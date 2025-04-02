@@ -157,6 +157,27 @@ main {
     font-size: 0.75rem;
     font-weight: 500;
 }
+.resource-button {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.resource-button:hover {
+  background: #1e40af;
+}
+
+.resource-button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.resource-button.secondary:hover {
+  background: #d1d5db;
+}
 
 footer {
     background: white;
@@ -307,4 +328,5 @@ footer {
     .resources-grid {
         grid-template-columns: 1fr;
     }
+    
 } 
