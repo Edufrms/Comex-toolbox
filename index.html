@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1YVJESR6W');
+</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directorio de herramientas y recursos para profesionales del comercio exterior">
     <title>Hub de Comercio Exterior</title>
+    <link rel="icon" type="image/x-icon" href="img/Contenedoricono.ico">
     <script src="lucide.min.js"></script>
     <meta name="google-adsense-account" content="ca-pub-3325448390634704">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="logo">
-                <i data-lucide="globe-2"></i>
-                <h1>Hub de Comercio Exterior</h1>
-            </div>
-        </div>
-    </header>
+  <div class="header-content" style="flex-direction: column; text-align: center; gap: 0.5rem;">
+    <div class="logo" style="justify-content: center;">
+      <i data-lucide="globe-2"></i>
+      <h1 style="font-size: 1.75rem;">Hub de Comercio Exterior</h1>
+    </div>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 1rem; color: #4b5563;">
+      Encuentra en un solo lugar las mejores <strong>herramientas de comercio exterior</strong>: acceso a mercados, estadísticas de exportación, inteligencia de mercado y normativa internacional. Ideal para exportadores, importadores, consultores y estudiantes.
+    </p>
+  </div>
+</header>
     <main>
         <section class="search-section">
             <div class="search-container">
-                <i data-lucide="search"></i>
-                <input type="text" id="searchInput" placeholder="Buscar recursos...">
+            <input type="text" id="searchInput" placeholder="Buscar recursos...">
             </div>
             <div class="categories" id="categories">
                 <button class="category-btn active" data-category="all">Todos</button>
-                <button class="category-btn" data-category="Análisis de Mercados">Análisis de Mercados</button>
-                <button class="category-btn" data-category="Estadísticas y Datos">Estadísticas y Datos</button>
-                <button class="category-btn" data-category="Acceso a Mercados">Acceso a Mercados</button>
-                <button class="category-btn" data-category="Financiación y Riesgos">Financiación y Riesgos</button>
-                <button class="category-btn" data-category="Formación y Recursos">Formación y Recursos</button>
+                <button class="category-btn" data-category="Análisis de Mercados">🔎Análisis de Mercados</button>
+                <button class="category-btn" data-category="Estadísticas y Datos">📊Estadísticas y Datos</button>
+                <button class="category-btn" data-category="Acceso a Mercados">🌐Acceso a Mercados</button>
+                <button class="category-btn" data-category="Financiación y Riesgos">💱Financiación y Riesgos</button>
+                <button class="category-btn" data-category="Formación y Recursos">📚Formación y Recursos</button>
             </div>
         </section>
         <div class="resources-grid" id="resourcesGrid"></div>
@@ -242,28 +254,29 @@
         function renderResources() {
             const filteredResources = filterResources();
             resourcesGrid.innerHTML = filteredResources.map(resource => `
-                <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-card">
-                    <div class="card-header">
-                        <h3 class="card-title">${resource.title}</h3>
-                        <i data-lucide="external-link"></i>
-                    </div>
-                    <p class="card-description">${resource.description}</p>
-                    <div class="card-footer">
-                        <span class="card-category">${getCategoryLabel(resource.category)}</span>
-                        ${resource.title === "Trade Map" ? 
-                            `<a href="tools/TradeMap.html" class="how-to-btn" target="_blank" rel="noopener noreferrer">
-                                <i data-lucide="book-open"></i> Cómo usar
-                            </a>` : 
-                            ''
-                        }
-                    </div>
-                </a>
-            `).join('');
+  <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-card">
+    <div class="card-header">
+      <h3 class="card-title">${resource.title}</h3>
+      <i data-lucide="external-link"></i>
+    </div>
+    <p class="card-description">${resource.description}</p>
+    <span class="card-category">${getCategoryLabel(resource.category)}</span>
+  </a>
+`).join('');
+
+
             window.lucide.createIcons();
         }
 
         function getCategoryLabel(category) {
-            return category;
+            const labels = {
+                'market-access': 'Acceso a Mercados',
+                'statistics': 'Estadísticas',
+                'market-intelligence': 'Inteligencia de Mercado',
+                'regulations': 'Regulaciones',
+                'trade-tools': 'Herramientas Comerciales'
+            };
+            return labels[category] || category;
         }
 
         searchInput.addEventListener('input', (e) => {
