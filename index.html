@@ -254,19 +254,16 @@
         function renderResources() {
             const filteredResources = filterResources();
             resourcesGrid.innerHTML = filteredResources.map(resource => `
-  <div class="resource-card">
+  <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-card">
     <div class="card-header">
       <h3 class="card-title">${resource.title}</h3>
       <i data-lucide="external-link"></i>
     </div>
     <p class="card-description">${resource.description}</p>
     <span class="card-category">${getCategoryLabel(resource.category)}</span>
-    <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-      <a href="${resource.url}" target="_blank" class="resource-button">Visitar herramienta</a>
-      <a href="tools/${resource.slug || resource.id}.html" class="resource-button secondary">Aprender a usar</a>
-    </div>
-  </div>
+  </a>
 `).join('');
+
 
             window.lucide.createIcons();
         }
