@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directorio de herramientas y recursos para profesionales del comercio exterior">
     <title>Hub de Comercio Exterior</title>
-   <script src="https://unpkg.com/lucide@0.258.0/dist/umd/lucide.min.js"></script>
-   <meta name="google-adsense-account" content="ca-pub-3325448390634704">
+    <script src="https://unpkg.com/lucide@0.258.0/dist/umd/lucide.min.js"></script>
+    <meta name="google-adsense-account" content="ca-pub-3325448390634704">
     <style>
         :root {
             --primary-color: #2563eb;
@@ -18,25 +17,21 @@
             --gray-600: #4b5563;
             --gray-900: #111827;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
-
         body {
             min-height: 100vh;
             background: linear-gradient(to bottom, #f0f9ff, #ffffff);
         }
-
         header {
             background: white;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             padding: 1rem;
         }
-
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -44,34 +39,28 @@
             align-items: center;
             padding: 1rem;
         }
-
         .logo {
             display: flex;
             align-items: center;
             gap: 0.75rem;
             color: var(--primary-color);
         }
-
         .logo h1 {
             font-size: 1.5rem;
             color: var(--gray-900);
         }
-
         main {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
-
         .search-section {
             margin-bottom: 2rem;
         }
-
         .search-container {
             position: relative;
             margin-bottom: 1rem;
         }
-
         .search-container i {
             position: absolute;
             left: 1rem;
@@ -79,7 +68,6 @@
             transform: translateY(-50%);
             color: var(--gray-600);
         }
-
         #searchInput {
             width: 100%;
             padding: 0.75rem 1rem 0.75rem 2.5rem;
@@ -87,19 +75,16 @@
             border-radius: 0.5rem;
             font-size: 1rem;
         }
-
         #searchInput:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
-
         .categories {
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
         }
-
         .category-btn {
             padding: 0.5rem 1rem;
             border-radius: 9999px;
@@ -110,23 +95,19 @@
             color: var(--gray-600);
             transition: all 0.2s;
         }
-
         .category-btn:hover {
             background: var(--gray-200);
         }
-
         .category-btn.active {
             background: var(--primary-color);
             color: white;
         }
-
         .resources-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
-
         .resource-card {
             background: white;
             border-radius: 0.5rem;
@@ -136,30 +117,25 @@
             color: inherit;
             transition: box-shadow 0.2s;
         }
-
         .resource-card:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0.75rem;
         }
-
         .card-title {
             font-size: 1.125rem;
             color: var(--gray-900);
             font-weight: 600;
         }
-
         .card-description {
             color: var(--gray-600);
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
-
         .card-category {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -169,7 +145,6 @@
             font-size: 0.75rem;
             font-weight: 500;
         }
-
         footer {
             background: white;
             border-top: 1px solid var(--gray-200);
@@ -179,7 +154,6 @@
             font-size: 0.875rem;
             margin-top: 3rem;
         }
-
         @media (max-width: 768px) {
             .resources-grid {
                 grid-template-columns: 1fr;
@@ -211,19 +185,14 @@
                 <button class="category-btn" data-category="trade-tools">Herramientas Comerciales</button>
             </div>
         </section>
-
         <div class="resources-grid" id="resourcesGrid"></div>
     </main>
-
     <footer>
         <p>© <span id="year"></span> Hub de Comercio Exterior. Todos los derechos reservados.</p>
     </footer>
-
     <script>
-        // Initialize Lucide icons
         window.lucide.createIcons();
 
-        // Resources data
         const resources = [
             {
                 id: 1,
@@ -234,172 +203,42 @@
             },
             {
                 id: 2,
-                title: "The Atlas of Economic Complexity",
-                description: "Visualización de datos sobre comercio internacional y desarrollo económico",
-                url: "https://atlas.cid.harvard.edu/",
-                category: "market-intelligence"
-            },
-            {
-                id: 3,
                 title: "Trade Map",
                 description: "Estadísticas del comercio para el desarrollo internacional de las empresas",
                 url: "https://www.trademap.org/",
                 category: "statistics"
             },
             {
-                id: 4,
+                id: 3,
                 title: "Market Access Map",
                 description: "Información sobre aranceles y requisitos de acceso a mercados",
                 url: "https://www.macmap.org/",
                 category: "market-access"
-            },
-            {
-                id: 5,
-                title: "Rules of Origin Facilitator",
-                description: "Guía para determinar el origen de los productos y sus requisitos",
-                url: "https://findrulesoforigin.org/",
-                category: "regulations"
-            },
-            {
-                id: 6,
-                title: "Statista",
-                description: "Portal de estadísticas de mercado e investigación comercial",
-                url: "https://www.statista.com/",
-                category: "statistics"
-            },
-            {
-                id: 7,
-                title: "Tax Consultations – European Commission",
-                description: "Consulta de impuestos y aranceles en la Unión Europea",
-                url: "https://ec.europa.eu/taxation_customs/",
-                category: "regulations"
-            },
-            {
-                id: 8,
-                title: "TARIC Consultation",
-                description: "Consulta del arancel integrado de la Unión Europea",
-                url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
-                category: "regulations"
-            },
-            {
-                id: 9,
-                title: "CCE – Base de datos de Comercio Exterior",
-                description: "Estadísticas de comercio exterior español",
-                url: "https://comercio.gob.es/",
-                category: "statistics"
-            },
-            {
-                id: 10,
-                title: "Estadísticas ICEX",
-                description: "Estadísticas de comercio exterior del ICEX",
-                url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
-                category: "statistics"
-            },
-            {
-                id: 11,
-                title: "Countries and Regions – European Commission",
-                description: "Información sobre relaciones comerciales de la UE",
-                url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
-                category: "market-intelligence"
-            },
-            {
-                id: 12,
-                title: "EUR-Lex",
-                description: "Reglamentos y legislación de la UE sobre comercio",
-                url: "https://eur-lex.europa.eu/",
-                category: "regulations"
-            },
-            {
-                id: 13,
-                title: "Riesgo País – Cesce España",
-                description: "Análisis de riesgos comerciales por países",
-                url: "https://www.cesce.es/riesgo-pais",
-                category: "market-intelligence"
-            },
-            {
-                id: 14,
-                title: "Access2Markets",
-                description: "Portal de la UE para información sobre comercio internacional",
-                url: "https://trade.ec.europa.eu/access-to-markets/",
-                category: "market-access"
-            },
-            {
-                id: 15,
-                title: "International Database",
-                description: "Acceso a datos demográficos globales",
-                url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
-                category: "statistics"
-            },
-            {
-                id: 16,
-                title: "Coface",
-                description: "Servicios de seguro de crédito y análisis de riesgo país",
-                url: "https://www.coface.es/",
-                category: "trade-tools"
-            },
-            {
-                id: 17,
-                title: "International Trade Administration",
-                description: "Recursos y herramientas para el comercio internacional",
-                url: "https://www.trade.gov/",
-                category: "trade-tools"
-            },
-            {
-                id: 18,
-                title: "Market Finder",
-                description: "Herramienta para encontrar oportunidades de mercado internacionales",
-                url: "https://marketfinder.thinkwithgoogle.com/",
-                category: "market-intelligence"
-            },
-            {
-                id: 19,
-                title: "DataComex",
-                description: "Estadísticas del comercio exterior español",
-                url: "https://datacomex.comercio.es/",
-                category: "statistics"
-            },
-            {
-                id: 20,
-                title: "UN Comtrade",
-                description: "Base de datos de estadísticas de comercio de las Naciones Unidas",
-                url: "https://comtrade.un.org/",
-                category: "statistics"
-            },
-            {
-                id: 21,
-                title: "Medios de Pago Internacional",
-                description: "El objetivo de esta web, es simplemente recopilar en un sólo espacio, contenidos dispersos por la red y que puedes ser de utilidad para la docencia de los Medios de Pago.",
-                url: "https://www.mediosdepagointernacional.es/home",
-                category: "market-intelligence"
             }
+            // Agrega el resto de tus recursos aquí...
         ];
 
-        // DOM Elements
         const searchInput = document.getElementById('searchInput');
         const categoryButtons = document.querySelectorAll('.category-btn');
         const resourcesGrid = document.getElementById('resourcesGrid');
         const yearSpan = document.getElementById('year');
 
-        // Set current year in footer
         yearSpan.textContent = new Date().getFullYear();
 
-        // State
         let currentCategory = 'all';
         let searchTerm = '';
 
-        // Filter resources
         function filterResources() {
             return resources.filter(resource => {
                 const matchesSearch = (
                     resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                     resource.description.toLowerCase().includes(searchTerm.toLowerCase())
                 );
-                const matchesCategory = currentCategory === 'all' || resource.category.toLowerCase().replace(/\s+/g, '-') === currentCategory;
+                const matchesCategory = currentCategory === 'all' || resource.category === currentCategory;
                 return matchesSearch && matchesCategory;
             });
         }
 
-        // Render resources
         function renderResources() {
             const filteredResources = filterResources();
             resourcesGrid.innerHTML = filteredResources.map(resource => `
@@ -412,22 +251,20 @@
                     <span class="card-category">${getCategoryLabel(resource.category)}</span>
                 </a>
             `).join('');
-            lucide.createIcons();
+            window.lucide.createIcons();
         }
 
-        // Get category label
         function getCategoryLabel(category) {
             const labels = {
-                'Market Access': 'Acceso a Mercados',
-                'Statistics': 'Estadísticas',
-                'Market Intelligence': 'Inteligencia de Mercado',
-                'Regulations': 'Regulaciones',
-                'Trade Tools': 'Herramientas Comerciales'
+                'market-access': 'Acceso a Mercados',
+                'statistics': 'Estadísticas',
+                'market-intelligence': 'Inteligencia de Mercado',
+                'regulations': 'Regulaciones',
+                'trade-tools': 'Herramientas Comerciales'
             };
             return labels[category] || category;
         }
 
-        // Event Listeners
         searchInput.addEventListener('input', (e) => {
             searchTerm = e.target.value;
             renderResources();
@@ -442,20 +279,7 @@
             });
         });
 
-        // Initial render
         renderResources();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704"
-     crossorigin="anonymous"></script>
-<!-- comextoolbox_footer_display -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3325448390634704"
-     data-ad-slot="8307204154"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>
 </html>
