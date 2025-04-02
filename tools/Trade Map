@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Map | Cómo usarlo - ComexToolbox</title>
+  <link rel="stylesheet" href="../estilos.css"> <!-- Enlace a tu CSS si usas uno -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f9fafb;
+      padding: 2rem;
+      color: #111827;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      color: #1e3a8a;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: #2563eb;
+      margin-top: 2rem;
+    }
+    a.boton {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 2rem;
+    }
+    a.boton:hover {
+      background: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Guía rápida para usar Trade Map</h1>
+    <p><strong>Trade Map</strong> es una herramienta desarrollada por el International Trade Centre (ITC) que permite acceder a estadísticas detalladas del comercio internacional entre países. Es ideal para analizar exportaciones, importaciones, mercados potenciales y competidores.</p>
+
+    <h2>¿Para qué sirve?</h2>
+    <ul>
+      <li>Consultar datos por producto, país y año.</li>
+      <li>Analizar tendencias de exportación/importación.</li>
+      <li>Estudiar participación de mercado.</li>
+      <li>Comparar competidores por producto y destino.</li>
+    </ul>
+
+    <h2>Pasos para usar Trade Map</h2>
+    <ol>
+      <li>Ir al sitio oficial (botón abajo).</li>
+      <li>Seleccionar "Data by Product" o "Data by Country".</li>
+      <li>Elegir un código arancelario o nombre de producto.</li>
+      <li>Explorar las tablas y gráficos disponibles.</li>
+    </ol>
+
+    <h2>Consejos útiles</h2>
+    <ul>
+      <li>Utiliza códigos HS a 6 dígitos para mayor precisión.</li>
+      <li>Exporta los datos en Excel para análisis posterior.</li>
+      <li>Revisa series históricas para ver tendencias.</li>
+    </ul>
+
+    <a class="boton" href="https://www.trademap.org/" target="_blank">Ir a Trade Map</a>
+  </div>
+</body>
+</html>
