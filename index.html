@@ -159,6 +159,83 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Estilos para la sección de comentarios */
+        .comments-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 0.5rem;
+            border: 1px solid var(--gray-200);
+        }
+        .comments-section h2 {
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .comment-form {
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+        .comments-list {
+            margin-top: 2rem;
+        }
+        .comment {
+            padding: 1rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            background: var(--gray-100);
+        }
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .comment-author {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        .comment-date {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        .comment-content {
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -186,6 +263,25 @@
             </div>
         </section>
         <div class="resources-grid" id="resourcesGrid"></div>
+        
+        <!-- Sección de comentarios -->
+        <section class="comments-section">
+            <h2>Recomendaciones y Comentarios</h2>
+            <form class="comment-form" id="commentForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Tu recomendación:</label>
+                    <textarea id="comment" required placeholder="Comparte tu sugerencia de herramientas, webs, formación o cualquier otro recurso útil..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar recomendación</button>
+            </form>
+            <div class="comments-list" id="commentsList">
+                <!-- Los comentarios se cargarán dinámicamente aquí -->
+            </div>
+        </section>
     </main>
     <footer>
         <p>© <span id="year"></span> Hub de Comercio Exterior. Todos los derechos reservados.</p>
@@ -405,6 +501,49 @@
         });
 
         renderResources();
+
+        // Funcionalidad de comentarios
+        const commentForm = document.getElementById('commentForm');
+        const commentsList = document.getElementById('commentsList');
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+        function saveComments() {
+            localStorage.setItem('comments', JSON.stringify(comments));
+        }
+
+        function renderComments() {
+            commentsList.innerHTML = comments.map(comment => `
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">${comment.name}</span>
+                        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
+                    </div>
+                    <div class="comment-content">${comment.content}</div>
+                </div>
+            `).join('');
+        }
+
+        commentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const content = document.getElementById('comment').value;
+            
+            const newComment = {
+                name,
+                content,
+                date: new Date().toISOString()
+            };
+
+            comments.unshift(newComment);
+            saveComments();
+            renderComments();
+            
+            // Limpiar el formulario
+            commentForm.reset();
+        });
+
+        // Cargar comentarios al inicio
+        renderComments();
     </script>
 </body>
 </html>
