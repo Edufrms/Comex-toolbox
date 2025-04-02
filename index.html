@@ -39,11 +39,11 @@
             </div>
             <div class="categories" id="categories">
                 <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="market-analysis">Análisis de Mercados</button>
+                <button class="category-btn" data-category="statistics">Estadísticas y Datos</button>
                 <button class="category-btn" data-category="market-access">Acceso a Mercados</button>
-                <button class="category-btn" data-category="statistics">Estadísticas</button>
-                <button class="category-btn" data-category="market-intelligence">Inteligencia de Mercado</button>
-                <button class="category-btn" data-category="regulations">Regulaciones</button>
-                <button class="category-btn" data-category="trade-tools">Herramientas Comerciales</button>
+                <button class="category-btn" data-category="finance">Financiación y Riesgos</button>
+                <button class="category-btn" data-category="training">Formación y Recursos</button>
             </div>
         </section>
         <div class="resources-grid" id="resourcesGrid"></div>
@@ -74,19 +74,19 @@
         window.lucide.createIcons();
 
         const resources = [
-            {
+            
                 id: 1,
                 title: "Export Potential Map",
                 description: "Herramienta para identificar oportunidades de exportación y diversificación de mercados",
                 url: "https://exportpotential.intracen.org/",
-                category: "market-intelligence"
+                category: "market-analysis"
             },
             {
                 id: 2,
                 title: "The Atlas of Economic Complexity",
                 description: "Visualización de datos sobre comercio internacional y desarrollo económico",
                 url: "https://atlas.cid.harvard.edu/",
-                category: "market-intelligence"
+                category: "market-analysis"
             },
             {
                 id: 3,
@@ -107,7 +107,7 @@
                 title: "Rules of Origin Facilitator",
                 description: "Guía para determinar el origen de los productos y sus requisitos",
                 url: "https://findrulesoforigin.org/",
-                category: "regulations"
+                category: "market-access"
             },
             {
                 id: 6,
@@ -121,14 +121,14 @@
                 title: "Tax Consultations – European Commission",
                 description: "Consulta de impuestos y aranceles en la Unión Europea",
                 url: "https://ec.europa.eu/taxation_customs/",
-                category: "regulations"
+                category: "market-access"
             },
             {
                 id: 8,
                 title: "TARIC Consultation",
                 description: "Consulta del arancel integrado de la Unión Europea",
                 url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
-                category: "regulations"
+                category: "market-access"
             },
             {
                 id: 9,
@@ -149,21 +149,21 @@
                 title: "Countries and Regions – European Commission",
                 description: "Información sobre relaciones comerciales de la UE",
                 url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
-                category: "market-intelligence"
+                category: "market-analysis"
             },
             {
                 id: 12,
                 title: "EUR-Lex",
                 description: "Reglamentos y legislación de la UE sobre comercio",
                 url: "https://eur-lex.europa.eu/",
-                category: "regulations"
+                category: "market-access"
             },
             {
                 id: 13,
                 title: "Riesgo País – Cesce España",
                 description: "Análisis de riesgos comerciales por países",
                 url: "https://www.cesce.es/riesgo-pais",
-                category: "market-intelligence"
+                category: "finance"
             },
             {
                 id: 14,
@@ -184,21 +184,21 @@
                 title: "Coface",
                 description: "Servicios de seguro de crédito y análisis de riesgo país",
                 url: "https://www.coface.es/",
-                category: "trade-tools"
+                category: "finance"
             },
             {
                 id: 17,
                 title: "International Trade Administration",
                 description: "Recursos y herramientas para el comercio internacional",
                 url: "https://www.trade.gov/",
-                category: "trade-tools"
+                category: "training"
             },
             {
                 id: 18,
                 title: "Market Finder",
                 description: "Herramienta para encontrar oportunidades de mercado internacionales",
                 url: "https://marketfinder.thinkwithgoogle.com/",
-                category: "market-intelligence"
+                category: "market-analysis"
             },
             {
                 id: 19,
@@ -219,14 +219,14 @@
                 title: "Medios de Pago Internacional",
                 description: "El objetivo de esta web, es simplemente recopilar en un sólo espacio, contenidos dispersos por la red y que puedes ser de utilidad para la docencia de los Medios de Pago.",
                 url: "https://www.mediosdepagointernacional.es/home",
-                category: "market-intelligence"
+                category: "finance"
             },
             {
-                id: 21,
+                id: 22,
                 title: "Google Trend",
                 description: "Muestra los temas más buscados en todo el mundo en tiempo real. Ideal para analizar tendencias de mercado, comparar intereses y tomar decisiones basadas en datos.",
                 url: "https://trends.google.es/trends/",
-                category: "market-intelligence"
+                category: "market-analysis"
             }
         ];
 
