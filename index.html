@@ -304,17 +304,31 @@
             localStorage.setItem('comments', JSON.stringify(comments));
         }
 
-        function renderComments() {
-            commentsList.innerHTML = comments.map(comment => `
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">${comment.name}</span>
-                        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
-                    </div>
-                    <div class="comment-content">${comment.content}</div>
-                </div>
-            `).join('');
-        }
+       function renderComments() {
+  commentsList.innerHTML = comments.map((comment, index) => `
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">${comment.name}</span>
+        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
+      </div>
+      <div class="comment-content">${comment.content}</div>
+      <button class="delete-btn" data-index="${index}">Eliminar</button>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const clave = prompt("Introduce la contraseña para eliminar:");
+      if (clave === "admin123") {
+        comments.splice(parseInt(this.dataset.index), 1);
+        saveComments();
+        renderComments();
+      } else {
+        alert("Contraseña incorrecta.");
+      }
+    });
+  });
+}
 
         commentForm.addEventListener('submit', (e) => {
             e.preventDefault();
