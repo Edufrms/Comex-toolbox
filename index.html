@@ -103,165 +103,185 @@
     <script>
         window.lucide.createIcons();
 
-        const resources = [
-            {
-                id: 1,
-                title: "Export Potential Map",
-                description: "Herramienta para identificar oportunidades de exportación y diversificación de mercados",
-                url: "https://exportpotential.intracen.org/",
-                category: "Análisis de Mercados"
-            },
-            {
-                id: 2,
-                title: "The Atlas of Economic Complexity",
-                description: "Visualización de datos sobre comercio internacional y desarrollo económico",
-                url: "https://atlas.cid.harvard.edu/",
-                category: "Análisis de Mercados",
-                learnUrl: "https://atlas-guide.github.io"
-            },
-            {
-                id: 3,
-                title: "Trade Map",
-                description: "Estadísticas del comercio para el desarrollo internacional de las empresas",
-                url: "https://www.trademap.org/",
-                category: "Estadísticas y Datos",
-                learnUrl: "tools/TradeMap.html"
-            },
-            {
-                id: 4,
-                title: "Market Access Map",
-                description: "Información sobre aranceles y requisitos de acceso a mercados",
-                url: "https://www.macmap.org/",
-                category: "Acceso a Mercados"
-            },
-            {
-                id: 5,
-                title: "Rules of Origin Facilitator",
-                description: "Guía para determinar el origen de los productos y sus requisitos",
-                url: "https://findrulesoforigin.org/",
-                category: "Acceso a Mercados"
-            },
-            {
-                id: 6,
-                title: "Statista",
-                description: "Portal de estadísticas de mercado e investigación comercial",
-                url: "https://www.statista.com/",
-                category: "Estadísticas y Datos"
-            },
-            {
-                id: 7,
-                title: "Tax Consultations – European Commission",
-                description: "Consulta de impuestos y aranceles en la Unión Europea",
-                url: "https://ec.europa.eu/taxation_customs/",
-                category: "Acceso a Mercados"
-            },
-            {
-                id: 8,
-                title: "TARIC Consultation",
-                description: "Consulta del arancel integrado de la Unión Europea",
-                url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
-                category: "Acceso a Mercados"
-            },
-            {
-                id: 9,
-                title: "CCE – Base de datos de Comercio Exterior",
-                description: "Estadísticas de comercio exterior español",
-                url: "https://comercio.gob.es/",
-                category: "Estadísticas y Datos"
-            },
-            {
-                id: 10,
-                title: "Estadísticas ICEX",
-                description: "Estadísticas de comercio exterior del ICEX",
-                url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
-                category: "Estadísticas y Datos"
-            },
-            {
-                id: 11,
-                title: "Countries and Regions – European Commission",
-                description: "Información sobre relaciones comerciales de la UE",
-                url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
-                category: "Análisis de Mercados"
-            },
-            {
-                id: 12,
-                title: "EUR-Lex",
-                description: "Reglamentos y legislación de la UE sobre comercio",
-                url: "https://eur-lex.europa.eu/",
-                category: "Acceso a Mercados"
-            },
-            {
-                id: 13,
-                title: "Riesgo País – Cesce España",
-                description: "Análisis de riesgos comerciales por países",
-                url: "https://www.cesce.es/riesgo-pais",
-                category: "Financiación y Riesgos"
-            },
-            {
-                id: 14,
-                title: "Access2Markets",
-                description: "Portal de la UE para información sobre comercio internacional",
-                url: "https://trade.ec.europa.eu/access-to-markets/",
-                category: "Acceso a Mercados"
-            },
-            {
-                id: 15,
-                title: "International Database",
-                description: "Acceso a datos demográficos globales",
-                url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
-                category: "Estadísticas y Datos"
-            },
-            {
-                id: 16,
-                title: "Coface",
-                description: "Servicios de seguro de crédito y análisis de riesgo país",
-                url: "https://www.coface.es/",
-                category: "Financiación y Riesgos"
-            },
-            {
-                id: 17,
-                title: "International Trade Administration",
-                description: "Recursos y herramientas para el comercio internacional",
-                url: "https://www.trade.gov/",
-                category: "Formación y Recursos"
-            },
-            {
-                id: 18,
-                title: "Market Finder",
-                description: "Herramienta para encontrar oportunidades de mercado internacionales",
-                url: "https://marketfinder.thinkwithgoogle.com/",
-                category: "Análisis de Mercados"
-            },
-            {
-                id: 19,
-                title: "DataComex",
-                description: "Estadísticas del comercio exterior español",
-                url: "https://datacomex.comercio.es/",
-                category: "Estadísticas y Datos"
-            },
-            {
-                id: 20,
-                title: "UN Comtrade",
-                description: "Base de datos de estadísticas de comercio de las Naciones Unidas",
-                url: "https://comtrade.un.org/",
-                category: "Estadísticas y Datos"
-            },
-            {
-                id: 21,
-                title: "Medios de Pago Internacional",
-                description: "El objetivo de esta web, es simplemente recopilar en un sólo espacio, contenidos dispersos por la red y que puedes ser de utilidad para la docencia de los Medios de Pago.",
-                url: "https://www.mediosdepagointernacional.es/home",
-                category: "Financiación y Riesgos"
-            },
-            {
-                id: 22,
-                title: "Google Trend",
-                description: "Muestra los temas más buscados en todo el mundo en tiempo real. Ideal para analizar tendencias de mercado, comparar intereses y tomar decisiones basadas en datos.",
-                url: "https://trends.google.es/trends/",
-                category: "Análisis de Mercados",
-                learnUrl: "https://googletrends-guide.github.io"
-            }
-        ];
+       const resources = [
+    {
+        id: 1,
+        title: "Export Potential Map",
+        description: "Herramienta para identificar oportunidades de exportación y diversificación de mercados",
+        url: "https://exportpotential.intracen.org/",
+        category: "Análisis de Mercados",
+        learnUrl: "tools/export-potential-map.html"
+    },
+    {
+        id: 2,
+        title: "The Atlas of Economic Complexity",
+        description: "Visualización de datos sobre comercio internacional y desarrollo económico",
+        url: "https://atlas.cid.harvard.edu/",
+        category: "Análisis de Mercados",
+        learnUrl: "tools/the-atlas-of-economic-complexity.html"
+    },
+    {
+        id: 3,
+        title: "Trade Map",
+        description: "Estadísticas del comercio para el desarrollo internacional de las empresas",
+        url: "https://www.trademap.org/",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/TradeMap.html"
+    },
+    {
+        id: 4,
+        title: "Market Access Map",
+        description: "Información sobre aranceles y requisitos de acceso a mercados",
+        url: "https://www.macmap.org/",
+        category: "Acceso a Mercados",
+        learnUrl: "tools/market-access-map.html"
+    },
+    {
+        id: 5,
+        title: "Rules of Origin Facilitator",
+        description: "Guía para determinar el origen de los productos y sus requisitos",
+        url: "https://findrulesoforigin.org/",
+        category: "Acceso a Mercados",
+        learnUrl: "tools/rules-of-origin-facilitator.html"
+    },
+    {
+        id: 6,
+        title: "Statista",
+        description: "Portal de estadísticas de mercado e investigación comercial",
+        url: "https://www.statista.com/",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/statista.html"
+    },
+    {
+        id: 7,
+        title: "Tax Consultations – European Commission",
+        description: "Consulta de impuestos y aranceles en la Unión Europea",
+        url: "https://ec.europa.eu/taxation_customs/",
+        category: "Acceso a Mercados",
+        learnUrl: "tools/tax-consultations---european-commission.html"
+    },
+    {
+        id: 8,
+        title: "TARIC Consultation",
+        description: "Consulta del arancel integrado de la Unión Europea",
+        url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
+        category: "Acceso a Mercados",
+        learnUrl: "tools/taric-consultation.html"
+    },
+    {
+        id: 9,
+        title: "CCE – Base de datos de Comercio Exterior",
+        description: "Estadísticas de comercio exterior español",
+        url: "https://comercio.gob.es/",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/cce---base-de-datos-de-comercio-exterior.html"
+    },
+    {
+        id: 10,
+        title: "Estadísticas ICEX",
+        description: "Estadísticas de comercio exterior del ICEX",
+        url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/estadisticas-icex.html"
+    },
+    {
+        id: 11,
+        title: "Countries and Regions – European Commission",
+        description: "Información sobre relaciones comerciales de la UE",
+        url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
+        category: "Análisis de Mercados",
+        learnUrl: "tools/countries-and-regions---european-commission.html"
+    },
+    {
+        id: 12,
+        title: "EUR-Lex",
+        description: "Reglamentos y legislación de la UE sobre comercio",
+        url: "https://eur-lex.europa.eu/",
+        category: "Acceso a Mercados",
+        learnUrl: "tools/eur-lex.html"
+    },
+    {
+        id: 13,
+        title: "Riesgo País – Cesce España",
+        description: "Análisis de riesgos comerciales por países",
+        url: "https://www.cesce.es/riesgo-pais",
+        category: "Financiación y Riesgos",
+        learnUrl: "tools/riesgo-pais---cesce-espana.html"
+    },
+    {
+        id: 14,
+        title: "Access2Markets",
+        description: "Portal de la UE para información sobre comercio internacional",
+        url: "https://trade.ec.europa.eu/access-to-markets/",
+        category: "Acceso a Mercados",
+        learnUrl: "tools/access2markets.html"
+    },
+    {
+        id: 15,
+        title: "International Database",
+        description: "Acceso a datos demográficos globales",
+        url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/international-database.html"
+    },
+    {
+        id: 16,
+        title: "Coface",
+        description: "Servicios de seguro de crédito y análisis de riesgo país",
+        url: "https://www.coface.es/",
+        category: "Financiación y Riesgos",
+        learnUrl: "tools/coface.html"
+    },
+    {
+        id: 17,
+        title: "International Trade Administration",
+        description: "Recursos y herramientas para el comercio internacional",
+        url: "https://www.trade.gov/",
+        category: "Formación y Recursos",
+        learnUrl: "tools/international-trade-administration.html"
+    },
+    {
+        id: 18,
+        title: "Market Finder",
+        description: "Herramienta para encontrar oportunidades de mercado internacionales",
+        url: "https://marketfinder.thinkwithgoogle.com/",
+        category: "Análisis de Mercados",
+        learnUrl: "tools/market-finder.html"
+    },
+    {
+        id: 19,
+        title: "DataComex",
+        description: "Estadísticas del comercio exterior español",
+        url: "https://datacomex.comercio.es/",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/datacomex.html"
+    },
+    {
+        id: 20,
+        title: "UN Comtrade",
+        description: "Base de datos de estadísticas de comercio de las Naciones Unidas",
+        url: "https://comtrade.un.org/",
+        category: "Estadísticas y Datos",
+        learnUrl: "tools/un-comtrade.html"
+    },
+    {
+        id: 21,
+        title: "Medios de Pago Internacional",
+        description: "Recopila contenidos útiles sobre instrumentos de pago internacional para docencia y empresas",
+        url: "https://www.mediosdepagointernacional.es/home",
+        category: "Financiación y Riesgos",
+        learnUrl: "tools/medios-de-pago-internacional.html"
+    },
+    {
+        id: 22,
+        title: "Google Trend",
+        description: "Muestra los temas más buscados en todo el mundo en tiempo real",
+        url: "https://trends.google.es/trends/",
+        category: "Análisis de Mercados",
+        learnUrl: "tools/google-trend.html"
+    }
+];
+
 
         const searchInput = document.getElementById('searchInput');
         const categoryButtons = document.querySelectorAll('.category-btn');
