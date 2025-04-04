@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J1YVJESR6W');
-</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directorio de herramientas y recursos para profesionales del comercio exterior">
     <title>Hub de Comercio Exterior</title>
-    <link rel="icon" type="image/x-icon" href="img/Contenedoricono.ico">
     <script src="lucide.min.js"></script>
     <meta name="google-adsense-account" content="ca-pub-3325448390634704">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .resource-card {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-link {
+            text-decoration: none;
+            color: inherit;
+            flex-grow: 1;
+        }
+
+        .learn-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .learn-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .learn-btn i {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
 </head>
 <body>
     <header>
-  <div class="header-content" style="flex-direction: column; text-align: center; gap: 0.5rem;">
-    <div class="logo" style="justify-content: center;">
-      <i data-lucide="globe-2"></i>
-      <h1 style="font-size: 1.75rem;">Hub de Comercio Exterior</h1>
-    </div>
-    <p style="max-width: 700px; margin: 0 auto; font-size: 1rem; color: #4b5563;">
-      Encuentra en un solo lugar las mejores <strong>herramientas de comercio exterior</strong>: acceso a mercados, estadísticas de exportación, inteligencia de mercado y normativa internacional. Ideal para exportadores, importadores, consultores y estudiantes.
-    </p>
-  </div>
-</header>
+        <div class="header-content">
+            <div class="logo">
+                <i data-lucide="globe-2"></i>
+                <h1>Hub de Comercio Exterior</h1>
+            </div>
+        </div>
+    </header>
     <main>
         <section class="search-section">
             <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Buscar recursos...">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar recursos...">
             </div>
             <div class="categories" id="categories">
                 <button class="category-btn active" data-category="all">Todos</button>
-                <button class="category-btn" data-category="Análisis de Mercados">🔎Análisis de Mercados</button>
-                <button class="category-btn" data-category="Estadísticas y Datos">📊Estadísticas y Datos</button>
-                <button class="category-btn" data-category="Acceso a Mercados">🌐Acceso a Mercados</button>
-                <button class="category-btn" data-category="Financiación y Riesgos">💱Financiación y Riesgos</button>
-                <button class="category-btn" data-category="Formación y Recursos">📚Formación y Recursos</button>
+                <button class="category-btn" data-category="Análisis de Mercados">Análisis de Mercados</button>
+                <button class="category-btn" data-category="Estadísticas y Datos">Estadísticas y Datos</button>
+                <button class="category-btn" data-category="Acceso a Mercados">Acceso a Mercados</button>
+                <button class="category-btn" data-category="Financiación y Riesgos">Financiación y Riesgos</button>
+                <button class="category-btn" data-category="Formación y Recursos">Formación y Recursos</button>
             </div>
         </section>
         <div class="resources-grid" id="resourcesGrid"></div>
@@ -73,163 +103,165 @@
     <script>
         window.lucide.createIcons();
 
-       const resources = [
-  {
-    id: 1,
-    title: "Export Potential Map",
-    description: "Herramienta para identificar oportunidades de exportación y diversificación de mercados. Permite analizar datos de comercio potencial y tomar decisiones estratégicas basadas en oferta y demanda.",
-    url: "https://exportpotential.intracen.org/",
-    category: "Análisis de Mercados"
-  },
-  {
-    id: 2,
-    title: "The Atlas of Economic Complexity",
-    description: "Visualización de datos sobre comercio internacional y desarrollo económico. Facilita la identificación de patrones económicos globales mediante visualizaciones interactivas.",
-    url: "https://atlas.cid.harvard.edu/",
-    category: "Análisis de Mercados"
-  },
-  {
-  id: 3,
-  title: "Trade Map",
-  description: "Estadísticas del comercio para el desarrollo internacional de las empresas. Ideal para estudios de mercado por producto, país y evolución histórica del comercio exterior",
-  url: "https://www.trademap.org/",
-  category: "Estadísticas y Datos"
-},
-
-  {
-    id: 4,
-    title: "Market Access Map",
-    description: "Información sobre aranceles y requisitos de acceso a mercados. Útil para conocer condiciones comerciales, acuerdos preferenciales y barreras técnicas.",
-    url: "https://www.macmap.org/",
-    category: "Acceso a Mercados"
-  },
-  {
-    id: 5,
-    title: "Rules of Origin Facilitator",
-    description: "Guía para determinar el origen de los productos y sus requisitos. Ayuda a interpretar reglas de origen y facilitar el cumplimiento normativo.",
-    url: "https://findrulesoforigin.org/",
-    category: "Acceso a Mercados"
-  },
-  {
-    id: 6,
-    title: "Statista",
-    description: "Portal de estadísticas de mercado e investigación comercial. Ofrece gráficos y estadísticas clave para análisis sectorial y benchmarking comercial.",
-    url: "https://www.statista.com/",
-    category: "Estadísticas y Datos"
-  },
-  {
-    id: 7,
-    title: "Tax Consultations – European Commission",
-    description: "Consulta de impuestos y aranceles en la Unión Europea. Fundamental para conocer aranceles aplicables y procedimientos aduaneros en la UE.",
-    url: "https://ec.europa.eu/taxation_customs/",
-    category: "Acceso a Mercados"
-  },
-  {
-    id: 8,
-    title: "TARIC Consultation",
-    description: "Consulta del arancel integrado de la Unión Europea. Fundamental para conocer aranceles aplicables y procedimientos aduaneros en la UE.",
-    url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
-    category: "Acceso a Mercados"
-  },
-  {
-    id: 9,
-    title: "CCE – Base de datos de Comercio Exterior",
-    description: "Estadísticas de comercio exterior español. Recurso esencial para el análisis de exportaciones e importaciones desde España.",
-    url: "https://comercio.gob.es/",
-    category: "Estadísticas y Datos"
-  },
-  {
-    id: 10,
-    title: "Estadísticas ICEX",
-    description: "Estadísticas de comercio exterior del ICEX. Recurso esencial para el análisis de exportaciones e importaciones desde España.",
-    url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
-    category: "Estadísticas y Datos"
-  },
-  {
-    id: 11,
-    title: "Countries and Regions – European Commission",
-    description: "Información sobre relaciones comerciales de la UE. Permite explorar acuerdos comerciales bilaterales y políticas exteriores de la UE.",
-    url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
-    category: "Análisis de Mercados"
-  },
-  {
-    id: 12,
-    title: "EUR-Lex",
-    description: "Reglamentos y legislación de la UE sobre comercio. Proporciona acceso a normativa legal actualizada aplicable al comercio exterior europeo.",
-    url: "https://eur-lex.europa.eu/",
-    category: "Acceso a Mercados"
-  },
-  {
-    id: 13,
-    title: "Riesgo País – Cesce España",
-    description: "Análisis de riesgos comerciales por países. Útil para evaluar solvencia de mercados destino y condiciones financieras.",
-    url: "https://www.cesce.es/riesgo-pais",
-    category: "Financiación y Riesgos"
-  },
-  {
-    id: 14,
-    title: "Access2Markets",
-    description: "Portal de la UE para información sobre comercio internacional. Ideal para empresas que buscan exportar productos a la UE y entender regulaciones aplicables.",
-    url: "https://trade.ec.europa.eu/access-to-markets/",
-    category: "Acceso a Mercados"
-  },
-  {
-    id: 15,
-    title: "International Database",
-    description: "Acceso a datos demográficos globales. Facilita comparativas comerciales y estudios globales por flujo y producto.",
-    url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
-    category: "Estadísticas y Datos"
-  },
-  {
-    id: 16,
-    title: "Coface",
-    description: "Servicios de seguro de crédito y análisis de riesgo país. Útil para evaluar solvencia de mercados destino y condiciones financieras.",
-    url: "https://www.coface.es/",
-    category: "Financiación y Riesgos"
-  },
-  {
-    id: 17,
-    title: "International Trade Administration",
-    description: "Recursos y herramientas para el comercio internacional. Proporciona herramientas gubernamentales para facilitar exportaciones y análisis de mercados.",
-    url: "https://www.trade.gov/",
-    category: "Formación y Recursos"
-  },
-  {
-    id: 18,
-    title: "Market Finder",
-    description: "Herramienta para encontrar oportunidades de mercado internacionales. Utiliza inteligencia de mercado para detectar regiones potenciales según tu tipo de producto.",
-    url: "https://marketfinder.thinkwithgoogle.com/",
-    category: "Análisis de Mercados"
-  },
-  {
-    id: 19,
-    title: "DataComex",
-    description: "Estadísticas del comercio exterior español. Recurso esencial para el análisis de exportaciones e importaciones desde España.",
-    url: "https://datacomex.comercio.es/",
-    category: "Estadísticas y Datos"
-  },
-  {
-    id: 20,
-    title: "UN Comtrade",
-    description: "Base de datos de estadísticas de comercio de las Naciones Unidas. Facilita comparativas comerciales y estudios globales por flujo y producto.",
-    url: "https://comtrade.un.org/",
-    category: "Estadísticas y Datos"
-  },
-  {
-    id: 21,
-    title: "Medios de Pago Internacional",
-    description: "Recopila contenido útil sobre instrumentos de pago para comercio exterior. Ideal para docentes y profesionales que desean aprender sobre instrumentos financieros internacionales.",
-    url: "https://www.mediosdepagointernacional.es/home",
-    category: "Financiación y Riesgos"
-  },
-  {
-    id: 22,
-    title: "Google Trend",
-    description: "Muestra los temas más buscados en tiempo real. Permite detectar variaciones de interés por país o región y anticipar tendencias comerciales.",
-    url: "https://trends.google.es/trends/",
-    category: "Análisis de Mercados"
-  }
-];
+        const resources = [
+            {
+                id: 1,
+                title: "Export Potential Map",
+                description: "Herramienta para identificar oportunidades de exportación y diversificación de mercados",
+                url: "https://exportpotential.intracen.org/",
+                category: "Análisis de Mercados",
+                learnUrl: "tools\TradeMap.html"
+            },
+            {
+                id: 2,
+                title: "The Atlas of Economic Complexity",
+                description: "Visualización de datos sobre comercio internacional y desarrollo económico",
+                url: "https://atlas.cid.harvard.edu/",
+                category: "Análisis de Mercados",
+                learnUrl: "https://atlas-guide.github.io"
+            },
+            {
+                id: 3,
+                title: "Trade Map",
+                description: "Estadísticas del comercio para el desarrollo internacional de las empresas",
+                url: "https://www.trademap.org/",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 4,
+                title: "Market Access Map",
+                description: "Información sobre aranceles y requisitos de acceso a mercados",
+                url: "https://www.macmap.org/",
+                category: "Acceso a Mercados"
+            },
+            {
+                id: 5,
+                title: "Rules of Origin Facilitator",
+                description: "Guía para determinar el origen de los productos y sus requisitos",
+                url: "https://findrulesoforigin.org/",
+                category: "Acceso a Mercados"
+            },
+            {
+                id: 6,
+                title: "Statista",
+                description: "Portal de estadísticas de mercado e investigación comercial",
+                url: "https://www.statista.com/",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 7,
+                title: "Tax Consultations – European Commission",
+                description: "Consulta de impuestos y aranceles en la Unión Europea",
+                url: "https://ec.europa.eu/taxation_customs/",
+                category: "Acceso a Mercados"
+            },
+            {
+                id: 8,
+                title: "TARIC Consultation",
+                description: "Consulta del arancel integrado de la Unión Europea",
+                url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
+                category: "Acceso a Mercados"
+            },
+            {
+                id: 9,
+                title: "CCE – Base de datos de Comercio Exterior",
+                description: "Estadísticas de comercio exterior español",
+                url: "https://comercio.gob.es/",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 10,
+                title: "Estadísticas ICEX",
+                description: "Estadísticas de comercio exterior del ICEX",
+                url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 11,
+                title: "Countries and Regions – European Commission",
+                description: "Información sobre relaciones comerciales de la UE",
+                url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
+                category: "Análisis de Mercados"
+            },
+            {
+                id: 12,
+                title: "EUR-Lex",
+                description: "Reglamentos y legislación de la UE sobre comercio",
+                url: "https://eur-lex.europa.eu/",
+                category: "Acceso a Mercados"
+            },
+            {
+                id: 13,
+                title: "Riesgo País – Cesce España",
+                description: "Análisis de riesgos comerciales por países",
+                url: "https://www.cesce.es/riesgo-pais",
+                category: "Financiación y Riesgos"
+            },
+            {
+                id: 14,
+                title: "Access2Markets",
+                description: "Portal de la UE para información sobre comercio internacional",
+                url: "https://trade.ec.europa.eu/access-to-markets/",
+                category: "Acceso a Mercados"
+            },
+            {
+                id: 15,
+                title: "International Database",
+                description: "Acceso a datos demográficos globales",
+                url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 16,
+                title: "Coface",
+                description: "Servicios de seguro de crédito y análisis de riesgo país",
+                url: "https://www.coface.es/",
+                category: "Financiación y Riesgos"
+            },
+            {
+                id: 17,
+                title: "International Trade Administration",
+                description: "Recursos y herramientas para el comercio internacional",
+                url: "https://www.trade.gov/",
+                category: "Formación y Recursos"
+            },
+            {
+                id: 18,
+                title: "Market Finder",
+                description: "Herramienta para encontrar oportunidades de mercado internacionales",
+                url: "https://marketfinder.thinkwithgoogle.com/",
+                category: "Análisis de Mercados"
+            },
+            {
+                id: 19,
+                title: "DataComex",
+                description: "Estadísticas del comercio exterior español",
+                url: "https://datacomex.comercio.es/",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 20,
+                title: "UN Comtrade",
+                description: "Base de datos de estadísticas de comercio de las Naciones Unidas",
+                url: "https://comtrade.un.org/",
+                category: "Estadísticas y Datos"
+            },
+            {
+                id: 21,
+                title: "Medios de Pago Internacional",
+                description: "El objetivo de esta web, es simplemente recopilar en un sólo espacio, contenidos dispersos por la red y que puedes ser de utilidad para la docencia de los Medios de Pago.",
+                url: "https://www.mediosdepagointernacional.es/home",
+                category: "Financiación y Riesgos"
+            },
+            {
+                id: 22,
+                title: "Google Trend",
+                description: "Muestra los temas más buscados en todo el mundo en tiempo real. Ideal para analizar tendencias de mercado, comparar intereses y tomar decisiones basadas en datos.",
+                url: "https://trends.google.es/trends/",
+                category: "Análisis de Mercados",
+                learnUrl: "https://googletrends-guide.github.io"
+            }
+        ];
 
         const searchInput = document.getElementById('searchInput');
         const categoryButtons = document.querySelectorAll('.category-btn');
@@ -255,29 +287,27 @@
         function renderResources() {
             const filteredResources = filterResources();
             resourcesGrid.innerHTML = filteredResources.map(resource => `
-  <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-card">
-    <div class="card-header">
-      <h3 class="card-title">${resource.title}</h3>
-      <i data-lucide="external-link"></i>
-    </div>
-    <p class="card-description">${resource.description}</p>
-    <span class="card-category">${getCategoryLabel(resource.category)}</span>
-  </a>
-`).join('');
-
-
+                <div class="resource-card">
+                    <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <div class="card-header">
+                            <h3 class="card-title">${resource.title}</h3>
+                            <i data-lucide="external-link"></i>
+                        </div>
+                        <p class="card-description">${resource.description}</p>
+                        <div class="card-footer">
+                            <span class="card-category">${getCategoryLabel(resource.category)}</span>
+                        </div>
+                    </a>
+                    <a href="${resource.learnUrl}" class="learn-btn" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="book-open"></i> Aprende a usar
+                    </a>
+                </div>
+            `).join('');
             window.lucide.createIcons();
         }
 
         function getCategoryLabel(category) {
-            const labels = {
-                'market-access': 'Acceso a Mercados',
-                'statistics': 'Estadísticas',
-                'market-intelligence': 'Inteligencia de Mercado',
-                'regulations': 'Regulaciones',
-                'trade-tools': 'Herramientas Comerciales'
-            };
-            return labels[category] || category;
+            return category;
         }
 
         searchInput.addEventListener('input', (e) => {
@@ -305,31 +335,17 @@
             localStorage.setItem('comments', JSON.stringify(comments));
         }
 
-       function renderComments() {
-  commentsList.innerHTML = comments.map((comment, index) => `
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">${comment.name}</span>
-        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
-      </div>
-      <div class="comment-content">${comment.content}</div>
-      <button class="delete-btn" data-index="${index}">Eliminar</button>
-    </div>
-  `).join('');
-
-  document.querySelectorAll('.delete-btn').forEach(button => {
-    button.addEventListener('click', function () {
-      const clave = prompt("Introduce la contraseña para eliminar:");
-      if (clave === "admin123") {
-        comments.splice(parseInt(this.dataset.index), 1);
-        saveComments();
-        renderComments();
-      } else {
-        alert("Contraseña incorrecta.");
-      }
-    });
-  });
-}
+        function renderComments() {
+            commentsList.innerHTML = comments.map(comment => `
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">${comment.name}</span>
+                        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
+                    </div>
+                    <div class="comment-content">${comment.content}</div>
+                </div>
+            `).join('');
+        }
 
         commentForm.addEventListener('submit', (e) => {
             e.preventDefault();
