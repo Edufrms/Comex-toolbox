@@ -2,12 +2,301 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Access2Markets - Aprende a usar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Market Access Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tutorial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .tutorial-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tutorial-section {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tutorial-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .tutorial-step {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #3498db;
+        }
+
+        .tutorial-step h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .tutorial-step p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+            border-left: 4px solid #2c3e50;
+        }
+
+        .note {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .tip {
+            background: #d4edda;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #28a745;
+        }
+
+        .warning {
+            background: #f8d7da;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #dc3545;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .feature-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #dee2e6;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        .role-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .role-section h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Access2Markets</h1>
-    <p>En esta página encontrarás una guía para aprender a utilizar <strong>Access2Markets</strong>.</p>
-    <p>🔧 Contenido en construcción. Pronto añadiremos el tutorial paso a paso.</p>
+    <div class="tutorial-container">
+        <div class="tutorial-header">
+            <h1>Tutorial de Market Access Map</h1>
+            <p>Guía completa para utilizar la plataforma de análisis de acceso a mercados</p>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>Introducción</h2>
+            <p>Market Access Map (MacMap) es un portal analítico gratuito desarrollado por el Centro de Comercio Internacional (ITC) que permite a los usuarios acceder, comparar, analizar y descargar información sobre aranceles aduaneros, contingentes arancelarios, medidas de defensa comercial y medidas no arancelarias aplicables a productos específicos en cualquier mercado del mundo.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Acceso a Mercados</h4>
+                    <p>Información detallada sobre aranceles y requisitos de acceso a mercados.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Comparación de Mercados</h4>
+                    <p>Herramientas para comparar condiciones de acceso entre diferentes mercados.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Análisis de Acuerdos</h4>
+                    <p>Información sobre más de 400 acuerdos comerciales en vigor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>1. Funcionalidades por Rol de Usuario</h2>
+            
+            <div class="role-section">
+                <h4>Para EXPORTADORES e IMPORTADORES</h4>
+                <ul>
+                    <li>Encontrar información arancelaria y requisitos de acceso a mercados</li>
+                    <li>Comparar aranceles aduaneros en múltiples mercados</li>
+                    <li>Analizar ventajas arancelarias frente a competidores</li>
+                </ul>
+            </div>
+
+            <div class="role-section">
+                <h4>Para FORMULADORES DE POLÍTICAS</h4>
+                <ul>
+                    <li>Comparar aranceles y requisitos de acceso a mercados</li>
+                    <li>Identificar mercados para diversificación de exportaciones</li>
+                    <li>Generar informes y recomendaciones de política</li>
+                </ul>
+            </div>
+
+            <div class="role-section">
+                <h4>Para INVESTIGADORES</h4>
+                <ul>
+                    <li>Descargar datos masivos sobre aranceles aplicados</li>
+                    <li>Explorar bases de datos GTAP de protección arancelaria</li>
+                    <li>Analizar cronogramas de reducción arancelaria</li>
+                </ul>
+            </div>
+
+            <div class="role-section">
+                <h4>Para NEGOCIADORES COMERCIALES</h4>
+                <ul>
+                    <li>Acceder a aranceles históricos y actuales</li>
+                    <li>Analizar acuerdos comerciales y sus textos</li>
+                    <li>Identificar socios potenciales para nuevos acuerdos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>2. Búsqueda de Información</h2>
+            <div class="tutorial-step">
+                <h3>Búsqueda Básica</h3>
+                <p>Para realizar una búsqueda básica:</p>
+                <ol>
+                    <li>Selecciona el país exportador</li>
+                    <li>Selecciona el país de destino</li>
+                    <li>Ingresa el código HS6 o la línea arancelaria nacional</li>
+                    <li>Utiliza la búsqueda avanzada de productos si es necesario</li>
+                </ol>
+                <div class="tip">
+                    <strong>Tip:</strong> Utiliza el buscador de productos para encontrar códigos HS específicos.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>3. Análisis de Mercados</h2>
+            <div class="tutorial-step">
+                <h3>Comparación de Mercados</h3>
+                <p>Herramientas disponibles para comparar mercados:</p>
+                <ul>
+                    <li>Gráficos interactivos de aranceles</li>
+                    <li>Mapas de acceso a mercados</li>
+                    <li>Comparación de competidores</li>
+                    <li>Análisis de productos</li>
+                </ul>
+            </div>
+
+            <div class="tutorial-step">
+                <h3>Análisis de Acuerdos Comerciales</h3>
+                <p>Características del análisis de acuerdos:</p>
+                <ul>
+                    <li>Textos completos de acuerdos</li>
+                    <li>Cronogramas de implementación</li>
+                    <li>Partes involucradas</li>
+                    <li>Reducción de aranceles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>4. Descarga de Datos</h2>
+            <div class="tutorial-step">
+                <h3>Opciones de Descarga</h3>
+                <p>Puedes descargar datos en diferentes formatos:</p>
+                <ul>
+                    <li>Datos masivos de aranceles aplicados</li>
+                    <li>Bases de datos GTAP</li>
+                    <li>Informes personalizados en Excel</li>
+                    <li>Gráficos y tablas para informes</li>
+                </ul>
+                <div class="note">
+                    <strong>Nota:</strong> Algunas funcionalidades avanzadas pueden requerir una cuenta premium.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>5. Recursos Adicionales</h2>
+            <div class="tutorial-step">
+                <h3>Herramientas Complementarias</h3>
+                <p>MacMap ofrece recursos adicionales:</p>
+                <ul>
+                    <li>Glosario de términos comerciales</li>
+                    <li>Preguntas frecuentes (FAQ)</li>
+                    <li>Buscador de productos</li>
+                    <li>Iniciativas regionales</li>
+                    <li>Incoterms</li>
+                </ul>
+            </div>
+
+            <div class="tutorial-step">
+                <h3>Monitor de Medidas</h3>
+                <p>Nueva funcionalidad para monitorear:</p>
+                <ul>
+                    <li>Últimas medidas comerciales</li>
+                    <li>Tensiones geopolíticas</li>
+                    <li>Cambios en aranceles</li>
+                    <li>Actualizaciones regulatorias</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+</html> 
