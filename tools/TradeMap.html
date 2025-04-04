@@ -1,79 +1,308 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trade Map | Cómo usarlo - ComexToolbox</title>
-  <link rel="stylesheet" href=styles.css> 
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: #f9fafb;
-      padding: 2rem;
-      color: #111827;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    }
-    h1 {
-      color: #1e3a8a;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      color: #2563eb;
-      margin-top: 2rem;
-    }
-    a.boton {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      text-decoration: none;
-      margin-top: 2rem;
-    }
-    a.boton:hover {
-      background: #1e40af;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de TradeMap</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tutorial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .tutorial-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tutorial-section {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tutorial-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .tutorial-step {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #3498db;
+        }
+
+        .tutorial-step h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .tutorial-step p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+            border-left: 4px solid #2c3e50;
+        }
+
+        .note {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .tip {
+            background: #d4edda;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #28a745;
+        }
+
+        .warning {
+            background: #f8d7da;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #dc3545;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .feature-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #dee2e6;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Guía rápida para usar Trade Map</h1>
-    <p><strong>Trade Map</strong> es una herramienta desarrollada por el International Trade Centre (ITC) que permite acceder a estadísticas detalladas del comercio internacional entre países. Es ideal para analizar exportaciones, importaciones, mercados potenciales y competidores.</p>
+    <div class="tutorial-container">
+        <div class="tutorial-header">
+            <h1>Tutorial de TradeMap</h1>
+            <p>Guía completa para utilizar la plataforma de análisis de comercio internacional</p>
+        </div>
 
-    <h2>¿Para qué sirve?</h2>
-    <ul>
-      <li>Consultar datos por producto, país y año.</li>
-      <li>Analizar tendencias de exportación/importación.</li>
-      <li>Estudiar participación de mercado.</li>
-      <li>Comparar competidores por producto y destino.</li>
-    </ul>
+        <div class="tutorial-section">
+            <h2>Introducción</h2>
+            <p>TradeMap es una plataforma avanzada desarrollada por el Centro de Comercio Internacional (ITC) que proporciona datos detallados sobre comercio internacional, mercados y empresas. Este tutorial te guiará paso a paso en el uso de todas sus funcionalidades principales.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Datos Comerciales</h4>
+                    <p>Acceso a estadísticas de comercio internacional de más de 220 países y territorios.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Análisis de Mercado</h4>
+                    <p>Herramientas para identificar oportunidades de mercado y tendencias comerciales.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Perfiles de Países</h4>
+                    <p>Información detallada sobre el comercio exterior de cada país.</p>
+                </div>
+            </div>
+        </div>
 
-    <h2>Pasos para usar Trade Map</h2>
-    <ol>
-      <li>Ir al sitio oficial (botón abajo).</li>
-      <li>Seleccionar "Data by Product" o "Data by Country".</li>
-      <li>Elegir un código arancelario o nombre de producto.</li>
-      <li>Explorar las tablas y gráficos disponibles.</li>
-    </ol>
+        <div class="tutorial-section">
+            <h2>1. Configuración Inicial</h2>
+            <div class="tutorial-step">
+                <h3>Creación de Cuenta</h3>
+                <p>Para comenzar a usar TradeMap, necesitas crear una cuenta:</p>
+                <ol>
+                    <li>Visita la página de registro en www.trademap.org</li>
+                    <li>Completa el formulario con tus datos personales y profesionales</li>
+                    <li>Verifica tu correo electrónico</li>
+                    <li>Configura tu perfil de seguridad</li>
+                    <li>Selecciona tu plan de suscripción</li>
+                </ol>
+                <div class="note">
+                    <strong>Nota:</strong> TradeMap ofrece diferentes niveles de acceso, desde cuentas gratuitas hasta suscripciones premium con funcionalidades avanzadas.
+                </div>
+            </div>
+        </div>
 
-    <h2>Consejos útiles</h2>
-    <ul>
-      <li>Utiliza códigos HS a 6 dígitos para mayor precisión.</li>
-      <li>Exporta los datos en Excel para análisis posterior.</li>
-      <li>Revisa series históricas para ver tendencias.</li>
-    </ul>
+        <div class="tutorial-section">
+            <h2>2. Interfaz Principal</h2>
+            <div class="tutorial-step">
+                <h3>Panel de Control</h3>
+                <p>El panel de control es tu centro de operaciones. Aquí encontrarás:</p>
+                <ul>
+                    <li>Búsqueda de productos y mercados</li>
+                    <li>Estadísticas de comercio internacional</li>
+                    <li>Herramientas de análisis de mercado</li>
+                    <li>Perfiles de países y empresas</li>
+                    <li>Informes personalizados</li>
+                </ul>
+                <div class="tip">
+                    <strong>Tip:</strong> Utiliza los filtros avanzados para refinar tus búsquedas y obtener resultados más precisos.
+                </div>
+            </div>
+        </div>
 
-    <a class="boton" href="https://www.trademap.org/" target="_blank">Ir a Trade Map</a>
-  </div>
+        <div class="tutorial-section">
+            <h2>3. Análisis de Mercado</h2>
+            <div class="tutorial-step">
+                <h3>Búsqueda de Productos</h3>
+                <p>TradeMap permite buscar productos utilizando diferentes sistemas de clasificación:</p>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Sistema</th>
+                            <th>Descripción</th>
+                        </tr>
+                        <tr>
+                            <td>HS (Sistema Armonizado)</td>
+                            <td>Clasificación internacional de productos</td>
+                        </tr>
+                        <tr>
+                            <td>SITC</td>
+                            <td>Clasificación Uniforme para el Comercio Internacional</td>
+                        </tr>
+                        <tr>
+                            <td>BEC</td>
+                            <td>Clasificación por Finalidad Económica</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h3>Análisis de Tendencias</h3>
+                <p>Herramientas para analizar tendencias comerciales:</p>
+                <ul>
+                    <li>Gráficos de evolución temporal</li>
+                    <li>Comparación entre países</li>
+                    <li>Análisis de estacionalidad</li>
+                    <li>Proyecciones de mercado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>4. Perfiles de Países</h2>
+            <div class="tutorial-step">
+                <h3>Información Disponible</h3>
+                <p>Cada perfil de país incluye:</p>
+                <ul>
+                    <li>Estadísticas de importación/exportación</li>
+                    <li>Principales socios comerciales</li>
+                    <li>Productos más comercializados</li>
+                    <li>Barreras comerciales</li>
+                    <li>Acuerdos comerciales</li>
+                </ul>
+                <div class="warning">
+                    <strong>Importante:</strong> Los datos pueden tener un desfase de hasta 2 años debido al tiempo de procesamiento de las estadísticas oficiales.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>5. Herramientas Avanzadas</h2>
+            <div class="tutorial-step">
+                <h3>Generación de Informes</h3>
+                <p>TradeMap permite crear informes personalizados:</p>
+                <ol>
+                    <li>Selecciona el tipo de informe</li>
+                    <li>Define los parámetros de búsqueda</li>
+                    <li>Personaliza el formato de salida</li>
+                    <li>Exporta en diferentes formatos (PDF, Excel, etc.)</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h3>Alertas de Mercado</h3>
+                <p>Configura alertas para:</p>
+                <ul>
+                    <li>Cambios en patrones comerciales</li>
+                    <li>Nuevas oportunidades de mercado</li>
+                    <li>Actualizaciones de datos</li>
+                    <li>Cambios en aranceles y regulaciones</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>6. Consejos Prácticos</h2>
+            <div class="tutorial-step">
+                <h3>Optimización de Búsquedas</h3>
+                <p>Para obtener mejores resultados:</p>
+                <ul>
+                    <li>Utiliza códigos HS específicos</li>
+                    <li>Combina diferentes criterios de búsqueda</li>
+                    <li>Guarda tus búsquedas frecuentes</li>
+                    <li>Utiliza los filtros avanzados</li>
+                </ul>
+            </div>
+
+            <div class="tutorial-step">
+                <h3>Interpretación de Datos</h3>
+                <p>Consideraciones importantes:</p>
+                <ul>
+                    <li>Verifica la fuente de los datos</li>
+                    <li>Considera las limitaciones de los datos</li>
+                    <li>Analiza las tendencias a largo plazo</li>
+                    <li>Compara diferentes fuentes de información</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+</html> 
