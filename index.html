@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1YVJESR6W');
+</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,13 +63,16 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="logo">
-                <i data-lucide="globe-2"></i>
-                <h1>Hub de Comercio Exterior</h1>
-            </div>
-        </div>
-    </header>
+  <div class="header-content" style="flex-direction: column; text-align: center; gap: 0.5rem;">
+    <div class="logo" style="justify-content: center;">
+      <i data-lucide="globe-2"></i>
+      <h1 style="font-size: 1.75rem;">Hub de Comercio Exterior</h1>
+    </div>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 1rem; color: #4b5563;">
+      Encuentra en un solo lugar las mejores <strong>herramientas de comercio exterior</strong>: acceso a mercados, estadísticas de exportación, inteligencia de mercado y normativa internacional. Ideal para exportadores, importadores, consultores y estudiantes.
+    </p>
+  </div>
+</header>
     <main>
         <section class="search-section">
             <div class="search-container">
@@ -69,11 +81,11 @@
             </div>
             <div class="categories" id="categories">
                 <button class="category-btn active" data-category="all">Todos</button>
-                <button class="category-btn" data-category="Análisis de Mercados">Análisis de Mercados</button>
-                <button class="category-btn" data-category="Estadísticas y Datos">Estadísticas y Datos</button>
-                <button class="category-btn" data-category="Acceso a Mercados">Acceso a Mercados</button>
-                <button class="category-btn" data-category="Financiación y Riesgos">Financiación y Riesgos</button>
-                <button class="category-btn" data-category="Formación y Recursos">Formación y Recursos</button>
+                <button class="category-btn" data-category="Análisis de Mercados">🔎Análisis de Mercados</button>
+                <button class="category-btn" data-category="Estadísticas y Datos">📊Estadísticas y Datos</button>
+                <button class="category-btn" data-category="Acceso a Mercados">🌐Acceso a Mercados</button>
+                <button class="category-btn" data-category="Financiación y Riesgos">💱Financiación y Riesgos</button>
+                <button class="category-btn" data-category="Formación y Recursos">📚Formación y Recursos</button>
             </div>
         </section>
         <div class="resources-grid" id="resourcesGrid"></div>
