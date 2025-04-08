@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <a href="index.html">🇪🇸 Español</a>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1YVJESR6W');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio de herramientas y recursos para profesionales del comercio exterior">
+    <title>International Trade Hub</title>
+    <script src="lucide.min.js"></script>
+    <meta name="google-adsense-account" content="ca-pub-3325448390634704">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .resource-card {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-link {
+            text-decoration: none;
+            color: inherit;
+            flex-grow: 1;
+        }
+
+        .learn-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .learn-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .learn-btn i {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="header-content" style="flex-direction: column; text-align: center; gap: 0.5rem;">
+    <div class="logo" style="justify-content: center;">
+      <i data-lucide="globe-2"></i>
+      <h1 style="font-size: 1.75rem;">International Trade Hub</h1>
+    </div>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 1rem; color: #4b5563;">
+      Find in one place the best <strong>tools for foreign trade:</strong> market access, export statistics, market intelligence and international regulations. Ideal for exporters, importers, consultants and students.
+    </p>
+  </div>
+</header>
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar recursos...">
+            </div>
+            <div class="categories" id="categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="Análisis de Mercados">🔎Market Analysis</button>
+                <button class="category-btn" data-category="Estadísticas y Datos">📊Statistics & Data</button>
+                <button class="category-btn" data-category="Acceso a Mercados">🌐Market Access</button>
+                <button class="category-btn" data-category="Financiación y Riesgos">💱Financing & Risks</button>
+                <button class="category-btn" data-category="Formación y Recursos">📚Training & Resources</button>
+            </div>
+        </section>
+        <div class="resources-grid" id="resourcesGrid"></div>
+        
+        <!-- Sección de comentarios -->
+        <section class="comments-section">
+            <h2>Recommendations & Comments</h2>
+            <form class="comment-form" id="commentForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Your recommendation:</label>
+                    <textarea id="comment" required placeholder="Comparte tu sugerencia de herramientas, webs, formación o cualquier otro recurso útil..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send recommendation</button>
+            </form>
+            <div class="comments-list" id="commentsList">
+                <!-- Los comentarios se cargarán dinámicamente aquí -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="year"></span> Foreign Trade Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        window.lucide.createIcons();
+
+       const resources = [
+    {
+  id: 1,
+  title: "Export Potential Map",
+  description: "Tool to identify export opportunities and market diversification. It allows you to analyze potential trade data and make strategic decisions based on supply and demand.",
+  url: "https://exportpotential.intracen.org/",
+  category: "Market Analysis",
+  learnUrl: "tools/export-potential-map.html"
+},
+{
+  id: 2,
+  title: "The Atlas of Economic Complexity",
+  description: "Data visualization on international trade and economic development. Helps identify global economic patterns through interactive visualizations.",
+  url: "https://atlas.cid.harvard.edu/",
+  category: "Market Analysis",
+  learnUrl: "tools/the-atlas-of-economic-complexity.html"
+},
+{
+  id: 3,
+  title: "Trade Map",
+  description: "Trade statistics for international business development. Ideal for market research by product, country, and trade evolution.",
+  url: "https://www.trademap.org/",
+  category: "Statistics & Data",
+  learnUrl: "tools/TradeMap.html"
+},
+{
+  id: 4,
+  title: "Market Access Map",
+  description: "Information on tariffs and market access requirements. Useful for understanding trade conditions, preferential agreements, and technical barriers.",
+  url: "https://www.macmap.org/",
+  category: "Market Access",
+  learnUrl: "tools/market-access-map.html"
+},
+{
+  id: 5,
+  title: "Rules of Origin Facilitator",
+  description: "Guide to determine product origin and requirements. Helps interpret rules of origin and comply with regulations.",
+  url: "https://findrulesoforigin.org/",
+  category: "Market Access",
+  learnUrl: "tools/rules-of-origin-facilitator.html"
+},
+{
+  id: 6,
+  title: "Statista",
+  description: "Market statistics and commercial research portal. Offers key charts and statistics for sectoral analysis and benchmarking.",
+  url: "https://www.statista.com/",
+  category: "Statistics & Data",
+  learnUrl: "tools/statista.html"
+},
+{
+  id: 7,
+  title: "Tax Consultations – European Commission",
+  description: "Tax and tariff inquiry in the European Union. Essential to understand applicable tariffs and customs procedures in the EU.",
+  url: "https://ec.europa.eu/taxation_customs/",
+  category: "Market Access",
+  learnUrl: "tools/tax-consultations---european-commission.html"
+},
+{
+  id: 8,
+  title: "TARIC Consultation",
+  description: "Consultation of the EU's integrated tariff. Essential for knowing applicable tariffs and customs procedures in the EU.",
+  url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
+  category: "Market Access",
+  learnUrl: "tools/taric-consultation.html"
+},
+{
+  id: 9,
+  title: "CCE – Foreign Trade Database",
+  description: "Spanish foreign trade statistics. Key resource for analyzing exports and imports from Spain.",
+  url: "https://comercio.gob.es/",
+  category: "Statistics & Data",
+  learnUrl: "tools/cce---base-de-datos-de-comercio-exterior.html"
+},
+{
+  id: 10,
+  title: "ICEX Statistics",
+  description: "Foreign trade statistics from ICEX. Key resource for analyzing exports and imports from Spain.",
+  url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
+  category: "Statistics & Data",
+  learnUrl: "tools/estadisticas-icex.html"
+},
+{
+  id: 11,
+  title: "Countries and Regions – European Commission",
+  description: "Information on the EU's trade relations. Allows you to explore bilateral trade agreements and EU foreign policies.",
+  url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
+  category: "Market Analysis",
+  learnUrl: "tools/countries-and-regions---european-commission.html"
+},
+{
+  id: 12,
+  title: "EUR-Lex",
+  description: "EU trade regulations and legislation. Provides access to updated legal framework applicable to European foreign trade.",
+  url: "https://eur-lex.europa.eu/",
+  category: "Market Access",
+  learnUrl: "tools/eur-lex.html"
+},
+{
+  id: 13,
+  title: "Country Risk – Cesce Spain",
+  description: "Commercial risk analysis by country. Useful for assessing market solvency and financial conditions.",
+  url: "https://www.cesce.es/riesgo-pais",
+  category: "Financing & Risk",
+  learnUrl: "tools/riesgo-pais---cesce-espana.html"
+},
+{
+  id: 14,
+  title: "Access2Markets",
+  description: "EU portal for international trade information. Ideal for companies looking to export to the EU and understand applicable regulations.",
+  url: "https://trade.ec.europa.eu/access-to-markets/",
+  category: "Market Access",
+  learnUrl: "tools/access2markets.html"
+},
+{
+  id: 15,
+  title: "International Database",
+  description: "Access to global demographic data. Useful for commercial comparisons and global studies by flow and product.",
+  url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
+  category: "Statistics & Data",
+  learnUrl: "tools/international-database.html"
+},
+{
+  id: 16,
+  title: "Coface",
+  description: "Credit insurance services and country risk analysis. Useful for evaluating market solvency and financial conditions.",
+  url: "https://www.coface.es/",
+  category: "Financing & Risk",
+  learnUrl: "tools/coface.html"
+},
+{
+  id: 17,
+  title: "International Trade Administration",
+  description: "Resources and tools for international trade. Provides government tools to facilitate exports and market analysis.",
+  url: "https://www.trade.gov/",
+  category: "Training & Resources",
+  learnUrl: "tools/international-trade-administration.html"
+},
+{
+  id: 18,
+  title: "Market Finder",
+  description: "Tool to find international market opportunities. Uses market intelligence to detect potential regions based on your product type.",
+  url: "https://marketfinder.thinkwithgoogle.com/",
+  category: "Market Analysis",
+  learnUrl: "tools/market-finder.html"
+},
+{
+  id: 19,
+  title: "DataComex",
+  description: "Spanish foreign trade statistics. Key resource for analyzing exports and imports from Spain.",
+  url: "https://datacomex.comercio.es/",
+  category: "Statistics & Data",
+  learnUrl: "tools/datacomex.html"
+},
+{
+  id: 20,
+  title: "UN Comtrade",
+  description: "UN trade statistics database. Useful for commercial comparisons and global studies by flow and product.",
+  url: "https://comtrade.un.org/",
+  category: "Statistics & Data",
+  learnUrl: "tools/un-comtrade.html"
+},
+{
+  id: 21,
+  title: "International Payment Methods",
+  description: "Useful content on payment instruments for foreign trade. Ideal for teachers and professionals interested in learning about international financial tools.",
+  url: "https://www.mediosdepagointernacional.es/home",
+  category: "Financing & Risk",
+  learnUrl: "tools/medios-de-pago-internacional.html"
+},
+{
+  id: 22,
+  title: "Google Trend",
+  description: "Shows real-time trending topics. Helps detect changes in interest by country or region and anticipate trade trends.",
+  url: "https://trends.google.es/trends/",
+  category: "Market Analysis",
+  learnUrl: "tools/google-trend.html"
+},
+{
+  id: 23,
+  title: "Business Portal – Junta de Castilla y León",
+  description: "Access services, aid, regulations, and resources provided by the regional government of Castilla y León for local companies and entrepreneurs. Useful information for business creation, internationalization, digitalization, and growth.",
+  url: "https://empresas.jcyl.es/web/es/empresas-castilla-leon.html",
+  category: "Market Access",
+  learnUrl: "tools/Junta-Castilla-León.html"
+},
+{
+  id: 24,
+  title: "FAOLEX – Legal Profiles by Country",
+  description: "Access a global database of legislation, policies, and international agreements related to agriculture, natural resources, food, and the environment. Resource provided by FAO with updated country-level information.",
+  url: "https://www.fao.org/faolex/country-profiles/en/",
+  category: "Market Analysis",
+  learnUrl: "tools/FAOLEX-Database.html"
+},
+{
+  id: 25,
+  title: "Foreign Trade Services – Spanish Chamber of Commerce",
+  description: "Explore services and tools provided by the Spanish Chamber of Commerce to boost business internationalization. Information on trade missions, aid, training, consulting, and export support platforms.",
+  url: "https://www.camara.es/comercio-exterior",
+  category: "Market Access",
+  learnUrl: "tools/Cámara-Comercio.html"
+},
+{
+  id: 26,
+  title: "Eurostat – EU Statistics",
+  description: "Access official EU statistics on economy, trade, population, industry, and more. A key platform for comparative analysis across EU countries.",
+  url: "https://ec.europa.eu/eurostat/web/main/home",
+  category: "Statistics & Data",
+  learnUrl: "tools/Eurostat.html"
+}
+
+];
+
+        const searchInput = document.getElementById('searchInput');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const resourcesGrid = document.getElementById('resourcesGrid');
+        const yearSpan = document.getElementById('year');
+
+        yearSpan.textContent = new Date().getFullYear();
+
+        let currentCategory = 'all';
+        let searchTerm = '';
+
+        function filterResources() {
+            return resources.filter(resource => {
+                const matchesSearch = (
+                    resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    resource.description.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+                const matchesCategory = currentCategory === 'all' || resource.category === currentCategory;
+                return matchesSearch && matchesCategory;
+            });
+        }
+
+        function renderResources() {
+            const filteredResources = filterResources();
+            resourcesGrid.innerHTML = filteredResources.map(resource => `
+                <div class="resource-card">
+                    <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <div class="card-header">
+                            <h3 class="card-title">${resource.title}</h3>
+                            <i data-lucide="external-link"></i>
+                        </div>
+                        <p class="card-description">${resource.description}</p>
+                        <div class="card-footer">
+                            <span class="card-category">${getCategoryLabel(resource.category)}</span>
+                        </div>
+                    </a>
+                    <a href="${resource.learnUrl}" class="learn-btn" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="book-open"></i> Aprende a usar
+                    </a>
+                </div>
+            `).join('');
+            window.lucide.createIcons();
+        }
+
+        function getCategoryLabel(category) {
+            return category;
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderResources();
+        });
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentCategory = button.dataset.category;
+                renderResources();
+            });
+        });
+
+        renderResources();
+
+        // Funcionalidad de comentarios
+        const commentForm = document.getElementById('commentForm');
+        const commentsList = document.getElementById('commentsList');
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+        function saveComments() {
+            localStorage.setItem('comments', JSON.stringify(comments));
+        }
+
+        function renderComments() {
+            commentsList.innerHTML = comments.map(comment => `
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">${comment.name}</span>
+                        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
+                    </div>
+                    <div class="comment-content">${comment.content}</div>
+                </div>
+            `).join('');
+        }
+
+        commentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const content = document.getElementById('comment').value;
+            
+            const newComment = {
+                name,
+                content,
+                date: new Date().toISOString()
+            };
+
+            comments.unshift(newComment);
+            saveComments();
+            renderComments();
+            
+            // Limpiar el formulario
+            commentForm.reset();
+        });
+
+        // Cargar comentarios al inicio
+        renderComments();
+    </script>
+</body>
+</html>
