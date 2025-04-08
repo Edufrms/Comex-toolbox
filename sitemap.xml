@@ -6,6 +6,12 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+<url>
+    <loc>https://comextoolbox.com/index-en.html</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://comextoolbox.com/tools/export-potential-map.html</loc>
     <lastmod>2025-04-04</lastmod>
