@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeMap Tutorial</title>
+    <link rel="stylesheet" href="stylestools.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J1YVJESR6W');
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Foreign Trade Hub</h1>
+            <a href="../index-en.html">🌐Back to the Hub🌐</a>
+        </nav>
+    </header>
+    <div class="tutorial-container">
+        <div class="tutorial-header">
+            <h1>TradeMap Tutorial</h1>
+            <p>A complete guide to using the international trade analysis platform</p>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>1. What is TradeMap?</h2>
+            <div class="tutorial-step">
+                <p>TradeMap is an advanced platform developed by the International Trade Centre (ITC) that provides detailed data on international trade, markets, and companies. It is an essential tool for:</p>
+                <ul>
+                    <li>International market analysis</li>
+                    <li>Identifying trade opportunities</li>
+                    <li>Competitor evaluation</li>
+                    <li>Trade trend analysis</li>
+                </ul>
+                <div class="note">
+                    <strong>Note:</strong> TradeMap is used by companies, governments, and international organizations to make strategic decisions in foreign trade.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>2. How to register and access</h2>
+            <div class="tutorial-step">
+                <h3>Registration Process</h3>
+                <ol>
+                    <li>Go to www.trademap.org</li>
+                    <li>Click on "Register"</li>
+                    <li>Fill out the form with your information</li>
+                    <li>Verify your email</li>
+                    <li>Set up your user profile</li>
+                </ol>
+                <div class="tip">
+                    <strong>Tip:</strong> Keep your professional information handy, as it will be required to complete the registration.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>3. Initial interface: selection menu</h2>
+            <div class="tutorial-step">
+                <h3>Main Navigation</h3>
+                <p>The TradeMap interface is organized into main sections:</p>
+                <ul>
+                    <li>Country and region selection</li>
+                    <li>Product search</li>
+                    <li>Time period configuration</li>
+                    <li>Advanced filters</li>
+                </ul>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Element</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Origin country</td>
+                            <td>Select the exporting country</td>
+                        </tr>
+                        <tr>
+                            <td>Destination country</td>
+                            <td>Select the target market</td>
+                        </tr>
+                        <tr>
+                            <td>Period</td>
+                            <td>Define the range of years to analyze</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>4. Product analysis</h2>
+            <div class="tutorial-step">
+                <h3>Market Identification</h3>
+                <p>To analyze potential markets:</p>
+                <ol>
+                    <li>Select the product of interest</li>
+                    <li>Analyze the top importers</li>
+                    <li>Evaluate competition</li>
+                    <li>Examine import trends</li>
+                </ol>
+                <div class="warning">
+                    <strong>Important:</strong> Always consider market context and existing trade barriers.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>5. Country analysis</h2>
+            <div class="tutorial-step">
+                <h3>Export Portfolio</h3>
+                <p>To analyze a country’s export profile:</p>
+                <ul>
+                    <li>Top exported products</li>
+                    <li>Main destination markets</li>
+                    <li>Growth trends</li>
+                    <li>Sector competitiveness</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>6. Bilateral analysis</h2>
+            <div class="tutorial-step">
+                <h3>Trade Opportunities</h3>
+                <p>To analyze trade relationships between two countries:</p>
+                <ol>
+                    <li>Select the countries to compare</li>
+                    <li>Analyze trade flows</li>
+                    <li>Identify products with potential</li>
+                    <li>Evaluate trade barriers</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>7. Trade in services</h2>
+            <div class="tutorial-step">
+                <h3>Services Analysis</h3>
+                <p>Key considerations:</p>
+                <ul>
+                    <li>Data available by service category</li>
+                    <li>Limitations in data coverage</li>
+                    <li>Methodological differences between countries</li>
+                    <li>Less frequent updates than goods</li>
+                </ul>
+                <div class="note">
+                    <strong>Note:</strong> Service data tends to have a greater time lag than goods data.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>8. Tips and real examples</h2>
+            <div class="tutorial-step">
+                <h3>Case Studies</h3>
+                <p>Example: Export analysis of watermelons from Costa Rica</p>
+                <ul>
+                    <li>Identifying potential markets</li>
+                    <li>Competitor analysis</li>
+                    <li>Trade barrier evaluation</li>
+                    <li>Strategic recommendations</li>
+                </ul>
+                <div class="tip">
+                    <strong>Tip:</strong> Use charts and visualizations to present your findings effectively.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Other useful resources</h2>
+        <div>
+            <a href="/tools/TradeMap.html">📊 TradeMap</a>
+            <a href="/tools/export-potential-map.html">🌍 Export Potential Map</a>
+            <a href="/tools/the-atlas-of-economic-complexity.html">🧠 Economic Atlas</a>
+            <a href="/tools/market-finder.html">🔎 Market Finder</a>
+            <a href="/tools/google-trend.html">📈 Google Trends</a>
+            <a href="/tools/countries-and-regions---european-commission.html">🌐 EU Regions</a>
+            <a href="/tools/FAOLEX-Database.html">📚 FAOLEX</a>
+            <a href="/tools/statista.html">📊 Statista</a>
+            <a href="/tools/cce---base-de-datos-de-comercio-exterior.html">🇪🇸 CCE</a>
+            <a href="/tools/estadisticas-icex.html">📉 ICEX Statistics</a>
+            <a href="/tools/international-database.html">🌍 Int. Database</a>
+            <a href="/tools/datacomex.html">📦 DataComex</a>
+            <a href="/tools/un-comtrade.html">🌐 UN Comtrade</a>
+            <a href="/tools/market-access-map.html">🛃 Market Access Map</a>
+            <a href="/tools/tax-consultations---european-commission.html">📑 Tax Consultations</a>
+            <a href="/tools/taric-consultation.html">💼 TARIC EU</a>
+            <a href="/tools/eur-lex.html">⚖️ EUR-Lex</a>
+            <a href="/tools/rules-of-origin-facilitator.html">📘 Rules of Origin</a>
+            <a href="/tools/access2markets.html">🌐 Access2Markets</a>
+            <a href="/tools/Junta-Castilla-León.html">🏛 Junta of Castilla y León</a>
+            <a href="/tools/Cámara-Comercio.html">🏢 Spanish Chamber of Commerce</a>
+            <a href="/tools/riesgo-pais---cesce-espana.html">📉 Country Risk</a>
+            <a href="/tools/coface.html">💳 Coface</a>
+            <a href="/tools/medios-de-pago-internacional.html">💱 Payment Methods</a>
+            <a href="/tools/international-trade-administration.html">🧭 ITA (USA)</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Foreign Trade Hub. All rights reserved.</p>
+        <a href="../index-en.html">🌐Back to the Hub🌐</a>
+    </footer>
+</body>
+</html>
