@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("Script de comentarios cargado ✅");
+
   const firebaseConfig = {
     apiKey: "AIzaSyAuVJynIyGExA2rMjOTUt8JuRxmxnYoRCM",
     authDomain: "comextoolbox.firebaseapp.com",
@@ -13,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let rawPath = location.pathname;
   const normalizedPageId = ["/", "/index.html", "/index-en.html"].includes(rawPath) ? "home" : rawPath;
+  console.log("Mostrando comentarios para:", normalizedPageId);
+
 
   const form = document.getElementById("commentForm");
   const commentsList = document.getElementById("commentsList");
