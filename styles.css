@@ -241,6 +241,12 @@ footer {
 .comment-form {
     margin-bottom: 2rem;
 }
+.comment {
+  background: #f5f5f5;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
 
 .form-group {
     margin-bottom: 1rem;
