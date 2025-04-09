@@ -415,48 +415,7 @@
 
         renderResources();
 
-        // Funcionalidad de comentarios
-        const commentForm = document.getElementById('commentForm');
-        const commentsList = document.getElementById('commentsList');
-        let comments = JSON.parse(localStorage.getItem('comments')) || [];
-
-        function saveComments() {
-            localStorage.setItem('comments', JSON.stringify(comments));
-        }
-
-        function renderComments() {
-            commentsList.innerHTML = comments.map(comment => `
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">${comment.name}</span>
-                        <span class="comment-date">${new Date(comment.date).toLocaleDateString('es-ES')}</span>
-                    </div>
-                    <div class="comment-content">${comment.content}</div>
-                </div>
-            `).join('');
-        }
-
-        commentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const content = document.getElementById('comment').value;
-            
-            const newComment = {
-                name,
-                content,
-                date: new Date().toISOString()
-            };
-
-            comments.unshift(newComment);
-            saveComments();
-            renderComments();
-            
-            // Limpiar el formulario
-            commentForm.reset();
-        });
-
-        // Cargar comentarios al inicio
-        renderComments();
+        
     </script>
         <!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
