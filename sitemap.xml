@@ -144,4 +144,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://comextoolbox.com/tools/FAOLEX-Database.html</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://comextoolbox.com/tools/Cámara-Comercio.html</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://comextoolbox.com/tools/Junta-Castilla-León.html</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://comextoolbox.com/tools/eurostat.html</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://comextoolbox.com/tools/load-calculator.html</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://comextoolbox.com/tools/icontainers.html</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
