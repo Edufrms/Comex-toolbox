@@ -12,7 +12,8 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // Detecta la página actual para guardar los comentarios por URL
-const pageId = location.pathname;
+let rawPath = location.pathname;
+const normalizedPageId = ["/", "/index.html", "/index-en.html"].includes(rawPath) ? "home" : rawPath;
 const form = document.getElementById("commentForm");
 const commentsList = document.getElementById("commentsList");
 
