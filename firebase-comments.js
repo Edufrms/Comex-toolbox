@@ -14,6 +14,7 @@ const db = firebase.firestore();
 // Detecta la página actual para guardar los comentarios por URL
 let rawPath = location.pathname;
 const normalizedPageId = ["/", "/index.html", "/index-en.html"].includes(rawPath) ? "home" : rawPath;
+
 const form = document.getElementById("commentForm");
 const commentsList = document.getElementById("commentsList");
 
@@ -25,7 +26,7 @@ if (form && commentsList) {
     if (!name || !comment) return;
 
     await db.collection("comments").add({
-      page: pageId,
+      page: normalizedPageId,
       name: name,
       comment: comment,
       timestamp: Date.now()
@@ -35,7 +36,7 @@ if (form && commentsList) {
   });
 
   db.collection("comments")
-    .where("page", "==", pageId)
+    .where("page", "==", normalizedPageId)
     .orderBy("timestamp", "desc")
     .onSnapshot((snapshot) => {
       commentsList.innerHTML = "";
