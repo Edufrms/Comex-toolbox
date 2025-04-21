@@ -118,9 +118,21 @@
 </section>
 
     </main>
-    <footer>
-        <p>© <span id="year"></span> Hub de Comercio Exterior. Todos los derechos reservados.</p>
-            <a href="privacidad.html">Política de Privacidad</a>
+   <footer style="background-color:#f8f8f8; padding: 20px; text-align: center; font-size: 14px; border-top: 1px solid #ddd;">
+        <p>© <span id="year"></span> ComexToolbox · Hub de Comercio Exterior. Todos los derechos reservados.</p>
+        
+        <div style="margin-top: 10px;">
+            <a href="/privacidad.html" style="margin: 0 10px;">Política de Privacidad</a>
+            <a href="/aviso-legal.html" style="margin: 0 10px;">Aviso Legal</a>
+            <a href="/https://www.linkedin.com/in/eduardofernandezramos/.html" style="margin: 0 10px;">Contacto</a>
+            <a href="/sobre-nosotros.html" style="margin: 0 10px;">Sobre nosotros</a>
+            <a href="/sitemap.xml" style="margin: 0 10px;">Mapa del sitio</a>
+        </div>
+        
+        <script>
+            // Inserta automáticamente el año actual
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
     </footer>
     <script>
         window.lucide.createIcons();
