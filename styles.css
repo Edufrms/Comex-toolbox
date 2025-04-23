@@ -88,12 +88,12 @@
         display: flex;
     }
     /* Añade esto a tu CSS */
-html {
+.html {
     scroll-behavior: smooth;
 }
 
 /* Ajuste para compensar la barra de navegación fija */
-section {
+.section {
     scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
 }
 
@@ -296,7 +296,7 @@ main {
     height: 1rem;
 }
 
-footer {
+.footer {
     background: white;
     border-top: 1px solid var(--gray-200);
     padding: 2rem 1rem;
