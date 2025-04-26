@@ -348,4 +348,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Página de Iberglobal -->
+  <url>
+    <loc>https://comextoolbox.com/tools/iberglobal.html</loc>
+    <lastmod>2025-04-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Página de Iberglobal (Inglés) -->
+  <url>
+    <loc>https://comextoolbox.com/tools/iberglobal-en.html</loc>
+    <lastmod>2025-04-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Página de Club de Exportadores -->
+  <url>
+    <loc>https://comextoolbox.com/tools/club.html</loc>
+    <lastmod>2025-04-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Página de Club de Exportadores (Inglés) -->
+  <url>
+    <loc>https://comextoolbox.com/tools/club-en.html</loc>
+    <lastmod>2025-04-26</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
