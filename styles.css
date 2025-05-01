@@ -30,9 +30,10 @@
 
 .video-container {
   position: relative;
-  width: 90%;
-  max-width: 100px;
-  padding-bottom: 56.25%; /* 16:9 */
+  width: 100%;
+  max-width: 700px;  /* cambia este valor para ajustar el tamaño */
+  margin: 30px auto; /* centra horizontalmente y añade espacio */
+  padding-bottom: 39.375%; /* altura para 16:9 proporcional a 700px de ancho */
   height: 0;
 }
 
@@ -43,6 +44,7 @@
   width: 100%;
   height: 100%;
 }
+
 
 
 .header-container {
