@@ -17,12 +17,13 @@
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 480px; /* Tamaño mediano */
     margin: 0 auto;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
+
 
 .video-container iframe {
     position: absolute;
@@ -38,8 +39,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 500px; /* Ajustado proporcionalmente */
+    margin: 0 auto;
     padding: 0;
-    margin: 0;
 }
 
 
