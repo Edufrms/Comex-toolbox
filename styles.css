@@ -52,18 +52,21 @@
   padding: 1rem;
 }
 
-.linkedin-icon {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  object-fit: contain;
-  transition: transform 0.2s ease;
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.linkedin-icon:hover {
-  transform: scale(1.1);
+.nav-item .linkedin-nav-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
 }
 
+.nav-item .linkedin-nav-icon:hover {
+    transform: scale(1.1);
+}
 
 
 body {
