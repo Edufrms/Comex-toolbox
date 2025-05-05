@@ -4,7 +4,7 @@ const noticias = [
         titulo: "¿Cómo afecta el conflicto entre India y Pakistán al comercio internacional?",
         resumen: "Análisis del impacto comercial y geopolítico del reciente conflicto entre India y Pakistán, con datos, contexto histórico y gráficas.",
         fecha: "2024-05-03",
-        imagen: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=80", // Puedes cambiar la URL por otra imagen relevante
+        imagen: "blog/imagen/portada_blog_india_pakistan.webp", // Puedes cambiar la URL por otra imagen relevante
         enlace: "articulo-india-pakistan.html"
       }
   ];
