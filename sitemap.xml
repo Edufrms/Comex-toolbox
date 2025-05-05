@@ -380,6 +380,22 @@
     <lastmod>2025-04-26</lastmod>
     <priority>0.80</priority>
   </url>
+  <!-- Página principal del blog -->
+  <url>
+    <loc>https://comextoolbox.com/blog/index.html</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artículo específico -->
+  <url>
+    <loc>https://comextoolbox.com/blog/imagen/articulo-india-pakistan.html</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
    <url>
     <loc>https://comextoolbox.com/tools/Globaltrade-en.html</loc>
     <lastmod>2025-04-26</lastmod>
