@@ -11,7 +11,7 @@ const noticias = [
         titulo: "Plan de Internazionalización-Parte 1",
         resumen: "Conceptos básico en el proceso de internacionalización.",
         fecha: "2025-05-30",
-        imagen: "/img/Qué-es-ComexToolbox.webp", // Puedes cambiar la URL por otra imagen relevante
+        imagen: "Comex-toolbox/img/Qué-es-ComexToolbox.webp", // Puedes cambiar la URL por otra imagen relevante
         enlace: "blog/Plan de Internacionalización-1.html"
       }
   ];
