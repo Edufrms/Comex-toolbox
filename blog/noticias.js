@@ -3,9 +3,16 @@ const noticias = [
     {
         titulo: "¿Cómo afecta el conflicto entre India y Pakistán al comercio internacional?",
         resumen: "Análisis del impacto comercial y geopolítico del reciente conflicto entre India y Pakistán, con datos, contexto histórico y gráficas.",
-        fecha: "2024-05-03",
+        fecha: "2025-05-03",
         imagen: "imagen/portada_blog_india_pakistan.webp", // Puedes cambiar la URL por otra imagen relevante
         enlace: "articulo-india-pakistan.html"
+      },
+    {
+        titulo: "Plan de Internazionalización-Parte 1",
+        resumen: "Conceptos básico en el proceso de internacionalización.",
+        fecha: "2025-05-30",
+        imagen: "img/Qué-es-ComexToolbox.webp", // Puedes cambiar la URL por otra imagen relevante
+        enlace: "blog/Plan de Internacionalización-1.html"
       }
   ];
 
