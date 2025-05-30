@@ -12,7 +12,7 @@ const noticias = [
         resumen: "Conceptos básico en el proceso de internacionalización.",
         fecha: "2025-05-30",
         imagen: "../img/Qué-es-ComexToolbox.webp", // Puedes cambiar la URL por otra imagen relevante
-        enlace: "Plan de Internacionalización-1.html"
+        enlace: "Plan_de_Internacionalización_1.html"
       }
   ];
 
