@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    env_file: .env
+    volumes:
+      - ./backend:/app
+    expose:
+      - "8000"
+    restart: unless-stopped
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    expose:
+      - "3000"
+    restart: unless-stopped
+  nginx:
+    image: nginx:1.25-alpine
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    restart: unless-stopped
