@@ -1,8 +1,0 @@
-fastapi==0.112.0
-uvicorn[standard]==0.30.6
-pdfplumber==0.11.0
-PyPDF2==3.0.1
-pandas==2.2.2
-xlsxwriter==3.2.0
-python-multipart==0.0.9
-phonenumberslite==8.13.43
