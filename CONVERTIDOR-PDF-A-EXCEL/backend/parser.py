@@ -2,6 +2,7 @@ import io, re
 from typing import List, Dict
 import pandas as pd
 
+# --- Expresiones regulares para buscar datos de contacto ---
 PHONE_RE = re.compile(r'(?:\+\d{1,3}\s?)?(?:\d[\s\-]?){6,}')
 EMAIL_RE = re.compile(r'[\w.\-\+]+@[\w\.-]+\.[A-Za-z]{2,}')
 URL_RE   = re.compile(r'https?://[^\s,;]+')
@@ -10,6 +11,20 @@ HEADER_PREFIXES = (
     "Name Phone Email Website", "Name Phone Email"
 )
 
+# --- Nueva función para separar nombre y dirección ---
+def separar_nombre_direccion(texto: str):
+    """
+    Detecta direcciones (número + código postal o patrón tipo '75001 Paris', '5401 DH Uden', etc.)
+    y las separa del nombre de la empresa.
+    """
+    patron = re.search(r'\d{3,5}\s?[A-Z]{0,3}\s?[A-Z]{0,2}\s?[A-Za-z].*', texto)
+    if patron:
+        pos = patron.start()
+        nombre = texto[:pos].strip(" ,.-")
+        direccion = texto[pos:].strip()
+        return nombre, direccion
+    return texto.strip(), ""
+
 def merge_unique(items: List[str]) -> str:
     parts, seen = [], set()
     for item in items:
@@ -17,7 +32,8 @@ def merge_unique(items: List[str]) -> str:
             continue
         for p in [x.strip().strip(',') for x in item.split(',')]:
             if p and p not in seen:
-                parts.append(p); seen.add(p)
+                parts.append(p)
+                seen.add(p)
     return ", ".join(parts)
 
 def read_pdf_text(file_bytes: bytes) -> str:
@@ -51,6 +67,7 @@ def parse_text_to_rows(raw_text: str) -> pd.DataFrame:
         email_str = ", ".join(dict.fromkeys(emails)) if emails else ""
         url_str   = ", ".join(dict.fromkeys(urls)) if urls else ""
 
+        # Limpia el texto eliminando datos conocidos
         name_candidate = ln
         if phone:
             name_candidate = name_candidate.replace(phone, " ")
@@ -60,21 +77,25 @@ def parse_text_to_rows(raw_text: str) -> pd.DataFrame:
             name_candidate = name_candidate.replace(u, " ")
 
         name_candidate = re.sub(r'\s{2,}', ' ', name_candidate).strip(" |-,:;")
-        # Quita postcode NL si quedó pegado al nombre
-        name_candidate = re.sub(r'\b\d{4}\s?[A-Z]{2}\b.*$', '', name_candidate).strip(" |-,:; ")
         name = name_candidate or "Contacto sin nombre"
 
+        # 👇 Nueva separación automática
+        nombre, direccion = separar_nombre_direccion(name)
+
         rows.append({
-            "Nombre": name.strip(),
+            "Nombre": nombre,
+            "Direccion": direccion,
             "Telefono": phone,
             "Correos": email_str,
             "Web": url_str
         })
 
     df = pd.DataFrame(rows)
-    grouped = df.groupby("Nombre", as_index=False).agg({
+
+    grouped = df.groupby(["Nombre", "Direccion"], as_index=False).agg({
         "Telefono": merge_unique,
         "Correos": merge_unique,
         "Web": merge_unique
     })
-    return grouped[["Nombre", "Telefono", "Correos", "Web"]]
+
+    return grouped[["Nombre", "Direccion", "Telefono", "Correos", "Web"]]
