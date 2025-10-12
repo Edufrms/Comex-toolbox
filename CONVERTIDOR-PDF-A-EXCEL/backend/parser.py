@@ -17,11 +17,13 @@ def merge_unique(items: List[str]) -> str:
     for item in items:
         if not isinstance(item, str) or not item.strip():
             continue
-        for p in [x.strip().strip(',') for x in item.split(',')]:
+        # Separar por coma o punto y coma al agrupar
+        for p in re.split(r'[;,]\s*', item):
             if p and p not in seen:
-                parts.append(p)
-                seen.add(p)
-    return ", ".join(parts)
+                parts.append(p.strip())
+                seen.add(p.strip())
+    return "; ".join(parts)
+
 
 def read_pdf_text(file_bytes: bytes) -> str:
     """Extrae texto de un PDF usando pdfplumber o PyPDF2"""
@@ -100,3 +102,4 @@ def parse_text_to_rows(raw_text: str) -> pd.DataFrame:
     })
 
     return grouped[["Nombre", "Telefono", "Correos", "Web", "Direccion"]]
+
