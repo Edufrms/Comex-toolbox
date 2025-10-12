@@ -86,11 +86,12 @@ def parse_text_to_rows(raw_text: str) -> pd.DataFrame:
             "Web": url_str
         })
 
-    df = pd.DataFrame(rows)
-    grouped = df.groupby("Nombre", as_index=False).agg({
-        "Direccion": merge_unique,
-        "Telefono": merge_unique,
-        "Correos": merge_unique,
-        "Web": merge_unique
-    })
-    return grouped[["Nombre", "Direccion", "Telefono", "Correos", "Web"]]
+   df = pd.DataFrame(rows)
+
+# Evitamos agrupar por nombre, porque puede haber direcciones distintas
+# En su lugar, eliminamos duplicados exactos
+df = df.drop_duplicates(subset=["Nombre", "Direccion", "Telefono", "Correos", "Web"], keep="first")
+
+return df[["Nombre", "Direccion", "Telefono", "Correos", "Web"]]
+
+
