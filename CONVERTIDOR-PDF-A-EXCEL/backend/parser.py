@@ -24,7 +24,6 @@ def merge_unique(items: List[str]) -> str:
                 seen.add(p.strip())
     return "; ".join(parts)
 
-
 def read_pdf_text(file_bytes: bytes) -> str:
     """Extrae texto de un PDF usando pdfplumber o PyPDF2"""
     pages = []
@@ -62,19 +61,22 @@ def parse_text_to_rows(raw_text: str) -> pd.DataFrame:
 
         # Extrae campos clave
         phone_match = PHONE_RE.search(ln)
-        email_match = EMAIL_RE.search(ln)
+        emails = EMAIL_RE.findall(ln)
         url_match = URL_RE.search(ln)
 
         phone = phone_match.group(0).strip() if phone_match else ""
-        email = email_match.group(0).strip() if email_match else ""
+        email = "; ".join(e.strip() for e in emails)
         web = url_match.group(0).strip() if url_match else ""
 
         # Determinar índices de separación según los datos encontrados
         first_phone = phone_match.start() if phone_match else len(ln)
         last_piece = 0
-        for match in [phone_match, email_match, url_match]:
+        # Considerar todos los emails para calcular el final del último correo encontrado
+        for match in [phone_match, url_match]:
             if match:
                 last_piece = max(last_piece, match.end())
+        for m in EMAIL_RE.finditer(ln):
+            last_piece = max(last_piece, m.end())
 
         # Nombre: desde inicio hasta el primer teléfono (o primer campo encontrado)
         nombre = ln[:first_phone].strip(" ,.-")
