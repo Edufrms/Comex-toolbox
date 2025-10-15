@@ -2,27 +2,29 @@ import io, re
 from typing import List, Dict
 import pandas as pd
 
+# --- Expresiones regulares ---
 PHONE_RE = re.compile(r'(?:\+\d{1,3}\s?)?(?:\d[\s\-]?){6,}')
 EMAIL_RE = re.compile(r'[\w.\-\+]+@[\w\.-]+\.[A-Za-z]{2,}')
-URL_RE = re.compile(r'https?://[^\s,;]+')
+URL_RE   = re.compile(r'https?://[^\s,;]+')
 HEADER_PREFIXES = (
     "Email List Page", "Download CSV", "Download XLSX", "Current Plan:",
     "Name Phone Email Website", "Name Phone Email"
 )
 
+# --- Funciones auxiliares ---
 def merge_unique(items: List[str]) -> str:
-    """Une valores únicos con punto y coma."""
     parts, seen = [], set()
     for item in items:
         if not isinstance(item, str) or not item.strip():
             continue
-        for p in [x.strip() for x in re.split(r'[,;]', item) if x.strip()]:
-            if p not in seen:
-                seen.add(p)
+        for p in [x.strip().strip(',') for x in item.split(',')]:
+            if p and p not in seen:
                 parts.append(p)
-    return "; ".join(parts)
+                seen.add(p)
+    return ", ".join(parts)
 
 def read_pdf_text(file_bytes: bytes) -> str:
+    """Extrae texto de un PDF usando pdfplumber o PyPDF2"""
     pages = []
     try:
         import pdfplumber
@@ -40,58 +42,61 @@ def read_pdf_text(file_bytes: bytes) -> str:
             return ""
     return "\n".join(pages)
 
+# --- Función principal ---
 def parse_text_to_rows(raw_text: str) -> pd.DataFrame:
+    """
+    Convierte el texto plano extraído del PDF en una tabla estructurada
+    respetando el orden Name | Phone | Email | Website | Address
+    """
     lines = [re.sub(r'\s+', ' ', ln).strip() for ln in raw_text.splitlines()]
-    lines = [ln for ln in lines if ln and not ln.startswith(HEADER_PREFIXES)]
+    lines = [ln for ln in lines if ln and not any(ln.startswith(h) for h in HEADER_PREFIXES)]
 
     rows: List[Dict[str, str]] = []
+
     for ln in lines:
-        # Extraer correos, webs y teléfono
-        emails = EMAIL_RE.findall(ln)
-        urls = URL_RE.findall(ln)
+        # Ignora líneas que no contienen ningún dato relevante
+        if not re.search(r'\d', ln) and '@' not in ln and 'http' not in ln:
+            continue
+
+        # Extrae campos clave
         phone_match = PHONE_RE.search(ln)
+        email_match = EMAIL_RE.search(ln)
+        url_match = URL_RE.search(ln)
+
         phone = phone_match.group(0).strip() if phone_match else ""
+        email = email_match.group(0).strip() if email_match else ""
+        web = url_match.group(0).strip() if url_match else ""
 
-        email_str = "; ".join(dict.fromkeys(emails)) if emails else ""
-        url_str = "; ".join(dict.fromkeys(urls)) if urls else ""
+        # Determinar índices de separación según los datos encontrados
+        first_phone = phone_match.start() if phone_match else len(ln)
+        last_piece = 0
+        for match in [phone_match, email_match, url_match]:
+            if match:
+                last_piece = max(last_piece, match.end())
 
-        # Quitar correos, webs y teléfono del texto para aislar nombre + dirección
-        clean_line = ln
-        if phone:
-            clean_line = clean_line.replace(phone, " ")
-        for e in emails:
-            clean_line = clean_line.replace(e, " ")
-        for u in urls:
-            clean_line = clean_line.replace(u, " ")
+        # Nombre: desde inicio hasta el primer teléfono (o primer campo encontrado)
+        nombre = ln[:first_phone].strip(" ,.-")
 
-        clean_line = re.sub(r'\s{2,}', ' ', clean_line).strip(" ,-:;")
-
-        # Separar nombre y dirección:
-        # Supongamos que el nombre va primero, seguido de una coma o número (dirección)
-        match = re.match(r"^([A-Za-z0-9&'\"().\-\s]+?)(?:,|\s\d|\s[A-Z]\d|\s[A-Z]{2,})?(.*)$", clean_line)
-        if match:
-            name = match.group(1).strip(" ,-:;")
-            address = match.group(2).strip(" ,-:;")
-        else:
-            name, address = clean_line, ""
-
-        # Quita restos de códigos postales del nombre si quedaron pegados
-        name = re.sub(r'\b\d{4}\s?[A-Z]{2}\b', '', name).strip(" ,-:;")
+        # Dirección: desde el último campo encontrado hasta el final
+        direccion = ln[last_piece:].strip(" ,.-")
 
         rows.append({
-            "Nombre": name or "Contacto sin nombre",
-            "Direccion": address,
+            "Nombre": nombre,
             "Telefono": phone,
-            "Correos": email_str,
-            "Web": url_str
+            "Correos": email,
+            "Web": web,
+            "Direccion": direccion
         })
 
-   df = pd.DataFrame(rows)
+    # Crear DataFrame y agrupar duplicados
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return pd.DataFrame(columns=["Nombre", "Telefono", "Correos", "Web", "Direccion"])
 
-# Evitamos agrupar por nombre, porque puede haber direcciones distintas
-# En su lugar, eliminamos duplicados exactos
-df = df.drop_duplicates(subset=["Nombre", "Direccion", "Telefono", "Correos", "Web"], keep="first")
+    grouped = df.groupby(["Nombre", "Direccion"], as_index=False).agg({
+        "Telefono": merge_unique,
+        "Correos": merge_unique,
+        "Web": merge_unique
+    })
 
-return df[["Nombre", "Direccion", "Telefono", "Correos", "Web"]]
-
-
+    return grouped[["Nombre", "Telefono", "Correos", "Web", "Direccion"]]
