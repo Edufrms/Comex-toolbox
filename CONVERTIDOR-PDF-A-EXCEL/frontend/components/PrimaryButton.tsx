@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -5,6 +6,10 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
 };
 
+/**
+ * Botón primario con microinteracciones (framer-motion).
+ * Archivo: frontend/components/PrimaryButton.tsx
+ */
 export default function PrimaryButton({ children, className = "", ...rest }: Props) {
   return (
     <motion.button
