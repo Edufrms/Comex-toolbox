@@ -20,23 +20,71 @@ export default function Page() {
   const onUpload = async () => {
     try {
       setBusy(true); setError(null); setSuccess(false);
+
+      if (files.length === 0) {
+        setError("Selecciona al menos un archivo PDF.");
+        return;
+      }
+
       const form = new FormData();
       files.forEach(f => form.append("files", f));
-      const res = await fetch("/api/convert?keep_empty=true", { method: "POST", body: form });
+
+      // Usa la URL del backend en producción. En Render define NEXT_PUBLIC_API_URL.
+      const apiBase = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "";
+      const endpoint = apiBase ? `${apiBase}/api/convert?keep_empty=true` : `/api/convert?keep_empty=true`;
+
+      console.debug("Enviando a:", endpoint, "files:", files.map(f => f.name));
+
+      const res = await fetch(endpoint, { method: "POST", body: form });
+
       if (!res.ok) {
-        const txt = await res.text();
-        throw new Error(txt || `HTTP ${res.status}`);
+        // intenta leer JSON o texto para dar mensaje útil
+        const ct = res.headers.get("content-type") || "";
+        let serverMsg = `HTTP ${res.status}`;
+        try {
+          if (ct.includes("application/json")) {
+            const json = await res.json();
+            serverMsg = json?.message || JSON.stringify(json);
+          } else {
+            serverMsg = await res.text();
+          }
+        } catch (parseErr) {
+          // ignore parse error and keep serverMsg
+        }
+        throw new Error(serverMsg || `HTTP ${res.status}`);
       }
+
+      // Si backend devuelve JSON con error en lugar de archivo, detectarlo
+      const contentType = (res.headers.get("content-type") || "").toLowerCase();
+      if (contentType.includes("application/json")) {
+        const json = await res.json();
+        throw new Error(json?.message || "Respuesta inesperada del servidor.");
+      }
+
+      // Descargar blob
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
-      a.href = url; a.download = "contactos.xlsx"; a.click();
+      a.href = url;
+      // intenta obtener un filename desde content-disposition si existe
+      const cd = res.headers.get("content-disposition") || "";
+      const match = cd.match(/filename\*?=([^;]+)/i);
+      let filename = "contactos.xlsx";
+      if (match) {
+        filename = decodeURIComponent(match[1].replace(/UTF-8''/i, "").replace(/["']/g, ""));
+      }
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
       URL.revokeObjectURL(url);
+
       setSuccess(true);
       setFiles([]);
-      if(inputRef.current) inputRef.current.value = "";
-    } catch (e:any) {
-      setError(e.message || "Error al convertir");
+      if (inputRef.current) inputRef.current.value = "";
+    } catch (e: any) {
+      console.error("Error en conversión:", e);
+      setError(e?.message || "Error al convertir");
     } finally {
       setBusy(false);
     }
