@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lector de texto multilingüe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 p-6">
+  <div class="max-w-3xl mx-auto space-y-4">
+    <h1 class="text-2xl font-bold text-center">🔊 Lector de texto multilingüe</h1>
+    <p class="text-slate-600 text-center">
+      Escribe o pega texto y escúchalo en el idioma seleccionado. No sube nada a ningún servidor.
+    </p>
+
+    <textarea id="textInput" rows="10"
+      class="w-full p-3 rounded-2xl border focus:ring-2 outline-none"
+      placeholder="Écrivez votre texte ici..."></textarea>
+
+    <div class="flex items-center gap-4 flex-wrap">
+      <label for="lang" class="text-sm font-semibold">Idioma:</label>
+      <select id="lang" class="border rounded-xl p-2">
+        <option value="fr-FR">Français 🇫🇷</option>
+        <option value="es-ES">Español 🇪🇸</option>
+        <option value="en-US">English 🇬🇧</option>
+        <option value="it-IT">Italiano 🇮🇹</option>
+        <option value="de-DE">Deutsch 🇩🇪</option>
+      </select>
+
+      <label for="rate" class="text-sm font-semibold">Velocidad:</label>
+      <input type="range" id="rate" min="0.5" max="1.5" step="0.1" value="1" />
+      <span id="rateValue">1.0x</span>
+
+      <button id="speakBtn"
+        class="px-4 py-2 rounded-xl bg-black text-white hover:bg-slate-800">
+        ▶️ Leer texto
+      </button>
+      <button id="stopBtn"
+        class="px-4 py-2 rounded-xl bg-gray-300 hover:bg-gray-400">
+        ⏹️ Detener
+      </button>
+    </div>
+
+    <p class="text-xs text-slate-500 pt-4 text-center">
+      Funciona con la <strong>Web Speech API</strong> — 100 % local, sin subir datos.  
+      La calidad de voz depende del navegador y del sistema operativo.
+    </p>
+  </div>
+
+  <script>
+    const synth = window.speechSynthesis;
+    const speakBtn = document.getElementById("speakBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const textInput = document.getElementById("textInput");
+    const rateInput = document.getElementById("rate");
+    const rateValue = document.getElementById("rateValue");
+    const langSelect = document.getElementById("lang");
+
+    rateInput.addEventListener("input", () => {
+      rateValue.textContent = rateInput.value + "x";
+    });
+
+    speakBtn.addEventListener("click", () => {
+      if (synth.speaking) synth.cancel();
+      const text = textInput.value.trim();
+      if (!text) return alert("Por favor, escribe algo de texto.");
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = langSelect.value;
+      utter.rate = parseFloat(rateInput.value);
+      synth.speak(utter);
+    });
+
+    stopBtn.addEventListener("click", () => {
+      synth.cancel();
+    });
+  </script>
+</body>
+</html>
