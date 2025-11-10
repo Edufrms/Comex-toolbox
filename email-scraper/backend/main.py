@@ -1,6 +1,8 @@
 """
 API FastAPI para extraer correos electrónicos de URLs.
 """
+@app.post("/api/upload")
+async def upload_file(file: UploadFile = File(...)):
 import os
 import tempfile
 from pathlib import Path
@@ -189,5 +191,6 @@ async def get_status():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
 
