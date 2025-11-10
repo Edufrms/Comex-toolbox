@@ -5,7 +5,7 @@ import ProgressBar from './components/ProgressBar'
 import ResultsTable from './components/ResultsTable'
 
 // URL del backend - cambiar según el entorno
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_URL = "https://extractor-5k9u.onrender.com"
 
 function App() {
   const [file, setFile] = useState(null)
@@ -239,4 +239,5 @@ function App() {
 }
 
 export default App
+
 
