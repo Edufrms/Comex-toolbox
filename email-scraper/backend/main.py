@@ -19,7 +19,9 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     title="Email Scraper API",
     description="API para extraer correos electrónicos de URLs",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/docs",        # 👈 Habilita la interfaz Swagger (como en tu otro proyecto)
+    redoc_url="/redoc"       # 👈 (Opcional) Interfaz alternativa de documentación
 )
 
 # Configurar CORS para permitir conexiones desde comextoolbox.com
@@ -187,4 +189,5 @@ async def get_status():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
