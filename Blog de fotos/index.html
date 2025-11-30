@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio fotográfico minimalista. Historias visuales de viajes, ciudades y detalles cotidianos capturados con pasión.">
+    <title>Portfolio Fotográfico | Historias Visuales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#inicio" class="logo">Portfolio</a>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#historias" class="nav-link">Historias</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Principal -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Portfolio Fotográfico</h1>
+            <p class="hero-subtitle">Historias visuales de viajes, ciudades y detalles cotidianos</p>
+            <a href="#galeria" class="hero-cta">Explorar Galería</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Galería Principal -->
+    <main>
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Galería</h2>
+                <div class="gallery-grid">
+                    <!-- Foto 1 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image-wrapper">
+                            <img src="img/foto1.jpg" alt="Atardecer en la ciudad" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Atardecer Urbano</h3>
+                                <p class="gallery-location">Bruselas / Noche</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info" style="display: none;">
+                            <h3>Atardecer Urbano</h3>
+                            <p class="gallery-category">Bruselas / Noche</p>
+                            <p class="gallery-description">Capturado al caer la noche, cuando la ciudad comienza a iluminarse. La mezcla de luz natural y artificial crea un ambiente único. Disparado con velocidad lenta para capturar el movimiento de las luces.</p>
+                        </div>
+                    </article>
+
+                    <!-- Foto 2 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image-wrapper">
+                            <img src="img/foto2.jpg" alt="Arquitectura moderna" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Líneas Modernas</h3>
+                                <p class="gallery-location">Malinas / Arquitectura</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info" style="display: none;">
+                            <h3>Líneas Modernas</h3>
+                            <p class="gallery-category">Malinas / Arquitectura</p>
+                            <p class="gallery-description">La geometría y la simetría en la arquitectura contemporánea siempre me han fascinado. Esta toma aprovecha la luz del mediodía para resaltar las formas y crear profundidad.</p>
+                        </div>
+                    </article>
+
+                    <!-- Foto 3 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image-wrapper">
+                            <img src="img/foto3.jpg" alt="Detalle callejero" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Detalle Perdido</h3>
+                                <p class="gallery-location">Antwerp / Street</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info" style="display: none;">
+                            <h3>Detalle Perdido</h3>
+                            <p class="gallery-category">Antwerp / Street</p>
+                            <p class="gallery-description">A veces los mejores momentos son los que pasan desapercibidos. Un instante capturado durante un paseo matutino que refleja la autenticidad de la vida urbana.</p>
+                        </div>
+                    </article>
+
+                    <!-- Foto 4 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image-wrapper">
+                            <img src="img/foto4.jpg" alt="Paisaje natural" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Horizonte Sereno</h3>
+                                <p class="gallery-location">Costa / Paisaje</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info" style="display: none;">
+                            <h3>Horizonte Sereno</h3>
+                            <p class="gallery-category">Costa / Paisaje</p>
+                            <p class="gallery-description">La calma del amanecer junto al mar. Esperé horas para capturar el momento exacto en que el sol comenzaba a asomarse, creando una paleta de colores única en el cielo.</p>
+                        </div>
+                    </article>
+
+                    <!-- Foto 5 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image-wrapper">
+                            <img src="img/foto5.jpg" alt="Retrato callejero" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Mirada Urbana</h3>
+                                <p class="gallery-location">Ghent / Retrato</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info" style="display: none;">
+                            <h3>Mirada Urbana</h3>
+                            <p class="gallery-category">Ghent / Retrato</p>
+                            <p class="gallery-description">Fotografía de calle que captura la esencia de un momento espontáneo. La composición natural y la expresión auténtica son clave en este tipo de retratos.</p>
+                        </div>
+                    </article>
+
+                    <!-- Foto 6 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image-wrapper">
+                            <img src="img/foto6.jpg" alt="Interior arquitectónico" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">Espacios Interiores</h3>
+                                <p class="gallery-location">Brujas / Interior</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info" style="display: none;">
+                            <h3>Espacios Interiores</h3>
+                            <p class="gallery-category">Brujas / Interior</p>
+                            <p class="gallery-description">La luz natural que entra por las ventanas antiguas ilumina estos espacios de forma única. La fotografía de interiores requiere paciencia para encontrar el ángulo perfecto.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Historias / Blog -->
+        <section id="historias" class="stories-section">
+            <div class="container">
+                <h2 class="section-title">Historias</h2>
+                <div class="stories-grid">
+                    <!-- Historia 1 -->
+                    <article class="story-card">
+                        <div class="story-image-wrapper">
+                            <img src="img/story1.jpg" alt="Viaje a Bruselas" class="story-image">
+                        </div>
+                        <div class="story-content">
+                            <time class="story-date" datetime="2024-11-15">15 de Noviembre, 2024</time>
+                            <h3 class="story-title">Un Fin de Semana en Bruselas</h3>
+                            <p class="story-excerpt">Explorando las calles empedradas y la arquitectura única de la capital belga. Cada esquina guarda una historia, cada edificio tiene un pasado que contar.</p>
+                            <button class="story-read-more" data-story="story1">Leer más</button>
+                        </div>
+                        <div class="story-full" id="story1" style="display: none;">
+                            <div class="story-full-content">
+                                <h3>Un Fin de Semana en Bruselas</h3>
+                                <time datetime="2024-11-15">15 de Noviembre, 2024</time>
+                                <p>Bruselas me sorprendió desde el primer momento. La mezcla de arquitectura medieval y moderna crea un contraste fascinante. Durante mi estancia, me dediqué a recorrer las calles menos transitadas, buscando esos momentos únicos que solo ocurren cuando te detienes a observar.</p>
+                                <p>La Grand Place al amanecer es especialmente mágica. Sin las multitudes de turistas, puedes apreciar cada detalle de los edificios góticos y barrocos que la rodean. Disparé esta serie con una cámara manual, ajustando la exposición para capturar la luz dorada de las primeras horas.</p>
+                                <p>La fotografía de viaje no solo se trata de capturar lugares, sino de contar historias. Cada imagen que tomé ese fin de semana lleva consigo un recuerdo, una sensación, un momento que quiero compartir con quienes vean estas fotografías.</p>
+                                <button class="story-close">Cerrar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Historia 2 -->
+                    <article class="story-card">
+                        <div class="story-image-wrapper">
+                            <img src="img/story2.jpg" alt="Buscando la luz perfecta" class="story-image">
+                        </div>
+                        <div class="story-content">
+                            <time class="story-date" datetime="2024-11-08">8 de Noviembre, 2024</time>
+                            <h3 class="story-title">Buscando la Luz Perfecta</h3>
+                            <p class="story-excerpt">La fotografía es un juego de paciencia y observación. A veces esperas horas para que la luz sea la adecuada, otras veces es cuestión de segundos.</p>
+                            <button class="story-read-more" data-story="story2">Leer más</button>
+                        </div>
+                        <div class="story-full" id="story2" style="display: none;">
+                            <div class="story-full-content">
+                                <h3>Buscando la Luz Perfecta</h3>
+                                <time datetime="2024-11-08">8 de Noviembre, 2024</time>
+                                <p>Uno de los aspectos más desafiantes de la fotografía es dominar la luz. Cada hora del día ofrece posibilidades diferentes, cada estación del año cambia completamente el carácter de una escena.</p>
+                                <p>En esta sesión, me propuse capturar el "hora dorada" en un lugar urbano. Llegué una hora antes del atardecer calculado y exploré diferentes ángulos. Moví la cámara, cambié la perspectiva, esperé a que pasaran nubes que mejoraran el cielo.</p>
+                                <p>Cuando finalmente llegó el momento perfecto, todo encajó: la luz, la composición, el sujeto. Esos momentos son los que hacen que valga la pena la espera y la dedicación.</p>
+                                <button class="story-close">Cerrar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Historia 3 -->
+                    <article class="story-card">
+                        <div class="story-image-wrapper">
+                            <img src="img/story3.jpg" alt="Fotografía callejera" class="story-image">
+                        </div>
+                        <div class="story-content">
+                            <time class="story-date" datetime="2024-10-28">28 de Octubre, 2024</time>
+                            <h3 class="story-title">El Arte de la Fotografía Callejera</h3>
+                            <p class="story-excerpt">Capturar la vida tal como es, sin pose ni preparación. La fotografía callejera es honesta, espontánea y llena de autenticidad.</p>
+                            <button class="story-read-more" data-story="story3">Leer más</button>
+                        </div>
+                        <div class="story-full" id="story3" style="display: none;">
+                            <div class="story-full-content">
+                                <h3>El Arte de la Fotografía Callejera</h3>
+                                <time datetime="2024-10-28">28 de Octubre, 2024</time>
+                                <p>La fotografía callejera me enseñó a ver más allá de lo obvio. Ya no camino por la ciudad simplemente para llegar a un destino, ahora observo constantemente: las expresiones, los gestos, los momentos únicos que se desarrollan a mi alrededor.</p>
+                                <p>Lo más importante en este género es el respeto. Respeto hacia las personas que fotografío, respeto hacia su espacio y su privacidad. Busco capturar momentos públicos, situaciones que ocurren naturalmente sin que la cámara interfiera.</p>
+                                <p>Cada salida es una lección. Aprendo sobre composición, sobre timing, sobre cómo anticipar un momento antes de que ocurra. La fotografía callejera es un ejercicio constante de observación y paciencia.</p>
+                                <button class="story-close">Cerrar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Historia 4 -->
+                    <article class="story-card">
+                        <div class="story-image-wrapper">
+                            <img src="img/story4.jpg" alt="Retrato natural" class="story-image">
+                        </div>
+                        <div class="story-content">
+                            <time class="story-date" datetime="2024-10-20">20 de Octubre, 2024</time>
+                            <h3 class="story-title">Conectando con el Sujeto</h3>
+                            <p class="story-excerpt">Los mejores retratos surgen de una conexión genuina. No se trata solo de técnica, sino de crear un momento de confianza y autenticidad.</p>
+                            <button class="story-read-more" data-story="story4">Leer más</button>
+                        </div>
+                        <div class="story-full" id="story4" style="display: none;">
+                            <div class="story-full-content">
+                                <h3>Conectando con el Sujeto</h3>
+                                <time datetime="2024-10-20">20 de Octubre, 2024</time>
+                                <p>Fotografiar personas es mucho más que capturar una imagen, es crear un diálogo visual. La conexión que estableces con tu sujeto se refleja directamente en la fotografía resultante.</p>
+                                <p>Antes de comenzar a disparar, siempre dedico tiempo a conversar. Conocer a la persona, entender su personalidad, hacer que se sienta cómoda. Una sesión relajada produce retratos mucho más naturales y expresivos.</p>
+                                <p>La luz natural es mi aliada en los retratos. Prefiero trabajar con ventanas, reflejos suaves, y evitar el flash siempre que sea posible. La luz natural es más amable, más real, y ayuda a que el sujeto se sienta en su ambiente.</p>
+                                <button class="story-close">Cerrar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image-wrapper">
+                        <img src="img/perfil.jpg" alt="Fotógrafo" class="about-image">
+                    </div>
+                    <div class="about-text">
+                        <h2 class="section-title">Sobre mí</h2>
+                        <p>La fotografía comenzó como un hobby y se convirtió en una pasión que define cómo veo el mundo. Cada imagen es una oportunidad de contar una historia, de capturar un momento que de otra manera se perdería en el tiempo.</p>
+                        <p>Me especializo en fotografía de viajes, arquitectura y retrato, buscando siempre la autenticidad en cada toma. Creo que las mejores fotografías no necesitan explicación, hablan por sí solas y conectan directamente con quien las observa.</p>
+                        <p>Trabajo principalmente con luz natural, aprovechando los diferentes momentos del día para crear atmósferas únicas. Mi estilo se caracteriza por la limpieza, la atención al detalle y la búsqueda constante de composiciones que inviten a la contemplación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content">
+                    <p class="contact-intro">¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte.</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar</button>
+                    </form>
+                    <div class="form-message" id="formMessage" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio Fotográfico. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Cerrar lightbox">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-category" id="lightboxCategory"></p>
+                <p class="lightbox-description" id="lightboxDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
