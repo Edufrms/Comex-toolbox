@@ -1,0 +1,5 @@
+[
+  {"id":"wine","label":"Vino y espirituosos","file":"wine.csv"},
+  {"id":"automotive","label":"Automoción","file":"automotive.csv"},
+  {"id":"pharma","label":"Farmacia","file":"pharma.csv"}
+]
