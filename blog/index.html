@@ -3,48 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog sobre comercio exterior y digital business. Noticias, tendencias y recursos para potenciar tu negocio internacional.">
+  <meta name="description" content="Blog sobre comercio exterior, aranceles, logística y herramientas para exportadores e importadores. Radar Comex: el resumen semanal de comercio internacional.">
   <title>Blog | ComexToolbox</title>
   <link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J1YVJESR6W');
-</script>
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-3325448390634704"
-     crossorigin="anonymous"></script>
-<meta name="p:domain_verify" content="3bac4d80cc0ced59100964e306c13428"/>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J1YVJESR6W');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
+  <meta name="p:domain_verify" content="3bac4d80cc0ced59100964e306c13428"/>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="https://comextoolbox.com/" class="logo">ComexToolbox</a>
-      <nav>
-        <a href="/">ComexToolbox</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://comextoolbox.com/" class="logo">
+        <span class="logo-box">CT</span>
+        <span class="logo-text">ComexToolbox</span>
+      </a>
+      <nav class="site-nav">
+        <a href="https://comextoolbox.com/">Inicio</a>
         <a href="#" class="active">Blog</a>
-              </nav>
+        <a href="#radar" class="nav-highlight">Radar Comex</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menú" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
   <main>
+
+    <!-- HERO -->
     <section class="blog-hero">
-      <h1>Blog de Comercio Exterior y Digital Business</h1>
-      <p>Noticias, tendencias y recursos para potenciar tu negocio internacional.</p>
+      <div class="hero-inner">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Publicaciones cada domingo
+        </div>
+        <h1 class="hero-title">El blog de referencia<br>en <em>comercio exterior</em></h1>
+        <p class="hero-sub">Análisis, tendencias y herramientas prácticas para exportadores e importadores. Sin relleno, solo lo que importa.</p>
+        <div class="hero-tags">
+          <span>#Aranceles</span>
+          <span>#Logística</span>
+          <span>#Acuerdos Comerciales</span>
+          <span>#Aduanas</span>
+          <span>#Ferias</span>
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="deco-ring deco-ring-1"></div>
+        <div class="deco-ring deco-ring-2"></div>
+        <div class="deco-ring deco-ring-3"></div>
+      </div>
     </section>
-    <section class="blog-list" id="blog-list">
-      <!-- Aquí se cargarán las tarjetas de noticias -->
+
+    <!-- RADAR COMEX BANNER -->
+    <section class="radar-banner" id="radar">
+      <div class="radar-inner">
+        <div class="radar-label">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+            <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+          </svg>
+          RADAR COMEX
+        </div>
+        <div class="radar-content">
+          <h2 class="radar-title">El resumen semanal que no puedes perderte</h2>
+          <p class="radar-desc">Cada domingo: las 10 noticias más importantes del comercio internacional, curadas y explicadas para que puedas tomar mejores decisiones. Aranceles, acuerdos, logística, ferias y más.</p>
+          <div class="radar-features">
+            <div class="radar-feature">
+              <span class="feature-num">01</span>
+              <span>Selección curada de fuentes fiables</span>
+            </div>
+            <div class="radar-feature">
+              <span class="feature-num">02</span>
+              <span>Impacto práctico para tu empresa</span>
+            </div>
+            <div class="radar-feature">
+              <span class="feature-num">03</span>
+              <span>Formato breve y visual</span>
+            </div>
+          </div>
+        </div>
+        <div class="radar-cta">
+          <a href="#blog-list" class="btn-radar">Ver última edición</a>
+          <p class="radar-sources">Fuentes: Reuters · WTO · Comisión Europea · FT · UNCTAD · Eurostat</p>
+        </div>
+      </div>
     </section>
+
+    <!-- FILTERS -->
+    <section class="blog-controls">
+      <div class="controls-inner">
+        <div class="section-label">Todas las entradas</div>
+        <div class="filter-group" id="filter-group">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="radar">Radar Comex</button>
+          <button class="filter-btn" data-filter="analisis">Análisis</button>
+          <button class="filter-btn" data-filter="herramientas">Herramientas</button>
+          <button class="filter-btn" data-filter="guias">Guías</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="blog-grid-section">
+      <div id="blog-list" class="blog-list">
+        <!-- Tarjetas generadas por noticias.js -->
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 ComexToolbox. Todos los derechos reservados.</p>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-box small">CT</span>
+        <span class="footer-name">ComexToolbox</span>
+      </div>
+      <p class="footer-tagline">Herramientas y conocimiento para el comercio internacional.</p>
+      <div class="footer-links">
+        <a href="https://comextoolbox.com/">Inicio</a>
+        <a href="#">Blog</a>
+        <a href="https://www.linkedin.com/company/comextoolbox" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 ComexToolbox. Todos los derechos reservados.</p>
     </div>
   </footer>
+
   <script src="noticias.js"></script>
+  <script>
+    // Filtros
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('.card').forEach(card => {
+          card.style.display = (f === 'todos' || card.dataset.categoria === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
-</html> 
+</html>
