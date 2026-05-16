@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Comex | Semana del 11 al 17 de mayo de 2026 | ComexToolbox</title>
+<meta name="description" content="Selección semanal de noticias clave de comercio exterior: petróleo, medicamentos europeos, cumbre Trump-Xi, acuerdo México-UE y cadenas de suministro globales. Semana del 11 al 17 de mayo de 2026.">
+<meta name="keywords" content="comercio exterior, aranceles, cadenas de suministro, acuerdos comerciales, geopolítica comercial, logística internacional, México UE, Trump Xi">
+<meta property="og:title" content="Radar Comex — Semana 11-17 mayo 2026">
+<meta property="og:description" content="Las noticias que han movido el comercio internacional esta semana.">
+<meta property="og:type" content="article">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Radar Comex: Semana del 11 al 17 de mayo de 2026",
+  "description": "Selección visual de noticias de comercio exterior, geopolítica, logística y acuerdos comerciales internacionales.",
+  "datePublished": "2026-05-17",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ComexToolbox",
+    "url": "https://comextoolbox.com"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "ComexToolbox"
+  }
+}
+</script>
+
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0a1628;
+  --navy-mid: #112240;
+  --navy-light: #1a3356;
+  --cream: #f5f0e8;
+  --cream-warm: #faf7f2;
+  --green: #4a9c6f;
+  --green-light: #6bbf8e;
+  --gold: #c8921a;
+  --gold-light: #e8ad35;
+  --orange: #d4621a;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #3d4a5c;
+  --text-light: #6b7a8d;
+  --border: rgba(10,22,40,0.12);
+  --shadow-sm: 0 2px 12px rgba(10,22,40,0.08);
+  --shadow-md: 0 8px 32px rgba(10,22,40,0.12);
+  --shadow-lg: 0 20px 60px rgba(10,22,40,0.18);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --font-head: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Optima', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Courier New', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream-warm);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--navy);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Starfield dots */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 72% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 88% 45%, rgba(200,146,26,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 75%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 90%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 55%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(2px 2px at 65% 35%, rgba(74,156,111,0.4) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Subtle globe grid lines */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.02) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.02) 60px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 760px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(200,146,26,0.15);
+  border: 1px solid rgba(200,146,26,0.35);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  animation: fadeSlideDown 0.8s ease both;
+}
+
+.hero-badge::before { content: '●'; font-size: 0.5em; animation: pulse 2s infinite; }
+
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+h1.hero-title {
+  font-family: var(--font-head);
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  animation: fadeSlideDown 0.9s ease 0.1s both;
+}
+
+.hero-title span {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.hero-date {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeSlideDown 1s ease 0.2s both;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  animation: fadeSlideDown 1s ease 0.3s both;
+}
+
+/* RADAR SVG */
+.radar-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2.5rem;
+  animation: fadeSlideDown 1s ease 0.4s both;
+}
+
+.radar-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.radar-ring {
+  fill: none;
+  stroke: rgba(74,156,111,0.25);
+  stroke-width: 1;
+}
+
+.radar-cross {
+  stroke: rgba(74,156,111,0.2);
+  stroke-width: 1;
+}
+
+.radar-sweep {
+  transform-origin: 100px 100px;
+  animation: sweep 3s linear infinite;
+}
+
+@keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.radar-dot {
+  fill: var(--green-light);
+  animation: blink var(--delay, 2s) ease-in-out infinite;
+}
+
+@keyframes blink { 0%,100% { opacity:1; r:3; } 50% { opacity:0.3; r:2; } }
+
+.radar-blip {
+  fill: var(--gold);
+  animation: blip 3s ease-in-out infinite;
+  animation-delay: var(--bd, 0s);
+}
+@keyframes blip { 0%,70%,100% { opacity:0; transform: scale(0); } 30%,50% { opacity:1; transform: scale(1); } }
+
+/* Routes lines on hero */
+.hero-routes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.12;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.35);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: fadeSlideDown 1s ease 1s both;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 1.5px solid rgba(255,255,255,0.3);
+  border-bottom: 1.5px solid rgba(255,255,255,0.3);
+  transform: rotate(45deg);
+  animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowBounce { 0%,100% { transform: rotate(45deg) translateY(-3px); } 50% { transform: rotate(45deg) translateY(3px); } }
+
+@keyframes fadeSlideDown { from { opacity:0; transform: translateY(-16px); } to { opacity:1; transform: translateY(0); } }
+
+/* ===== MAIN CONTENT ===== */
+main { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem 2rem; }
+
+/* ===== EXECUTIVE SUMMARY ===== */
+.exec-summary {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.exec-summary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--gold), var(--orange));
+}
+
+.exec-summary h2 {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gold-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.exec-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.exec-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.exec-icon.energy { background: rgba(212,98,26,0.2); }
+.exec-icon.pharma { background: rgba(74,156,111,0.2); }
+.exec-icon.trade { background: rgba(200,146,26,0.2); }
+
+.exec-text {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-section {
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline-track {
+  position: absolute;
+  left: 80px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green), var(--gold), var(--orange));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.tl-date {
+  width: 70px;
+  flex-shrink: 0;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-light);
+  padding-top: 4px;
+  line-height: 1.4;
+}
+
+.tl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 3px rgba(74,156,111,0.2);
+  transition: transform 0.2s;
+}
+
+.tl-dot:hover { transform: scale(1.3); }
+.tl-dot.energy { background: var(--orange); }
+.tl-dot.pharma { background: var(--green); }
+.tl-dot.health { background: #7b68ee; }
+.tl-dot.geo { background: var(--gold); }
+.tl-dot.deal { background: var(--green-light); }
+
+.tl-content {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  flex: 1;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  transition: box-shadow 0.2s;
+}
+
+.tl-content:hover { box-shadow: var(--shadow-md); }
+
+.tl-content strong { color: var(--text-dark); }
+
+/* ===== NEWS CARDS ===== */
+.cards-section { margin-bottom: 4rem; }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: box-shadow 0.25s, transform 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.card-top-bar {
+  height: 4px;
+  width: 100%;
+}
+
+.card-top-bar.energy { background: linear-gradient(90deg, var(--orange), var(--gold)); }
+.card-top-bar.pharma { background: linear-gradient(90deg, var(--green), var(--green-light)); }
+.card-top-bar.health { background: linear-gradient(90deg, #7b68ee, #9b8fe8); }
+.card-top-bar.geo { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+.card-top-bar.deal { background: linear-gradient(90deg, var(--green), var(--gold)); }
+
+.card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+
+.card-category {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cat-energy { color: var(--orange); }
+.cat-pharma { color: var(--green); }
+.cat-health { color: #7b68ee; }
+.cat-geo { color: var(--navy-light); }
+.cat-deal { color: var(--green); }
+
+.card-date {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  font-family: var(--font-mono);
+  float: right;
+  margin-top: -1.5rem;
+}
+
+.card h2 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.why-matters {
+  background: var(--cream-warm);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.why-matters strong {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+
+.card-source {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1.25rem;
+}
+
+.card-source a {
+  color: var(--navy-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.card-source a:hover { color: var(--gold); }
+
+/* ===== EASTER EGGS ===== */
+.easter-egg {
+  border-top: 1px dashed var(--border);
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.ee-hint {
+  font-size: 0.68rem;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ee-hint::before { content: '◈'; color: var(--gold); }
+
+/* --- EE1: Oil Barrel --- */
+.barrel-scene {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.barrel {
+  position: relative;
+  width: 44px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.barrel-body {
+  width: 44px;
+  height: 48px;
+  background: linear-gradient(135deg, #2a1a00 0%, #5a3a10 40%, #8a5a20 100%);
+  border-radius: 6px 6px 4px 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  border: 1.5px solid #3a2a08;
+}
+
+.barrel-band {
+  width: 100%;
+  height: 4px;
+  background: #1a0d00;
+  opacity: 0.6;
+}
+
+.barrel-label {
+  font-size: 0.4rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.drop {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 14px;
+  background: radial-gradient(ellipse at 30% 30%, #f0c040, #b8860b);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.drop.animate {
+  animation: dropFall 0.7s ease-in forwards;
+}
+
+@keyframes dropFall {
+  0% { top: -20px; opacity: 1; }
+  60% { top: 10px; opacity: 1; }
+  80% { top: 5px; opacity: 0.8; }
+  100% { top: 15px; opacity: 0; }
+}
+
+.risk-counter {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--orange);
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.price-display {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--orange);
+  transition: color 0.3s;
+}
+
+/* --- EE2: Pharma conveyor --- */
+.pharma-scene {
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f0f8f4;
+  height: 54px;
+  position: relative;
+  cursor: pointer;
+}
+
+.conveyor-belt {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 10px;
+  background: repeating-linear-gradient(90deg, #4a9c6f 0px, #4a9c6f 18px, #3a8c5f 18px, #3a8c5f 24px);
+  animation: beltMove 1s linear infinite;
+}
+
+@keyframes beltMove { from { background-position: 0; } to { background-position: 24px; } }
+
+.pill {
+  position: absolute;
+  bottom: 12px;
+  width: 22px;
+  height: 11px;
+  border-radius: 100px;
+  animation: pillMove 3s linear infinite;
+}
+
+.pill:nth-child(1) { background: linear-gradient(90deg, #e84393 50%, #f472b6 50%); animation-delay: 0s; }
+.pill:nth-child(2) { background: linear-gradient(90deg, #4a9c6f 50%, #6bbf8e 50%); animation-delay: -1s; }
+.pill:nth-child(3) { background: linear-gradient(90deg, #f59e0b 50%, #fcd34d 50%); animation-delay: -2s; }
+
+@keyframes pillMove {
+  from { left: -30px; }
+  to { left: calc(100% + 30px); }
+}
+
+.made-eu {
+  position: absolute;
+  top: 6px; right: 6px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.pharma-scene:hover .made-eu, .pharma-scene.active .made-eu { opacity: 1; }
+
+/* --- EE3: Ship scene --- */
+.ship-scene {
+  position: relative;
+  height: 60px;
+  background: linear-gradient(180deg, #daeeff 0%, #b0d8f0 60%, #7ab8e0 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wave-base {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 18px;
+  background: #5a9fd4;
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+.ship-svg-wrap {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  animation: shipBob 2.5s ease-in-out infinite;
+}
+
+@keyframes shipBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+.emergency-light {
+  position: absolute;
+  top: 6px; right: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff4444;
+  opacity: 0;
+  box-shadow: 0 0 8px #ff4444;
+  transition: opacity 0.3s;
+}
+
+.protocol-badge {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.92);
+  color: #7b2d2d;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #cc3333;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.ship-scene.activated .emergency-light { opacity: 1; animation: emergencyBlink 0.6s ease-in-out infinite; }
+.ship-scene.activated .protocol-badge { opacity: 1; }
+
+@keyframes emergencyBlink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
+
+/* --- EE4: Tension slider --- */
+.tension-scene { padding: 0.25rem 0; }
+
+.tension-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.tension-slider-wrap {
+  position: relative;
+}
+
+#tensionSlider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--gold) 50%, var(--green) 100%);
+  outline: none;
+  cursor: pointer;
+}
+
+#tensionSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2.5px solid var(--navy);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.15s;
+}
+
+#tensionSlider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+#tensionSlider::-moz-range-thumb {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--white); border: 2.5px solid var(--navy);
+  cursor: pointer;
+}
+
+.tension-indicator {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  transition: color 0.3s;
+}
+
+/* --- EE5: Plane counter --- */
+.plane-scene {
+  position: relative;
+  height: 58px;
+  background: linear-gradient(135deg, #e8f0ff, #d0e4ff);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.plane-track {
+  position: absolute;
+  bottom: 16px; left: 0; right: 0;
+  height: 1px;
+  border-top: 1px dashed rgba(100,130,200,0.4);
+}
+
+.plane-icon {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1rem;
+  animation: flyPlane 2.5s ease-in-out infinite;
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+@keyframes flyPlane {
+  0% { left: -20px; opacity: 0; transform: scale(0.6); }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: calc(100% + 10px); opacity: 0; transform: scale(1); }
+}
+
+.plane-counter {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.plane-counter span { color: var(--green); }
+
+.plane-cta {
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+  font-size: 0.6rem;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+/* --- EE6: Bridge/container --- */
+.bridge-scene {
+  position: relative;
+  height: 60px;
+  background: linear-gradient(135deg, #f0faf5, #e0f2e8);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bridge-left {
+  position: absolute;
+  left: 6px; bottom: 10px;
+  width: 30px; height: 22px;
+  background: var(--navy);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.5rem; color: rgba(255,255,255,0.7); font-weight: 700;
+}
+
+.bridge-right {
+  position: absolute;
+  right: 6px; bottom: 10px;
+  width: 30px; height: 22px;
+  background: #1a4a8a;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.45rem; color: rgba(255,255,255,0.7); font-weight: 700;
+}
+
+.bridge-line {
+  position: absolute;
+  bottom: 20px;
+  left: 36px;
+  right: 36px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--navy), #1a4a8a);
+  border-radius: 2px;
+}
+
+.bridge-line::before, .bridge-line::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  width: 1px;
+  height: 8px;
+  background: var(--text-light);
+}
+
+.bridge-line::before { left: 25%; }
+.bridge-line::after { right: 25%; }
+
+.container-box {
+  position: absolute;
+  bottom: 12px;
+  left: 36px;
+  width: 22px;
+  height: 14px;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  border-radius: 3px;
+  font-size: 0.4rem;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  transition: left 1.5s ease;
+}
+
+.bridge-scene.shipping .container-box {
+  left: calc(100% - 58px);
+}
+
+.customs-badge {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--green);
+  color: white;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.5s 1s;
+}
+
+.bridge-scene.shipping .customs-badge { opacity: 1; }
+
+.export-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.5s 2s;
+}
+
+.bridge-scene.shipping .export-badge { opacity: 1; }
+
+/* ===== WATCHLIST ===== */
+.watchlist {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.watchlist::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--orange));
+}
+
+.watchlist h2 {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.watchlist-sub {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1.75rem;
+}
+
+.watch-items { display: flex; flex-direction: column; gap: 1rem; }
+
+.watch-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.watch-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.watch-text {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  padding-top: 4px;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.cta-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.cta-title {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 14px 28px;
+  border-radius: 100px;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: var(--shadow-md);
+  letter-spacing: 0.02em;
+}
+
+.cta-btn:hover {
+  background: var(--navy-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-btn::after { content: '→'; transition: transform 0.2s; }
+.cta-btn:hover::after { transform: translateX(4px); }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  border-top: 1px solid var(--border);
+}
+
+footer a { color: var(--navy-light); text-decoration: none; }
+footer a:hover { color: var(--gold); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  main { padding: 2.5rem 1rem 1rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .timeline-track { left: 60px; }
+  .tl-date { width: 50px; font-size: 0.62rem; }
+  .exec-grid { grid-template-columns: 1fr; }
+  .watchlist, .exec-summary { padding: 1.75rem; }
+  h1.hero-title { font-size: 3.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero" role="banner">
+  <svg class="hero-routes" viewBox="0 0 1400 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M100,450 Q400,200 700,400 Q1000,600 1300,350" fill="none" stroke="rgba(74,156,111,0.15)" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <path d="M0,300 Q350,500 700,300 Q1050,100 1400,400" fill="none" stroke="rgba(200,146,26,0.12)" stroke-width="1" stroke-dasharray="4,6"/>
+    <path d="M200,700 Q600,400 1100,500" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,5"/>
+    <circle cx="120" cy="440" r="4" fill="rgba(74,156,111,0.5)"/>
+    <circle cx="700" cy="395" r="5" fill="rgba(200,146,26,0.5)"/>
+    <circle cx="1290" cy="348" r="4" fill="rgba(74,156,111,0.4)"/>
+    <circle cx="480" cy="260" r="3" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="950" cy="520" r="3" fill="rgba(255,255,255,0.25)"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-badge">ComexToolbox · Edición semanal</div>
+
+    <div class="radar-container" aria-label="Animación de radar comercial global" role="img">
+      <svg class="radar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Rings -->
+        <circle class="radar-ring" cx="100" cy="100" r="90"/>
+        <circle class="radar-ring" cx="100" cy="100" r="65"/>
+        <circle class="radar-ring" cx="100" cy="100" r="40"/>
+        <circle class="radar-ring" cx="100" cy="100" r="18"/>
+        <!-- Cross -->
+        <line class="radar-cross" x1="100" y1="10" x2="100" y2="190"/>
+        <line class="radar-cross" x1="10" y1="100" x2="190" y2="100"/>
+        <!-- Sweep -->
+        <g class="radar-sweep">
+          <path d="M100,100 L100,10 A90,90 0 0,1 172,145 Z" fill="url(#sweepGrad)" opacity="0.6"/>
+        </g>
+        <defs>
+          <radialGradient id="sweepGrad" cx="0%" cy="50%">
+            <stop offset="0%" stop-color="#4a9c6f" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#4a9c6f" stop-opacity="0.5"/>
+          </radialGradient>
+        </defs>
+        <!-- Blips -->
+        <circle class="radar-dot" cx="140" cy="55" r="3.5" style="--delay:2.3s"/>
+        <circle class="radar-dot" cx="65" cy="130" r="3" style="--delay:3.1s"/>
+        <circle class="radar-dot" cx="155" cy="130" r="2.5" style="--delay:1.8s"/>
+        <circle class="radar-dot" cx="75" cy="60" r="2.5" style="--delay:2.7s"/>
+        <!-- Center -->
+        <circle cx="100" cy="100" r="4" fill="#4a9c6f"/>
+        <circle cx="100" cy="100" r="8" fill="none" stroke="#4a9c6f" stroke-width="1" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <h1 class="hero-title">Radar <span>Comex</span></h1>
+    <p class="hero-date">Semana del 11 al 17 de mayo de 2026</p>
+    <p class="hero-description">Una selección visual de las noticias que han movido el comercio internacional esta semana: energía, medicamentos críticos, tensiones EEUU-China, crisis sanitarias y nuevos acuerdos comerciales.</p>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Explorar</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="exec-summary" aria-labelledby="exec-title">
+    <h2 id="exec-title">Resumen ejecutivo</h2>
+    <div class="exec-grid">
+      <div class="exec-item">
+        <div class="exec-icon energy" aria-hidden="true">⚡</div>
+        <p class="exec-text"><strong style="color:rgba(255,255,255,0.9)">La energía vuelve al centro del riesgo comercial.</strong> El conflicto en Oriente Medio presiona los fletes y los costes de producción a escala global.</p>
+      </div>
+      <div class="exec-item">
+        <div class="exec-icon pharma" aria-hidden="true">💊</div>
+        <p class="exec-text"><strong style="color:rgba(255,255,255,0.9)">Europa acelera su autonomía estratégica en medicamentos.</strong> Menos dependencia de Asia en cadenas de suministro críticas.</p>
+      </div>
+      <div class="exec-item">
+        <div class="exec-icon trade" aria-hidden="true">🌐</div>
+        <p class="exec-text"><strong style="color:rgba(255,255,255,0.9)">Los acuerdos y tensiones comerciales siguen marcando las cadenas globales de suministro.</strong> México-UE y EEUU-China, dos vectores opuestos esta semana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section" aria-labelledby="timeline-title">
+    <p class="section-label" id="timeline-title">Cronología semanal</p>
+    <div class="timeline">
+      <div class="timeline-track" aria-hidden="true"></div>
+      <div class="timeline-item">
+        <div class="tl-date">11 mayo</div>
+        <div class="tl-dot energy" title="Energía y rutas"></div>
+        <div class="tl-content"><strong>Petróleo supera los 105 USD</strong> — Estrecho de Ormuz prácticamente cerrado tras el rechazo de Trump a la propuesta de paz iraní.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">12 mayo</div>
+        <div class="tl-dot pharma" title="Farmacéutico"></div>
+        <div class="tl-content"><strong>Acuerdo provisional UE sobre medicamentos esenciales</strong> — La UE aprueba medidas para relocalizar producción farmacéutica crítica en Europa.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">12 mayo</div>
+        <div class="tl-dot health" title="Salud global"></div>
+        <div class="tl-content"><strong>Crisis sanitaria en crucero MV Hondius</strong> — Brote de hantavirus activa protocolos internacionales de emergencia sanitaria en varios países europeos.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">12–15 mayo</div>
+        <div class="tl-dot geo" title="Geopolítica"></div>
+        <div class="tl-content"><strong>Cumbre Trump-Xi en Pekín</strong> — Grandes declaraciones, sin avances concretos en aranceles. China comprará 200 aviones Boeing (esperados: 500).</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">22 mayo <em>(próximo)</em></div>
+        <div class="tl-dot deal" title="Acuerdo comercial"></div>
+        <div class="tl-content"><strong>Firma del acuerdo México-UE en Ciudad de México</strong> — El nuevo tratado modernizado incluye eliminación de aranceles y facilitación aduanera digital.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS CARDS -->
+  <section class="cards-section" aria-labelledby="news-title">
+    <p class="section-label" id="news-title">Noticias de la semana</p>
+    <div class="cards-grid">
+
+      <!-- CARD 1: Petróleo -->
+      <article class="card">
+        <div class="card-top-bar energy"></div>
+        <div class="card-body">
+          <div class="card-category cat-energy">
+            <span aria-hidden="true">⚡</span> Energía y rutas comerciales
+          </div>
+          <time class="card-date" datetime="2026-05-11">11 mayo 2026</time>
+          <h2>El petróleo supera los 105 dólares con el Estrecho de Ormuz aún prácticamente cerrado</h2>
+          <p class="card-desc">El precio del crudo alcanza los 105 USD por barril tras el rechazo de Trump a la propuesta de paz de Irán. El Estrecho de Ormuz, por el que transita alrededor del 20% del petróleo mundial, continúa con severas restricciones de tráfico.</p>
+          <div class="why-matters">
+            <strong>Por qué importa para el comercio exterior</strong>
+            El encarecimiento del petróleo impacta directamente en los costes de transporte marítimo y aéreo, en los precios de materias primas y en los fletes. Las empresas importadoras y exportadoras deben revisar sus coberturas de precio y contratos de transporte.
+          </div>
+          <p class="card-source">
+            <span aria-hidden="true">🔗</span>
+            Fuente: <a href="https://www.irishtimes.com/world/middle-east/2026/05/11/iran-war-live-updates-us-middle-east-trump-lebanon/" target="_blank" rel="noopener noreferrer" aria-label="Ver noticia en The Irish Times">The Irish Times</a>
+          </p>
+          <div class="easter-egg">
+            <p class="ee-hint">Interactivo · Haz clic en el barril</p>
+            <div class="barrel-scene" id="barrelScene" role="button" tabindex="0" aria-label="Clic para ver animación del barril de petróleo">
+              <div class="barrel" id="barrelEl">
+                <div class="drop" id="oilDrop"></div>
+                <div class="barrel-body">
+                  <div class="barrel-band"></div>
+                  <span class="barrel-label">CRUDE</span>
+                  <div class="barrel-band"></div>
+                </div>
+              </div>
+              <div>
+                <div class="price-display" id="priceDisplay">$105</div>
+                <div class="risk-counter" id="riskCounter">Riesgo energético ×0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2: Pharma -->
+      <article class="card">
+        <div class="card-top-bar pharma"></div>
+        <div class="card-body">
+          <div class="card-category cat-pharma">
+            <span aria-hidden="true">💊</span> Industria farmacéutica y autonomía europea
+          </div>
+          <time class="card-date" datetime="2026-05-12">12 mayo 2026</time>
+          <h2>La UE acuerda reforzar la producción europea de medicamentos críticos</h2>
+          <p class="card-desc">La Unión Europea ha alcanzado un acuerdo provisional para impulsar la fabricación de medicamentos esenciales dentro de Europa, reduciendo la dependencia de China e India en cadenas de suministro farmacéuticas estratégicas.</p>
+          <div class="why-matters">
+            <strong>Por qué importa para el comercio exterior</strong>
+            La relocalización de producción farmacéutica afectará a los flujos de importación desde Asia hacia Europa. Las empresas con cadenas de suministro en medicamentos o principios activos deberán anticipar cambios regulatorios y ajustes de cuota de mercado.
+          </div>
+          <p class="card-source">
+            <span aria-hidden="true">🔗</span>
+            Fuente: <a href="https://www.reuters.com/sustainability/boards-policy-regulation/eu-reaches-provisional-deal-address-shortage-essential-medicines-2026-05-12/" target="_blank" rel="noopener noreferrer" aria-label="Ver noticia en Reuters">Reuters</a>
+          </p>
+          <div class="easter-egg">
+            <p class="ee-hint">Interactivo · Pasa el ratón o toca</p>
+            <div class="pharma-scene" id="pharmaScene" role="img" aria-label="Línea de producción farmacéutica europea animada">
+              <div class="pill"></div>
+              <div class="pill"></div>
+              <div class="pill"></div>
+              <div class="conveyor-belt"></div>
+              <div class="made-eu">✔ Made in Europe</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3: Crucero -->
+      <article class="card">
+        <div class="card-top-bar health"></div>
+        <div class="card-body">
+          <div class="card-category cat-health">
+            <span aria-hidden="true">🚢</span> Salud global y movilidad internacional
+          </div>
+          <time class="card-date" datetime="2026-05-12">12 mayo 2026</time>
+          <h2>Crisis sanitaria internacional en un crucero reactiva protocolos europeos de emergencia</h2>
+          <p class="card-desc">El brote de hantavirus detectado en el crucero MV Hondius ha obligado a coordinar evacuaciones, cuarentenas y protocolos sanitarios entre varios países europeos bajo supervisión de la OMS.</p>
+          <div class="why-matters">
+            <strong>Por qué importa para el comercio exterior</strong>
+            Las crisis sanitarias en rutas marítimas internacionales pueden activar restricciones portuarias, retrasar cargas y afectar a la logística de cruceros de carga mixta. El caso reabre el debate sobre gestión internacional de movilidad y protocolos sanitarios en puertos europeos.
+          </div>
+          <p class="card-source">
+            <span aria-hidden="true">🔗</span>
+            Fuente: <a href="https://www.rtve.es/noticias/20260512/hantavirus-directo-ultima-hora-resumen-12-mayo/17064180.shtml" target="_blank" rel="noopener noreferrer" aria-label="Ver noticia en RTVE">RTVE</a>
+          </p>
+          <div class="easter-egg">
+            <p class="ee-hint">Interactivo · Haz clic en el barco</p>
+            <div class="ship-scene" id="shipScene" role="button" tabindex="0" aria-label="Clic para activar protocolo de emergencia sanitaria">
+              <div class="ship-svg-wrap" aria-hidden="true">
+                <svg width="70" height="30" viewBox="0 0 70 30" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="14" width="60" height="12" rx="3" fill="#c8c8d8"/>
+                  <rect x="20" y="6" width="30" height="10" rx="2" fill="#e0e0ee"/>
+                  <rect x="28" y="2" width="14" height="6" rx="1.5" fill="#d0d0e8"/>
+                  <rect x="10" y="16" width="8" height="6" rx="1" fill="#b0b0c8"/>
+                  <rect x="50" y="16" width="8" height="6" rx="1" fill="#b0b0c8"/>
+                  <circle cx="35" cy="9" r="2" fill="#888"/>
+                  <path d="M2,26 Q35,22 68,26 L68,30 L2,30 Z" fill="#a0c8e0"/>
+                </svg>
+              </div>
+              <div class="wave-base"></div>
+              <div class="emergency-light"></div>
+              <div class="protocol-badge">⚠ PROTOCOLO ACTIVADO</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 4: Trump-Xi negociación -->
+      <article class="card">
+        <div class="card-top-bar geo"></div>
+        <div class="card-body">
+          <div class="card-category cat-geo">
+            <span aria-hidden="true">🌐</span> Geopolítica comercial
+          </div>
+          <time class="card-date" datetime="2026-05-12">12–15 mayo 2026</time>
+          <h2>Trump y Xi negocian una tregua comercial clave entre EEUU y China</h2>
+          <p class="card-desc">La reunión entre Donald Trump y Xi Jinping abre la posibilidad de una reducción parcial de tensiones comerciales. Los mercados siguen de cerca posibles acuerdos sobre aranceles, tierras raras, tecnología y cadenas globales de suministro.</p>
+          <div class="why-matters">
+            <strong>Por qué importa para el comercio exterior</strong>
+            Cualquier acuerdo o desacuerdo entre EEUU y China redefine las cadenas de suministro globales, los precios de las materias primas tecnológicas y las rutas comerciales. Empresas importadoras de electrónica, materiales estratégicos y componentes industriales deben seguir este proceso de cerca.
+          </div>
+          <p class="card-source">
+            <span aria-hidden="true">🔗</span>
+            Fuente: <a href="https://www.xtb.com/cl/analisis-y-noticias/analisis-de-mercado/volveran-los-aranceles-que-esperar-de-la-cumbre-trump-xi" target="_blank" rel="noopener noreferrer" aria-label="Ver análisis en XTB">XTB Análisis</a>
+          </p>
+          <div class="easter-egg">
+            <p class="ee-hint">Interactivo · Mueve el deslizador</p>
+            <div class="tension-scene">
+              <div class="tension-labels">
+                <span>🇺🇸 Aranceles</span>
+                <span>Tregua 🤝</span>
+              </div>
+              <input type="range" id="tensionSlider" min="0" max="100" value="70" aria-label="Control de tensión comercial entre EEUU y China">
+              <div class="tension-indicator" id="tensionIndicator" style="color:var(--orange)">🔴 Tensión alta</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 5: Trump-Xi resultados -->
+      <article class="card">
+        <div class="card-top-bar geo"></div>
+        <div class="card-body">
+          <div class="card-category cat-geo">
+            <span aria-hidden="true">✈️</span> EEUU-China · Mercados
+          </div>
+          <time class="card-date" datetime="2026-05-15">15 mayo 2026</time>
+          <h2>Cumbre Trump-Xi en Pekín: grandes palabras, pocos acuerdos concretos</h2>
+          <p class="card-desc">China comprará 200 aviones Boeing, lejos de los 500 esperados. Los aranceles no se discutieron de forma sustancial y la tregua comercial sigue sin confirmarse, dejando a los mercados internacionales sin las certezas que buscaban.</p>
+          <div class="why-matters">
+            <strong>Por qué importa para el comercio exterior</strong>
+            La ausencia de acuerdos reales mantiene la incertidumbre arancelaria. Las empresas con exposición a mercados estadounidenses o chinos deben preparar escenarios de contingencia ante posibles nuevas escaladas o acuerdos parciales en los próximos meses.
+          </div>
+          <p class="card-source">
+            <span aria-hidden="true">🔗</span>
+            Fuente: <a href="https://cnnespanol.cnn.com/2026/05/15/mundo/trump-china-conclusiones-trax" target="_blank" rel="noopener noreferrer" aria-label="Ver noticia en CNN en Español">CNN en Español</a>
+          </p>
+          <div class="easter-egg">
+            <p class="ee-hint">Interactivo · Haz clic para ver el acuerdo</p>
+            <div class="plane-scene" id="planeScene" role="button" tabindex="0" aria-label="Clic para ver animación de aviones Boeing vendidos">
+              <div class="plane-track"></div>
+              <div class="plane-counter"><span id="planeCount">0</span> / 500 esperados</div>
+              <div class="plane-cta">Clic para ver los aviones →</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 6: México-UE -->
+      <article class="card">
+        <div class="card-top-bar deal"></div>
+        <div class="card-body">
+          <div class="card-category cat-deal">
+            <span aria-hidden="true">🤝</span> Acuerdos comerciales
+          </div>
+          <time class="card-date" datetime="2026-05-22">Firma: 22 mayo 2026</time>
+          <h2>México y la UE firmarán el 22 de mayo un acuerdo comercial que proyecta aumentar un 50% las exportaciones mexicanas a Europa</h2>
+          <p class="card-desc">México y la Unión Europea modernizarán su tratado comercial con eliminación de aranceles, facilitación aduanera digital y protección de denominaciones de origen, en una cumbre que se celebrará en Ciudad de México.</p>
+          <div class="why-matters">
+            <strong>Por qué importa para el comercio exterior</strong>
+            El nuevo acuerdo abre oportunidades directas para exportadores de sectores como autopartes, agroalimentario, farmacéutico, químico y textil. La facilitación aduanera digital reducirá tiempos y costes de despacho, beneficiando especialmente a pymes exportadoras.
+          </div>
+          <p class="card-source">
+            <span aria-hidden="true">🔗</span>
+            Fuente: <a href="https://www.bloomberglinea.com/latinoamerica/mexico/mexico-proyecta-aumentar-50-exportaciones-a-europa-con-firma-de-acuerdo-comercial/" target="_blank" rel="noopener noreferrer" aria-label="Ver noticia en Bloomberg Línea">Bloomberg Línea</a>
+          </p>
+          <div class="easter-egg">
+            <p class="ee-hint">Interactivo · Haz clic en el puente</p>
+            <div class="bridge-scene" id="bridgeScene" role="button" tabindex="0" aria-label="Clic para enviar contenedor de México a la UE">
+              <div class="bridge-left" aria-hidden="true">MX</div>
+              <div class="bridge-line" aria-hidden="true"></div>
+              <div class="bridge-right" aria-hidden="true">EU</div>
+              <div class="container-box" id="containerBox" aria-hidden="true">📦</div>
+              <div class="customs-badge" aria-hidden="true">✔ Aduana digital</div>
+              <div class="export-badge" aria-hidden="true">+50% exportaciones</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- WATCHLIST -->
+  <section class="watchlist" aria-labelledby="watch-title">
+    <h2 id="watch-title">Qué vigilar la próxima semana</h2>
+    <p class="watchlist-sub">Puntos clave de seguimiento para exportadores e importadores</p>
+    <div class="watch-items">
+      <div class="watch-item">
+        <div class="watch-num" aria-hidden="true">01</div>
+        <p class="watch-text"><strong style="color:rgba(255,255,255,0.9)">Evolución del precio del petróleo y rutas marítimas sensibles.</strong> El conflicto en el Estrecho de Ormuz puede intensificarse. Cualquier apertura o cierre afecta directamente a los costes de flete y seguro marítimo.</p>
+      </div>
+      <div class="watch-item">
+        <div class="watch-num" aria-hidden="true">02</div>
+        <p class="watch-text"><strong style="color:rgba(255,255,255,0.9)">Confirmación o falta de avances reales en la relación EEUU-China.</strong> Las próximas declaraciones oficiales determinarán si hay movimiento en aranceles sobre tecnología, minerales críticos y productos manufacturados.</p>
+      </div>
+      <div class="watch-item">
+        <div class="watch-num" aria-hidden="true">03</div>
+        <p class="watch-text"><strong style="color:rgba(255,255,255,0.9)">Impacto del nuevo marco comercial México-UE.</strong> La firma del 22 de mayo y el inicio del proceso de ratificación parlamentaria marcarán el calendario de aplicación de las nuevas condiciones arancelarias y aduaneras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <p class="cta-label">ComexToolbox · Herramientas de comercio exterior</p>
+    <h2 class="cta-title">Explora más herramientas de comercio exterior</h2>
+    <a href="https://comextoolbox.com/" class="cta-btn" aria-label="Ir al hub de herramientas de ComexToolbox">Ir al hub de herramientas</a>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 <a href="https://comextoolbox.com/" rel="noopener">ComexToolbox.com</a> · Radar Comex · Semana 11–17 mayo de 2026 · Contenido informativo, no constituye asesoramiento comercial ni legal.</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// --- EE1: Barrel ---
+const barrelScene = document.getElementById('barrelScene');
+const oilDrop = document.getElementById('oilDrop');
+const priceDisplay = document.getElementById('priceDisplay');
+const riskCounter = document.getElementById('riskCounter');
+let riskCount = 0;
+let prices = [105, 106, 107, 108, 106, 109, 107];
+let pi = 0;
+
+function triggerBarrel() {
+  oilDrop.classList.remove('animate');
+  void oilDrop.offsetWidth;
+  oilDrop.classList.add('animate');
+  riskCount++;
+  pi = (pi + 1) % prices.length;
+  priceDisplay.textContent = '$' + prices[pi];
+  priceDisplay.style.color = prices[pi] > 106 ? '#e8401a' : 'var(--orange)';
+  riskCounter.textContent = 'Riesgo energético ×' + riskCount;
+}
+
+barrelScene.addEventListener('click', triggerBarrel);
+barrelScene.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') triggerBarrel(); });
+
+// --- EE2: Pharma ---
+const pharmaScene = document.getElementById('pharmaScene');
+pharmaScene.addEventListener('click', () => { pharmaScene.classList.toggle('active'); });
+
+// --- EE3: Ship ---
+const shipScene = document.getElementById('shipScene');
+let shipActivated = false;
+
+shipScene.addEventListener('click', () => {
+  if (!shipActivated) {
+    shipScene.classList.add('activated');
+    shipActivated = true;
+    setTimeout(() => {
+      shipScene.classList.remove('activated');
+      shipActivated = false;
+    }, 4000);
+  }
+});
+shipScene.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') shipScene.click(); });
+
+// --- EE4: Tension slider ---
+const slider = document.getElementById('tensionSlider');
+const indicator = document.getElementById('tensionIndicator');
+
+function updateTension(v) {
+  const val = parseInt(v);
+  if (val < 30) {
+    indicator.textContent = '🟢 Tregua comercial';
+    indicator.style.color = 'var(--green)';
+  } else if (val < 65) {
+    indicator.textContent = '🟡 Tensión moderada';
+    indicator.style.color = 'var(--gold)';
+  } else {
+    indicator.textContent = '🔴 Tensión alta';
+    indicator.style.color = 'var(--orange)';
+  }
+}
+
+slider.addEventListener('input', e => updateTension(e.target.value));
+
+// --- EE5: Planes ---
+const planeScene = document.getElementById('planeScene');
+const planeCount = document.getElementById('planeCount');
+let planesFlying = false;
+let planeTotal = 0;
+const maxPlanes = 200;
+
+function launchPlanes() {
+  if (planesFlying) return;
+  planesFlying = true;
+  planeTotal = 0;
+  planeCount.textContent = '0';
+
+  // Remove old planes
+  planeScene.querySelectorAll('.plane-icon').forEach(p => p.remove());
+
+  const totalToLaunch = 10;
+  let launched = 0;
+
+  function launchOne() {
+    if (launched >= totalToLaunch) {
+      setTimeout(() => { planesFlying = false; }, 3000);
+      return;
+    }
+    const plane = document.createElement('div');
+    plane.className = 'plane-icon';
+    plane.textContent = '✈';
+    plane.style.bottom = (8 + Math.random() * 20) + 'px';
+    plane.style.animationDuration = (2 + Math.random()) + 's';
+    plane.style.animationPlayState = 'running';
+    plane.style.opacity = '1';
+    planeScene.appendChild(plane);
+
+    planeTotal += Math.floor(maxPlanes / totalToLaunch);
+    if (planeTotal > maxPlanes) planeTotal = maxPlanes;
+    planeCount.textContent = planeTotal;
+
+    launched++;
+    plane.addEventListener('animationend', () => plane.remove());
+    setTimeout(launchOne, 280);
+  }
+  launchOne();
+}
+
+planeScene.addEventListener('click', launchPlanes);
+planeScene.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') launchPlanes(); });
+
+// --- EE6: Bridge/container ---
+const bridgeScene = document.getElementById('bridgeScene');
+let bridgeActive = false;
+
+bridgeScene.addEventListener('click', () => {
+  if (!bridgeActive) {
+    bridgeActive = true;
+    bridgeScene.classList.add('shipping');
+    setTimeout(() => {
+      bridgeScene.classList.remove('shipping');
+      // Reset container position for next click
+      const cb = document.getElementById('containerBox');
+      cb.style.transition = 'none';
+      cb.style.left = '36px';
+      void cb.offsetWidth;
+      cb.style.transition = 'left 1.5s ease';
+      bridgeActive = false;
+    }, 3500);
+  }
+});
+bridgeScene.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') bridgeScene.click(); });
+
+// Smooth scroll observe for subtle fade-in
+if ('IntersectionObserver' in window) {
+  const cards = document.querySelectorAll('.card, .exec-summary, .watchlist, .timeline-item');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  cards.forEach(c => {
+    c.style.opacity = '0';
+    c.style.transform = 'translateY(20px)';
+    c.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s, transform 0.25s';
+    obs.observe(c);
+  });
+}
+</script>
+</body>
+</html>
