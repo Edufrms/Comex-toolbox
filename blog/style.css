@@ -571,43 +571,61 @@ body {
 .card.card-featured {
   grid-column: 1 / -1;
   flex-direction: row;
-  min-height: 300px;
+  min-height: 320px;
+  align-items: stretch;
 }
+
+/* Lado izquierdo: imagen */
 .card.card-featured .card-img-link {
-  width: 44%;
+  width: 42%;
   flex-shrink: 0;
+  display: block;
 }
-/* Override: en card-featured la imagen ocupa el 100% del contenedor padre, sin padding-top */
 .card.card-featured .card-img-wrap {
-  padding-top: 0;      /* anulamos el truco 16:9 */
-  height: 100%;        /* ocupa toda la altura de la card */
+  padding-top: 0;
+  height: 100%;
+  min-height: 320px;
   width: 100%;
 }
 .card.card-featured .card-img {
-  position: static;   /* volvemos a flujo normal */
+  position: static;
   width: 100%;
   height: 100%;
-  min-height: 300px;
+  min-height: 320px;
   object-fit: cover;
+  display: block;
 }
+
+/* Lado derecho: wrapper que agrupa body + footer */
+.card.card-featured .card-right {
+  flex: 1;
+  min-width: 0;          /* evita overflow en flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card.card-featured .card-body {
   padding: 2rem 2rem 1rem;
-  justify-content: center;
+  flex: 1;
+  justify-content: flex-start;
+  gap: 0.75rem;
 }
 .card.card-featured .card-title {
-  font-size: 1.55rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
   letter-spacing: -0.5px;
   line-height: 1.2;
 }
 .card.card-featured .card-summary {
   font-size: 0.95rem;
-  -webkit-line-clamp: 3;
   display: -webkit-box;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .card.card-featured .card-footer {
-  padding: 0.75rem 2rem 1.5rem;
+  padding: 1rem 2rem 1.75rem;
+  border-top: 1px solid var(--border);
 }
 
 /* ── FOOTER SITE ── */
@@ -672,16 +690,18 @@ body {
   }
   .card.card-featured .card-img-link { width: 100%; }
   .card.card-featured .card-img-wrap {
-    padding-top: 52%;   /* ratio 16:9 ≈ 56%, usamos un poco menos en tablet */
+    padding-top: 52%;
     height: auto;
+    min-height: unset;
   }
   .card.card-featured .card-img {
     position: absolute;
     min-height: unset;
   }
+  .card.card-featured .card-right { flex-direction: column; }
   .card.card-featured .card-body { padding: 1.5rem 1.5rem 0.75rem; }
   .card.card-featured .card-title { font-size: 1.3rem; }
-  .card.card-featured .card-footer { padding: 0.75rem 1.5rem 1.25rem; }
+  .card.card-featured .card-footer { padding: 0.75rem 1.5rem 1.25rem; border-top: none; }
 }
 
 @media (max-width: 640px) {
