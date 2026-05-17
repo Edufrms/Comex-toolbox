@@ -1,17 +1,6 @@
 // ============================================================
 // COMEXTOOLBOX — noticias.js
 // Edita solo el array "noticias" para agregar/quitar entradas.
-//
-// Campos disponibles:
-//   titulo    → título del artículo
-//   resumen   → 1–2 frases de descripción
-//   fecha     → "YYYY-MM-DD"
-//   imagen    → ruta a la imagen de portada
-//   enlace    → URL del artículo
-//   categoria → "radar" | "analisis" | "herramientas" | "guias"
-//   tags      → array de strings con etiquetas (máx 3)
-//   lectura   → tiempo estimado de lectura, ej. "4 min"
-//   destacado → true para mostrar como tarjeta grande al inicio
 // ============================================================
 
 const noticias = [
@@ -52,119 +41,115 @@ const noticias = [
 
 // ── Helpers ──────────────────────────────────────────────────
 function formatFecha(dateStr) {
-  const [y, m, d] = dateStr.split('-').map(Number);
-  return new Date(y, m - 1, d).toLocaleDateString('es-ES', {
+  var parts = dateStr.split('-').map(Number);
+  return new Date(parts[0], parts[1] - 1, parts[2]).toLocaleDateString('es-ES', {
     year: 'numeric', month: 'long', day: 'numeric'
   });
 }
 
-const catLabel = {
-  radar:       '📡 Radar Comex',
-  analisis:    '📊 Análisis',
-  herramientas:'🛠 Herramientas',
-  guias:       '📖 Guía'
+var catLabel = {
+  radar:        '📡 Radar Comex',
+  analisis:     '📊 Análisis',
+  herramientas: '🛠 Herramientas',
+  guias:        '📖 Guía'
 };
 
 // ── Crear tarjeta ────────────────────────────────────────────
 function crearCard(noticia) {
-  const article = document.createElement('article');
-  const clases = ['card'];
+  var article = document.createElement('article');
+  var clases = ['card'];
   if (noticia.destacado) clases.push('card-featured');
   if (noticia.categoria === 'radar') clases.push('card-radar');
   article.className = clases.join(' ');
   article.dataset.categoria = noticia.categoria || 'todos';
 
-  const label = catLabel[noticia.categoria] || 'Artículo';
-
-  const tagsHTML = (noticia.tags || [])
+  var label = catLabel[noticia.categoria] || 'Artículo';
+  var tagsHTML = (noticia.tags || [])
     .slice(0, 3)
-    .map(t => `<span class="tag">${t}</span>`)
+    .map(function(t) { return '<span class="tag">' + t + '</span>'; })
     .join('');
 
-  // Imagen con fallback si no carga
-  article.innerHTML = `
-    <a href="${noticia.enlace}" class="card-img-link" tabindex="-1" aria-hidden="true">
-      <div class="card-img-wrap">
-        <img
-          src="${noticia.imagen}"
-          alt="Portada: ${noticia.titulo}"
-          class="card-img"
-          loading="lazy"
-          onerror="this.closest('.card-img-wrap').classList.add('img-fallback'); this.style.display='none';"
-        >
-        <span class="card-cat">${label}</span>
-        ${noticia.destacado ? '<span class="card-badge-featured">Última edición</span>' : ''}
-      </div>
-    </a>
-    <div class="card-body">
-      <div class="card-meta">
-        <time datetime="${noticia.fecha}" class="card-date">${formatFecha(noticia.fecha)}</time>
-        ${noticia.lectura ? `<span class="card-read">⏱ ${noticia.lectura}</span>` : ''}
-      </div>
-      <h2 class="card-title">
-        <a href="${noticia.enlace}">${noticia.titulo}</a>
-      </h2>
-      <p class="card-summary">${noticia.resumen}</p>
-    </div>
-    <div class="card-footer">
-      <a href="${noticia.enlace}" class="card-link" aria-label="Leer: ${noticia.titulo}">
-        Leer artículo <span aria-hidden="true">→</span>
-      </a>
-      <div class="card-tags">${tagsHTML}</div>
-    </div>
-  `;
+  var badgeHTML = noticia.destacado
+    ? '<span class="card-badge-new">✦ Última edición</span>'
+    : '';
+
+  var lecturaHTML = noticia.lectura
+    ? '<span class="card-read">' + noticia.lectura + '</span>'
+    : '';
+
+  article.innerHTML =
+    '<a href="' + noticia.enlace + '" class="card-img-link" tabindex="-1" aria-hidden="true">' +
+      '<div class="card-img-wrap">' +
+        '<img src="' + noticia.imagen + '" alt="Portada: ' + noticia.titulo + '" class="card-img" loading="lazy" ' +
+          'onerror="this.closest(\'.card-img-wrap\').classList.add(\'img-fallback\'); this.style.display=\'none\';">' +
+        '<span class="card-cat">' + label + '</span>' +
+        badgeHTML +
+      '</div>' +
+    '</a>' +
+    '<div class="card-body">' +
+      '<div class="card-meta">' +
+        '<time datetime="' + noticia.fecha + '" class="card-date">' + formatFecha(noticia.fecha) + '</time>' +
+        lecturaHTML +
+      '</div>' +
+      '<h2 class="card-title"><a href="' + noticia.enlace + '">' + noticia.titulo + '</a></h2>' +
+      '<p class="card-summary">' + noticia.resumen + '</p>' +
+    '</div>' +
+    '<div class="card-footer">' +
+      '<a href="' + noticia.enlace + '" class="card-link" aria-label="Leer: ' + noticia.titulo + '">Leer artículo</a>' +
+      '<div class="card-tags">' + tagsHTML + '</div>' +
+    '</div>';
 
   return article;
 }
 
-// ── Render principal ─────────────────────────────────────────
-function renderNoticias(filtro = 'todos') {
-  const contenedor = document.getElementById('blog-list');
+// ── Render ───────────────────────────────────────────────────
+function renderNoticias(filtro) {
+  filtro = filtro || 'todos';
+  var contenedor = document.getElementById('blog-list');
   if (!contenedor) return;
 
-  // Ordenar: destacados primero, luego por fecha desc
-  const sorted = [...noticias].sort((a, b) => {
+  var sorted = noticias.slice().sort(function(a, b) {
     if (a.destacado && !b.destacado) return -1;
     if (!a.destacado && b.destacado) return 1;
     return new Date(b.fecha) - new Date(a.fecha);
   });
 
-  const filtradas = filtro === 'todos'
+  var filtradas = filtro === 'todos'
     ? sorted
-    : sorted.filter(n => n.categoria === filtro);
+    : sorted.filter(function(n) { return n.categoria === filtro; });
 
-  // Animación de salida/entrada
   contenedor.style.opacity = '0';
-  contenedor.style.transform = 'translateY(8px)';
 
-  setTimeout(() => {
+  setTimeout(function() {
     contenedor.innerHTML = '';
-
     if (filtradas.length === 0) {
       contenedor.innerHTML = '<p class="empty-state">No hay entradas en esta categoría todavía.</p>';
     } else {
-      filtradas.forEach(n => contenedor.appendChild(crearCard(n)));
+      filtradas.forEach(function(n) { contenedor.appendChild(crearCard(n)); });
     }
-
-    contenedor.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    contenedor.style.transition = 'opacity 0.25s ease';
     contenedor.style.opacity = '1';
-    contenedor.style.transform = 'translateY(0)';
-  }, 150);
+  }, 120);
 }
 
 // ── Filtros ──────────────────────────────────────────────────
 function initFiltros() {
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  var btns = document.querySelectorAll('.filter-btn');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       renderNoticias(btn.dataset.filter);
     });
   });
 }
 
 // ── Init ─────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  renderNoticias();
+document.addEventListener('DOMContentLoaded', function() {
+  renderNoticias('todos');
   initFiltros();
 });
