@@ -16,15 +16,18 @@
 
 const noticias = [
   {
-    titulo: "Radar Comex #1 — Las 10 noticias del comercio internacional esta semana",
-    resumen: "Aranceles, logística, nuevos acuerdos y mucho más: el resumen semanal que necesitas para estar al día en comercio exterior.",
-    fecha: "2025-05-11",
-    imagen: "imagen/portada_radar_comex_1.webp",
-    enlace: "radar-comex-01.html",
-    categoria: "radar",
-    tags: ["Aranceles", "Logística", "Ferias"],
-    lectura: "6 min",
-    destacado: true
+  {
+  titulo: "Radar Comex #1 — Semana del 11 al 17 de mayo de 2026",
+  resumen: "Resumen semanal de comercio internacional: petróleo y Estrecho de Ormuz, medicamentos críticos en Europa, tensión EEUU-China y acuerdo comercial México-UE.",
+  fecha: "2026-05-17",
+  imagen: "noticias/portada_radar_comex_1.webp",
+  enlace: "noticias/mayo-11-17.html",
+  categoria: "radar",
+  tags: ["Comercio internacional", "Energía", "Farmacéutico", "Geopolítica", "Acuerdos comerciales"],
+  lectura: "8 min",
+  destacado: true
+}
+}
   },
   {
     titulo: "¿Cómo afecta el conflicto entre India y Pakistán al comercio internacional?",
