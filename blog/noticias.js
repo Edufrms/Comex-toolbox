@@ -77,6 +77,9 @@ function crearCard(noticia) {
     ? '<span class="card-read">' + noticia.lectura + '</span>'
     : '';
 
+  var rightOpen  = noticia.destacado ? '<div class="card-right">' : '';
+  var rightClose = noticia.destacado ? '</div>' : '';
+
   article.innerHTML =
     '<a href="' + noticia.enlace + '" class="card-img-link" tabindex="-1" aria-hidden="true">' +
       '<div class="card-img-wrap">' +
@@ -86,6 +89,7 @@ function crearCard(noticia) {
         badgeHTML +
       '</div>' +
     '</a>' +
+    rightOpen +
     '<div class="card-body">' +
       '<div class="card-meta">' +
         '<time datetime="' + noticia.fecha + '" class="card-date">' + formatFecha(noticia.fecha) + '</time>' +
@@ -97,7 +101,8 @@ function crearCard(noticia) {
     '<div class="card-footer">' +
       '<a href="' + noticia.enlace + '" class="card-link" aria-label="Leer: ' + noticia.titulo + '">Leer artículo</a>' +
       '<div class="card-tags">' + tagsHTML + '</div>' +
-    '</div>';
+    '</div>' +
+    rightClose;
 
   return article;
 }
