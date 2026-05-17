@@ -16,18 +16,15 @@
 
 const noticias = [
   {
-  {
-  titulo: "Radar Comex #1 — Semana del 11 al 17 de mayo de 2026",
-  resumen: "Resumen semanal de comercio internacional: petróleo y Estrecho de Ormuz, medicamentos críticos en Europa, tensión EEUU-China y acuerdo comercial México-UE.",
-  fecha: "2026-05-17",
-  imagen: "noticias/portada_radar_comex_1.webp",
-  enlace: "noticias/mayo-11-17.html",
-  categoria: "radar",
-  tags: ["Comercio internacional", "Energía", "Farmacéutico", "Geopolítica", "Acuerdos comerciales"],
-  lectura: "8 min",
-  destacado: true
-}
-}
+    titulo: "Radar Comex #1 — Semana del 11 al 17 de mayo de 2026",
+    resumen: "Petróleo a 105 USD, medicamentos críticos en Europa, tensión EEUU-China y el acuerdo comercial México-UE que se firma el 22 de mayo.",
+    fecha: "2026-05-17",
+    imagen: "noticias/portada_radar_comex_1.webp",
+    enlace: "noticias/mayo-11-17.html",
+    categoria: "radar",
+    tags: ["Energía", "Geopolítica", "Acuerdos comerciales"],
+    lectura: "8 min",
+    destacado: true
   },
   {
     titulo: "¿Cómo afecta el conflicto entre India y Pakistán al comercio internacional?",
@@ -53,15 +50,22 @@ const noticias = [
   }
 ];
 
-// ── Renderizado ──────────────────────────────────────────────
+// ── Helpers ──────────────────────────────────────────────────
 function formatFecha(dateStr) {
-  // Parsear la fecha como local (no UTC) para evitar desfase de un día
   const [y, m, d] = dateStr.split('-').map(Number);
   return new Date(y, m - 1, d).toLocaleDateString('es-ES', {
     year: 'numeric', month: 'long', day: 'numeric'
   });
 }
 
+const catLabel = {
+  radar:       '📡 Radar Comex',
+  analisis:    '📊 Análisis',
+  herramientas:'🛠 Herramientas',
+  guias:       '📖 Guía'
+};
+
+// ── Crear tarjeta ────────────────────────────────────────────
 function crearCard(noticia) {
   const article = document.createElement('article');
   const clases = ['card'];
@@ -70,32 +74,42 @@ function crearCard(noticia) {
   article.className = clases.join(' ');
   article.dataset.categoria = noticia.categoria || 'todos';
 
-  const catLabel = {
-    radar: '📡 Radar Comex',
-    analisis: 'Análisis',
-    herramientas: 'Herramientas',
-    guias: 'Guía'
-  }[noticia.categoria] || 'Artículo';
+  const label = catLabel[noticia.categoria] || 'Artículo';
 
   const tagsHTML = (noticia.tags || [])
+    .slice(0, 3)
     .map(t => `<span class="tag">${t}</span>`)
     .join('');
 
+  // Imagen con fallback si no carga
   article.innerHTML = `
-    <div class="card-img-wrap">
-      <img src="${noticia.imagen}" alt="${noticia.titulo}" class="card-img" loading="lazy">
-      <span class="card-cat">${catLabel}</span>
-    </div>
+    <a href="${noticia.enlace}" class="card-img-link" tabindex="-1" aria-hidden="true">
+      <div class="card-img-wrap">
+        <img
+          src="${noticia.imagen}"
+          alt="Portada: ${noticia.titulo}"
+          class="card-img"
+          loading="lazy"
+          onerror="this.closest('.card-img-wrap').classList.add('img-fallback'); this.style.display='none';"
+        >
+        <span class="card-cat">${label}</span>
+        ${noticia.destacado ? '<span class="card-badge-featured">Última edición</span>' : ''}
+      </div>
+    </a>
     <div class="card-body">
       <div class="card-meta">
-        <span class="card-date">${formatFecha(noticia.fecha)}</span>
-        ${noticia.lectura ? `<span class="card-read">${noticia.lectura} lectura</span>` : ''}
+        <time datetime="${noticia.fecha}" class="card-date">${formatFecha(noticia.fecha)}</time>
+        ${noticia.lectura ? `<span class="card-read">⏱ ${noticia.lectura}</span>` : ''}
       </div>
-      <h2 class="card-title">${noticia.titulo}</h2>
+      <h2 class="card-title">
+        <a href="${noticia.enlace}">${noticia.titulo}</a>
+      </h2>
       <p class="card-summary">${noticia.resumen}</p>
     </div>
     <div class="card-footer">
-      <a href="${noticia.enlace}" class="card-link">Leer artículo</a>
+      <a href="${noticia.enlace}" class="card-link" aria-label="Leer: ${noticia.titulo}">
+        Leer artículo <span aria-hidden="true">→</span>
+      </a>
       <div class="card-tags">${tagsHTML}</div>
     </div>
   `;
@@ -103,10 +117,10 @@ function crearCard(noticia) {
   return article;
 }
 
-function renderNoticias() {
+// ── Render principal ─────────────────────────────────────────
+function renderNoticias(filtro = 'todos') {
   const contenedor = document.getElementById('blog-list');
   if (!contenedor) return;
-  contenedor.innerHTML = '';
 
   // Ordenar: destacados primero, luego por fecha desc
   const sorted = [...noticias].sort((a, b) => {
@@ -115,7 +129,42 @@ function renderNoticias() {
     return new Date(b.fecha) - new Date(a.fecha);
   });
 
-  sorted.forEach(n => contenedor.appendChild(crearCard(n)));
+  const filtradas = filtro === 'todos'
+    ? sorted
+    : sorted.filter(n => n.categoria === filtro);
+
+  // Animación de salida/entrada
+  contenedor.style.opacity = '0';
+  contenedor.style.transform = 'translateY(8px)';
+
+  setTimeout(() => {
+    contenedor.innerHTML = '';
+
+    if (filtradas.length === 0) {
+      contenedor.innerHTML = '<p class="empty-state">No hay entradas en esta categoría todavía.</p>';
+    } else {
+      filtradas.forEach(n => contenedor.appendChild(crearCard(n)));
+    }
+
+    contenedor.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    contenedor.style.opacity = '1';
+    contenedor.style.transform = 'translateY(0)';
+  }, 150);
 }
 
-document.addEventListener('DOMContentLoaded', renderNoticias);
+// ── Filtros ──────────────────────────────────────────────────
+function initFiltros() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderNoticias(btn.dataset.filter);
+    });
+  });
+}
+
+// ── Init ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  renderNoticias();
+  initFiltros();
+});
