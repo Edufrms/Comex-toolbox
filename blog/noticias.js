@@ -5,6 +5,17 @@
 
 const noticias = [
   {
+  titulo: "Radar Comex #2 — Semana del 18 al 22 de mayo de 2026",
+  resumen: "UE y México sellan su nuevo acuerdo comercial, una semana cargada de inflación, PIB y consumo, y el Eurogrupo debate competitividad y respuesta fiscal en un entorno más proteccionista.",
+  fecha: "2026-05-22",
+  imagen: "noticias/portada_radar_comex_2.webp",
+  enlace: "noticias/mayo-18-22.html",
+  categoria: "radar",
+  tags: ["Acuerdos comerciales", "Macroeconomía", "Unión Europea", "México", "Exportaciones"],
+  lectura: "8 min",
+  destacado: true
+},
+  {
     titulo: "Radar Comex #1 — Semana del 11 al 17 de mayo de 2026",
     resumen: "Petróleo a 105 USD, medicamentos críticos en Europa, tensión EEUU-China y el acuerdo comercial México-UE que se firma el 22 de mayo.",
     fecha: "2026-05-17",
