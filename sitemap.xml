@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Páginas principales -->
   <url>
-    <loc>https://comextoolbox.com/index.html</loc>
+    <loc>https://comextoolbox.com/</loc>
     <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -410,7 +410,7 @@
 
   <!-- Blog - Página principal -->
   <url>
-    <loc>https://comextoolbox.com/blog/index.html</loc>
+    <loc>https://comextoolbox.com/blog/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
