@@ -1,0 +1,33 @@
+// Proposed Firestore Security Rules for ComexToolbox public comments.
+// IMPORTANT: Review current production rules and test in Firebase Rules Playground
+// before publishing. This repository file is NOT automatically deployed.
+// Public users may read comments and submit new comments, but may never
+// edit or delete them. Client-side maxlength limits are repeated server-side.
+// Public create remains susceptible to spam: consider App Check, server-side
+// rate limiting / moderation and sensible budget alerts.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /comments/{commentId} {
+      allow get, list: if true;
+      allow create: if
+        request.resource.data.keys().hasOnly(['page', 'name', 'comment', 'timestamp']) &&
+        request.resource.data.keys().hasAll(['page', 'name', 'comment', 'timestamp']) &&
+        request.resource.data.page is string &&
+        request.resource.data.page.size() >= 1 &&
+        request.resource.data.page.size() <= 240 &&
+        request.resource.data.name is string &&
+        request.resource.data.name.size() >= 2 &&
+        request.resource.data.name.size() <= 80 &&
+        request.resource.data.comment is string &&
+        request.resource.data.comment.size() >= 3 &&
+        request.resource.data.comment.size() <= 1000 &&
+        request.resource.data.timestamp is int &&
+        request.resource.data.timestamp <= request.time.toMillis() + 300000 &&
+        request.resource.data.timestamp >= request.time.toMillis() - 300000;
+      allow update, delete: if false;
+    }
+    // Do not unintentionally allow access to other collections.
+    match /{document=**} { allow read, write: if false; }
+  }
+}
