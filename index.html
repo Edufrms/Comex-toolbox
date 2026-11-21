@@ -3,15 +3,8 @@
 <head>
         <link rel="icon" href="img/Contenedoricono.ico" type="image/x-icon">
 
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J1YVJESR6W');
-</script>
+        <!-- Consent defaults and optional Analytics are loaded before the AdSense/CMP script. -->
+<script src="privacy-consent.js"></script>
         <meta name="p:domain_verify" content="3bac4d80cc0ced59100964e306c13428"/>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -573,17 +566,19 @@
         <!-- Sección de comentarios -->
         <section class="comments-section">
   <h2>Recomendaciones y Comentarios</h2>
+  <p class="comment-privacy-note">Tu nombre y comentario serán visibles públicamente. No incluyas datos sensibles. Consulta la <a href="privacidad.html">política de privacidad</a>.</p>
   <form class="comment-form" id="commentForm">
     <div class="form-group">
       <label for="name">Nombre:</label>
-      <input type="text" id="name" required />
+      <input type="text" id="name" minlength="2" maxlength="80" autocomplete="name" required />
     </div>
     <div class="form-group">
       <label for="comment">Tu recomendación:</label>
-      <textarea id="comment" required placeholder="Comparte tu sugerencia de herramientas, webs, formación o cualquier otro recurso útil..."></textarea>
+      <textarea id="comment" minlength="3" maxlength="1000" required placeholder="Comparte tu sugerencia de herramientas, webs, formación o cualquier otro recurso útil..."></textarea>
     </div>
     <button type="submit" class="submit-btn">Enviar recomendación</button>
   </form>
+  <p id="commentsStatus" role="status" aria-live="polite" class="comment-form-status"></p>
   <div class="comments-list" id="commentsList">
     <!-- Comentarios se cargarán aquí -->
   </div>

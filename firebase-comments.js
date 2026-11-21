@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script de comentarios cargado ✅");
-
   const firebaseConfig = {
     apiKey: "AIzaSyAuVJynIyGExA2rMjOTUt8JuRxmxnYoRCM",
     authDomain: "comextoolbox.firebaseapp.com",
@@ -15,42 +13,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let rawPath = location.pathname;
   const normalizedPageId = ["/", "/index.html", "/index-en.html"].includes(rawPath) ? "home" : rawPath;
-  console.log("Mostrando comentarios para:", normalizedPageId);
-
 
   const form = document.getElementById("commentForm");
   const commentsList = document.getElementById("commentsList");
+  const nameInput = document.getElementById("name");
+  const commentInput = document.getElementById("comment");
+  const status = document.getElementById("commentsStatus");
+  const isEnglish = document.documentElement.lang === "en";
+  const messages = isEnglish
+    ? { sent: "Your comment has been sent.", failed: "The comment could not be sent. Please try again.", loading: "Loading comments failed. Please try again later.", length: "Please use 2–80 characters for your name and 3–1000 for your comment.", sending: "Sending…" }
+    : { sent: "Tu comentario se ha enviado.", failed: "No se pudo enviar el comentario. Vuelve a intentarlo.", loading: "No se pudieron cargar los comentarios.", length: "Utiliza entre 2 y 80 caracteres para el nombre y entre 3 y 1000 para el comentario.", sending: "Enviando…" };
 
-  if (form && commentsList) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const comment = document.getElementById("comment").value.trim();
-      if (!name || !comment) return;
+  function setStatus(text) {
+    if (status) status.textContent = text;
+  }
 
-      await db.collection("comments").add({
-        page: normalizedPageId,
-        name: name,
-        comment: comment,
-        timestamp: Date.now()
-      });
+  function renderComment(data) {
+    // Firestore content is untrusted user input. Never insert it with innerHTML.
+    const wrapper = document.createElement("div");
+    wrapper.className = "comment";
+    const author = document.createElement("strong");
+    author.textContent = typeof data.name === "string" ? data.name.slice(0, 80) : "";
+    const message = document.createElement("span");
+    message.textContent = typeof data.comment === "string" ? data.comment.slice(0, 1000) : "";
+    wrapper.append(author, document.createTextNode(": "), message);
+    return wrapper;
+  }
 
-      form.reset();
+  if (form && commentsList && nameInput && commentInput) {
+    const sendButton = form.querySelector('[type="submit"]');
+    nameInput.setAttribute("maxlength", "80");
+    commentInput.setAttribute("maxlength", "1000");
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const name = nameInput.value.trim();
+      const comment = commentInput.value.trim();
+      if (name.length < 2 || name.length > 80 || comment.length < 3 || comment.length > 1000) {
+        setStatus(messages.length);
+        return;
+      }
+      if (sendButton) sendButton.disabled = true;
+      setStatus(messages.sending);
+      try {
+        await db.collection("comments").add({
+          page: normalizedPageId,
+          name: name,
+          comment: comment,
+          timestamp: Date.now()
+        });
+        form.reset();
+        setStatus(messages.sent);
+      } catch (error) {
+        console.error("Comment submission error:", error);
+        setStatus(messages.failed);
+      } finally {
+        if (sendButton) sendButton.disabled = false;
+      }
     });
 
     db.collection("comments")
       .where("page", "==", normalizedPageId)
       .orderBy("timestamp", "desc")
+      .limit(50)
       .onSnapshot((snapshot) => {
-        commentsList.innerHTML = "";
-        snapshot.forEach((doc) => {
-          const c = doc.data();
-          commentsList.innerHTML += `
-            <div class="comment">
-              <strong>${c.name}</strong>: ${c.comment}
-            </div>
-          `;
-        });
+        const fragment = document.createDocumentFragment();
+        snapshot.forEach((doc) => fragment.appendChild(renderComment(doc.data())));
+        commentsList.replaceChildren(fragment);
+      }, (error) => {
+        console.error("Comment loading error:", error);
+        setStatus(messages.loading);
       });
   }
 });
