@@ -241,6 +241,7 @@
                     <p class="card-description">Estadísticas de comercio exterior del ICEX. Recurso esencial para el análisis de exportaciones e importaciones desde España.</p>
                     <div class="card-footer"><span class="card-category">Estadísticas y Datos</span></div>
                 </a>
+                <a href="tools/estadísticas-icex.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Aprende a usar</a>
             </article>
             <article class="resource-card" data-category="Análisis de Mercados">
                 <a href="https://ec.europa.eu/trade/policy/countries-and-regions/" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -264,6 +265,7 @@
                     <p class="card-description">Análisis de riesgos comerciales por países. Útil para evaluar solvencia de mercados destino y condiciones financieras.</p>
                     <div class="card-footer"><span class="card-category">Financiación y Riesgos</span></div>
                 </a>
+                <a href="tools/riesgo-país---cesce-espana.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Aprende a usar</a>
             </article>
             <article class="resource-card" data-category="Acceso a Mercados">
                 <a href="https://trade.ec.europa.eu/access-to-markets/" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -343,6 +345,7 @@
                     <p class="card-description">Accede a los servicios, ayudas, normativa y recursos que la Junta de Castilla y León pone a disposición de las empresas y emprendedores de la región. Información útil para la creación, internacionalización, digitalización y crecimiento empresarial.</p>
                     <div class="card-footer"><span class="card-category">Acceso a Mercados</span></div>
                 </a>
+                <a href="tools/Junta-Castilla-León.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Aprende a usar</a>
             </article>
             <article class="resource-card" data-category="Análisis de Mercados">
                 <a href="https://www.fao.org/faolex/country-profiles/en/" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -358,6 +361,7 @@
                     <p class="card-description">Explora los servicios y herramientas que la Cámara de Comercio de España ofrece para impulsar la internacionalización empresarial. Información sobre misiones comerciales, ayudas, formación, asesoramiento y plataformas de apoyo al exportador.</p>
                     <div class="card-footer"><span class="card-category">Acceso a Mercados</span></div>
                 </a>
+                <a href="tools/Cámara-Comercio.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Aprende a usar</a>
             </article>
             <article class="resource-card" data-category="Estadísticas y Datos">
                 <a href="https://ec.europa.eu/eurostat/web/main/home" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -910,7 +914,9 @@
             resourceCards.forEach(card => {
                 const matchesSearch = card.textContent.toLocaleLowerCase().includes(query);
                 const matchesCategory = currentCategory === 'all' || card.dataset.category === currentCategory;
-                card.hidden = !(matchesSearch && matchesCategory);
+                const visible = matchesSearch && matchesCategory;
+                card.hidden = !visible;
+                card.style.display = visible ? 'flex' : 'none';
             });
         }
 
