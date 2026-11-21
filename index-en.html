@@ -239,6 +239,7 @@
                     <p class="card-description">Foreign trade statistics from ICEX. Key resource for analyzing exports and imports from Spain.</p>
                     <div class="card-footer"><span class="card-category">Statistics Data</span></div>
                 </a>
+                <a href="tools/estadísticas-icex-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
             </article>
             <article class="resource-card" data-category="Market Analysis">
                 <a href="https://ec.europa.eu/trade/policy/countries-and-regions/" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -262,6 +263,7 @@
                     <p class="card-description">Commercial risk analysis by country. Useful for assessing market solvency and financial conditions.</p>
                     <div class="card-footer"><span class="card-category">Financing Risks</span></div>
                 </a>
+                <a href="tools/riesgo-país---cesce-espana-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
             </article>
             <article class="resource-card" data-category="Market Access">
                 <a href="https://trade.ec.europa.eu/access-to-markets/" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -341,6 +343,7 @@
                     <p class="card-description">Access services, aid, regulations, and resources provided by the regional government of Castilla y León for local companies and entrepreneurs. Useful information for business creation, internationalization, digitalization, and growth.</p>
                     <div class="card-footer"><span class="card-category">Market Access</span></div>
                 </a>
+                <a href="tools/Junta-Castilla-León-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
             </article>
             <article class="resource-card" data-category="Market Analysis">
                 <a href="https://www.fao.org/faolex/country-profiles/en/" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -356,6 +359,7 @@
                     <p class="card-description">Explore services and tools provided by the Spanish Chamber of Commerce to boost business internationalization. Information on trade missions, aid, training, consulting, and export support platforms.</p>
                     <div class="card-footer"><span class="card-category">Market Access</span></div>
                 </a>
+                <a href="tools/Cámara-Comercio-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
             </article>
             <article class="resource-card" data-category="Statistics Data">
                 <a href="https://ec.europa.eu/eurostat/web/main/home" target="_blank" rel="noopener noreferrer" class="resource-link">
@@ -901,7 +905,9 @@
             resourceCards.forEach(card => {
                 const matchesSearch = card.textContent.toLocaleLowerCase().includes(query);
                 const matchesCategory = currentCategory === 'all' || card.dataset.category === currentCategory;
-                card.hidden = !(matchesSearch && matchesCategory);
+                const visible = matchesSearch && matchesCategory;
+                card.hidden = !visible;
+                card.style.display = visible ? 'flex' : 'none';
             });
         }
 
