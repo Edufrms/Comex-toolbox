@@ -1,30 +1,43 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            navMenu.classList.toggle('active');
-        });
+  if (menuToggle && navMenu) {
+    menuToggle.setAttribute('aria-controls', navMenu.id);
+    menuToggle.setAttribute('aria-expanded', 'false');
 
-        // Cerrar menú al hacer click en un enlace
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Cerrar menú al hacer click fuera
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
+    function setMenuOpen(open) {
+      navMenu.classList.toggle('active', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute(
+        'aria-label',
+        document.documentElement.lang === 'en'
+          ? (open ? 'Close navigation menu' : 'Open navigation menu')
+          : (open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación')
+      );
     }
 
-    // Asegurarse de que los íconos de Lucide se inicialicen
-    if (window.lucide) {
-        window.lucide.createIcons();
-    }
+    menuToggle.addEventListener('click', function () {
+      setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenuOpen(false); });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+        setMenuOpen(false);
+        menuToggle.focus();
+      }
+    });
+  }
+
+  if (window.lucide) window.lucide.createIcons();
 });
