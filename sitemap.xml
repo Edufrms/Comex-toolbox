@@ -3,13 +3,13 @@
   <!-- Páginas principales -->
   <url>
     <loc>https://comextoolbox.com/index.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/index-en.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,49 +17,49 @@
   <!-- Herramientas de análisis comercial -->
   <url>
     <loc>https://comextoolbox.com/tools/export-potential-map.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/export-potential-map-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/the-atlas-of-economic-complexity.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/the-atlas-of-economic-complexity-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/TradeMap.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/TradeMap-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/market-access-map.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/market-access-map-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -67,49 +67,49 @@
   <!-- Regulaciones y aranceles -->
   <url>
     <loc>https://comextoolbox.com/tools/rules-of-origin-facilitator.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/rules-of-origin-facilitator-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/taric-consultation.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/taric-consultation-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/tax-consultations---european-commission.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/tax-consultations---european-commission-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/eur-lex.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/eur-lex-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -117,85 +117,85 @@
   <!-- Bases de datos estadísticas -->
   <url>
     <loc>https://comextoolbox.com/tools/statista.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/statista-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/datacomex.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/datacomex-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/un-comtrade.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/un-comtrade-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/cce---base-de-datos-de-comercio-exterior.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/cce---base-de-datos-de-comercio-exterior-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/estadísticas-icex.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/estadísticas-icex-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Eurostat.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Eurostat-en.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/international-database.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/international-database-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -203,25 +203,25 @@
   <!-- Información de países y mercados -->
   <url>
     <loc>https://comextoolbox.com/tools/countries-and-regions---european-commission.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/countries-and-regions---european-commission-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/access2markets.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/access2markets-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -229,25 +229,25 @@
   <!-- Riesgo país y crédito -->
   <url>
     <loc>https://comextoolbox.com/tools/riesgo-país---cesce-espana.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/riesgo-país---cesce-espana-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/coface.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/coface-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -255,13 +255,13 @@
   <!-- Medios de pago y financiamiento -->
   <url>
     <loc>https://comextoolbox.com/tools/medios-de-pago-internacional.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/medios-de-pago-internacional-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -269,37 +269,37 @@
   <!-- Análisis de mercado y tendencias -->
   <url>
     <loc>https://comextoolbox.com/tools/market-finder.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/market-finder-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/google-trend.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/google-trend-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/international-trade-administration.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/international-trade-administration-en.html</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -307,25 +307,25 @@
   <!-- Logística y transporte -->
   <url>
     <loc>https://comextoolbox.com/tools/load-calculator.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/load-calculator-en.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/icontainers.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/icontainers-en.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -333,13 +333,13 @@
   <!-- Regulaciones agrícolas y alimentarias -->
   <url>
     <loc>https://comextoolbox.com/tools/FAOLEX-Database.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/FAOLEX-Database-en.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -347,25 +347,25 @@
   <!-- Administraciones españolas -->
   <url>
     <loc>https://comextoolbox.com/tools/Cámara-Comercio.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Cámara-Comercio-en.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Junta-Castilla-León.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Junta-Castilla-León-en.html</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -373,37 +373,37 @@
   <!-- Portales especializados -->
   <url>
     <loc>https://comextoolbox.com/tools/iberglobal.html</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/iberglobal-en.html</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/club.html</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/club-en.html</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Globaltrade.html</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comextoolbox.com/tools/Globaltrade-en.html</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -430,9 +430,87 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comextoolbox.com/blog/11-17.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://comextoolbox.com/tools/10times-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/10times.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/AUMA-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/AUMA.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/Eventseye-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/Eventseye.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/Marine-traffic-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/Marine-traffic.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/MesseFrankfurt-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/MesseFrankfurt.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/TradeFairDates-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/TradeFairDates.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/sanctionskit-en.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comextoolbox.com/tools/sanctionskit.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
