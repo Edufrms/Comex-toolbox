@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Comparador de herramientas de comercio exterior | ComexToolbox</title>
+  <meta name="description" content="Compara 38 herramientas de comercio exterior por utilidad, alcance y limitaciones: Trade Map, DataComex, TARIC, Eurostat, ferias y logística.">
+  <link rel="canonical" href="https://comextoolbox.com/comparador.html">
+  <link rel="alternate" hreflang="es" href="https://comextoolbox.com/comparador.html">
+  <link rel="alternate" hreflang="en" href="https://comextoolbox.com/comparador-en.html">
+  <link rel="icon" href="img/Contenedoricono.ico" type="image/x-icon">
+  <meta name="google-adsense-account" content="ca-pub-3325448390634704">
+  <link rel="stylesheet" href="comparador.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script>
+</head>
+<body class="cmp-page">
+  <nav class="cmp-nav" aria-label="Navegación principal">
+    <div class="cmp-shell cmp-nav__inner">
+      <a class="cmp-brand" href="index.html">ComexToolbox</a>
+      <div class="cmp-nav__links"><a href="index.html">Inicio</a><a href="index.html#resourcesGrid">Directorio</a><a href="comparador-en.html">English</a></div>
+    </div>
+  </nav>
+  <header class="cmp-hero">
+    <div class="cmp-shell">
+      <div class="cmp-kicker">INVESTIGACIÓN COMERCIAL INTERACTIVA</div>
+      <h1>Compara herramientas de comercio exterior sin perder tiempo</h1>
+      <p>Selecciona entre dos y cuatro recursos para identificar qué información aporta cada uno, en qué situación conviene utilizarlo y cuáles son sus limitaciones.</p>
+      <div class="cmp-statline"><span>38 herramientas</span><span>Comparaciones de 2 a 4</span><span>Tutoriales incluidos</span></div>
+    </div>
+  </header>
+  <main>
+    <section class="cmp-intro cmp-shell" aria-label="Empieza con estas comparaciones">
+      <h2>Empieza con estas comparaciones</h2>
+      <p>Puedes utilizar un ejemplo y modificar la selección después.</p>
+      <div class="cmp-preset-row"><button type="button" class="cmp-preset" data-cmp-preset="3,19,20">Trade Map · DataComex · UN Comtrade</button><button type="button" class="cmp-preset" data-cmp-preset="4,8,14">Market Access Map · TARIC · Access2Markets</button><button type="button" class="cmp-preset" data-cmp-preset="33,34,36">AUMA · 10times · Eventseye</button><button type="button" class="cmp-preset" data-cmp-preset="16,13,38">Coface · CESCE · SanctionsKit</button></div>
+    </section>
+    <div class="cmp-shell" id="cmp-app">
+      <div class="cmp-app">
+        <section class="cmp-panel cmp-section" aria-labelledby="cmp-catalog-heading">
+          <div class="cmp-panel__top"><h2 id="cmp-catalog-heading">Elige las herramientas</h2><span class="cmp-count" id="cmp-count"></span></div>
+          <div class="cmp-filters">
+            <label for="cmp-search">Buscar una herramienta<input id="cmp-search" type="search" placeholder="Ej. Trade Map, aranceles, ferias…" autocomplete="off"></label>
+            <label for="cmp-category">Filtrar por temática<select id="cmp-category"></select></label>
+          </div>
+          <div id="cmp-catalog" class="cmp-catalog" aria-live="polite"></div>
+        </section>
+        <aside class="cmp-side" aria-labelledby="cmp-selected-heading">
+          <h3 id="cmp-selected-heading">Tu selección</h3>
+          <p class="cmp-side__subtitle">Añade o quita herramientas. El límite es de cuatro para facilitar la lectura.</p>
+          <p id="cmp-selected-count" class="cmp-count"></p>
+          <div id="cmp-selected" class="cmp-selected" aria-live="polite"></div>
+          <button id="cmp-view" type="button" class="cmp-primary">Ver comparación</button>
+          <button id="cmp-clear" type="button" class="cmp-secondary">Vaciar selección</button>
+          <p class="cmp-side__note">El enlace de esta página se actualiza con tu selección, para que puedas compartir la comparación.</p>
+          <p id="cmp-notice" class="cmp-notice" role="status" aria-live="polite" hidden></p>
+        </aside>
+      </div>
+      <section class="cmp-section cmp-results" aria-labelledby="cmp-results-heading">
+        <h2 id="cmp-results-heading">Comparación de herramientas</h2>
+        <p>Esta comparación es orientativa. No son datos de precios o disponibilidad en tiempo real; consulta siempre cada servicio antes de tomar una decisión.</p>
+        <div class="cmp-actions"><button id="cmp-copy" class="cmp-secondary" type="button">Copiar resumen</button></div>
+        <div id="cmp-results" aria-live="polite"></div>
+      </section>
+    </div>
+    <section class="cmp-editorial cmp-shell" aria-labelledby="cmp-editorial-heading">
+      <h2 id="cmp-editorial-heading">Tres casos habituales en comercio exterior</h2>
+      <div class="cmp-editorial__grid"><article class="cmp-editorial__card"><h3>¿Trade Map, DataComex o UN Comtrade?</h3><p>Trade Map permite explorar flujos comerciales internacionales y competidores. DataComex añade una perspectiva detallada de las exportaciones e importaciones españolas. UN Comtrade sirve para contrastar declaraciones de distintos países y detectar diferencias metodológicas. No son equivalentes: pueden utilizarse en secuencia.</p></article><article class="cmp-editorial__card"><h3>¿TARIC, Market Access Map o Access2Markets?</h3><p>TARIC es una referencia de las medidas aduaneras aplicables a importaciones en la UE. Market Access Map es útil para comparar tratamientos entre países. Access2Markets reúne información práctica sobre aranceles, requisitos y trámites para rutas vinculadas a la UE. La clasificación y el origen siguen siendo determinantes.</p></article><article class="cmp-editorial__card"><h3>¿Qué feria elegir?</h3><p>AUMA aporta una visión especializada del sector ferial alemán; 10times, EventsEye y TradeFairDates facilitan descubrir eventos en distintos países. Una vez encontrado un evento, hay que confirmar fechas, perfil de compradores, coste y condiciones con el organizador, no solo con el directorio.</p></article></div>
+      <div class="cmp-insight" style="margin-top:20px"><h3>Cómo interpretar el comparador</h3><p>La selección no establece un ganador automático. Las herramientas usan fuentes, modelos, coberturas geográficas y niveles de acceso diferentes. Compara primero la pregunta que quieres resolver y verifica posteriormente la vigencia de los resultados en la plataforma oficial.</p></div>
+    </section>
+  </main>
+  <footer class="cmp-foot"><div class="cmp-shell">© 2026 ComexToolbox · <a href="privacidad.html">Privacidad</a> · <a href="index.html">Inicio</a></div></footer>
+  <script src="comparador-data.js" defer></script>
+  <script src="comparador.js" defer></script>
+</body></html>
