@@ -1,152 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-3325448390634704">
-    <title>Tutorial TARIC UE (Consulta Arancelaria)</title>
-    <link rel="stylesheet" href="stylestools.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J1YVJESR6W');
-    </script>
-</head>
-<a href="taric-consultation-en.html" class="lang-btn">🇺🇸 English</a>
-<body>
-    <header>
-        <nav>
-            <h1>Hub de Comercio Exterior</h1>
-            <a href="../index.html">🌐Volver al Hub🌐</a>
-        </nav>
-    </header>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Consulta TARIC: cómo comprobar aranceles de la UE | ComexToolbox</title><meta name="description" content="Tutorial para consultar TARIC de la UE: clasificación, derechos, contingentes, medidas comerciales y condiciones aplicables."><meta name="google-adsense-account" content="ca-pub-3325448390634704"><link rel="canonical" href="https://comextoolbox.com/tools/taric-consultation.html"><link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/taric-consultation.html"><link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/taric-consultation-en.html"><link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon"><link rel="stylesheet" href="stylestools.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script><style>
+.ct-guide{max-width:1080px;margin:0 auto 28px;padding:0 18px;color:#17243a;line-height:1.7}
+.ct-guide *{box-sizing:border-box}.ct-guide .ct-hero{background:linear-gradient(115deg,#102a4b,#1c548a);color:white;border-radius:18px;padding:34px;margin:22px 0}
+.ct-guide .ct-eyebrow{font-size:.78rem;letter-spacing:.10em;font-weight:750;color:#b7e2ff}.ct-guide .ct-hero h1{font-size:clamp(1.55rem,3.2vw,2.4rem);line-height:1.24;margin:10px 0 15px;color:#fff}
+.ct-guide .ct-hero p{max-width:790px;color:#e7f1fc}.ct-guide .ct-hero a.ct-primary{display:inline-block;background:#fff;color:#163d6c;padding:10px 17px;border-radius:9px;font-weight:750;text-decoration:none;margin:12px 0 4px}
+.ct-guide .ct-pills{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0}.ct-guide .ct-pills span{border:1px solid #8db6d8;padding:3px 9px;border-radius:99px;font-size:.8rem}
+.ct-guide .ct-section{background:#fff;border:1px solid #e0e8f0;border-radius:14px;padding:26px;margin:20px 0;box-shadow:0 2px 8px #0c28450b}
+.ct-guide h2{font-size:1.45rem;margin:0 0 12px;color:#113d69}.ct-guide h3{color:#1a4873;font-size:1.06rem;margin:0 0 8px}.ct-guide p{margin:0 0 12px}.ct-guide ul,.ct-guide ol{padding-left:23px;margin:8px 0 14px}.ct-guide li{margin:5px 0}
+.ct-guide .ct-toc{display:flex;flex-wrap:wrap;gap:8px}.ct-guide .ct-toc a,.ct-guide .ct-alt a{background:#edf5fc;border:1px solid #d1e6fa;border-radius:8px;padding:7px 11px;text-decoration:none;color:#174c81}
+.ct-guide .ct-steps{counter-reset:step}.ct-guide .ct-step{padding:14px 0;border-bottom:1px solid #ecf0f4}.ct-guide .ct-step:last-child{border:none}.ct-guide .ct-step h3{display:flex;align-items:center;gap:9px}.ct-guide .ct-step h3:before{counter-increment:step;content:counter(step);background:#dbeefe;color:#144c81;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ct-guide .ct-callout{background:#eef6ff;border-left:4px solid #2077c9;padding:15px;border-radius:7px;margin:15px 0}.ct-guide .ct-caution{background:#fff8e8;border-left-color:#d5901c}
+.ct-guide .ct-overflow{overflow-x:auto}.ct-guide table{width:100%;border-collapse:collapse;min-width:630px;font-size:.91rem}.ct-guide th,.ct-guide td{text-align:left;padding:10px;border-bottom:1px solid #e6ecf1;vertical-align:top}.ct-guide th{background:#edf4fb;color:#123e6a}
+.ct-guide .ct-kicker{font-weight:800;font-size:.78rem;color:#965300;letter-spacing:.04em}.ct-guide .ct-calc{border:1px solid #cae0f4;background:#f4f9ff;border-radius:12px;padding:18px}
+.ct-guide .ct-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:13px;align-items:end}.ct-guide .ct-fields label{display:block;font-weight:650;font-size:.86rem}.ct-guide .ct-fields input{display:block;width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;margin-top:5px;font-size:1rem}
+.ct-guide button.ct-button{border:0;border-radius:8px;background:#175b9c;color:white;padding:12px 17px;font-weight:700;cursor:pointer}.ct-guide .ct-result{font-weight:750;margin-top:12px;min-height:24px}.ct-guide .ct-hint{font-size:.88rem;color:#52677d}
+.ct-guide .ct-checks{columns:2;column-gap:35px}.ct-guide .ct-checks li{break-inside:avoid}.ct-guide .ct-alt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ct-guide .ct-alt a{display:flex;flex-direction:column}.ct-guide .ct-alt small{color:#516b84}
+.ct-guide .ct-video{max-width:700px;aspect-ratio:16/9;margin:18px auto}.ct-guide .ct-video iframe{width:100%;height:100%;border:0;border-radius:12px}
+.ct-guide .ct-sources{display:flex;flex-wrap:wrap;gap:12px}.ct-guide .ct-sources a{color:#155b99}
+.ct-guide .ct-meta{font-size:.81rem;color:#64748b;margin:12px 0}.ct-guide a:focus-visible,.ct-guide button:focus-visible{outline:3px solid #c17612;outline-offset:3px}
+@media(max-width:680px){.ct-guide .ct-hero{padding:23px}.ct-guide .ct-section{padding:18px}.ct-guide .ct-fields{grid-template-columns:1fr}.ct-guide .ct-checks{columns:1}.ct-guide .ct-alt{grid-template-columns:1fr}}
 
-    <div class="tutorial-container">
-        <div class="tutorial-header">
-            <h1>Tutorial de TARIC Consultation</h1>
-            <p>Consulta aranceles, medidas, códigos y requisitos de importación en la Unión Europea</p>
-        </div>
+/* Correcciones aisladas para guías ComexToolbox.
+   Neutralizan selectores globales de stylestools.css sin modificar el CSS compartido. */
+.ct-guide section,
+.ct-guide nav.ct-section {
+  max-width: none;
+  margin: 20px 0;
+  padding: 26px;
+}
+.ct-guide section.ct-hero {
+  margin: 22px 0;
+  padding: 34px;
+}
+.ct-guide nav.ct-section {
+  display: block;
+}
+.ct-guide .ct-section h2 { text-align: left; }
+.ct-guide section div {
+  display: block;
+  grid-template-columns: none;
+  gap: normal;
+}
+/* Restauramos solamente las rejillas que pertenecen al tutorial. */
+.ct-guide section .ct-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 13px; }
+.ct-guide section .ct-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ct-guide section .ct-step h3 { display: flex; }
+.ct-guide section .ct-video { max-width: 700px; }
+@media (max-width: 680px) {
+ .ct-guide section.ct-hero { padding: 23px; }
+ .ct-guide section.ct-section, .ct-guide nav.ct-section { padding: 18px; }
+ .ct-guide section .ct-fields, .ct-guide section .ct-alt { grid-template-columns: 1fr; }
+}
 
-        <div class="tutorial-section">
-            <h2>1. ¿Qué es TARIC?</h2>
-            <div class="tutorial-step">
-                <p>TARIC (Tarif Intégré de la Communauté) es el Arancel Integrado de la UE. La herramienta de consulta TARIC permite acceder a:</p>
-                <ul>
-                    <li>Aranceles aduaneros aplicables</li>
-                    <li>Medidas de suspensión o preferenciales</li>
-                    <li>Contingentes arancelarios</li>
-                    <li>Prohibiciones, restricciones y documentos requeridos</li>
-                </ul>
-                <div class="note">
-                    <strong>Nota:</strong> TARIC está actualizado diariamente y se basa en el código combinado de mercancías.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>2. Acceso a la herramienta</h2>
-            <div class="tutorial-step">
-                <ol>
-                    <li>Accede a: <a href="https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp" target="_blank">taric_consultation.jsp</a></li>
-                    <li>No es necesario registrarse</li>
-                    <li>Disponible en varios idiomas de la UE</li>
-                </ol>
-                <p>El acceso directo al buscador se encuentra también enlazado desde el portal de Fiscalidad y Aduanas.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>3. ¿Cómo buscar?</h2>
-            <div class="tutorial-step">
-                <ol>
-                    <li>Introduce el código arancelario (HS/CN/TARIC) o una palabra clave (ej. "vino")</li>
-                    <li>Selecciona el país de origen de la mercancía</li>
-                    <li>Selecciona la fecha de la operación (por defecto es hoy)</li>
-                    <li>Haz clic en “Display Measures”</li>
-                </ol>
-                <ul>
-                    <li>Verás una lista detallada con los aranceles aplicables, preferencias y medidas especiales</li>
-                    <li>Haz clic en “Details” para información más específica sobre normativa o documentación requerida</li>
-                </ul>
-                <div class="warning">
-                    <strong>Importante:</strong> Algunas partidas tienen subdivisiones (niveles TARIC) que activan requisitos adicionales.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>4. Interpretación de resultados</h2>
-            <div class="tutorial-step">
-                <p>Los resultados incluyen:</p>
-                <ul>
-                    <li>Arancel base (NMF)</li>
-                    <li>Preferencias arancelarias por acuerdos comerciales</li>
-                    <li>Medidas antidumping</li>
-                    <li>Licencias o restricciones a la importación</li>
-                    <li>Códigos adicionales que deben declararse</li>
-                </ul>
-                <p>Todo esto puede cambiar según el país de origen o la naturaleza del producto.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>5. Documentación y requisitos</h2>
-            <div class="tutorial-step">
-                <p>Además de los aranceles, se muestra si son necesarios:</p>
-                <ul>
-                    <li>Certificados sanitarios, fitosanitarios o técnicos</li>
-                    <li>Licencias de importación</li>
-                    <li>Contingentes con códigos adicionales</li>
-                    <li>Registros o declaraciones específicas</li>
-                </ul>
-                <p>Haz clic en los íconos de documento para consultar la base legal.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>6. Ejemplo práctico</h2>
-            <div class="tutorial-step">
-                <h3>Ejemplo: Importación de chocolate desde Ecuador</h3>
-                <ol>
-                    <li>Introduce el código 180632 (chocolate con azúcar)</li>
-                    <li>País de origen: Ecuador</li>
-                    <li>Fecha: hoy</li>
-                    <li>Resultado: 0% arancel por SPG (Sistema de Preferencias Generalizadas)</li>
-                    <li>Requisito: cumplir con regla de origen y declarar código adicional</li>
-                </ol>
-                <p>Consulta el desglose para confirmar documentación necesaria y referencias normativas.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>7. Consejos de uso</h2>
-            <div class="tutorial-step">
-                <ul>
-                    <li>Consulta siempre el TARIC antes de importar o presupuestar</li>
-                    <li>Guarda los códigos TARIC y sus medidas como parte del expediente logístico</li>
-                    <li>Verifica también en Access2Markets para info complementaria</li>
-                    <li>Revisa frecuentemente los cambios normativos, sobre todo en sectores regulados (alimentación, química, textil...)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <section>
-        <h2>Otros recursos útiles</h2>
-        <div>
-            <a href="/tools/market-access-map.html">🛃 Market Access Map</a>
-            <a href="/tools/rules-of-origin-facilitator.html">📘 Rules of Origin</a>
-            <a href="/tools/taric-consultation.html">💼 TARIC UE</a>
-            <a href="/tools/access2markets.html">🌐 Access2Markets</a>
-            <a href="/tools/tax-consultations---european-commission.html">⚖️ Tax Consultations - EC</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Hub de Comercio Exterior. Todos los derechos reservados.</p>
-        <a href="../index.html">🌐Volver al Hub🌐</a>
-    </footer>
-</body>
-</html>
+.ct-guide .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide .ct-mini{padding:16px;background:#f4f8fc;border:1px solid #d9e7f3;border-radius:10px}
+.ct-guide .ct-mini strong{display:block;color:#174c81;margin-bottom:5px}
+.ct-guide .ct-quiz{border:1px solid #cae0f4;border-radius:12px;background:#f4f9ff;padding:20px}
+.ct-guide .ct-quiz select,.ct-guide .ct-quiz input{width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;font:inherit;max-width:100%}
+.ct-guide .ct-quiz label{display:block;font-weight:650;margin:10px 0}
+.ct-guide .ct-quiz .ct-output{padding:13px;background:white;border-radius:8px;border:1px solid #dae6f0;min-height:55px;margin-top:14px}
+.ct-guide section .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide section .ct-quiz{display:block}
+@media(max-width:680px){.ct-guide section .ct-stack{grid-template-columns:1fr}}
+</style></head><body><header><nav><h1>ComexToolbox</h1><a href="../index.html">Volver a ComexToolbox</a> · <a href="taric-consultation-en.html">English</a></nav></header><main class="ct-guide"><section class="ct-hero"><div class="ct-eyebrow">GUÍA PRÁCTICA · OPERATIVA ADUANERA</div><h1>TARIC: interpreta el arancel integrado de la Unión Europea</h1><p>Guía para consultar medidas aduaneras, códigos, países de origen y fechas antes de importar.</p><a class="ct-primary" href="https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/eu-customs-tariff-taric_en" target="_blank" rel="noopener noreferrer">Abrir plataforma oficial ↗</a></section><nav class="ct-section" aria-label="Índice"><h2>En esta guía</h2><div class="ct-toc"><a href="#fundamento">Qué información ofrece</a><a href="#proceso">Cómo realizar una consulta</a><a href="#caso">Situación práctica</a><a href="#lectura">Cómo interpretar los resultados</a><a href="#errores">Errores frecuentes</a><a href="#fuentes">Fuentes y siguientes pasos</a></div></nav><section class="ct-section" id="fundamento"><h2>1. Qué información ofrece</h2><p>TARIC es el arancel integrado de la Unión Europea: reúne derechos y medidas vinculadas al arancel aduanero común y a disposiciones comerciales y agrícolas relevantes. Una consulta debe incorporar clasificación, país de origen y fecha de aplicación. El resultado puede incluir medidas diferentes del derecho ad valorem general.</p><div class="ct-callout ct-caution">Contrasta siempre la normativa vigente con la fuente oficial antes de aplicar un arancel o una preferencia.</div></section><section class="ct-section" id="proceso"><h2>2. Cómo realizar una consulta</h2><div class="ct-steps"><div class="ct-step"><h3>Define el producto y la clasificación TARIC</h3><p>Anota la fuente, los códigos relevantes y la fecha para esta fase; utiliza el control equivalente en la interfaz oficial vigente.</p></div><div class="ct-step"><h3>Introduce el país de origen pertinente</h3><p>Anota la fuente, los códigos relevantes y la fecha para esta fase; utiliza el control equivalente en la interfaz oficial vigente.</p></div><div class="ct-step"><h3>Selecciona la fecha prevista de importación</h3><p>Anota la fuente, los códigos relevantes y la fecha para esta fase; utiliza el control equivalente en la interfaz oficial vigente.</p></div><div class="ct-step"><h3>Examina medidas, condiciones y documentos</h3><p>Anota la fuente, los códigos relevantes y la fecha para esta fase; utiliza el control equivalente en la interfaz oficial vigente.</p></div></div></section><section class="ct-section" id="caso"><h2>3. Situación práctica</h2><p>Una empresa española importa piezas metálicas desde un país tercero. Dos artículos que parecen iguales pueden corresponder a códigos distintos según composición y uso. La empresa comprueba el código, el país de origen y la fecha y analiza si aparecen derechos adicionales, medidas de defensa comercial o documentos exigibles. No es correcto presupuestar un porcentaje genérico sin verificar estos parámetros.</p><div class="ct-callout">Este caso ilustra el método de análisis: no atribuye aranceles actuales ni certifica el cumplimiento de un producto.</div></section><section class="ct-section" id="lectura"><h2>4. Cómo interpretar los resultados</h2><p>TARIC integra medidas de la UE, pero la información de IVA y ciertos impuestos nacionales se consulta por los canales pertinentes. Un derecho puede ser específico, mixto, condicionado a contingente o a una medida de defensa comercial. La decisión de clasificación aduanera corresponde a la autoridad competente.</p><div class="ct-quiz"><label>¿Qué dato necesitas resolver para consultar TARIC?<select id="ct-choose"><option value="0">Clasificación TARIC del artículo</option><option value="1">País de origen aduanero</option><option value="2">Fecha de aplicación de las medidas</option><option value="3">Condiciones y documentos de una medida</option></select></label><button type="button" class="ct-button" id="ct-go">Ver siguiente paso</button><p class="ct-output" id="ct-result" aria-live="polite" role="status"></p></div><p class="ct-hint">El orientador es educativo, no una decisión aduanera.</p></section><section class="ct-section" id="errores"><h2>5. Errores frecuentes</h2><div class="ct-steps"><div class="ct-step"><h3>Elegir un código por el nombre comercial sin revisar composición</h3></div><div class="ct-step"><h3>Olvidar que las medidas pueden cambiar por fecha</h3></div><div class="ct-step"><h3>Ignorar medidas antidumping o contingentes</h3></div><div class="ct-step"><h3>Confundir derecho aduanero con coste total de importación</h3></div></div></section><section class="ct-section" id="fuentes"><h2>6. Fuentes y siguientes pasos</h2><p>Guarda código del producto, países, fechas, fuente y requisitos documentales. Consulta la base vigente y conserva una evidencia fechada del resultado.</p><div class="ct-sources"><a target="_blank" rel="noopener noreferrer" href="https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/eu-customs-tariff-taric_en">Documentación oficial</a></div><h3 style="margin-top:22px">Investigación relacionada</h3><div class="ct-alt"><a href="access2markets.html"><strong>Access2Markets</strong><small>Complementa el análisis de acceso al mercado</small></a><a href="market-access-map.html"><strong>Market Access Map</strong><small>Contrasta regímenes arancelarios</small></a></div></section><p class="ct-meta">Revisión: noviembre de 2026. Confirma la normativa vigente en la fuente oficial.</p></main><footer><p>ComexToolbox · Guía educativa independiente</p><a href="../index.html">Volver a ComexToolbox</a></footer><script>(function(){const b=document.getElementById('ct-go'),a=document.getElementById('ct-choose'),o=document.getElementById('ct-result');if(!b||!a||!o)return;const answers=["Revisa material, función y reglas de clasificación; un nombre comercial no basta.","Aclara el origen antes de interpretar medidas específicas por país.","Utiliza la fecha prevista de importación y comprueba actualizaciones.","Abre los detalles de cada medida y verifica justificantes y códigos adicionales."];function update(){o.textContent=answers[Number(a.value)]||'';}b.addEventListener('click',update);update();})();</script></body></html>

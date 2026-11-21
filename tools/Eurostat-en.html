@@ -1,149 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn how to use Eurostat to access official European Union statistics for trade, economy, labor, and market analysis." />
-  <meta name="google-adsense-account" content="ca-pub-3325448390634704" />
-  <meta name="robots" content="index, follow" />
-  <title>Eurostat | ComexToolbox</title>
-  <link rel="canonical" href="https://comextoolbox.com/tools/Eurostat-en.html" />
-  <link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/Eurostat-en.html" />
-  <link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/Eurostat.html" />
-  <link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="stylestools.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J1YVJESR6W');
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <nav aria-label="Main navigation">
-      <span style="color:white;font-size:1.5rem;font-weight:bold;">ComexToolbox</span>
-      <a href="../index-en.html">Back to Hub</a>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How to use Eurostat Comext for trade analysis | ComexToolbox</title><meta name="description" content="Practical guide to Eurostat Comext trade data: reporters, partners, product codes, comparable periods and growth calculations."><meta name="google-adsense-account" content="ca-pub-3325448390634704"><link rel="canonical" href="https://comextoolbox.com/tools/Eurostat-en.html"><link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/Eurostat.html"><link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/Eurostat-en.html"><link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon"><link rel="stylesheet" href="stylestools.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script><style>
+.ct-guide{max-width:1080px;margin:0 auto 28px;padding:0 18px;color:#17243a;line-height:1.7}
+.ct-guide *{box-sizing:border-box}.ct-guide .ct-hero{background:linear-gradient(115deg,#102a4b,#1c548a);color:white;border-radius:18px;padding:34px;margin:22px 0}
+.ct-guide .ct-eyebrow{font-size:.78rem;letter-spacing:.10em;font-weight:750;color:#b7e2ff}.ct-guide .ct-hero h1{font-size:clamp(1.55rem,3.2vw,2.4rem);line-height:1.24;margin:10px 0 15px;color:#fff}
+.ct-guide .ct-hero p{max-width:790px;color:#e7f1fc}.ct-guide .ct-hero a.ct-primary{display:inline-block;background:#fff;color:#163d6c;padding:10px 17px;border-radius:9px;font-weight:750;text-decoration:none;margin:12px 0 4px}
+.ct-guide .ct-pills{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0}.ct-guide .ct-pills span{border:1px solid #8db6d8;padding:3px 9px;border-radius:99px;font-size:.8rem}
+.ct-guide .ct-section{background:#fff;border:1px solid #e0e8f0;border-radius:14px;padding:26px;margin:20px 0;box-shadow:0 2px 8px #0c28450b}
+.ct-guide h2{font-size:1.45rem;margin:0 0 12px;color:#113d69}.ct-guide h3{color:#1a4873;font-size:1.06rem;margin:0 0 8px}.ct-guide p{margin:0 0 12px}.ct-guide ul,.ct-guide ol{padding-left:23px;margin:8px 0 14px}.ct-guide li{margin:5px 0}
+.ct-guide .ct-toc{display:flex;flex-wrap:wrap;gap:8px}.ct-guide .ct-toc a,.ct-guide .ct-alt a{background:#edf5fc;border:1px solid #d1e6fa;border-radius:8px;padding:7px 11px;text-decoration:none;color:#174c81}
+.ct-guide .ct-steps{counter-reset:step}.ct-guide .ct-step{padding:14px 0;border-bottom:1px solid #ecf0f4}.ct-guide .ct-step:last-child{border:none}.ct-guide .ct-step h3{display:flex;align-items:center;gap:9px}.ct-guide .ct-step h3:before{counter-increment:step;content:counter(step);background:#dbeefe;color:#144c81;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ct-guide .ct-callout{background:#eef6ff;border-left:4px solid #2077c9;padding:15px;border-radius:7px;margin:15px 0}.ct-guide .ct-caution{background:#fff8e8;border-left-color:#d5901c}
+.ct-guide .ct-overflow{overflow-x:auto}.ct-guide table{width:100%;border-collapse:collapse;min-width:630px;font-size:.91rem}.ct-guide th,.ct-guide td{text-align:left;padding:10px;border-bottom:1px solid #e6ecf1;vertical-align:top}.ct-guide th{background:#edf4fb;color:#123e6a}
+.ct-guide .ct-kicker{font-weight:800;font-size:.78rem;color:#965300;letter-spacing:.04em}.ct-guide .ct-calc{border:1px solid #cae0f4;background:#f4f9ff;border-radius:12px;padding:18px}
+.ct-guide .ct-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:13px;align-items:end}.ct-guide .ct-fields label{display:block;font-weight:650;font-size:.86rem}.ct-guide .ct-fields input{display:block;width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;margin-top:5px;font-size:1rem}
+.ct-guide button.ct-button{border:0;border-radius:8px;background:#175b9c;color:white;padding:12px 17px;font-weight:700;cursor:pointer}.ct-guide .ct-result{font-weight:750;margin-top:12px;min-height:24px}.ct-guide .ct-hint{font-size:.88rem;color:#52677d}
+.ct-guide .ct-checks{columns:2;column-gap:35px}.ct-guide .ct-checks li{break-inside:avoid}.ct-guide .ct-alt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ct-guide .ct-alt a{display:flex;flex-direction:column}.ct-guide .ct-alt small{color:#516b84}
+.ct-guide .ct-video{max-width:700px;aspect-ratio:16/9;margin:18px auto}.ct-guide .ct-video iframe{width:100%;height:100%;border:0;border-radius:12px}
+.ct-guide .ct-sources{display:flex;flex-wrap:wrap;gap:12px}.ct-guide .ct-sources a{color:#155b99}
+.ct-guide .ct-meta{font-size:.81rem;color:#64748b;margin:12px 0}.ct-guide a:focus-visible,.ct-guide button:focus-visible{outline:3px solid #c17612;outline-offset:3px}
+@media(max-width:680px){.ct-guide .ct-hero{padding:23px}.ct-guide .ct-section{padding:18px}.ct-guide .ct-fields{grid-template-columns:1fr}.ct-guide .ct-checks{columns:1}.ct-guide .ct-alt{grid-template-columns:1fr}}
 
-  <main class="tutorial-container" id="contenido">
-    <p><a href="Eurostat.html" lang="es" hreflang="es">Español</a></p>
+/* Correcciones aisladas para guías ComexToolbox.
+   Neutralizan selectores globales de stylestools.css sin modificar el CSS compartido. */
+.ct-guide section,
+.ct-guide nav.ct-section {
+  max-width: none;
+  margin: 20px 0;
+  padding: 26px;
+}
+.ct-guide section.ct-hero {
+  margin: 22px 0;
+  padding: 34px;
+}
+.ct-guide nav.ct-section {
+  display: block;
+}
+.ct-guide .ct-section h2 { text-align: left; }
+.ct-guide section div {
+  display: block;
+  grid-template-columns: none;
+  gap: normal;
+}
+/* Restauramos solamente las rejillas que pertenecen al tutorial. */
+.ct-guide section .ct-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 13px; }
+.ct-guide section .ct-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ct-guide section .ct-step h3 { display: flex; }
+.ct-guide section .ct-video { max-width: 700px; }
+@media (max-width: 680px) {
+ .ct-guide section.ct-hero { padding: 23px; }
+ .ct-guide section.ct-section, .ct-guide nav.ct-section { padding: 18px; }
+ .ct-guide section .ct-fields, .ct-guide section .ct-alt { grid-template-columns: 1fr; }
+}
 
-    <div class="tutorial-header">
-      <h1>Eurostat: official statistics for international market analysis</h1>
-      <p>Use Eurostat to access reliable European Union data on trade, economy, labor, production and sector performance.</p>
-    </div>
-
-    <article>
-      <div class="tutorial-section" aria-labelledby="what-is-eurostat">
-        <h2 id="what-is-eurostat">1. What is Eurostat?</h2>
-        <div class="tutorial-step">
-          <p><strong>Eurostat</strong> is the statistical office of the European Union. It provides free, official, and comparable data on all EU countries and many neighboring European states.</p>
-          <ul>
-            <li>Economy and finance: GDP, inflation, investment, public accounts</li>
-            <li>International trade: exports, imports, trade balance, sectoral flows</li>
-            <li>Labor market: employment, unemployment, wages, productivity</li>
-            <li>Business and innovation: industrial structure, R&D, digitalization</li>
-            <li>Population and society: demographics, education, health, households</li>
-          </ul>
-          <div class="note">
-            <strong>Note:</strong> Eurostat is one of the most reliable public sources for benchmarking, market mapping, and strategic analysis in Europe.
-          </div>
-        </div>
-      </div>
-
-      <div class="tutorial-section" aria-labelledby="access">
-        <h2 id="access">2. How to access the platform</h2>
-        <div class="tutorial-step">
-          <ol>
-            <li>Visit the official Eurostat portal: <a href="https://ec.europa.eu/eurostat/web/main/home" target="_blank" rel="noopener noreferrer">ec.europa.eu/eurostat</a></li>
-            <li>Use the top navigation or the search bar to look for a topic or indicator.</li>
-            <li>Click on <strong>Database</strong> to access tables and downloadable datasets.</li>
-            <li>From there you can filter by country, period, unit of measure, and product or sector.</li>
-          </ol>
-          <div class="tip">
-            <strong>Practical tip:</strong> If you need quick comparison between countries, start by selecting the country and period filters before moving to more detailed breakdowns.
-          </div>
-        </div>
-      </div>
-
-      <div class="tutorial-section" aria-labelledby="categories">
-        <h2 id="categories">3. Main statistical categories</h2>
-        <div class="tutorial-step">
-          <p>Eurostat groups data by thematic categories. The most useful for foreign trade and market planning are:</p>
-          <ul>
-            <li><strong>Economy and finance:</strong> GDP, inflation, public deficit, investment</li>
-            <li><strong>International trade:</strong> intra-EU and extra-EU imports and exports</li>
-            <li><strong>Labour market:</strong> unemployment, wages, employment rates</li>
-            <li><strong>Business:</strong> structure of firms, productivity, R&D, digital adoption</li>
-            <li><strong>Population and society:</strong> demography, education, health and consumption patterns</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tutorial-section" aria-labelledby="query">
-        <h2 id="query">4. How to run a query</h2>
-        <div class="tutorial-step">
-          <ol>
-            <li>Open <strong>Database</strong> from the main menu.</li>
-            <li>Select a subject such as <strong>International Trade</strong> or <strong>Economy and Finance</strong>.</li>
-            <li>Choose the dataset that matches your need, for example “Trade in goods” or “Monthly trade data”.</li>
-            <li>Apply filters: country, time period, unit, flow (imports/exports), and product.</li>
-            <li>Click <strong>View data</strong> and then export if needed to Excel or CSV.</li>
-          </ol>
-          <p>You can visualize the data as tables or charts, which makes it easier to compare markets or countries.</p>
-        </div>
-      </div>
-
-      <div class="tutorial-section" aria-labelledby="example">
-        <h2 id="example">5. Practical example</h2>
-        <div class="tutorial-step">
-          <h3>Example: checking Spanish exports to Germany</h3>
-          <ol>
-            <li>Go to <strong>Database → International Trade</strong>.</li>
-            <li>Select a dataset such as <strong>Monthly trade data (extra and intra-EU)</strong>.</li>
-            <li>Set filters: Spain as reporting country, Germany as partner country, flow type “Exports”.</li>
-            <li>Choose the time range you need, for example the last 24 or 60 months.</li>
-            <li>Review the data and export it for internal analysis or reporting.</li>
-          </ol>
-          <p>This type of query helps you measure the evolution of a commercial relationship and identify whether it is growing, stable or declining.</p>
-        </div>
-      </div>
-
-      <div class="tutorial-section" aria-labelledby="recommendations">
-        <h2 id="recommendations">6. Final recommendations</h2>
-        <div class="tutorial-step">
-          <ul>
-            <li>Use Eurostat for benchmarking, strategic planning, and market analysis.</li>
-            <li>Cross-check with other data sources such as <a href="/tools/datacomex-en.html">DataComex</a>, <a href="/tools/un-comtrade-en.html">UN Comtrade</a> or <a href="/tools/statista-en.html">Statista</a> for deeper context.</li>
-            <li>Build your own indicator matrices to compare countries, sectors and periods.</li>
-            <li>Keep track of annual revisions and methodology changes when comparing data series.</li>
-          </ul>
-          <div class="warning">
-            <strong>Warning:</strong> Numbers from different databases may not always be strictly comparable because of definitions, classification methods or reporting scopes.
-          </div>
-        </div>
-      </div>
-    </article>
-  </main>
-
-  <section aria-labelledby="other-resources">
-    <h2 id="other-resources">Other useful resources</h2>
-    <div>
-      <a href="/tools/datacomex-en.html">📦 DataComex</a>
-      <a href="/tools/un-comtrade-en.html">🌐 UN Comtrade</a>
-      <a href="/tools/statista-en.html">📈 Statista</a>
-      <a href="/tools/the-atlas-of-economic-complexity-en.html">🧠 Economic Atlas</a>
-      <a href="/tools/estadísticas-icex-en.html">📉 ICEX Statistics</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 ComexToolbox · International trade resources and tutorials.</p>
-    <p><a href="../index-en.html">Back to the International Trade Hub</a></p>
-  </footer>
-</body>
-</html>
+.ct-guide .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide .ct-mini{padding:16px;background:#f4f8fc;border:1px solid #d9e7f3;border-radius:10px}
+.ct-guide .ct-mini strong{display:block;color:#174c81;margin-bottom:5px}
+.ct-guide .ct-quiz{border:1px solid #cae0f4;border-radius:12px;background:#f4f9ff;padding:20px}
+.ct-guide .ct-quiz select,.ct-guide .ct-quiz input{width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;font:inherit;max-width:100%}
+.ct-guide .ct-quiz label{display:block;font-weight:650;margin:10px 0}
+.ct-guide .ct-quiz .ct-output{padding:13px;background:white;border-radius:8px;border:1px solid #dae6f0;min-height:55px;margin-top:14px}
+.ct-guide section .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide section .ct-quiz{display:block}
+@media(max-width:680px){.ct-guide section .ct-stack{grid-template-columns:1fr}}
+</style></head><body><header><nav><h1>ComexToolbox</h1><a href="../index-en.html">Back to ComexToolbox</a> · <a href="Eurostat.html">Español</a></nav></header><main class="ct-guide"><section class="ct-hero"><div class="ct-eyebrow">PRACTICAL GUIDE · TRADE STATISTICS</div><h1>Eurostat and Comext: turning trade data into market insights</h1><p>Choose reporter, partner, product and period; interpret values and quantities; calculate changes across comparable series.</p><a class="ct-primary" href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/database" target="_blank" rel="noopener noreferrer">Open Eurostat trade database ↗</a><div class="ct-pills"><span>Intra- and extra-EU trade</span><span>Comext</span><span>Series comparison</span></div></section><nav class="ct-section" aria-label="Guide contents"><h2>In this guide</h2><div class="ct-toc"><a href="#que-es">Choose data</a><a href="#pasos">Research workflow</a><a href="#caso">Spain-Germany case</a><a href="#calculadora">Growth calculator</a><a href="#errores">Interpretation errors</a><a href="#fuentes">Sources</a></div></nav>
+<section id="que-es" class="ct-section"><h2>1. Eurostat versus Comext: which data do you need?</h2><p><strong>Eurostat</strong> is the statistical office of the European Union. Its <strong>Comext</strong> database provides detailed international trade in goods data by reporting economy, partner, product, unit and time period. It is useful for analysing changes in EU and non-EU goods trade.</p><div class="ct-stack"><div class="ct-mini"><strong>Aggregated data</strong>Useful for overall exports, imports, monthly or annual movements, and trade balances.</div><div class="ct-mini"><strong>Detailed data</strong>Allow country-pair and product studies using the relevant classifications, including the Combined Nomenclature where applicable.</div></div><p>For a product-specific question, detail matters. A rise in total imports does not show that your particular product is growing. <strong>Trade values</strong> do not reveal buyer identities, domestic consumption or distributor margins.</p><div class="ct-callout"><strong>Key distinction:</strong> Eurostat measures goods flows, not signed contracts, customer demand forecasts or profitability.</div></section>
+<section id="pasos" class="ct-section"><h2>2. A reproducible research workflow</h2><div class="ct-steps"><div class="ct-step"><h3>Write a precise question</h3><p>“How did Spanish exports of a specific product to Germany change across the last five complete years?” is more useful than “find data about Germany”.</p></div><div class="ct-step"><h3>Open international trade in goods data</h3><p>Visit Eurostat's <a href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/database" target="_blank" rel="noopener noreferrer">official database</a>. Choose detailed trade data if you need a product breakdown; dataset names and controls can change.</p></div><div class="ct-step"><h3>Set all relevant dimensions</h3><p><strong>Reporter: Spain</strong>; <strong>partner: Germany</strong>; <strong>flow: exports</strong>; defined product classification; annual or monthly periods; consistent value unit.</p></div><div class="ct-step"><h3>Download and document</h3><p>Record the dataset identifier, retrieval date, classification, units and periods. Export in CSV or another available format and save the query for reproducibility.</p></div></div></section>
+<section id="caso" class="ct-section"><h2>3. Worked example: is the market growing or is the price changing?</h2><p>Consider exports of a product from Spain to Germany in two full years. <strong>Every figure below is fictional</strong> and does not represent a Eurostat dataset.</p><div class="ct-overflow"><table><thead><tr><th>Fictional measure</th><th>Year 1</th><th>Year 2</th></tr></thead><tbody><tr><td>Export value</td><td>€12m</td><td>€15m</td></tr><tr><td>Export volume</td><td>6,000 tonnes</td><td>5,000 tonnes</td></tr><tr><td>Derived unit value</td><td>€2,000/t</td><td>€3,000/t</td></tr><tr><td>Value growth</td><td colspan="2">+25%</td></tr><tr><td>Volume growth</td><td colspan="2">Approximately −16.7%</td></tr></tbody></table></div><p>A headline interpretation would say the market “grew 25%”, but physical trade actually fell. The average unit value increased, potentially reflecting prices, product mix, or both. <strong>It does not demonstrate a 25% increase in physical demand.</strong></p><div class="ct-callout ct-caution"><strong>Interpretation limit:</strong> unit value is a statistical ratio, not a transaction-level sales price. Quality, contracts and product mix can matter.</div></section>
+<section id="calculadora" class="ct-section"><h2>4. Calculator: change across comparable periods</h2><p>Enter two values from the same series with the same unit and equivalent time spans. Percentage change is <strong>not</strong> a forecast of market potential.</p><div class="ct-quiz"><label>Initial period value<input id="ct-x-start" type="number" min="0" step="any" value="12000000" inputmode="decimal"></label><label>Final period value<input id="ct-x-end" type="number" min="0" step="any" value="15000000" inputmode="decimal"></label><button class="ct-button" type="button" id="ct-x-go">Calculate change</button><p id="ct-x-result" class="ct-output" role="status" aria-live="polite"></p></div><p class="ct-hint">For volume changes, use quantities in both fields. Never compare a full year to an incomplete reporting period.</p></section>
+<section id="errores" class="ct-section"><h2>5. Five errors that change your interpretation</h2><div class="ct-steps"><div class="ct-step"><h3>Mixing units</h3><p>Euros, thousands of euros, kilograms and tonnes cannot be compared without conversion.</p></div><div class="ct-step"><h3>Mixing up reporter and partner</h3><p>Spanish reported exports to Germany need not precisely match German reported imports from Spain.</p></div><div class="ct-step"><h3>Ignoring revisions</h3><p>Recent observations can be preliminary or revised; record the extraction date and statistical period.</p></div><div class="ct-step"><h3>Ignoring classification versions</h3><p>Product definitions can change across revisions; verify correspondence for long time series.</p></div><div class="ct-step"><h3>Equating nominal growth with volume growth</h3><p>Inspect trade values and quantities separately whenever possible.</p></div></div></section>
+<section id="fuentes" class="ct-section"><h2>6. Document your analysis and cross-check conclusions</h2><p>Reproducibility matters. Record dataset name and identifier, reporter, partner, product, nomenclature, flow, unit, period, retrieval date and methodological caveats.</p><div class="ct-sources"><a href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/database" target="_blank" rel="noopener noreferrer">Official Eurostat trade database</a><a href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/information-data" target="_blank" rel="noopener noreferrer">Data explanations</a></div><h3 style="margin-top:22px">Further research</h3><div class="ct-alt"><a href="datacomex-en.html"><strong>DataComex</strong><small>Explore Spain-specific external trade statistics</small></a><a href="un-comtrade-en.html"><strong>UN Comtrade</strong><small>Cross-check international trade flows and differences</small></a></div></section><p class="ct-meta">Reviewed November 2026. All case figures are simulated.</p></main><footer><p>ComexToolbox · Independent educational guide. Not affiliated with Eurostat.</p><a href="../index-en.html">Back to ComexToolbox</a></footer><script>(function(){const b=document.getElementById("ct-x-go"),o=document.getElementById("ct-x-result");if(!b||!o)return;b.addEventListener("click",()=>{const a=document.getElementById("ct-x-start").value.trim(),z=document.getElementById("ct-x-end").value.trim(),v=Number(a),w=Number(z);if(a===""||z===""||!Number.isFinite(v)||!Number.isFinite(w)||v<=0||w<0){o.textContent="Enter a positive initial value and a non-negative final value.";return;}const pct=(w-v)/v*100;const fmt=new Intl.NumberFormat("en-GB",{maximumFractionDigits:2});o.textContent="Change: "+(pct>0?"+":"")+fmt.format(pct)+" %"+". Compare equivalent units and time spans.";});b.click()})();</script></body></html>

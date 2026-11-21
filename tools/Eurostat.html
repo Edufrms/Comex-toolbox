@@ -1,132 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Aprende a utilizar Eurostat para acceder a estadísticas oficiales de la Unión Europea, fundamentales para análisis de mercado y decisiones estratégicas.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="google-adsense-account" content="ca-pub-3325448390634704">
-  <title>Tutorial Eurostat</title>
-  <link rel="stylesheet" href="stylestools.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J1YVJESR6W');
-  </script>
-</head>
-<a href="Eurostat-en.html" class="lang-btn">🇺🇸 English</a>
-<body>
-  <header>
-    <nav>
-      <h1>Hub de Comercio Exterior</h1>
-      <a href="../index.html">🌐Volver al Hub🌐</a>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cómo usar Eurostat y Comext para analizar mercados | ComexToolbox</title><meta name="description" content="Guía práctica para investigar importaciones y exportaciones en Eurostat Comext, comparar países, unidades, series y evitar errores estadísticos."><meta name="google-adsense-account" content="ca-pub-3325448390634704"><link rel="canonical" href="https://comextoolbox.com/tools/Eurostat.html"><link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/Eurostat.html"><link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/Eurostat-en.html"><link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon"><link rel="stylesheet" href="stylestools.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script><style>
+.ct-guide{max-width:1080px;margin:0 auto 28px;padding:0 18px;color:#17243a;line-height:1.7}
+.ct-guide *{box-sizing:border-box}.ct-guide .ct-hero{background:linear-gradient(115deg,#102a4b,#1c548a);color:white;border-radius:18px;padding:34px;margin:22px 0}
+.ct-guide .ct-eyebrow{font-size:.78rem;letter-spacing:.10em;font-weight:750;color:#b7e2ff}.ct-guide .ct-hero h1{font-size:clamp(1.55rem,3.2vw,2.4rem);line-height:1.24;margin:10px 0 15px;color:#fff}
+.ct-guide .ct-hero p{max-width:790px;color:#e7f1fc}.ct-guide .ct-hero a.ct-primary{display:inline-block;background:#fff;color:#163d6c;padding:10px 17px;border-radius:9px;font-weight:750;text-decoration:none;margin:12px 0 4px}
+.ct-guide .ct-pills{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0}.ct-guide .ct-pills span{border:1px solid #8db6d8;padding:3px 9px;border-radius:99px;font-size:.8rem}
+.ct-guide .ct-section{background:#fff;border:1px solid #e0e8f0;border-radius:14px;padding:26px;margin:20px 0;box-shadow:0 2px 8px #0c28450b}
+.ct-guide h2{font-size:1.45rem;margin:0 0 12px;color:#113d69}.ct-guide h3{color:#1a4873;font-size:1.06rem;margin:0 0 8px}.ct-guide p{margin:0 0 12px}.ct-guide ul,.ct-guide ol{padding-left:23px;margin:8px 0 14px}.ct-guide li{margin:5px 0}
+.ct-guide .ct-toc{display:flex;flex-wrap:wrap;gap:8px}.ct-guide .ct-toc a,.ct-guide .ct-alt a{background:#edf5fc;border:1px solid #d1e6fa;border-radius:8px;padding:7px 11px;text-decoration:none;color:#174c81}
+.ct-guide .ct-steps{counter-reset:step}.ct-guide .ct-step{padding:14px 0;border-bottom:1px solid #ecf0f4}.ct-guide .ct-step:last-child{border:none}.ct-guide .ct-step h3{display:flex;align-items:center;gap:9px}.ct-guide .ct-step h3:before{counter-increment:step;content:counter(step);background:#dbeefe;color:#144c81;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ct-guide .ct-callout{background:#eef6ff;border-left:4px solid #2077c9;padding:15px;border-radius:7px;margin:15px 0}.ct-guide .ct-caution{background:#fff8e8;border-left-color:#d5901c}
+.ct-guide .ct-overflow{overflow-x:auto}.ct-guide table{width:100%;border-collapse:collapse;min-width:630px;font-size:.91rem}.ct-guide th,.ct-guide td{text-align:left;padding:10px;border-bottom:1px solid #e6ecf1;vertical-align:top}.ct-guide th{background:#edf4fb;color:#123e6a}
+.ct-guide .ct-kicker{font-weight:800;font-size:.78rem;color:#965300;letter-spacing:.04em}.ct-guide .ct-calc{border:1px solid #cae0f4;background:#f4f9ff;border-radius:12px;padding:18px}
+.ct-guide .ct-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:13px;align-items:end}.ct-guide .ct-fields label{display:block;font-weight:650;font-size:.86rem}.ct-guide .ct-fields input{display:block;width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;margin-top:5px;font-size:1rem}
+.ct-guide button.ct-button{border:0;border-radius:8px;background:#175b9c;color:white;padding:12px 17px;font-weight:700;cursor:pointer}.ct-guide .ct-result{font-weight:750;margin-top:12px;min-height:24px}.ct-guide .ct-hint{font-size:.88rem;color:#52677d}
+.ct-guide .ct-checks{columns:2;column-gap:35px}.ct-guide .ct-checks li{break-inside:avoid}.ct-guide .ct-alt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ct-guide .ct-alt a{display:flex;flex-direction:column}.ct-guide .ct-alt small{color:#516b84}
+.ct-guide .ct-video{max-width:700px;aspect-ratio:16/9;margin:18px auto}.ct-guide .ct-video iframe{width:100%;height:100%;border:0;border-radius:12px}
+.ct-guide .ct-sources{display:flex;flex-wrap:wrap;gap:12px}.ct-guide .ct-sources a{color:#155b99}
+.ct-guide .ct-meta{font-size:.81rem;color:#64748b;margin:12px 0}.ct-guide a:focus-visible,.ct-guide button:focus-visible{outline:3px solid #c17612;outline-offset:3px}
+@media(max-width:680px){.ct-guide .ct-hero{padding:23px}.ct-guide .ct-section{padding:18px}.ct-guide .ct-fields{grid-template-columns:1fr}.ct-guide .ct-checks{columns:1}.ct-guide .ct-alt{grid-template-columns:1fr}}
 
-  <div class="tutorial-container">
-    <div class="tutorial-header">
-      <h1>Tutorial de Eurostat</h1>
-      <p>Consulta estadísticas oficiales de la Unión Europea por país, sector y periodo</p>
-    </div>
+/* Correcciones aisladas para guías ComexToolbox.
+   Neutralizan selectores globales de stylestools.css sin modificar el CSS compartido. */
+.ct-guide section,
+.ct-guide nav.ct-section {
+  max-width: none;
+  margin: 20px 0;
+  padding: 26px;
+}
+.ct-guide section.ct-hero {
+  margin: 22px 0;
+  padding: 34px;
+}
+.ct-guide nav.ct-section {
+  display: block;
+}
+.ct-guide .ct-section h2 { text-align: left; }
+.ct-guide section div {
+  display: block;
+  grid-template-columns: none;
+  gap: normal;
+}
+/* Restauramos solamente las rejillas que pertenecen al tutorial. */
+.ct-guide section .ct-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 13px; }
+.ct-guide section .ct-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ct-guide section .ct-step h3 { display: flex; }
+.ct-guide section .ct-video { max-width: 700px; }
+@media (max-width: 680px) {
+ .ct-guide section.ct-hero { padding: 23px; }
+ .ct-guide section.ct-section, .ct-guide nav.ct-section { padding: 18px; }
+ .ct-guide section .ct-fields, .ct-guide section .ct-alt { grid-template-columns: 1fr; }
+}
 
-    <div class="tutorial-section">
-      <h2>1. ¿Qué es Eurostat?</h2>
-      <div class="tutorial-step">
-        <p>Eurostat es la oficina estadística de la Comisión Europea. Proporciona datos comparables y fiables sobre los países de la UE y otros estados europeos.</p>
-        <ul>
-          <li>Economía, comercio, empleo, innovación, medio ambiente, población, etc.</li>
-          <li>Acceso libre a bases de datos, visualizaciones y mapas</li>
-          <li>Formatos: tablas, gráficos interactivos y Excel/CSV</li>
-        </ul>
-        <div class="note">
-          <strong>Nota:</strong> Es una fuente oficial para informes técnicos, benchmarking y planificación estratégica europea.
-        </div>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>2. Acceso a la plataforma</h2>
-      <div class="tutorial-step">
-        <ol>
-          <li>Visita: <a href="https://ec.europa.eu/eurostat/web/main/home" target="_blank">ec.europa.eu/eurostat</a></li>
-          <li>Utiliza el menú superior o el buscador para acceder a temas concretos</li>
-          <li>También puedes acceder directamente a la base de datos desde “Database”</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>3. Categorías estadísticas</h2>
-      <div class="tutorial-step">
-        <p>Algunas de las categorías disponibles:</p>
-        <ul>
-          <li><strong>Economía y finanzas:</strong> PIB, inflación, déficit, inversión</li>
-          <li><strong>Comercio internacional:</strong> exportaciones e importaciones intra y extra-UE</li>
-          <li><strong>Mercado laboral:</strong> tasa de empleo, desempleo, salarios</li>
-          <li><strong>Empresas:</strong> I+D, digitalización, estructura empresarial</li>
-          <li><strong>Población y sociedad:</strong> demografía, educación, salud</li>
-        </ul>
-        <div class="tip">
-          <strong>Tip:</strong> Usa la función “My Statistics” para guardar tus consultas frecuentes.
-        </div>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>4. Cómo hacer una consulta</h2>
-      <div class="tutorial-step">
-        <ol>
-          <li>Haz clic en “Database” en el menú</li>
-          <li>Selecciona una categoría y subcategoría</li>
-          <li>Elige el dataset (por ejemplo, “Trade in goods - monthly data”)</li>
-          <li>Configura filtros por país, periodo y unidad de medida</li>
-          <li>Haz clic en “View data”</li>
-        </ol>
-        <p>Puedes exportar los datos a Excel o visualizarlos en tablas y gráficos dinámicos.</p>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>5. Ejemplo práctico</h2>
-      <div class="tutorial-step">
-        <h3>Ejemplo: Consultar exportaciones de bienes de España a Alemania</h3>
-        <ol>
-          <li>Ir a Database → International Trade</li>
-          <li>Seleccionar “Monthly trade data (extra and intra-EU)”</li>
-          <li>Filtrar: España como país reportero, Alemania como socio comercial, tipo de flujo “Exportaciones”</li>
-          <li>Ver los datos por mes desde 2020 a 2024</li>
-          <li>Exportar en Excel</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>6. Recomendaciones finales</h2>
-      <div class="tutorial-step">
-        <ul>
-          <li>Utiliza Eurostat para informes DAFO, benchmarking regional o planes estratégicos</li>
-          <li>Complementa con DataComex, UN Comtrade y Statista para visión comparativa</li>
-          <li>Sigue su cuenta de Twitter para estar al día con nuevos indicadores</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <h2>Otros recursos útiles</h2>
-    <div>
-      <a href="/tools/datacomex.html">📦 DataComex</a>
-      <a href="/tools/un-comtrade.html">🌐 UN Comtrade</a>
-      <a href="/tools/statista.html">📈 Statista</a>
-      <a href="/tools/the-atlas-of-economic-complexity.html">🧠 Atlas Económico</a>
-      <a href="/tools/estadísticas-icex.html">📉 Estadísticas ICEX</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Hub de Comercio Exterior. Todos los derechos reservados.</p>
-    <a href="../index.html">🌐Volver al Hub🌐</a>
-  </footer>
-</body>
-</html>
+.ct-guide .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide .ct-mini{padding:16px;background:#f4f8fc;border:1px solid #d9e7f3;border-radius:10px}
+.ct-guide .ct-mini strong{display:block;color:#174c81;margin-bottom:5px}
+.ct-guide .ct-quiz{border:1px solid #cae0f4;border-radius:12px;background:#f4f9ff;padding:20px}
+.ct-guide .ct-quiz select,.ct-guide .ct-quiz input{width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;font:inherit;max-width:100%}
+.ct-guide .ct-quiz label{display:block;font-weight:650;margin:10px 0}
+.ct-guide .ct-quiz .ct-output{padding:13px;background:white;border-radius:8px;border:1px solid #dae6f0;min-height:55px;margin-top:14px}
+.ct-guide section .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide section .ct-quiz{display:block}
+@media(max-width:680px){.ct-guide section .ct-stack{grid-template-columns:1fr}}
+</style></head><body><header><nav><h1>ComexToolbox</h1><a href="../index.html">Volver a ComexToolbox</a> · <a href="Eurostat-en.html">English</a></nav></header><main class="ct-guide"><section class="ct-hero"><div class="ct-eyebrow">GUÍA PRÁCTICA · ESTADÍSTICAS COMERCIALES</div><h1>Eurostat y Comext: convertir estadísticas en decisiones de mercado</h1><p>Selecciona correctamente declarante, socio, producto y periodo; interpreta los datos y calcula una variación comparable.</p><a class="ct-primary" href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/database" target="_blank" rel="noopener noreferrer">Abrir base de datos Eurostat ↗</a><div class="ct-pills"><span>Comercio intra y extra-UE</span><span>Comext</span><span>Comparación de series</span></div></section><nav class="ct-section" aria-label="Índice de la guía"><h2>En esta guía</h2><div class="ct-toc"><a href="#que-es">Elegir datos</a><a href="#pasos">Consulta paso a paso</a><a href="#caso">Caso España-Alemania</a><a href="#calculadora">Calculadora de variación</a><a href="#errores">Errores de lectura</a><a href="#fuentes">Fuentes y uso</a></div></nav>
+<section id="que-es" class="ct-section"><h2>1. Eurostat y Comext: qué base necesitas</h2><p><strong>Eurostat</strong> es la oficina estadística de la Unión Europea. Su base <strong>Comext</strong> ofrece estadísticas detalladas de comercio internacional de bienes: exportaciones e importaciones por declarante, socio, producto, unidad y periodo. Es especialmente útil para comprobar la evolución de un mercado dentro y fuera de la UE.</p><div class="ct-stack"><div class="ct-mini"><strong>Datos agregados</strong>Sirven para seguir comercio total, evolución mensual o anual y balances generales.</div><div class="ct-mini"><strong>Datos detallados</strong>Permiten estudiar grupos de mercancías y socios concretos, con clasificaciones como la Nomenclatura Combinada cuando corresponda.</div></div><p>Si buscas oportunidades para un producto concreto, la desagregación importa. Una subida del total importado no significa necesariamente crecimiento del producto que comercializas. Tampoco confundas <strong>valor del comercio</strong> con número de clientes, consumo interno o ventas a distribuidores.</p><div class="ct-callout"><strong>Idea clave:</strong> Eurostat mide flujos de mercancías. No te dice qué empresa compró, qué margen obtuvo ni si un nuevo exportador tendrá acceso al mercado.</div></section>
+<section id="pasos" class="ct-section"><h2>2. Consulta reproducible, sin depender de un menú concreto</h2><div class="ct-steps"><div class="ct-step"><h3>Escribe la pregunta</h3><p>«¿Cómo han evolucionado las exportaciones españolas de un producto hacia Alemania durante los últimos cinco años completos?» es más útil que «quiero ver datos de Alemania».</p></div><div class="ct-step"><h3>Accede a comercio internacional de bienes</h3><p>Abre la <a href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/database" target="_blank" rel="noopener noreferrer">base de datos oficial</a>. Elige datos detallados de comercio de bienes si necesitas producto; los nombres de conjuntos y controles pueden actualizarse.</p></div><div class="ct-step"><h3>Configura todas las dimensiones</h3><p>Declarante <strong>España</strong>; socio <strong>Alemania</strong>; flujo <strong>exportaciones</strong>; producto y clasificación definidos; periodo anual o mensual; unidad de valor consistente.</p></div><div class="ct-step"><h3>Descarga y documenta</h3><p>Registra el identificador del conjunto, fecha de extracción, clasificación, unidad y periodos. Descarga CSV o formato disponible y conserva la consulta para poder repetirla.</p></div></div></section>
+<section id="caso" class="ct-section"><h2>3. Caso: ¿crece un mercado o solo cambia su precio?</h2><p>Supongamos que una empresa compara dos años completos de exportaciones de un producto desde España hacia Alemania. Los siguientes valores son <strong>completamente simulados</strong>, no corresponden a ninguna serie de Eurostat.</p><div class="ct-overflow"><table><thead><tr><th>Indicador del ejemplo</th><th>Año 1</th><th>Año 2</th></tr></thead><tbody><tr><td>Valor exportado</td><td>12 M €</td><td>15 M €</td></tr><tr><td>Cantidad exportada</td><td>6.000 t</td><td>5.000 t</td></tr><tr><td>Valor unitario calculado</td><td>2.000 €/t</td><td>3.000 €/t</td></tr><tr><td>Variación de valor</td><td colspan="2">+25 %</td></tr><tr><td>Variación de cantidad</td><td colspan="2">−16,7 % aproximadamente</td></tr></tbody></table></div><p>Una lectura superficial concluiría que el mercado «creció un 25 %». Pero se comercializó menos volumen. El valor unitario aumentó: podría haber cambiado el precio, la mezcla de productos o ambas cosas. <strong>No equivale a un aumento del 25 % en demanda física.</strong></p><div class="ct-callout ct-caution"><strong>Limitación:</strong> el valor unitario de comercio es un promedio estadístico, no el precio de una operación concreta. Diferencias de calidad, contratos o clasificación afectan su interpretación.</div></section>
+<section id="calculadora" class="ct-section"><h2>4. Calculadora: variación entre dos periodos comparables</h2><p>Introduce dos valores de la misma serie, en la misma unidad y para periodos equivalentes. El resultado mide variación porcentual, <strong>no crecimiento del mercado potencial</strong>.</p><div class="ct-quiz"><label>Valor periodo inicial<input id="ct-x-start" type="number" min="0" step="any" value="12000000" inputmode="decimal"></label><label>Valor periodo final<input id="ct-x-end" type="number" min="0" step="any" value="15000000" inputmode="decimal"></label><button class="ct-button" type="button" id="ct-x-go">Calcular variación</button><p id="ct-x-result" class="ct-output" role="status" aria-live="polite"></p></div><p class="ct-hint">Para medir variación de cantidad, utiliza cantidades en ambos campos. Evita comparar un año completo con un periodo incompleto.</p></section>
+<section id="errores" class="ct-section"><h2>5. Cinco errores de interpretación estadística</h2><div class="ct-steps"><div class="ct-step"><h3>Combinar series con distinta unidad</h3><p>Euros, miles de euros, kilogramos y toneladas no son intercambiables. Conserva la unidad de cada extracción.</p></div><div class="ct-step"><h3>Confundir declarante y socio</h3><p>Las exportaciones declaradas por España a Alemania no tienen por qué coincidir exactamente con las importaciones declaradas por Alemania desde España.</p></div><div class="ct-step"><h3>Olvidar revisiones de datos</h3><p>Los datos recientes pueden ser provisionales y actualizarse. Registra la fecha de consulta y el periodo estadístico.</p></div><div class="ct-step"><h3>Ignorar la revisión de la clasificación</h3><p>Algunas categorías de mercancías cambian entre revisiones. Comprueba correspondencias antes de comparar series largas.</p></div><div class="ct-step"><h3>Tomar un incremento nominal como más volumen</h3><p>Comprueba valores y cantidades por separado, cuando la serie lo permita.</p></div></div></section>
+<section id="fuentes" class="ct-section"><h2>6. Documenta el análisis y contrasta las conclusiones</h2><p>El resultado de una consulta profesional debe poder reproducirse. Guarda: nombre e identificador de la serie, declarante, socio, producto, nomenclatura, flujo, unidad, periodo, fecha de extracción y advertencias metodológicas.</p><div class="ct-sources"><a href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/database" target="_blank" rel="noopener noreferrer">Base de datos de comercio (Eurostat)</a><a href="https://ec.europa.eu/eurostat/web/international-trade-in-goods/information-data" target="_blank" rel="noopener noreferrer">Notas sobre los datos</a></div><h3 style="margin-top:22px">Siguiente contraste</h3><div class="ct-alt"><a href="datacomex.html"><strong>DataComex</strong><small>Analizar la perspectiva española del comercio exterior</small></a><a href="un-comtrade.html"><strong>UN Comtrade</strong><small>Contrastar flujos y diferencias metodológicas internacionales</small></a></div></section><p class="ct-meta">Revisión: noviembre de 2026. Todas las cifras del caso son simuladas.</p></main><footer><p>ComexToolbox · Guía educativa independiente. No afiliada a Eurostat.</p><a href="../index.html">Volver a ComexToolbox</a></footer><script>(function(){const b=document.getElementById("ct-x-go"),o=document.getElementById("ct-x-result");if(!b||!o)return;b.addEventListener("click",()=>{const a=document.getElementById("ct-x-start").value.trim(),z=document.getElementById("ct-x-end").value.trim(),v=Number(a),w=Number(z);if(a===""||z===""||!Number.isFinite(v)||!Number.isFinite(w)||v<=0||w<0){o.textContent="Introduce un valor inicial positivo y un valor final no negativo.";return;}const pct=(w-v)/v*100;const fmt=new Intl.NumberFormat("es-ES",{maximumFractionDigits:2});o.textContent="Variación: "+(pct>0?"+":"")+fmt.format(pct)+" %"+". Comprueba que unidades y periodos sean equivalentes.";});b.click()})();</script></body></html>

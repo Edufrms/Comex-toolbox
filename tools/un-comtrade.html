@@ -1,132 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="google-adsense-account" content="ca-pub-3325448390634704">
-  <title>Tutorial UN Comtrade Plus</title>
-  <link rel="stylesheet" href="stylestools.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J1YVJESR6W');
-  </script>
-</head>
-<a href="un-comtrade-en.html" class="lang-btn">🇺🇸 English</a>
-<body>
-  <header>
-    <nav>
-      <h1>Hub de Comercio Exterior</h1>
-      <a href="../index.html">🌐Volver al Hub🌐</a>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UN Comtrade Plus: guía para comparar comercio bilateral | ComexToolbox</title><meta name="description" content="Tutorial UN Comtrade Plus: reporter, partner, flujos, HS, datos espejo y cobertura. Aprende a interpretar diferencias con un ejemplo."><meta name="google-adsense-account" content="ca-pub-3325448390634704"><link rel="canonical" href="https://comextoolbox.com/tools/un-comtrade.html"><link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/un-comtrade.html"><link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/un-comtrade-en.html"><link rel="stylesheet" href="stylestools.css"><link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon"><script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script><style>
+.ct-guide{max-width:1080px;margin:0 auto 28px;padding:0 18px;color:#17243a;line-height:1.7}
+.ct-guide *{box-sizing:border-box}.ct-guide .ct-hero{background:linear-gradient(115deg,#102a4b,#1c548a);color:white;border-radius:18px;padding:34px;margin:22px 0}
+.ct-guide .ct-eyebrow{font-size:.78rem;letter-spacing:.10em;font-weight:750;color:#b7e2ff}.ct-guide .ct-hero h1{font-size:clamp(1.55rem,3.2vw,2.4rem);line-height:1.24;margin:10px 0 15px;color:#fff}
+.ct-guide .ct-hero p{max-width:790px;color:#e7f1fc}.ct-guide .ct-hero a.ct-primary{display:inline-block;background:#fff;color:#163d6c;padding:10px 17px;border-radius:9px;font-weight:750;text-decoration:none;margin:12px 0 4px}
+.ct-guide .ct-pills{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0}.ct-guide .ct-pills span{border:1px solid #8db6d8;padding:3px 9px;border-radius:99px;font-size:.8rem}
+.ct-guide .ct-section{background:#fff;border:1px solid #e0e8f0;border-radius:14px;padding:26px;margin:20px 0;box-shadow:0 2px 8px #0c28450b}
+.ct-guide h2{font-size:1.45rem;margin:0 0 12px;color:#113d69}.ct-guide h3{color:#1a4873;font-size:1.06rem;margin:0 0 8px}.ct-guide p{margin:0 0 12px}.ct-guide ul,.ct-guide ol{padding-left:23px;margin:8px 0 14px}.ct-guide li{margin:5px 0}
+.ct-guide .ct-toc{display:flex;flex-wrap:wrap;gap:8px}.ct-guide .ct-toc a,.ct-guide .ct-alt a{background:#edf5fc;border:1px solid #d1e6fa;border-radius:8px;padding:7px 11px;text-decoration:none;color:#174c81}
+.ct-guide .ct-steps{counter-reset:step}.ct-guide .ct-step{padding:14px 0;border-bottom:1px solid #ecf0f4}.ct-guide .ct-step:last-child{border:none}.ct-guide .ct-step h3{display:flex;align-items:center;gap:9px}.ct-guide .ct-step h3:before{counter-increment:step;content:counter(step);background:#dbeefe;color:#144c81;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ct-guide .ct-callout{background:#eef6ff;border-left:4px solid #2077c9;padding:15px;border-radius:7px;margin:15px 0}.ct-guide .ct-caution{background:#fff8e8;border-left-color:#d5901c}
+.ct-guide .ct-overflow{overflow-x:auto}.ct-guide table{width:100%;border-collapse:collapse;min-width:630px;font-size:.91rem}.ct-guide th,.ct-guide td{text-align:left;padding:10px;border-bottom:1px solid #e6ecf1;vertical-align:top}.ct-guide th{background:#edf4fb;color:#123e6a}
+.ct-guide .ct-kicker{font-weight:800;font-size:.78rem;color:#965300;letter-spacing:.04em}.ct-guide .ct-calc{border:1px solid #cae0f4;background:#f4f9ff;border-radius:12px;padding:18px}
+.ct-guide .ct-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:13px;align-items:end}.ct-guide .ct-fields label{display:block;font-weight:650;font-size:.86rem}.ct-guide .ct-fields input{display:block;width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;margin-top:5px;font-size:1rem}
+.ct-guide button.ct-button{border:0;border-radius:8px;background:#175b9c;color:white;padding:12px 17px;font-weight:700;cursor:pointer}.ct-guide .ct-result{font-weight:750;margin-top:12px;min-height:24px}.ct-guide .ct-hint{font-size:.88rem;color:#52677d}
+.ct-guide .ct-checks{columns:2;column-gap:35px}.ct-guide .ct-checks li{break-inside:avoid}.ct-guide .ct-alt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ct-guide .ct-alt a{display:flex;flex-direction:column}.ct-guide .ct-alt small{color:#516b84}
+.ct-guide .ct-video{max-width:700px;aspect-ratio:16/9;margin:18px auto}.ct-guide .ct-video iframe{width:100%;height:100%;border:0;border-radius:12px}
+.ct-guide .ct-sources{display:flex;flex-wrap:wrap;gap:12px}.ct-guide .ct-sources a{color:#155b99}
+.ct-guide .ct-meta{font-size:.81rem;color:#64748b;margin:12px 0}.ct-guide a:focus-visible,.ct-guide button:focus-visible{outline:3px solid #c17612;outline-offset:3px}
+@media(max-width:680px){.ct-guide .ct-hero{padding:23px}.ct-guide .ct-section{padding:18px}.ct-guide .ct-fields{grid-template-columns:1fr}.ct-guide .ct-checks{columns:1}.ct-guide .ct-alt{grid-template-columns:1fr}}
 
-  <div class="tutorial-container">
-    <div class="tutorial-header">
-      <h1>Tutorial de UN Comtrade Plus</h1>
-      <p>Accede a estadísticas globales de comercio internacional por producto, país y año desde fuentes oficiales de la ONU</p>
-    </div>
+/* Correcciones aisladas para guías ComexToolbox.
+   Neutralizan selectores globales de stylestools.css sin modificar el CSS compartido. */
+.ct-guide section,
+.ct-guide nav.ct-section {
+  max-width: none;
+  margin: 20px 0;
+  padding: 26px;
+}
+.ct-guide section.ct-hero {
+  margin: 22px 0;
+  padding: 34px;
+}
+.ct-guide nav.ct-section {
+  display: block;
+}
+.ct-guide .ct-section h2 { text-align: left; }
+.ct-guide section div {
+  display: block;
+  grid-template-columns: none;
+  gap: normal;
+}
+/* Restauramos solamente las rejillas que pertenecen al tutorial. */
+.ct-guide section .ct-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 13px; }
+.ct-guide section .ct-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ct-guide section .ct-step h3 { display: flex; }
+.ct-guide section .ct-video { max-width: 700px; }
+@media (max-width: 680px) {
+ .ct-guide section.ct-hero { padding: 23px; }
+ .ct-guide section.ct-section, .ct-guide nav.ct-section { padding: 18px; }
+ .ct-guide section .ct-fields, .ct-guide section .ct-alt { grid-template-columns: 1fr; }
+}
 
-    <div class="tutorial-section">
-      <h2>1. ¿Qué es UN Comtrade Plus?</h2>
-      <div class="tutorial-step">
-        <p>Es la plataforma de datos comerciales de Naciones Unidas, que proporciona información oficial y armonizada sobre importaciones y exportaciones entre países, incluyendo:</p>
-        <ul>
-          <li>Flujos de comercio por producto (códigos HS/SITC)</li>
-          <li>Datos por país emisor y receptor</li>
-          <li>Estadísticas anuales y mensuales</li>
-          <li>Visualizaciones y descarga de bases de datos</li>
-        </ul>
-        <div class="note">
-          <strong>Nota:</strong> La herramienta permite acceder a millones de registros y generar consultas personalizadas con filtros avanzados.
-        </div>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>2. ¿Cómo acceder?</h2>
-      <div class="tutorial-step">
-        <ol>
-          <li>Visita: <a href="https://comtradeplus.un.org/" target="_blank">comtradeplus.un.org</a></li>
-          <li>No es necesario registrarse para consultar datos públicos</li>
-          <li>Usa el botón “Build Query” para crear una consulta personalizada</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>3. Cómo construir una consulta</h2>
-      <div class="tutorial-step">
-        <ol>
-          <li>Haz clic en “Build Query”</li>
-          <li>Selecciona el tipo de flujo: importaciones, exportaciones o ambos</li>
-          <li>Elige los países (reporter y partner)</li>
-          <li>Selecciona el sistema de clasificación (HS 2017, SITC, etc.)</li>
-          <li>Introduce el producto (por nombre o código)</li>
-          <li>Indica los años y haz clic en “Run Query”</li>
-        </ol>
-        <p>El sistema te mostrará una tabla interactiva con los resultados.</p>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>4. Visualización y descarga</h2>
-      <div class="tutorial-step">
-        <ul>
-          <li>Los resultados se pueden ver como tabla, gráfico o mapa</li>
-          <li>Puedes descargar los datos en CSV o JSON</li>
-          <li>También puedes copiar enlaces para compartir tus consultas</li>
-        </ul>
-        <div class="tip">
-          <strong>Tip:</strong> Usa los filtros por valor, unidad o código de producto para obtener insights más precisos.
-        </div>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>5. Ejemplo práctico</h2>
-      <div class="tutorial-step">
-        <h3>Ejemplo: Exportaciones de cacao de Costa de Marfil a España</h3>
-        <ol>
-          <li>Tipo de flujo: Exportaciones</li>
-          <li>País reportero: Costa de Marfil</li>
-          <li>País socio: España</li>
-          <li>Código producto HS: 1801 (cacao en grano)</li>
-          <li>Año: 2022</li>
-          <li>Haz clic en “Run Query”</li>
-        </ol>
-        <p>El sistema mostrará valor FOB, volumen, país de destino y tendencias por año.</p>
-      </div>
-    </div>
-
-    <div class="tutorial-section">
-      <h2>6. Recomendaciones finales</h2>
-      <div class="tutorial-step">
-        <ul>
-          <li>Comtrade es ideal para informes de análisis de competencia o flujos globales</li>
-          <li>Úsalo junto con TradeMap para enriquecer tus gráficos o justificar estrategias de mercado</li>
-          <li>Verifica siempre las unidades de medida y la cobertura de datos por país</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <h2>Otros recursos útiles</h2>
-    <div>
-      <a href="/tools/TradeMap.html">📊 TradeMap</a>
-      <a href="/tools/statista.html">📈 Statista</a>
-      <a href="/tools/market-access-map.html">🛃 Market Access Map</a>
-      <a href="/tools/export-potential-map.html">🌍 Export Potential Map</a>
-      <a href="/tools/datacomex.html">📦 DataComex</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Hub de Comercio Exterior. Todos los derechos reservados.</p>
-    <a href="../index.html">🌐Volver al Hub🌐</a>
-  </footer>
-</body>
-</html>
+.ct-guide .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide .ct-mini{padding:16px;background:#f4f8fc;border:1px solid #d9e7f3;border-radius:10px}
+.ct-guide .ct-mini strong{display:block;color:#174c81;margin-bottom:5px}
+.ct-guide .ct-quiz{border:1px solid #cae0f4;border-radius:12px;background:#f4f9ff;padding:20px}
+.ct-guide .ct-quiz select,.ct-guide .ct-quiz input{width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;font:inherit;max-width:100%}
+.ct-guide .ct-quiz label{display:block;font-weight:650;margin:10px 0}
+.ct-guide .ct-quiz .ct-output{padding:13px;background:white;border-radius:8px;border:1px solid #dae6f0;min-height:55px;margin-top:14px}
+.ct-guide section .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide section .ct-quiz{display:block}
+@media(max-width:680px){.ct-guide section .ct-stack{grid-template-columns:1fr}}
+</style></head><body><header><nav><h1>ComexToolbox</h1><a href="../index.html">Volver a ComexToolbox</a> · <a href="un-comtrade-en.html">English</a></nav></header><main class="ct-guide"><section class="ct-hero"><div class="ct-eyebrow">GUÍA PRÁCTICA · ANÁLISIS COMERCIAL</div><h1>UN Comtrade Plus: compara los datos que declaran dos países</h1><p>Investiga los flujos comerciales sin confundir país declarante, socio, origen, valoración y cobertura estadística.</p><a class="ct-primary" href="https://comtradeplus.un.org/" target="_blank" rel="noopener noreferrer">Abrir plataforma oficial ↗</a><div class="ct-pills"><span>ONU · comercio mundial</span><span>Datos espejo</span><span>Clasificaciones HS</span></div></section><nav class="ct-section" aria-label="Índice"><h2>En esta guía</h2><div class="ct-toc"><a href="#concepto">Qué aporta UN Comtrade Plus</a><a href="#proceso">Cómo construir una consulta bilateral</a><a href="#caso">Caso práctico: cacao entre Costa de Marfil y España</a><a href="#calculadora">Calculadora de discrepancia espejo</a><a href="#errores">Cuatro límites que afectan a los resultados</a><a href="#fuentes">Fuentes y siguiente paso</a></div></nav><section id="concepto" class="ct-section"><h2>1. Qué aporta UN Comtrade Plus</h2><p><strong>UN Comtrade</strong> recopila estadísticas oficiales de comercio internacional comunicadas por los países y territorios estadísticos. Su interfaz Plus permite investigar mercancías por declarante (<em>reporter</em>), socio comercial (<em>partner</em>), flujo, producto y periodo. Los detalles disponibles varían según qué haya publicado cada declarante.</p><div class="ct-stack"><div class="ct-mini"><strong>Reporter</strong>Economía cuya autoridad estadística declara el comercio. No debe confundirse con el país desde el que haces la consulta.</div><div class="ct-mini"><strong>Partner</strong>Economía socia indicada en la operación; su interpretación depende de la información y definiciones suministradas.</div></div><div class="ct-callout ct-caution"><strong>Datos oficiales y analíticos:</strong> la interfaz distingue estadísticas reportadas oficialmente de determinados resultados estimados o analíticos. Anota siempre la condición del dato que utilizas.</div></section>
+<section id="proceso" class="ct-section"><h2>2. Cómo construir una consulta bilateral</h2><div class="ct-steps"><div class="ct-step"><h3>Selecciona la clasificación</h3><p>Elige la revisión HS o SITC apropiada. Evita comparar series de productos que hayan cambiado de definición entre revisiones.</p></div><div class="ct-step"><h3>Escoge flujo y declarante</h3><p>Para analizar envíos de Costa de Marfil a España, parte del declarante Costa de Marfil, flujo exportaciones y socio España.</p></div><div class="ct-step"><h3>Elige el producto y el periodo</h3><p>La partida HS 1801 corresponde a cacao en grano, entero o partido, crudo o tostado. Consulta un año con cobertura disponible y registra la unidad.</p></div><div class="ct-step"><h3>Contrasta la perspectiva espejo</h3><p>Repite con España como declarante y flujo importaciones desde Costa de Marfil. Compara ambos valores, señalando su origen y diferencias de valoración.</p></div></div></section>
+<section id="caso" class="ct-section"><h2>3. Caso práctico: cacao entre Costa de Marfil y España</h2><p>Un analista obtiene dos resultados que no coinciden. La tabla utiliza <strong>cifras inventadas a efectos educativos</strong>.</p><div class="ct-overflow"><table><thead><tr><th>Perspectiva hipotética</th><th>Valor</th><th>Posible explicación</th></tr></thead><tbody><tr><td>Exportaciones declaradas por Costa de Marfil a España</td><td>12,0 M USD</td><td>Declaración del país exportador, habitualmente con valoración FOB</td></tr><tr><td>Importaciones declaradas por España desde Costa de Marfil</td><td>13,2 M USD</td><td>La importación se puede valorar con conceptos CIF; influyen además registro y cobertura</td></tr></tbody></table></div><p>La diferencia es del 10 % tomando como base el primer valor. <strong>No demuestra fraude ni error</strong>. Antes de concluir, revisa FOB/CIF, periodos, país de origen o expedición, revisiones y metodología.</p><div class="ct-callout"><strong>Uso profesional:</strong> la discrepancia entre datos espejo es una señal para investigar, no un dato que debas corregir arbitrariamente.</div></section>
+<section id="calculadora" class="ct-section"><h2>4. Calculadora de discrepancia espejo</h2><p>Introduce dos valores del mismo producto y año para estimar su diferencia relativa. No corrige automáticamente valoraciones FOB/CIF.</p><div class="ct-quiz"><label>Exportación reportada (valor positivo)<input id="ct-v" type="number" min="0" step="any" value="12000000"></label><label>Importación espejo (valor positivo)<input id="ct-q" type="number" min="0" step="any" value="13200000"></label><button class="ct-button" type="button" id="ct-go">Comparar declaraciones</button><p class="ct-output" id="ct-result" role="status" aria-live="polite"></p></div></section>
+<section id="errores" class="ct-section"><h2>5. Cuatro límites que afectan a los resultados</h2><div class="ct-steps"><div class="ct-step"><h3>Un país no ha publicado el periodo</h3><p>No presupongas valor cero; comprueba disponibilidad y fecha de publicación.</p></div><div class="ct-step"><h3>La comparación cruza distintas versiones HS</h3><p>Puede que las agrupaciones no sean equivalentes. Comprueba códigos y tablas de correspondencia.</p></div><div class="ct-step"><h3>Se confunden CIF y FOB</h3><p>Las importaciones y exportaciones pueden utilizar bases de valoración distintas.</p></div><div class="ct-step"><h3>Se confunden datos oficiales con estimaciones</h3><p>Comtrade incluye herramientas y resultados analíticos claramente identificados; cita el tipo de dato.</p></div></div></section>
+<section id="fuentes" class="ct-section"><h2>6. Fuentes y siguiente paso</h2><p>Guarda la consulta con declarante, socio, flujo, producto, revisión, periodo, unidad, fecha y fuente. Contrasta las diferencias grandes con los metadatos del país informante antes de utilizar los datos en una decisión comercial.</p><div class="ct-sources"><a href="https://comtradeplus.un.org/" target="_blank" rel="noopener noreferrer">UN Comtrade Plus</a><a href="https://uncomtrade.org/docs/data/" target="_blank" rel="noopener noreferrer">Cómo consultar datos</a><a href="https://uncomtrade.org/docs/data-availability/" target="_blank" rel="noopener noreferrer">Disponibilidad de datos</a></div><div class="ct-alt"><a href="TradeMap.html"><strong>Trade Map</strong><small>Interpretar demanda y cuota de mercado</small></a><a href="Eurostat.html"><strong>Eurostat</strong><small>Contrastar series europeas detalladas</small></a></div></section><p class="ct-meta">Metodología revisada en noviembre de 2026. Las cifras de los casos son simuladas.</p></main><footer><p>ComexToolbox · Guía educativa independiente. Contrasta siempre los datos vigentes en su fuente oficial.</p><a href="../index.html">Volver a ComexToolbox</a></footer><script>(function(){const b=document.getElementById("ct-go"),o=document.getElementById("ct-result");if(!b||!o)return;function calc(){const aa=document.getElementById("ct-v").value,bb=document.getElementById("ct-q").value,a=Number(aa),q=Number(bb);if(!aa||!bb||!Number.isFinite(a)||!Number.isFinite(q)||a<=0||q<=0){o.textContent="Introduce dos valores positivos.";return;}const fmt=new Intl.NumberFormat("es-ES",{maximumFractionDigits:2});o.textContent="Diferencia respecto a exportaciones: "+(q>=a?"+":"")+fmt.format((q-a)/a*100)+" %";}b.addEventListener("click",calc);calc()})();</script></body></html>

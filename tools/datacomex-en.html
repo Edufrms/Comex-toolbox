@@ -1,152 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DataComex: practical guide to Spain's export statistics | ComexToolbox</title><meta name="description" content="Analyse Spanish exports in DataComex by product, trading partner and province; interpret trade value and weight with a worked example."><meta name="google-adsense-account" content="ca-pub-3325448390634704"><link rel="canonical" href="https://comextoolbox.com/tools/datacomex-en.html"><link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/datacomex.html"><link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/datacomex-en.html"><link rel="stylesheet" href="stylestools.css"><link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon"><script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script><style>
+.ct-guide{max-width:1080px;margin:0 auto 28px;padding:0 18px;color:#17243a;line-height:1.7}
+.ct-guide *{box-sizing:border-box}.ct-guide .ct-hero{background:linear-gradient(115deg,#102a4b,#1c548a);color:white;border-radius:18px;padding:34px;margin:22px 0}
+.ct-guide .ct-eyebrow{font-size:.78rem;letter-spacing:.10em;font-weight:750;color:#b7e2ff}.ct-guide .ct-hero h1{font-size:clamp(1.55rem,3.2vw,2.4rem);line-height:1.24;margin:10px 0 15px;color:#fff}
+.ct-guide .ct-hero p{max-width:790px;color:#e7f1fc}.ct-guide .ct-hero a.ct-primary{display:inline-block;background:#fff;color:#163d6c;padding:10px 17px;border-radius:9px;font-weight:750;text-decoration:none;margin:12px 0 4px}
+.ct-guide .ct-pills{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0}.ct-guide .ct-pills span{border:1px solid #8db6d8;padding:3px 9px;border-radius:99px;font-size:.8rem}
+.ct-guide .ct-section{background:#fff;border:1px solid #e0e8f0;border-radius:14px;padding:26px;margin:20px 0;box-shadow:0 2px 8px #0c28450b}
+.ct-guide h2{font-size:1.45rem;margin:0 0 12px;color:#113d69}.ct-guide h3{color:#1a4873;font-size:1.06rem;margin:0 0 8px}.ct-guide p{margin:0 0 12px}.ct-guide ul,.ct-guide ol{padding-left:23px;margin:8px 0 14px}.ct-guide li{margin:5px 0}
+.ct-guide .ct-toc{display:flex;flex-wrap:wrap;gap:8px}.ct-guide .ct-toc a,.ct-guide .ct-alt a{background:#edf5fc;border:1px solid #d1e6fa;border-radius:8px;padding:7px 11px;text-decoration:none;color:#174c81}
+.ct-guide .ct-steps{counter-reset:step}.ct-guide .ct-step{padding:14px 0;border-bottom:1px solid #ecf0f4}.ct-guide .ct-step:last-child{border:none}.ct-guide .ct-step h3{display:flex;align-items:center;gap:9px}.ct-guide .ct-step h3:before{counter-increment:step;content:counter(step);background:#dbeefe;color:#144c81;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ct-guide .ct-callout{background:#eef6ff;border-left:4px solid #2077c9;padding:15px;border-radius:7px;margin:15px 0}.ct-guide .ct-caution{background:#fff8e8;border-left-color:#d5901c}
+.ct-guide .ct-overflow{overflow-x:auto}.ct-guide table{width:100%;border-collapse:collapse;min-width:630px;font-size:.91rem}.ct-guide th,.ct-guide td{text-align:left;padding:10px;border-bottom:1px solid #e6ecf1;vertical-align:top}.ct-guide th{background:#edf4fb;color:#123e6a}
+.ct-guide .ct-kicker{font-weight:800;font-size:.78rem;color:#965300;letter-spacing:.04em}.ct-guide .ct-calc{border:1px solid #cae0f4;background:#f4f9ff;border-radius:12px;padding:18px}
+.ct-guide .ct-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:13px;align-items:end}.ct-guide .ct-fields label{display:block;font-weight:650;font-size:.86rem}.ct-guide .ct-fields input{display:block;width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;margin-top:5px;font-size:1rem}
+.ct-guide button.ct-button{border:0;border-radius:8px;background:#175b9c;color:white;padding:12px 17px;font-weight:700;cursor:pointer}.ct-guide .ct-result{font-weight:750;margin-top:12px;min-height:24px}.ct-guide .ct-hint{font-size:.88rem;color:#52677d}
+.ct-guide .ct-checks{columns:2;column-gap:35px}.ct-guide .ct-checks li{break-inside:avoid}.ct-guide .ct-alt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ct-guide .ct-alt a{display:flex;flex-direction:column}.ct-guide .ct-alt small{color:#516b84}
+.ct-guide .ct-video{max-width:700px;aspect-ratio:16/9;margin:18px auto}.ct-guide .ct-video iframe{width:100%;height:100%;border:0;border-radius:12px}
+.ct-guide .ct-sources{display:flex;flex-wrap:wrap;gap:12px}.ct-guide .ct-sources a{color:#155b99}
+.ct-guide .ct-meta{font-size:.81rem;color:#64748b;margin:12px 0}.ct-guide a:focus-visible,.ct-guide button:focus-visible{outline:3px solid #c17612;outline-offset:3px}
+@media(max-width:680px){.ct-guide .ct-hero{padding:23px}.ct-guide .ct-section{padding:18px}.ct-guide .ct-fields{grid-template-columns:1fr}.ct-guide .ct-checks{columns:1}.ct-guide .ct-alt{grid-template-columns:1fr}}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-adsense-account" content="ca-pub-3325448390634704">
-    <title>DataComex Tutorial</title>
-    <link rel="stylesheet" href="stylestools.css" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+/* Correcciones aisladas para guías ComexToolbox.
+   Neutralizan selectores globales de stylestools.css sin modificar el CSS compartido. */
+.ct-guide section,
+.ct-guide nav.ct-section {
+  max-width: none;
+  margin: 20px 0;
+  padding: 26px;
+}
+.ct-guide section.ct-hero {
+  margin: 22px 0;
+  padding: 34px;
+}
+.ct-guide nav.ct-section {
+  display: block;
+}
+.ct-guide .ct-section h2 { text-align: left; }
+.ct-guide section div {
+  display: block;
+  grid-template-columns: none;
+  gap: normal;
+}
+/* Restauramos solamente las rejillas que pertenecen al tutorial. */
+.ct-guide section .ct-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 13px; }
+.ct-guide section .ct-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ct-guide section .ct-step h3 { display: flex; }
+.ct-guide section .ct-video { max-width: 700px; }
+@media (max-width: 680px) {
+ .ct-guide section.ct-hero { padding: 23px; }
+ .ct-guide section.ct-section, .ct-guide nav.ct-section { padding: 18px; }
+ .ct-guide section .ct-fields, .ct-guide section .ct-alt { grid-template-columns: 1fr; }
+}
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-J1YVJESR6W');
-    </script>
-</head>
-<a href="datacomex.html" class="lang-btn">🇪🇸 Español</a>
-
-<body>
-    <header>
-        <nav>
-            <h1>Foreign Trade Hub</h1>
-            <a href="../index-en.html">🌐Back to Hub🌐</a>
-        </nav>
-    </header>
-
-    <div class="tutorial-container">
-        <div class="tutorial-header">
-            <h1>DataComex Tutorial</h1>
-            <p>Detailed consultation of Spanish exports and imports by product, country, region, and company</p>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>1. What is DataComex?</h2>
-            <div class="tutorial-step">
-                <p>DataComex is a tool developed by the Spanish Secretary of State for Trade that provides official
-                    statistics on Spanish foreign trade with a high level of detail. It allows you to:</p>
-                <ul>
-                    <li>Access monthly, annual, and accumulated data</li>
-                    <li>Filter by product (HS), country, autonomous community, or province</li>
-                    <li>See the number of exporting or importing companies</li>
-                    <li>Download the data in Excel</li>
-                </ul>
-                <div class="note">
-                    <strong>Note:</strong> It is free, requires no registration, and is updated monthly with data from the Tax
-                    Agency.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>2. Access to the system</h2>
-            <div class="tutorial-step">
-                <ol>
-                    <li>Access: <a href="https://datacomex.comercio.es/" target="_blank">datacomex.comercio.es</a></li>
-                    <li>Click on “Estadísticas de comercio exterior” (Foreign trade statistics)</li>
-                    <li>Select the type of query you want to perform</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>3. Types of queries available</h2>
-            <div class="tutorial-step">
-                <ul>
-                    <li><strong>Consulta por país:</strong> ¿qué productos exporta España a un mercado concreto? (Query by
-                        country: What products does Spain export to a specific market?)</li>
-                    <li><strong>Consulta por producto:</strong> ¿a qué países se exporta un código arancelario determinado?
-                        (Query by product: To which countries is a specific tariff code exported?)</li>
-                    <li><strong>Consulta por comunidad:</strong> ¿qué exporta Castilla y León, Andalucía, etc.? (Query by
-                        community: What does Castilla y León, Andalucía, etc., export?)</li>
-                    <li><strong>Consulta por empresa:</strong> requiere acceso especial (Query by company: Requires special
-                        access)</li>
-                </ul>
-                <p>Each query can be broken down by year, period, FOB/CIF value, and more.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>4. How to perform a search</h2>
-            <div class="tutorial-step">
-                <ol>
-                    <li>Select the type of query (e.g., by product)</li>
-                    <li>Enter the HS code or select it from the menu</li>
-                    <li>Filter by year, community, country, or grouping</li>
-                    <li>Click on “Consultar” (Query)</li>
-                </ol>
-                <p>You will see an interactive table with exports/imports by value, volume, number of transactions, etc.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>5. Exporting results</h2>
-            <div class="tutorial-step">
-                <ul>
-                    <li>Use the “Exportar a Excel” (Export to Excel) button to download the data</li>
-                    <li>You can save favorite filters for periodic analysis</li>
-                    <li>The results can also be displayed in graphic format</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>6. Practical example</h2>
-            <div class="tutorial-step">
-                <h3>Example: Consulting wine exports from Spain to the U.S. in 2023</h3>
-                <ol>
-                    <li>Tipo de consulta: “Por producto” (Type of query: "By product")</li>
-                    <li>Producto: “Vino” (Wine) (HS 2204)</li>
-                    <li>Año: 2023 (Year: 2023)</li>
-                    <li>País destino: Estados Unidos (Destination country: United States)</li>
-                    <li>Resultado: se muestra volumen exportado, valor FOB y número de operaciones (Result: Exported volume, FOB
-                        value, and number of transactions are shown)</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>7. Usage recommendations</h2>
-            <div class="tutorial-step">
-                <ul>
-                    <li>Use DataComex to prepare SWOT analyses, country sheets, justifications for aid, or market studies
-                    </li>
-                    <li>Complement with TradeMap and Export Potential Map for a comparative analysis</li>
-                    <li>Remember to check the new data monthly (published between the 20th-25th)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <section>
-        <h2>Other useful resources</h2>
-        <div>
-            <a href="/tools/estadísticas-icex-en.html">📈 ICEX Statistics</a>
-            <a href="/tools/TradeMap-en.html">📊 TradeMap</a>
-            <a href="/tools/market-access-map-en.html">🛃 Market Access Map</a>
-            <a href="/tools/statista-en.html">📈 Statista</a>
-            <a href="/tools/export-potential-map-en.html">🌍 Export Potential Map</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Foreign Trade Hub. All rights reserved.</p>
-        <a href="../index.html">🌐Back to Hub🌐</a>
-    </footer>
-</body>
-
-</html>
+.ct-guide .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide .ct-mini{padding:16px;background:#f4f8fc;border:1px solid #d9e7f3;border-radius:10px}
+.ct-guide .ct-mini strong{display:block;color:#174c81;margin-bottom:5px}
+.ct-guide .ct-quiz{border:1px solid #cae0f4;border-radius:12px;background:#f4f9ff;padding:20px}
+.ct-guide .ct-quiz select,.ct-guide .ct-quiz input{width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;font:inherit;max-width:100%}
+.ct-guide .ct-quiz label{display:block;font-weight:650;margin:10px 0}
+.ct-guide .ct-quiz .ct-output{padding:13px;background:white;border-radius:8px;border:1px solid #dae6f0;min-height:55px;margin-top:14px}
+.ct-guide section .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide section .ct-quiz{display:block}
+@media(max-width:680px){.ct-guide section .ct-stack{grid-template-columns:1fr}}
+</style></head><body><header><nav><h1>ComexToolbox</h1><a href="../index-en.html">Back to ComexToolbox</a> · <a href="datacomex.html">Español</a></nav></header><main class="ct-guide"><section class="ct-hero"><div class="ct-eyebrow">PRACTICAL GUIDE · TRADE ANALYSIS</div><h1>DataComex: turn Spanish trade statistics into market research</h1><p>Choose the right trade flow, territory, product and period, then interpret the resulting value and quantity.</p><a class="ct-primary" href="https://datacomex.comercio.es/" target="_blank" rel="noopener noreferrer">Open official platform ↗</a><div class="ct-pills"><span>Spanish exports</span><span>Customs and regions</span><span>Reproducible analysis</span></div></section><nav class="ct-section" aria-label="On this page"><h2>In this guide</h2><div class="ct-toc"><a href="#concepto">What DataComex provides</a><a href="#proceso">Step-by-step query</a><a href="#caso">Worked scenario: Spanish wine</a><a href="#calculadora">Calculator: trade value per tonne</a><a href="#errores">Common pitfalls</a><a href="#fuentes">Sources and next action</a></div></nav><section id="concepto" class="ct-section"><h2>1. What DataComex provides</h2><p><strong>DataComex</strong> is Spain's Secretary of State for Trade platform for international goods trade statistics, including Spanish customs data and EU member-state data originating from Eurostat. It can be used to compare merchandise imports and exports by product, partner and period, including relevant Spanish regional breakdowns.</p><div class="ct-stack"><div class="ct-mini"><strong>Declared trade</strong>Trade declared to customs authorities is not necessarily identical to estimates of total merchandise trade; check which dataset you selected.</div><div class="ct-mini"><strong>Regional breakdowns</strong>Province-level reporting does not prove the precise manufacturing location of every exported product.</div></div><div class="ct-callout ct-caution">DataComex is not a named directory of foreign buyers. Aggregated statistics cannot identify specific importer contacts.</div></section>
+<section id="proceso" class="ct-section"><h2>2. Step-by-step query</h2><div class="ct-steps"><div class="ct-step"><h3>Define the research question</h3><p>Example: how did Spanish wine exports to the United States change across comparable full years?</p></div><div class="ct-step"><h3>Choose the dataset and flow</h3><p>Open the reporting or download interface and select goods trade, exports and the relevant territorial scope.</p></div><div class="ct-step"><h3>Specify product and partner</h3><p>HS heading 2204 covers wine of fresh grapes and specified grape must. Check the available level of product detail, then select the United States as partner.</p></div><div class="ct-step"><h3>Keep the query reproducible</h3><p>Record years, value and weight units, nomenclature version and extraction date. Check metadata for provisional data and series coverage.</p></div></div></section>
+<section id="caso" class="ct-section"><h2>3. Worked scenario: Spanish wine</h2><p>A wine producer needs to distinguish changes in exported value from changes in weight. <strong>Every number below is simulated</strong> and does not represent live statistics:</p><div class="ct-overflow"><table><thead><tr><th>Fictional measure</th><th>Year A</th><th>Year B</th></tr></thead><tbody><tr><td>Trade value</td><td>€40m</td><td>€45m</td></tr><tr><td>Weight</td><td>20,000 tonnes</td><td>18,000 tonnes</td></tr><tr><td>Unit value</td><td>€2,000/t</td><td>€2,500/t</td></tr></tbody></table></div><p>Value increased 12.5%, weight fell 10%, and average unit value increased 25%. This could reflect prices or product composition. It <strong>does not prove growing physical demand</strong>.</p><div class="ct-callout"><strong>Commercial implication:</strong> decide whether you are targeting volume growth, a premium segment or new destinations before choosing the key metric.</div></section>
+<section id="calculadora" class="ct-section"><h2>4. Calculator: trade value per tonne</h2><p>Enter value and tonnes covering the <strong>same product, destination and period</strong>. The quotient is not a transaction selling price.</p><div class="ct-quiz"><label>Trade value (€)<input id="ct-v" type="number" min="0" step="any" value="45000000"></label><label>Tonnes<input id="ct-q" type="number" min="0" step="any" value="18000"></label><button class="ct-button" type="button" id="ct-go">Calculate unit value</button><p class="ct-output" id="ct-result" role="status" aria-live="polite"></p></div></section>
+<section id="errores" class="ct-section"><h2>5. Common pitfalls</h2><div class="ct-steps"><div class="ct-step"><h3>Assuming preliminary figures are final</h3><p>Check coverage, revision date and reporting status.</p></div><div class="ct-step"><h3>Equating province with production site</h3><p>Territorial trade statistics do not prove where every unit was made.</p></div><div class="ct-step"><h3>Mixing Customs and Eurostat series</h3><p>Document whether the series refer to declared trade, total estimates or European trade data.</p></div><div class="ct-step"><h3>Using operator counts as buyer directories</h3><p>Enterprise statistics have their own definitions and are not a customer contact list.</p></div></div></section>
+<section id="fuentes" class="ct-section"><h2>6. Sources and next action</h2><p>Document product code, flow, partner, territory, units, retrieval date, full-year periods and value/weight differences. Then cross-check international demand patterns.</p><div class="ct-sources"><a href="https://datacomex.comercio.es/" target="_blank" rel="noopener noreferrer">Official DataComex</a><a href="https://datacomex.comercio.es/Metadata/Comex" target="_blank" rel="noopener noreferrer">Methodology</a><a href="https://datacomex.comercio.es/Metadata/Empresas" target="_blank" rel="noopener noreferrer">Enterprise data</a></div><div class="ct-alt"><a href="TradeMap-en.html"><strong>Trade Map</strong><small>Compare international demand and competitors</small></a><a href="Eurostat-en.html"><strong>Eurostat</strong><small>Review EU trade indicators</small></a></div></section><p class="ct-meta">Methodology reviewed in November 2026. Case figures are simulated.</p></main><footer><p>ComexToolbox · Independent educational guide. Confirm live data with the official source.</p><a href="../index-en.html">Back to ComexToolbox</a></footer><script>(function(){const b=document.getElementById("ct-go"),o=document.getElementById("ct-result");if(!b||!o)return;function calc(){const aa=document.getElementById("ct-v").value,bb=document.getElementById("ct-q").value,a=Number(aa),q=Number(bb);if(!aa||!bb||!Number.isFinite(a)||!Number.isFinite(q)||a<=0||q<=0){o.textContent="Enter positive trade value and quantity.";return;}const fmt=new Intl.NumberFormat("en-GB",{maximumFractionDigits:2});o.textContent="Unit value: "+fmt.format(a/q)+" €/t";}b.addEventListener("click",calc);calc()})();</script></body></html>
