@@ -14,6 +14,11 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Transparencia y páginas legales -->
+  <url><loc>https://comextoolbox.com/privacidad.html</loc></url>
+  <url><loc>https://comextoolbox.com/privacy.html</loc></url>
+  <url><loc>https://comextoolbox.com/aviso-legal.html</loc></url>
+
   <!-- Herramientas de análisis comercial -->
   <url>
     <loc>https://comextoolbox.com/tools/export-potential-map.html</loc>
