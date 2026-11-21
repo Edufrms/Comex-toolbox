@@ -1,217 +1,1003 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta name="description" content="Accede a Trade Map, la plataforma del ITC que ofrece estadísticas de comercio internacional detalladas por país y producto para apoyar decisiones estratégicas de exportación e importación.">
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1YVJESR6W');
+</script>
+      <meta name="p:domain_verify" content="3bac4d80cc0ced59100964e306c13428"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325448390634704" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio de herramientas y recursos para profesionales del comercio exterior">
+    <title>International Trade Hub</title>
+    <script src="lucide.min.js"></script>
     <meta name="google-adsense-account" content="ca-pub-3325448390634704">
-    <title>Tutorial de TradeMap</title>
-    <link rel="stylesheet" href="stylestools.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J1YVJESR6W');
-    </script>
+    <link rel="stylesheet" href="styles.css">
+      <link rel="icon" href="img/Contenedoricono.ico" type="image/x-icon">
+    <style>
+        .resource-card {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-link {
+            text-decoration: none;
+            color: inherit;
+            flex-grow: 1;
+        }
+
+        .learn-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .learn-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .learn-btn i {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+<style>
+
+/* Fase 2: orientador aislado; no modifica tarjetas ni filtros existentes */
+.comex-advisor { margin: 1.6rem 0 2.4rem; padding: clamp(1.25rem,3vw,2rem); border: 1px solid #cbd5e1; border-radius: 16px; background: linear-gradient(125deg,#f8fbff 0%,#eef5ff 100%); box-shadow: 0 8px 28px rgba(15,23,42,.055); color: #0f172a; }
+.comex-advisor * { box-sizing: border-box; }
+.comex-advisor__eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .14em; color: #2563eb; margin-bottom: .6rem; }
+.comex-advisor h2 { font-size: clamp(1.45rem,2.6vw,2.05rem); line-height: 1.22; margin: 0 0 .65rem; }
+.comex-advisor__intro { max-width: 840px; font-size: .96rem; line-height: 1.65; color: #475569; margin: 0 0 1.3rem; }
+.comex-advisor__choices { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0 0 1.25rem; }
+.comex-advisor__choice { padding: .66rem .85rem; border: 1px solid #bfcee3; color: #1e3a5f; border-radius: 10px; background: #fff; font-size: .89rem; font-weight: 600; line-height: 1.3; cursor: pointer; transition: background .15s,border-color .15s,box-shadow .15s; }
+.comex-advisor__choice:hover { background: #e9f1ff; border-color: #6d9bec; }
+.comex-advisor__choice[aria-selected="true"] { background: #1d4ed8; color: white; border-color: #1d4ed8; box-shadow: 0 3px 9px rgba(29,78,216,.18); }
+.comex-advisor__choice:focus-visible, .comex-advisor a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+.comex-advisor__panel { border: 1px solid #dbe5f2; border-radius: 12px; background: #fff; padding: clamp(1rem,2.8vw,1.4rem); }
+.comex-advisor__panel[hidden] { display: none !important; }
+.comex-advisor__panel h3 { font-size: 1.17rem; line-height: 1.4; margin: 0 0 .4rem; }
+.comex-advisor__summary { color: #475569; font-size: .93rem; line-height: 1.65; margin: 0 0 1.1rem; }
+.comex-advisor__subhead { color: #1d4ed8; font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; margin-bottom: .75rem; }
+.comex-advisor__steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .75rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.comex-advisor__step { padding: 1rem; border: 1px solid #e2e8f0; border-radius: 11px; background: #f8fafc; min-width: 0; }
+.comex-advisor__num { display: block; font-size: .72rem; font-weight: 750; text-transform: uppercase; color: #2563eb; margin: 0 0 .5rem; }
+.comex-advisor__tool { display: block; font-size: 1rem; font-weight: 750; line-height: 1.3; margin-bottom: .45rem; overflow-wrap: anywhere; }
+.comex-advisor__why { color: #475569; font-size: .86rem; line-height: 1.55; margin: 0 0 .9rem; }
+.comex-advisor__links { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+.comex-advisor__links a { color: #1d4ed8; text-decoration: underline; text-underline-offset: 2px; font-size: .82rem; font-weight: 700; }
+.comex-advisor__tip { padding: .85rem 1rem; background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 4px; color: #334155; font-size: .88rem; line-height: 1.6; margin: 0; }
+@media(max-width:760px) { .comex-advisor__steps { grid-template-columns: 1fr; } .comex-advisor__choice { flex: 1 1 45%; } }
+@media(max-width:420px) { .comex-advisor__choice { flex-basis: 100%; } }
+
+</style>
 </head>
-    <a href="TradeMap-en.html" class="lang-btn">🇺🇸 English</a>
+        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
 <body>
-    <header>
-                <nav>
-            <h1>Hub de Comercio Exterior</h1>
-            <a href="../index.html">🌐Volver al Hub🌐</a>
-        </nav>
-    </header>
-    <div class="tutorial-container">
-        <div class="tutorial-header">
-            <h1>Tutorial de TradeMap</h1>
-            <p>Guía completa para utilizar la plataforma de análisis de comercio internacional</p>
+        <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i data-lucide="globe-2"></i>
+                <span>ComexToolbox</span>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                </li>
+                    <li class="nav-item">
+                    <a href="blog/index.html" class="nav-link active">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resourcesGrid" class="nav-link">Herramientas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about-section" class="nav-link">Sobre el Hub</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#commentForm" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">🇪🇸 Español</a>
+                </li>
+                  <li class="nav-item">
+                <a href="https://www.linkedin.com/in/eduardofernandezramos/" target="_blank" rel="noopener">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+                         alt="LinkedIn" 
+                         class="linkedin-nav-icon">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+               <header>
+  
+  <!-- Contenido del header centrado -->
+  <div class="header-content" style="flex-direction: column; text-align: center; gap: 0.5rem;">
+    <div class="logo" style="justify-content: center;">
+            <h1 style="font-size: 1.75rem;">International Trade Hub</h1>
+    </div>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 1rem; color: #4b5563;">
+      Find in one place the best <strong>tools for foreign trade:</strong> market access, export statistics, market intelligence and international regulations. Ideal for exporters, importers, consultants and students.
+    </p>
+  </div>
+</header>
+       <div style="max-width: 950px; margin: 1.25rem auto; padding: 1.25rem 1.5rem; background: #f8fafc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+        
+        <div style="flex: 1; min-width: 260px;">
+            <h2 style="font-size: 1.5rem; margin: 0 0 0.5rem 0; color: #111827;">
+                Now available on Google Play: FairAgenda
+            </h2>
+            <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #4b5563; line-height: 1.5;">
+                Organize your meetings, contacts, and trade fair schedule from your mobile.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.comextoolbox.fairagenda" 
+               target="_blank" 
+               rel="noopener"
+               style="display: inline-block; background: #16a34a; color: white; padding: 0.7rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">
+                View on Google Play
+            </a>
         </div>
-<div style="display: flex; justify-content: center; margin-bottom: 2em;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/628HAE5Rw_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <a href="https://play.google.com/store/apps/details?id=com.comextoolbox.fairagenda" target="_blank" rel="noopener">
+            <img 
+                src="fairagenda-app.png" 
+                alt="Download FairAgenda on Google Play" 
+                style="width: 140px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block;"
+            >
+        </a>
+    </div>
 </div>
-        <div class="tutorial-section">
-            <h2>1. ¿Qué es TradeMap?</h2>
-            <div class="tutorial-step">
-                <p>TradeMap es una plataforma avanzada desarrollada por el Centro de Comercio Internacional (ITC) que proporciona datos detallados sobre comercio internacional, mercados y empresas. Es una herramienta esencial para:</p>
-                <ul>
-                    <li>Análisis de mercados internacionales</li>
-                    <li>Identificación de oportunidades comerciales</li>
-                    <li>Evaluación de competidores</li>
-                    <li>Análisis de tendencias comerciales</li>
-                </ul>
-                <div class="note">
-                    <strong>Nota:</strong> TradeMap es utilizado por empresas, gobiernos y organizaciones internacionales para tomar decisiones estratégicas en comercio exterior.
+    <main>
+        <section class="comex-advisor" id="comexAdvisor" aria-labelledby="comexAdvisorTitle"><p class="comex-advisor__eyebrow">COMEXToolbox TOOL ADVISOR</p><h2 id="comexAdvisorTitle">What do you need to solve in international trade?</h2><p class="comex-advisor__intro">Select a task and follow a practical workflow. ComexToolbox suggests which resource to use first, what to verify next and which mistakes to avoid. Linked platforms are operated by their respective providers.</p><div class="comex-advisor__choices" role="tablist" aria-label="Select your goal"><button type="button" class="comex-advisor__choice" role="tab" id="comexAdvisorTab0" aria-controls="comexAdvisorPanel0" aria-selected="true" tabindex="0" data-advisor-index="0">Choose markets</button><button type="button" class="comex-advisor__choice" role="tab" id="comexAdvisorTab1" aria-controls="comexAdvisorPanel1" aria-selected="false" tabindex="-1" data-advisor-index="1">Check tariffs</button><button type="button" class="comex-advisor__choice" role="tab" id="comexAdvisorTab2" aria-controls="comexAdvisorPanel2" aria-selected="false" tabindex="-1" data-advisor-index="2">Find trade fairs</button><button type="button" class="comex-advisor__choice" role="tab" id="comexAdvisorTab3" aria-controls="comexAdvisorPanel3" aria-selected="false" tabindex="-1" data-advisor-index="3">Assess risks</button><button type="button" class="comex-advisor__choice" role="tab" id="comexAdvisorTab4" aria-controls="comexAdvisorPanel4" aria-selected="false" tabindex="-1" data-advisor-index="4">Plan shipments</button><button type="button" class="comex-advisor__choice" role="tab" id="comexAdvisorTab5" aria-controls="comexAdvisorPanel5" aria-selected="false" tabindex="-1" data-advisor-index="5">Compare data</button></div><div class="comex-advisor__panel" id="comexAdvisorPanel0" role="tabpanel" aria-labelledby="comexAdvisorTab0" ><h3>Choose promising export markets</h3><p class="comex-advisor__summary">Do not start with the largest country. Check demand for your product, assess competitors, then consider entry barriers.</p><p class="comex-advisor__subhead">Recommended workflow</p><ol class="comex-advisor__steps"><li class="comex-advisor__step"><span class="comex-advisor__num">Step 1</span><strong class="comex-advisor__tool">Export Potential Map</strong><p class="comex-advisor__why">Identify markets with estimated potential for your product; compare with your existing exports.</p><div class="comex-advisor__links"><a href="https://exportpotential.intracen.org/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/export-potential-map-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 2</span><strong class="comex-advisor__tool">Trade Map</strong><p class="comex-advisor__why">Examine imports, competing suppliers and trade trends in shortlisted markets.</p><div class="comex-advisor__links"><a href="https://www.trademap.org/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/TradeMap-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 3</span><strong class="comex-advisor__tool">Global Trade Helpdesk</strong><p class="comex-advisor__why">Check entry requirements, tariffs and support resources before pursuing a market.</p><div class="comex-advisor__links"><a href="https://globaltradehelpdesk.org/en" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/Globaltrade-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li></ol><p class="comex-advisor__tip">Tip: compare the same product code and reference year. Estimated export potential does not guarantee sales.</p></div><div class="comex-advisor__panel" id="comexAdvisorPanel1" role="tabpanel" aria-labelledby="comexAdvisorTab1" hidden><h3>Check tariffs and market entry requirements</h3><p class="comex-advisor__summary">A headline tariff is only part of the picture. Product origin and regulatory requirements also matter.</p><p class="comex-advisor__subhead">Recommended workflow</p><ol class="comex-advisor__steps"><li class="comex-advisor__step"><span class="comex-advisor__num">Step 1</span><strong class="comex-advisor__tool">Access2Markets</strong><p class="comex-advisor__why">Enter the product code and trade route to review conditions in supported markets.</p><div class="comex-advisor__links"><a href="https://trade.ec.europa.eu/access-to-markets/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/access2markets-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 2</span><strong class="comex-advisor__tool">Market Access Map</strong><p class="comex-advisor__why">Compare tariffs and potential trade preferences across destinations.</p><div class="comex-advisor__links"><a href="https://www.macmap.org/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/market-access-map-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 3</span><strong class="comex-advisor__tool">Rules of Origin Facilitator</strong><p class="comex-advisor__why">Examine whether your goods may qualify under preferential rules of origin.</p><div class="comex-advisor__links"><a href="https://findrulesoforigin.org/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/rules-of-origin-facilitator-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li></ol><p class="comex-advisor__tip">Tip: confirm tariff classification and check the applicable official rules before making customs decisions.</p></div><div class="comex-advisor__panel" id="comexAdvisorPanel2" role="tabpanel" aria-labelledby="comexAdvisorTab2" hidden><h3>Find and compare trade fairs</h3><p class="comex-advisor__summary">The biggest attendance does not necessarily mean the right buyers. Prioritize sector relevance and reliable data.</p><p class="comex-advisor__subhead">Recommended workflow</p><ol class="comex-advisor__steps"><li class="comex-advisor__step"><span class="comex-advisor__num">Step 1</span><strong class="comex-advisor__tool">AUMA</strong><p class="comex-advisor__why">Find trade fairs and review available participation statistics.</p><div class="comex-advisor__links"><a href="https://www.auma.de/en/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/AUMA.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 2</span><strong class="comex-advisor__tool">10times</strong><p class="comex-advisor__why">Broaden your search by country and sector to develop an event shortlist.</p><div class="comex-advisor__links"><a href="https://10times.com/es/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/10times.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 3</span><strong class="comex-advisor__tool">Eventseye</strong><p class="comex-advisor__why">Cross-check dates, organizers and industry coverage before contacting the event.</p><div class="comex-advisor__links"><a href="https://www.eventseye.com/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/Eventseye.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li></ol><p class="comex-advisor__tip">Tip: verify dates and attendance figures on the official organizer website; directories may be outdated.</p></div><div class="comex-advisor__panel" id="comexAdvisorPanel3" role="tabpanel" aria-labelledby="comexAdvisorTab3" hidden><h3>Assess commercial and country risks</h3><p class="comex-advisor__summary">Separate country risk, customer credit risk and trade restrictions before making an offer.</p><p class="comex-advisor__subhead">Recommended workflow</p><ol class="comex-advisor__steps"><li class="comex-advisor__step"><span class="comex-advisor__num">Step 1</span><strong class="comex-advisor__tool">Country Risk – Cesce Spain</strong><p class="comex-advisor__why">Review country-level risk assessments for your target market.</p><div class="comex-advisor__links"><a href="https://www.cesce.es/riesgo-pais" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/riesgo-país---cesce-espana-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 2</span><strong class="comex-advisor__tool">Coface</strong><p class="comex-advisor__why">Compare economic and credit-risk assessments.</p><div class="comex-advisor__links"><a href="https://www.coface.es/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/coface-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 3</span><strong class="comex-advisor__tool">SanctionsKit</strong><p class="comex-advisor__why">Run a preliminary public-source sanctions check, then verify against official lists.</p><div class="comex-advisor__links"><a href="https://www.sanctionskit.com/search" target="_blank" rel="noopener noreferrer">Open tool ↗</a></div></li></ol><p class="comex-advisor__tip">Tip: country ratings do not replace customer due diligence or professional compliance advice.</p></div><div class="comex-advisor__panel" id="comexAdvisorPanel4" role="tabpanel" aria-labelledby="comexAdvisorTab4" hidden><h3>Plan an international shipment</h3><p class="comex-advisor__summary">Treat container capacity, transport quotation and tracking as separate tasks.</p><p class="comex-advisor__subhead">Recommended workflow</p><ol class="comex-advisor__steps"><li class="comex-advisor__step"><span class="comex-advisor__num">Step 1</span><strong class="comex-advisor__tool">SeaRates Load Calculator</strong><p class="comex-advisor__why">Estimate how packages fit into a container based on dimensions and quantities.</p><div class="comex-advisor__links"><a href="https://www.searates.com/en/load-calculator/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/load-calculator-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 2</span><strong class="comex-advisor__tool">iContainers</strong><p class="comex-advisor__why">Request or compare shipping options according to the route and service terms.</p><div class="comex-advisor__links"><a href="https://www.icontainers.com/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/icontainers-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 3</span><strong class="comex-advisor__tool">Marine Traffic</strong><p class="comex-advisor__why">Use vessel traffic and location information to support shipment tracking.</p><div class="comex-advisor__links"><a href="https://www.marinetraffic.com/en/ais/home/centerx:62.8/centery:-20.0/zoom:2" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/Marine-traffic-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li></ol><p class="comex-advisor__tip">Tip: confirm weights, volume, Incoterms and forwarder conditions; an estimate is not a final quotation.</p></div><div class="comex-advisor__panel" id="comexAdvisorPanel5" role="tabpanel" aria-labelledby="comexAdvisorTab5" hidden><h3>Compare trade statistics</h3><p class="comex-advisor__summary">Reliable analysis needs consistent methodology and transparent sources. Avoid mixing non-comparable datasets.</p><p class="comex-advisor__subhead">Recommended workflow</p><ol class="comex-advisor__steps"><li class="comex-advisor__step"><span class="comex-advisor__num">Step 1</span><strong class="comex-advisor__tool">DataComex</strong><p class="comex-advisor__why">Start with Spanish official import and export data by destination and product.</p><div class="comex-advisor__links"><a href="https://datacomex.comercio.es/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/datacomex-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 2</span><strong class="comex-advisor__tool">Eurostat – EU Statistics</strong><p class="comex-advisor__why">Expand the comparison to EU member states and European time series.</p><div class="comex-advisor__links"><a href="https://ec.europa.eu/eurostat/web/main/home" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/Eurostat-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li><li class="comex-advisor__step"><span class="comex-advisor__num">Step 3</span><strong class="comex-advisor__tool">UN Comtrade</strong><p class="comex-advisor__why">Cross-check against international datasets and look for coverage differences.</p><div class="comex-advisor__links"><a href="https://comtrade.un.org/" target="_blank" rel="noopener noreferrer">Open tool ↗</a><a href="tools/un-comtrade-en.html" target="_blank" rel="noopener noreferrer">Read guide ↗</a></div></li></ol><p class="comex-advisor__tip">Tip: document reporting period, currency, unit, product nomenclature and provisional data flags.</p></div></section>
+        <section class="search-section">
+            <div class="search-container">
+                               <input type="text" id="searchInput" placeholder="Buscar recursos...">
+            </div>
+            <div class="categories" id="categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="Market Analysis">🔎Market Analysis</button>
+                <button class="category-btn" data-category="Statistics Data">📊Statistics & Data</button>
+                <button class="category-btn" data-category="Market Access">🌐Market Access</button>
+                <button class="category-btn" data-category="Financing Risks">💱Financing & Risks</button>
+                <button class="category-btn" data-category="Training Resources">📚Training & Resources</button>
+                  <button class="category-btn" data-category="Trade Fair Finders">🎡Trade Fair Finders</button>
+            </div>
+        </section>
+        
+        <div class="resources-grid" id="resourcesGrid">
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://exportpotential.intracen.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Export Potential Map</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Tool to identify export opportunities and market diversification. It allows you to analyze potential trade data and make strategic decisions based on supply and demand.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/export-potential-map-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://atlas.cid.harvard.edu/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">The Atlas of Economic Complexity</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Data visualization on international trade and economic development. Helps identify global economic patterns through interactive visualizations.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/the-atlas-of-economic-complexity-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://www.trademap.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Trade Map</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Trade statistics for international business development. Ideal for market research by product, country, and trade evolution.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/TradeMap-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://www.macmap.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Market Access Map</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Information on tariffs and market access requirements. Useful for understanding trade conditions, preferential agreements, and technical barriers.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/market-access-map-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://findrulesoforigin.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Rules of Origin Facilitator</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Guide to determine product origin and requirements. Helps interpret rules of origin and comply with regulations.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/rules-of-origin-facilitator-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://www.statista.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Statista</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Market statistics and commercial research portal. Offers key charts and statistics for sectoral analysis and benchmarking.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/statista-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://ec.europa.eu/taxation_customs/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Tax Consultations – European Commission</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Tax and tariff inquiry in the European Union. Essential to understand applicable tariffs and customs procedures in the EU.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/tax-consultations---european-commission-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://ec.europa.eu/taxation_customs/dds2/taric/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">TARIC Consultation</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Consultation of the EU&#x27;s integrated tariff. Essential for knowing applicable tariffs and customs procedures in the EU.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/taric-consultation-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://comercio.gob.es/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">CCE – Foreign Trade Database</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Spanish foreign trade statistics. Key resource for analyzing exports and imports from Spain.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/cce---base-de-datos-de-comercio-exterior-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">ICEX Statistics</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Foreign trade statistics from ICEX. Key resource for analyzing exports and imports from Spain.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/estadísticas-icex-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://ec.europa.eu/trade/policy/countries-and-regions/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Countries and Regions – European Commission</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Information on the EU&#x27;s trade relations. Allows you to explore bilateral trade agreements and EU foreign policies.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/countries-and-regions---european-commission-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://eur-lex.europa.eu/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">EUR-Lex</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">EU trade regulations and legislation. Provides access to updated legal framework applicable to European foreign trade.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/eur-lex-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Financing Risks">
+                <a href="https://www.cesce.es/riesgo-pais" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Country Risk – Cesce Spain</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Commercial risk analysis by country. Useful for assessing market solvency and financial conditions.</p>
+                    <div class="card-footer"><span class="card-category">Financing Risks</span></div>
+                </a>
+                <a href="tools/riesgo-país---cesce-espana-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://trade.ec.europa.eu/access-to-markets/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Access2Markets</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">EU portal for international trade information. Ideal for companies looking to export to the EU and understand applicable regulations.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/access2markets-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&amp;COUNTRY_YR_ANIM=2025" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">International Database</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Access to global demographic data. Useful for commercial comparisons and global studies by flow and product.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/international-database-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Financing Risks">
+                <a href="https://www.coface.es/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Coface</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Credit insurance services and country risk analysis. Useful for evaluating market solvency and financial conditions.</p>
+                    <div class="card-footer"><span class="card-category">Financing Risks</span></div>
+                </a>
+                <a href="tools/coface-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Training Resources">
+                <a href="https://www.trade.gov/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">International Trade Administration</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Resources and tools for international trade. Provides government tools to facilitate exports and market analysis.</p>
+                    <div class="card-footer"><span class="card-category">Training Resources</span></div>
+                </a>
+                <a href="tools/international-trade-administration-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://marketfinder.thinkwithgoogle.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Market Finder</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Tool to find international market opportunities. Uses market intelligence to detect potential regions based on your product type.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/market-finder-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://datacomex.comercio.es/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">DataComex</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Spanish foreign trade statistics. Key resource for analyzing exports and imports from Spain.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/datacomex-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://comtrade.un.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">UN Comtrade</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">UN trade statistics database. Useful for commercial comparisons and global studies by flow and product.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/un-comtrade-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Financing Risks">
+                <a href="https://www.mediosdepagointernacional.es/home" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">International Payment Methods</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Useful content on payment instruments for foreign trade. Ideal for teachers and professionals interested in learning about international financial tools.</p>
+                    <div class="card-footer"><span class="card-category">Financing Risks</span></div>
+                </a>
+                <a href="tools/medios-de-pago-internacional-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://trends.google.es/trends/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Google Trend</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Shows real-time trending topics. Helps detect changes in interest by country or region and anticipate trade trends.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/google-trend-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://empresas.jcyl.es/web/es/empresas-castilla-leon.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Business Portal – Junta de Castilla y León</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Access services, aid, regulations, and resources provided by the regional government of Castilla y León for local companies and entrepreneurs. Useful information for business creation, internationalization, digitalization, and growth.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/Junta-Castilla-León-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://www.fao.org/faolex/country-profiles/en/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">FAOLEX – Legal Profiles by Country</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Access a global database of legislation, policies, and international agreements related to agriculture, natural resources, food, and the environment. Resource provided by FAO with updated country-level information.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/FAOLEX-Database-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Access">
+                <a href="https://www.camara.es/comercio-exterior" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Foreign Trade Services – Spanish Chamber of Commerce</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Explore services and tools provided by the Spanish Chamber of Commerce to boost business internationalization. Information on trade missions, aid, training, consulting, and export support platforms.</p>
+                    <div class="card-footer"><span class="card-category">Market Access</span></div>
+                </a>
+                <a href="tools/Cámara-Comercio-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Statistics Data">
+                <a href="https://ec.europa.eu/eurostat/web/main/home" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Eurostat – EU Statistics</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Access official EU statistics on economy, trade, population, industry, and more. A key platform for comparative analysis across EU countries.</p>
+                    <div class="card-footer"><span class="card-category">Statistics Data</span></div>
+                </a>
+                <a href="tools/Eurostat-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Training Resources">
+                <a href="https://www.searates.com/en/load-calculator/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">SeaRates Load Calculator</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Calculates how packages fit into a shipping container based on their dimensions. Useful for preparing international shipments, maximizing container space, and reducing logistics costs.</p>
+                    <div class="card-footer"><span class="card-category">Training Resources</span></div>
+                </a>
+                <a href="tools/load-calculator-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Training Resources">
+                <a href="https://www.icontainers.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">iContainers</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Digital platform to compare shipping rates and manage international freight. Allows users to quote sea, air, and land transport—streamlining logistics for exporters and importers.</p>
+                    <div class="card-footer"><span class="card-category">Training Resources</span></div>
+                </a>
+                <a href="tools/icontainers-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Training Resources">
+                <a href="https://www.marinetraffic.com/en/ais/home/centerx:62.8/centery:-20.0/zoom:2" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Marine Traffic</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">View global maritime traffic in real time. Ideal for analyzing trade routes, planning logistics operations, and tracking vessels by type, destination, or location.</p>
+                    <div class="card-footer"><span class="card-category">Training Resources</span></div>
+                </a>
+                <a href="tools/Marine-traffic-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://iberglobal.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Iberglobal</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Specialized portal focused on international economic and trade analysis, providing detailed information about business opportunities, updated country reports, risk assessment, and access to international market studies. Offers practical guides for exporting and internationalization, alongside valuable resources for companies involved in foreign trade, international investments, and business cooperation.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/iberglobal-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://clubexportadores.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Spanish Exporters and Investors Club</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description"> A business association promoting the internationalization of Spanish companies. It provides market studies, strategic reports, policy recommendations, and access to networking activities to strengthen the global presence of its members.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/club-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Market Analysis">
+                <a href="https://globaltradehelpdesk.org/en" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Global Trade Helpdesk</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Comprehensive tool developed by ITC, WTO, and UNCTAD that centralizes key trade information in one place. It allows exporters to explore international demand by product, identify top importing markets, review applicable tariffs and technical/sanitary requirements, access trade statistics, and find institutional contact points. Especially useful for SMEs seeking reliable and free insights to evaluate and compare export opportunities globally.</p>
+                    <div class="card-footer"><span class="card-category">Market Analysis</span></div>
+                </a>
+                <a href="tools/Globaltrade-en.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Trade Fair Finders">
+                <a href="https://www.auma.de/en/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">AUMA</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Germany’s official trade fair portal, providing centralized information on trade shows and exhibitions worldwide. Users can search events by industry and country, access exhibitor and visitor statistics, and find practical information to help plan participation in international trade fairs and business events.</p>
+                    <div class="card-footer"><span class="card-category">Trade Fair Finders</span></div>
+                </a>
+                <a href="tools/AUMA.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Trade Fair Finders">
+                <a href="https://10times.com/es/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">10times</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">A global platform for discovering trade fairs, conferences, and professional events across all industries. Users can search events by country and sector, compare opportunities, review exhibitor and organizer profiles, and access practical information to help plan participation in international business events.</p>
+                    <div class="card-footer"><span class="card-category">Trade Fair Finders</span></div>
+                </a>
+                <a href="tools/10times.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Trade Fair Finders">
+                <a href="https://www.tradefairdates.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Trade Fair Dates</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">An international directory of trade fairs and exhibitions that enables users to search events by industry, country, and date. It provides essential information about organizers, venues, and visitor profiles, helping businesses and professionals plan, compare, and identify commercial opportunities across different markets.</p>
+                    <div class="card-footer"><span class="card-category">Trade Fair Finders</span></div>
+                </a>
+                <a href="tools/TradeFairDates.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Trade Fair Finders">
+                <a href="https://www.eventseye.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Eventseye</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">An international database of trade fairs and professional events that allows users to search exhibitions by industry, country, and date. It provides essential information on organizers, venues, and visitor profiles, helping businesses and professionals identify, compare, and plan participation in relevant commercial events worldwide.</p>
+                    <div class="card-footer"><span class="card-category">Trade Fair Finders</span></div>
+                </a>
+                <a href="tools/Eventseye.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Trade Fair Finders">
+                <a href="https://www.messefrankfurt.com/frankfurt/en.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">Messe Frankfurt</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">A leading international trade fair organizer based in Germany. It provides detailed information on industry-specific events, exhibitor and visitor services, and networking opportunities, helping companies connect with global markets through one of the world&#x27;s premier exhibition and trade fair venues.</p>
+                    <div class="card-footer"><span class="card-category">Trade Fair Finders</span></div>
+                </a>
+                <a href="tools/MesseFrankfurt.html" class="learn-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open"></i> Learn how to use</a>
+            </article>
+            <article class="resource-card" data-category="Financing Risks">
+                <a href="https://www.sanctionskit.com/search" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <div class="card-header"><h3 class="card-title">SanctionsKit</h3><i data-lucide="external-link"></i></div>
+                    <p class="card-description">Exporters and trade students can explore sanctions records, review source details and update timestamps, and access links to the original authorities. This helps support initial public-name research and sanctions screening, while providing transparency on the underlying sources and data updates. The tool is intended for publicly available names and aliases, not confidential customer information.</p>
+                    <div class="card-footer"><span class="card-category">Financing Risks</span></div>
+                </a>
+            </article>
+        </div>
+        <section class="about-section">
+    <div class="about-container">
+        <!-- Section 1: Who you are -->
+       <div class="about-card" id="about-section">
+  <div class="about-header" style="display:flex; align-items:center; gap:1rem;">
+    <h2>Who I am</h2>
+    <div class="about-image" style="flex-shrink:0; max-width:300px;">
+      <a href="https://www.pinterest.es/pin/1087760116308359295/" target="_blank" rel="noopener">
+        <img
+          src="img/ComexToolbox.webp"
+          alt="Who I am at ComexToolbox"
+          style="width:100%; display:block; border-radius:8px;"
+        >
+      </a>
+    </div>
+            </div>
+            <p>ComexToolbox is a project created by a professional in the agri-food sector specialized in foreign trade and digital business with the mission to bring together the best digital tools for foreign trade professionals, entrepreneurs, students and anyone else who wants to know how international trade works. This platform was born from direct experience with useful but scattered resources, and the need to have everything in one place.</p>
+        </div>
+
+        <!-- Section 2: What is ComexToolbox -->
+        <div class="about-card reverse">
+            <div class="about-header">
+                <h2>What is ComexToolbox</h2>
+                <div class="about-image-placeholder">
+                        <a href="https://www.pinterest.com/pin/1087760116308359332/" target="_blank" rel="noopener">
+                    <!-- Placeholder for image -->
+                    <img src="img/Qué-es-ComexToolbox.webp" alt="What is ComexToolbox" class="about-image">
+                                </a>
                 </div>
             </div>
+            <p>ComexToolbox is a digital directory of tools and resources to streamline work in the field of foreign trade. ComexToolbox brings together in a single webpage all the tools currently used to face international trade challenges through market knowledge and other resources.
+            It allows you to have a large amount of resources in an orderly, classified, and detailed way in one place to save time, improve decision-making through a more technical view of the markets, and discover new tools.
+            The Foreign Trade Hub provides links and explains each tool from experience and sector knowledge.</p>
         </div>
 
-        <div class="tutorial-section">
-            <h2>2. Cómo registrarse y acceder</h2>
-            <div class="tutorial-step">
-                <h3>Proceso de Registro</h3>
-                <ol>
-                    <li>Visita www.trademap.org</li>
-                    <li>Haz clic en "Registrarse"</li>
-                    <li>Completa el formulario con tus datos</li>
-                    <li>Verifica tu correo electrónico</li>
-                    <li>Configura tu perfil de usuario</li>
-                </ol>
-                <div class="tip">
-                    <strong>Tip:</strong> Mantén a mano tu información profesional, ya que será necesaria para completar el registro.
+        <!-- Section 3 and 4: Who it's for and Why -->
+        <div class="about-grid">
+            <div class="about-card-small">
+                <h2>Who it is intended for</h2>
+                <div class="about-image-placeholder">
+                        <a href="https://www.pinterest.com/pin/1087760116308361075/" target="_blank" rel="noopener">
+                    <!-- Placeholder for image -->
+                    <img src="img/Para-quién-está-pensado.webp" alt="Target audience" class="about-image">
+                                </a>
                 </div>
+                <p>At first it was a personal project for my own use, but after the interest of people close to me I decided to share my tool freely for any professional in the sector, students or teachers.</p>
             </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>3. Interfaz inicial: menú de selección</h2>
-            <div class="tutorial-step">
-                <h3>Navegación Principal</h3>
-                <p>La interfaz de TradeMap está organizada en secciones principales:</p>
-                <ul>
-                    <li>Selección de países y regiones</li>
-                    <li>Búsqueda de productos</li>
-                    <li>Configuración de períodos temporales</li>
-                    <li>Filtros avanzados</li>
-                </ul>
-                <div class="table-container">
-                    <table>
-                        <tr>
-                            <th>Elemento</th>
-                            <th>Descripción</th>
-                        </tr>
-                        <tr>
-                            <td>País de origen</td>
-                            <td>Selecciona el país exportador</td>
-                        </tr>
-                        <tr>
-                            <td>País destino</td>
-                            <td>Selecciona el mercado objetivo</td>
-                        </tr>
-                        <tr>
-                            <td>Período</td>
-                            <td>Define el rango de años a analizar</td>
-                        </tr>
-                    </table>
+            <div class="about-card-small">
+                <h2>Why it was created</h2>
+                <div class="about-image-placeholder">
+                        <a href="https://www.pinterest.com/pin/1087760116308357971/" target="_blank" rel="noopener">
+                    <!-- Placeholder for image -->
+                    <img src="img/Por-qué-creé-ComexToolbox.webp" alt="Motivation" class="about-image">
+                                </a>
                 </div>
+                <p>The idea came after the favorites bar of my browser collapsed with tools on market research, trade flows, tariffs, logistics... and when it came to the truth I did not know which one to use or was not able to exploit its true potential. So I wanted to create a resource that would automate my work and give me a head start in the industry.</p>
             </div>
         </div>
 
-        <div class="tutorial-section">
-            <h2>4. Análisis por producto</h2>
-            <div class="tutorial-step">
-                <h3>Identificación de Mercados</h3>
-                <p>Para analizar mercados potenciales:</p>
-                <ol>
-                    <li>Selecciona el producto de interés</li>
-                    <li>Analiza los principales importadores</li>
-                    <li>Evalúa la competencia</li>
-                    <li>Examina las tendencias de importación</li>
-                </ol>
-                <div class="warning">
-                    <strong>Importante:</strong> Considera siempre el contexto del mercado y las barreras comerciales existentes.
-                </div>
+        <!-- Section 5, 6 and 7: Differentiation, Vision and Contact -->
+        <div class="about-features">
+            <div class="feature-card">
+                <h3>What makes it different</h3>
+                <p>ComexToolbox not only lists tools: we explain them step by step. In addition, all content is in English and Spanish, accessible without registration and open to suggestions from the community.</p>
             </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>5. Análisis por país</h2>
-            <div class="tutorial-step">
-                <h3>Portfolio Exportador</h3>
-                <p>Para analizar el perfil exportador de un país:</p>
-                <ul>
-                    <li>Principales productos de exportación</li>
-                    <li>Mercados destino más importantes</li>
-                    <li>Tendencias de crecimiento</li>
-                    <li>Competitividad sectorial</li>
-                </ul>
+            <div class="feature-card">
+                <h3>My vision</h3>
+                <p>My vision is to create an automated platform that allows to extract data and information from all the tools quickly and easily in the Trade Hub itself. A reliable database, whose data has been obtained from official and truthful websites. A Swiss army knife, many tools in one.</p>
             </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>6. Análisis bilateral</h2>
-            <div class="tutorial-step">
-                <h3>Oportunidades Comerciales</h3>
-                <p>Para analizar relaciones comerciales entre dos países:</p>
-                <ol>
-                    <li>Selecciona los países a comparar</li>
-                    <li>Analiza el flujo comercial</li>
-                    <li>Identifica productos con potencial</li>
-                    <li>Evalúa barreras comerciales</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>7. Comercio de servicios</h2>
-            <div class="tutorial-step">
-                <h3>Análisis de Servicios</h3>
-                <p>Consideraciones importantes:</p>
-                <ul>
-                    <li>Datos disponibles por categoría de servicio</li>
-                    <li>Limitaciones en la cobertura de datos</li>
-                    <li>Diferencias metodológicas entre países</li>
-                    <li>Actualización menos frecuente que bienes</li>
-                </ul>
-                <div class="note">
-                    <strong>Nota:</strong> Los datos de servicios suelen tener un mayor desfase temporal que los datos de bienes.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>8. Consejos y ejemplos reales</h2>
-            <div class="tutorial-step">
-                <h3>Casos de Estudio</h3>
-                <p>Ejemplo: Análisis de exportación de sandías de Costa Rica</p>
-                <ul>
-                    <li>Identificación de mercados potenciales</li>
-                    <li>Análisis de competencia</li>
-                    <li>Evaluación de barreras comerciales</li>
-                    <li>Recomendaciones estratégicas</li>
-                </ul>
-                <div class="tip">
-                    <strong>Tip:</strong> Utiliza los gráficos y visualizaciones para presentar tus hallazgos de manera efectiva.
-                </div>
+            <div class="feature-card">
+                <h3>How to contact me or collaborate</h3>
+                <p>Do you know of any tools we should include? Would you like to collaborate with content or tutorials? Write to me at fernandezramosedu@gmail.com, through LinkedIn or from the contact section!</p>
             </div>
         </div>
     </div>
-
-    <section>
-        <h2>Otros recursos útiles</h2>
-        <div>
-            <a href="/tools/TradeMap.html">📊 TradeMap</a>
-            <a href="/tools/export-potential-map.html">🌍 Export Potential Map</a>
-            <a href="/tools/the-atlas-of-economic-complexity.html">🧠 Atlas Económico</a>
-            <a href="/tools/market-finder.html">🔎 Market Finder</a>
-            <a href="/tools/google-trend.html">📈 Google Trends</a>
-            <a href="/tools/countries-and-regions---european-commission.html">🌐 Regiones UE</a>
-            <a href="/tools/FAOLEX-Database.html">📚 FAOLEX</a>
-            <a href="/tools/statista.html">📊 Statista</a>
-            <a href="/tools/cce---base-de-datos-de-comercio-exterior.html">🇪🇸 CCE</a>
-            <a href="/tools/estadísticas-icex.html">📉 Estadísticas ICEX</a>
-            <a href="/tools/international-database.html">🌍 Int. Database</a>
-            <a href="/tools/datacomex.html">📦 DataComex</a>
-            <a href="/tools/un-comtrade.html">🌐 UN Comtrade</a>
-            <a href="/tools/market-access-map.html">🛃 Market Access Map</a>
-            <a href="/tools/tax-consultations---european-commission.html">📑 Tax Consultations</a>
-            <a href="/tools/taric-consultation.html">💼 TARIC UE</a>
-            <a href="/tools/eur-lex.html">⚖️ EUR-Lex</a>
-            <a href="/tools/rules-of-origin-facilitator.html">📘 Rules of Origin</a>
-            <a href="/tools/access2markets.html">🌐 Access2Markets</a>
-            <a href="/tools/Junta-Castilla-León.html">🏛 Junta CyL</a>
-            <a href="/tools/Cámara-Comercio.html">🏢 Cámara España</a>
-            <a href="/tools/riesgo-país---cesce-espana.html">📉 Riesgo País</a>
-            <a href="/tools/coface.html">💳 Coface</a>
-            <a href="/tools/medios-de-pago-internacional.html">💱 Medios de Pago</a>
-            <a href="/tools/international-trade-administration.html">🧭 ITA (USA)</a>
+</section>
+        <!-- Sección de comentarios -->
+        <section class="comments-section">
+  <h2>Recomendaciones y Comentarios</h2>
+  <form class="comment-form" id="commentForm">
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required />
+    </div>
+    <div class="form-group">
+      <label for="comment">Tu recomendación:</label>
+      <textarea id="comment" required placeholder="Comparte tu sugerencia de herramientas, webs, formación o cualquier otro recurso útil..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Enviar recomendación</button>
+  </form>
+  <div class="comments-list" id="commentsList">
+    <!-- Comentarios se cargarán aquí -->
+  </div>
+</section>
+    </main>
+    <footer style="background-color:#f8f8f8; padding: 20px; text-align: center; font-size: 14px; border-top: 1px solid #ddd;">
+        <p>© <span id="year"></span> ComexToolbox · Hub de Comercio Exterior. Todos los derechos reservados.</p>
+        
+        <div style="margin-top: 10px;">
+            <a href="/privacy.html" style="margin: 0 10px;">Privacy policy</a>
+            <a href="/aviso-legal.html" style="margin: 0 10px;">Legal advise</a>
+            <a href="https://www.linkedin.com/in/eduardofernandezramos/" style="margin: 0 10px;">Contact</a>
+            <a href="#about-section" style="margin: 0 10px;">About ComexToolbox</a>
+            <a href="/sitemap.xml" style="margin: 0 10px;">Sitemap</a>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Hub de Comercio Exterior. Todos los derechos reservados.</p>
-        <a href="../index.html">🌐Volver al Hub🌐</a>
+        
+        <script>
+            // Inserta automáticamente el año actual
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
     </footer>
+    <script>
+        window.lucide.createIcons();
+
+       const resources = [
+    {
+  id: 1,
+  title: "Export Potential Map",
+  description: "Tool to identify export opportunities and market diversification. It allows you to analyze potential trade data and make strategic decisions based on supply and demand.",
+  url: "https://exportpotential.intracen.org/",
+  category: "Market Analysis",
+  learnUrl: "tools/export-potential-map-en.html"
+},
+{
+  id: 2,
+  title: "The Atlas of Economic Complexity",
+  description: "Data visualization on international trade and economic development. Helps identify global economic patterns through interactive visualizations.",
+  url: "https://atlas.cid.harvard.edu/",
+  category: "Market Analysis",
+  learnUrl: "tools/the-atlas-of-economic-complexity-en.html"
+},
+{
+  id: 3,
+  title: "Trade Map",
+  description: "Trade statistics for international business development. Ideal for market research by product, country, and trade evolution.",
+  url: "https://www.trademap.org/",
+  category: "Statistics Data",
+  learnUrl: "tools/TradeMap-en.html"
+},
+{
+  id: 4,
+  title: "Market Access Map",
+  description: "Information on tariffs and market access requirements. Useful for understanding trade conditions, preferential agreements, and technical barriers.",
+  url: "https://www.macmap.org/",
+  category: "Market Access",
+  learnUrl: "tools/market-access-map-en.html"
+},
+{
+  id: 5,
+  title: "Rules of Origin Facilitator",
+  description: "Guide to determine product origin and requirements. Helps interpret rules of origin and comply with regulations.",
+  url: "https://findrulesoforigin.org/",
+  category: "Market Access",
+  learnUrl: "tools/rules-of-origin-facilitator-en.html"
+},
+{
+  id: 6,
+  title: "Statista",
+  description: "Market statistics and commercial research portal. Offers key charts and statistics for sectoral analysis and benchmarking.",
+  url: "https://www.statista.com/",
+  category: "Statistics Data",
+  learnUrl: "tools/statista-en.html"
+},
+{
+  id: 7,
+  title: "Tax Consultations – European Commission",
+  description: "Tax and tariff inquiry in the European Union. Essential to understand applicable tariffs and customs procedures in the EU.",
+  url: "https://ec.europa.eu/taxation_customs/",
+  category: "Market Access",
+  learnUrl: "tools/tax-consultations---european-commission-en.html"
+},
+{
+  id: 8,
+  title: "TARIC Consultation",
+  description: "Consultation of the EU's integrated tariff. Essential for knowing applicable tariffs and customs procedures in the EU.",
+  url: "https://ec.europa.eu/taxation_customs/dds2/taric/",
+  category: "Market Access",
+  learnUrl: "tools/taric-consultation-en.html"
+},
+{
+  id: 9,
+  title: "CCE – Foreign Trade Database",
+  description: "Spanish foreign trade statistics. Key resource for analyzing exports and imports from Spain.",
+  url: "https://comercio.gob.es/",
+  category: "Statistics Data",
+  learnUrl: "tools/cce---base-de-datos-de-comercio-exterior-en.html"
+},
+{
+  id: 10,
+  title: "ICEX Statistics",
+  description: "Foreign trade statistics from ICEX. Key resource for analyzing exports and imports from Spain.",
+  url: "https://www.icex.es/es/todos-nuestros-servicios/informacion-de-mercados/estadisticas",
+  category: "Statistics Data",
+  learnUrl: "tools/estadísticas-icex-en.html"
+},
+{
+  id: 11,
+  title: "Countries and Regions – European Commission",
+  description: "Information on the EU's trade relations. Allows you to explore bilateral trade agreements and EU foreign policies.",
+  url: "https://ec.europa.eu/trade/policy/countries-and-regions/",
+  category: "Market Analysis",
+  learnUrl: "tools/countries-and-regions---european-commission-en.html"
+},
+{
+  id: 12,
+  title: "EUR-Lex",
+  description: "EU trade regulations and legislation. Provides access to updated legal framework applicable to European foreign trade.",
+  url: "https://eur-lex.europa.eu/",
+  category: "Market Access",
+  learnUrl: "tools/eur-lex-en.html"
+},
+{
+  id: 13,
+  title: "Country Risk – Cesce Spain",
+  description: "Commercial risk analysis by country. Useful for assessing market solvency and financial conditions.",
+  url: "https://www.cesce.es/riesgo-pais",
+  category: "Financing Risks",
+  learnUrl: "tools/riesgo-país---cesce-espana-en.html"
+},
+{
+  id: 14,
+  title: "Access2Markets",
+  description: "EU portal for international trade information. Ideal for companies looking to export to the EU and understand applicable regulations.",
+  url: "https://trade.ec.europa.eu/access-to-markets/",
+  category: "Market Access",
+  learnUrl: "tools/access2markets-en.html"
+},
+{
+  id: 15,
+  title: "International Database",
+  description: "Access to global demographic data. Useful for commercial comparisons and global studies by flow and product.",
+  url: "https://www.census.gov/data-tools/demo/idb/#/dashboard?dashboard_page=country&COUNTRY_YR_ANIM=2025",
+  category: "Statistics Data",
+  learnUrl: "tools/international-database-en.html"
+},
+{
+  id: 16,
+  title: "Coface",
+  description: "Credit insurance services and country risk analysis. Useful for evaluating market solvency and financial conditions.",
+  url: "https://www.coface.es/",
+  category: "Financing Risks",
+  learnUrl: "tools/coface-en.html"
+},
+{
+  id: 17,
+  title: "International Trade Administration",
+  description: "Resources and tools for international trade. Provides government tools to facilitate exports and market analysis.",
+  url: "https://www.trade.gov/",
+  category: "Training Resources",
+  learnUrl: "tools/international-trade-administration-en.html"
+},
+{
+  id: 18,
+  title: "Market Finder",
+  description: "Tool to find international market opportunities. Uses market intelligence to detect potential regions based on your product type.",
+  url: "https://marketfinder.thinkwithgoogle.com/",
+  category: "Market Analysis",
+  learnUrl: "tools/market-finder-en.html"
+},
+{
+  id: 19,
+  title: "DataComex",
+  description: "Spanish foreign trade statistics. Key resource for analyzing exports and imports from Spain.",
+  url: "https://datacomex.comercio.es/",
+  category: "Statistics Data",
+  learnUrl: "tools/datacomex-en.html"
+},
+{
+  id: 20,
+  title: "UN Comtrade",
+  description: "UN trade statistics database. Useful for commercial comparisons and global studies by flow and product.",
+  url: "https://comtrade.un.org/",
+  category: "Statistics Data",
+  learnUrl: "tools/un-comtrade-en.html"
+},
+{
+  id: 21,
+  title: "International Payment Methods",
+  description: "Useful content on payment instruments for foreign trade. Ideal for teachers and professionals interested in learning about international financial tools.",
+  url: "https://www.mediosdepagointernacional.es/home",
+  category: "Financing Risks",
+  learnUrl: "tools/medios-de-pago-internacional-en.html"
+},
+{
+  id: 22,
+  title: "Google Trend",
+  description: "Shows real-time trending topics. Helps detect changes in interest by country or region and anticipate trade trends.",
+  url: "https://trends.google.es/trends/",
+  category: "Market Analysis",
+  learnUrl: "tools/google-trend-en.html"
+},
+{
+  id: 23,
+  title: "Business Portal – Junta de Castilla y León",
+  description: "Access services, aid, regulations, and resources provided by the regional government of Castilla y León for local companies and entrepreneurs. Useful information for business creation, internationalization, digitalization, and growth.",
+  url: "https://empresas.jcyl.es/web/es/empresas-castilla-leon.html",
+  category: "Market Access",
+  learnUrl: "tools/Junta-Castilla-León-en.html"
+},
+{
+  id: 24,
+  title: "FAOLEX – Legal Profiles by Country",
+  description: "Access a global database of legislation, policies, and international agreements related to agriculture, natural resources, food, and the environment. Resource provided by FAO with updated country-level information.",
+  url: "https://www.fao.org/faolex/country-profiles/en/",
+  category: "Market Analysis",
+  learnUrl: "tools/FAOLEX-Database-en.html"
+},
+{
+  id: 25,
+  title: "Foreign Trade Services – Spanish Chamber of Commerce",
+  description: "Explore services and tools provided by the Spanish Chamber of Commerce to boost business internationalization. Information on trade missions, aid, training, consulting, and export support platforms.",
+  url: "https://www.camara.es/comercio-exterior",
+  category: "Market Access",
+  learnUrl: "tools/Cámara-Comercio-en.html"
+},
+{
+  id: 26,
+  title: "Eurostat – EU Statistics",
+  description: "Access official EU statistics on economy, trade, population, industry, and more. A key platform for comparative analysis across EU countries.",
+  url: "https://ec.europa.eu/eurostat/web/main/home",
+  category: "Statistics Data",
+  learnUrl: "tools/Eurostat-en.html"
+},
+{
+    id: 27,
+    title: "SeaRates Load Calculator",
+    description: "Calculates how packages fit into a shipping container based on their dimensions. Useful for preparing international shipments, maximizing container space, and reducing logistics costs.",
+    url: "https://www.searates.com/en/load-calculator/",
+    category: "Training Resources",
+    learnUrl: "tools/load-calculator-en.html"
+},
+             {
+    id: 28,
+    title: "iContainers",
+    description: "Digital platform to compare shipping rates and manage international freight. Allows users to quote sea, air, and land transport—streamlining logistics for exporters and importers.",
+    url: "https://www.icontainers.com/",
+    category: "Training Resources",
+    learnUrl: "tools/icontainers-en.html"
+},
+             {
+             id: 29,
+    title: "Marine Traffic",
+    description: "View global maritime traffic in real time. Ideal for analyzing trade routes, planning logistics operations, and tracking vessels by type, destination, or location.",
+    url: "https://www.marinetraffic.com/en/ais/home/centerx:62.8/centery:-20.0/zoom:2",
+    category: "Training Resources",
+    learnUrl: "tools/Marine-traffic-en.html"
+},
+             {
+    id: 30,
+    title: "Iberglobal",
+    description: "Specialized portal focused on international economic and trade analysis, providing detailed information about business opportunities, updated country reports, risk assessment, and access to international market studies. Offers practical guides for exporting and internationalization, alongside valuable resources for companies involved in foreign trade, international investments, and business cooperation.",
+    url: "https://iberglobal.com/",
+    category: "Market Analysis",
+    learnUrl: "tools/iberglobal-en.html"
+},
+               {
+    id: 31,
+    title: "Spanish Exporters and Investors Club",
+    description: " A business association promoting the internationalization of Spanish companies. It provides market studies, strategic reports, policy recommendations, and access to networking activities to strengthen the global presence of its members.",
+    url: "https://clubexportadores.org/",
+    category: "Market Analysis",
+    learnUrl: "tools/club-en.html"
+},
+             {
+    id: 32,
+    title: "Global Trade Helpdesk",
+    description: "Comprehensive tool developed by ITC, WTO, and UNCTAD that centralizes key trade information in one place. It allows exporters to explore international demand by product, identify top importing markets, review applicable tariffs and technical/sanitary requirements, access trade statistics, and find institutional contact points. Especially useful for SMEs seeking reliable and free insights to evaluate and compare export opportunities globally.",
+    url: "https://globaltradehelpdesk.org/en",
+    category: "Market Analysis",
+    learnUrl: "tools/Globaltrade-en.html"
+},
+               {
+               id: 33,
+    title: "AUMA",
+    description: "Germany’s official trade fair portal, providing centralized information on trade shows and exhibitions worldwide. Users can search events by industry and country, access exhibitor and visitor statistics, and find practical information to help plan participation in international trade fairs and business events.",
+    url: "https://www.auma.de/en/",
+    category: "Trade Fair Finders",
+    learnUrl: "tools/AUMA.html"
+},          
+               {
+               id: 34,
+    title: "10times",
+    description: "A global platform for discovering trade fairs, conferences, and professional events across all industries. Users can search events by country and sector, compare opportunities, review exhibitor and organizer profiles, and access practical information to help plan participation in international business events.",
+    url: "https://10times.com/es/",
+    category: "Trade Fair Finders",
+    learnUrl: "tools/10times.html"
+},
+               {
+               id: 35,
+    title: "Trade Fair Dates",
+    description: "An international directory of trade fairs and exhibitions that enables users to search events by industry, country, and date. It provides essential information about organizers, venues, and visitor profiles, helping businesses and professionals plan, compare, and identify commercial opportunities across different markets.",
+    url: "https://www.tradefairdates.com/",
+    category: "Trade Fair Finders",
+    learnUrl: "tools/TradeFairDates.html"
+},
+            {
+               id: 36,
+    title: "Eventseye",
+    description: "An international database of trade fairs and professional events that allows users to search exhibitions by industry, country, and date. It provides essential information on organizers, venues, and visitor profiles, helping businesses and professionals identify, compare, and plan participation in relevant commercial events worldwide.",
+    url: "https://www.eventseye.com/",
+    category: "Trade Fair Finders",
+    learnUrl: "tools/Eventseye.html"
+},   
+        {
+               id: 37,
+    title: "Messe Frankfurt",
+    description: "A leading international trade fair organizer based in Germany. It provides detailed information on industry-specific events, exhibitor and visitor services, and networking opportunities, helping companies connect with global markets through one of the world's premier exhibition and trade fair venues.",
+    url: "https://www.messefrankfurt.com/frankfurt/en.html",
+    category: "Trade Fair Finders",
+    learnUrl: "tools/MesseFrankfurt.html"
+},   
+                       {
+               id: 38,
+    title: "SanctionsKit",
+    description: "Exporters and trade students can explore sanctions records, review source details and update timestamps, and access links to the original authorities. This helps support initial public-name research and sanctions screening, while providing transparency on the underlying sources and data updates. The tool is intended for publicly available names and aliases, not confidential customer information.",
+    url: "https://www.sanctionskit.com/search",
+    category: "Financing Risks"
+    
+}
+
+];
+
+        const searchInput = document.getElementById('searchInput');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const resourcesGrid = document.getElementById('resourcesGrid');
+        const yearSpan = document.getElementById('year');
+
+        yearSpan.textContent = new Date().getFullYear();
+
+        let currentCategory = 'all';
+        let searchTerm = '';
+
+        // Las tarjetas son HTML estático para permitir su lectura sin JavaScript.
+        // La búsqueda y los filtros se limitan a mostrar u ocultar tarjetas existentes.
+        const resourceCards = Array.from(resourcesGrid.querySelectorAll('.resource-card'));
+        function renderResources() {
+            const query = searchTerm.trim().toLocaleLowerCase();
+            resourceCards.forEach(card => {
+                const matchesSearch = card.textContent.toLocaleLowerCase().includes(query);
+                const matchesCategory = currentCategory === 'all' || card.dataset.category === currentCategory;
+                const visible = matchesSearch && matchesCategory;
+                card.hidden = !visible;
+                card.style.display = visible ? 'flex' : 'none';
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderResources();
+        });
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentCategory = button.dataset.category;
+                renderResources();
+            });
+        });
+
+        renderResources();
+       
+    </script>
+      <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+<!-- Tu script de comentarios -->
+<script src="firebase-comments.js"></script>
+      <script src="lucide.min.js"></script>
+    <script src="menu.js"></script>
+<script>
+/* Fase 2: el orientador tiene eventos independientes del buscador del directorio. */
+(function () {
+  const advisor = document.getElementById('comexAdvisor');
+  if (!advisor) return;
+  const tabs = Array.from(advisor.querySelectorAll('[role="tab"]'));
+  const panels = Array.from(advisor.querySelectorAll('[role="tabpanel"]'));
+  function activate(index, focus) {
+    tabs.forEach((tab, i) => {
+      const selected = index === i;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      panels[i].hidden = !selected;
+    });
+    if (focus) tabs[index].focus();
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(index, false));
+    tab.addEventListener('keydown', (event) => {
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(next, true);
+    });
+  });
+})();
+</script>
 </body>
-</html> 
+</html>
