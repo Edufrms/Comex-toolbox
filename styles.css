@@ -1,3 +1,6 @@
+/* Las tarjetas ocultas por los filtros no se muestran a ninguna anchura. */
+.resource-card[hidden] { display: none !important; }
+
 :root {
     --primary-color: #2563eb;
     --primary-light: #dbeafe;
@@ -471,6 +474,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
+}
+
 .admin-login {
     position: fixed;
     top: 1rem;
@@ -500,5 +505,4 @@ footer {
     }
 } 
 
-/* Fase 1: los filtros respetan el atributo hidden sin alterar el diseño. */
-.resource-card[hidden] { display: none !important; }
+
