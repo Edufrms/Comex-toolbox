@@ -506,3 +506,8 @@ footer {
 } 
 
 
+
+/* Privacy notice and accessible status below public comments (Phase 5) */
+.comment-privacy-note{font-size:.86rem;line-height:1.55;color:#455870;margin:0 0 1rem;padding:.8rem 1rem;background:#f0f6fd;border-left:3px solid #3378ba;border-radius:5px}
+.comment-privacy-note a{text-decoration:underline;color:#125b97}
+.comment-form-status{min-height:1.25em;margin:.75rem 0 1rem;color:#235a42;font-size:.88rem;font-weight:600}
