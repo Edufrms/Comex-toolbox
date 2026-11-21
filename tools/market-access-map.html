@@ -1,176 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Guía práctica de Market Access Map: arancel NMF, preferencias, reglas de origen, cuotas y comprobaciones antes de exportar.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-3325448390634704">
-    <title>Cómo consultar aranceles con Market Access Map (ITC) | ComexToolbox</title>
-    <link rel="canonical" href="https://comextoolbox.com/tools/market-access-map.html">
-    <link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/market-access-map.html">
-    <link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/market-access-map-en.html">
-    <link rel="stylesheet" href="stylestools.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J1YVJESR6W');
-    </script>
-<link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon">
-</head>
-<body>
-<a href="market-access-map-en.html" class="lang-btn">🇺🇸 English</a>
-    <header>
-        <nav>
-            <h1>Hub de Comercio Exterior</h1>
-            <a href="../index.html">🌐Volver al Hub🌐</a>
-        </nav>
-    </header>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Market Access Map: guía de aranceles y preferencias | ComexToolbox</title><meta name="description" content="Cómo consultar Market Access Map del ITC: arancel NMF, preferencias, clasificación, origen, costes y calculadora orientativa."><meta name="google-adsense-account" content="ca-pub-3325448390634704"><link rel="canonical" href="https://comextoolbox.com/tools/market-access-map.html"><link rel="alternate" hreflang="es" href="https://comextoolbox.com/tools/market-access-map.html"><link rel="alternate" hreflang="en" href="https://comextoolbox.com/tools/market-access-map-en.html"><link rel="icon" href="../img/Contenedoricono.ico" type="image/x-icon"><link rel="stylesheet" href="stylestools.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YVJESR6W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-J1YVJESR6W');</script><style>
+.ct-guide{max-width:1080px;margin:0 auto 28px;padding:0 18px;color:#17243a;line-height:1.7}
+.ct-guide *{box-sizing:border-box}.ct-guide .ct-hero{background:linear-gradient(115deg,#102a4b,#1c548a);color:white;border-radius:18px;padding:34px;margin:22px 0}
+.ct-guide .ct-eyebrow{font-size:.78rem;letter-spacing:.10em;font-weight:750;color:#b7e2ff}.ct-guide .ct-hero h1{font-size:clamp(1.55rem,3.2vw,2.4rem);line-height:1.24;margin:10px 0 15px;color:#fff}
+.ct-guide .ct-hero p{max-width:790px;color:#e7f1fc}.ct-guide .ct-hero a.ct-primary{display:inline-block;background:#fff;color:#163d6c;padding:10px 17px;border-radius:9px;font-weight:750;text-decoration:none;margin:12px 0 4px}
+.ct-guide .ct-pills{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0}.ct-guide .ct-pills span{border:1px solid #8db6d8;padding:3px 9px;border-radius:99px;font-size:.8rem}
+.ct-guide .ct-section{background:#fff;border:1px solid #e0e8f0;border-radius:14px;padding:26px;margin:20px 0;box-shadow:0 2px 8px #0c28450b}
+.ct-guide h2{font-size:1.45rem;margin:0 0 12px;color:#113d69}.ct-guide h3{color:#1a4873;font-size:1.06rem;margin:0 0 8px}.ct-guide p{margin:0 0 12px}.ct-guide ul,.ct-guide ol{padding-left:23px;margin:8px 0 14px}.ct-guide li{margin:5px 0}
+.ct-guide .ct-toc{display:flex;flex-wrap:wrap;gap:8px}.ct-guide .ct-toc a,.ct-guide .ct-alt a{background:#edf5fc;border:1px solid #d1e6fa;border-radius:8px;padding:7px 11px;text-decoration:none;color:#174c81}
+.ct-guide .ct-steps{counter-reset:step}.ct-guide .ct-step{padding:14px 0;border-bottom:1px solid #ecf0f4}.ct-guide .ct-step:last-child{border:none}.ct-guide .ct-step h3{display:flex;align-items:center;gap:9px}.ct-guide .ct-step h3:before{counter-increment:step;content:counter(step);background:#dbeefe;color:#144c81;width:27px;height:27px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ct-guide .ct-callout{background:#eef6ff;border-left:4px solid #2077c9;padding:15px;border-radius:7px;margin:15px 0}.ct-guide .ct-caution{background:#fff8e8;border-left-color:#d5901c}
+.ct-guide .ct-overflow{overflow-x:auto}.ct-guide table{width:100%;border-collapse:collapse;min-width:630px;font-size:.91rem}.ct-guide th,.ct-guide td{text-align:left;padding:10px;border-bottom:1px solid #e6ecf1;vertical-align:top}.ct-guide th{background:#edf4fb;color:#123e6a}
+.ct-guide .ct-kicker{font-weight:800;font-size:.78rem;color:#965300;letter-spacing:.04em}.ct-guide .ct-calc{border:1px solid #cae0f4;background:#f4f9ff;border-radius:12px;padding:18px}
+.ct-guide .ct-fields{display:grid;grid-template-columns:1fr 1fr auto;gap:13px;align-items:end}.ct-guide .ct-fields label{display:block;font-weight:650;font-size:.86rem}.ct-guide .ct-fields input{display:block;width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;margin-top:5px;font-size:1rem}
+.ct-guide button.ct-button{border:0;border-radius:8px;background:#175b9c;color:white;padding:12px 17px;font-weight:700;cursor:pointer}.ct-guide .ct-result{font-weight:750;margin-top:12px;min-height:24px}.ct-guide .ct-hint{font-size:.88rem;color:#52677d}
+.ct-guide .ct-checks{columns:2;column-gap:35px}.ct-guide .ct-checks li{break-inside:avoid}.ct-guide .ct-alt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ct-guide .ct-alt a{display:flex;flex-direction:column}.ct-guide .ct-alt small{color:#516b84}
+.ct-guide .ct-video{max-width:700px;aspect-ratio:16/9;margin:18px auto}.ct-guide .ct-video iframe{width:100%;height:100%;border:0;border-radius:12px}
+.ct-guide .ct-sources{display:flex;flex-wrap:wrap;gap:12px}.ct-guide .ct-sources a{color:#155b99}
+.ct-guide .ct-meta{font-size:.81rem;color:#64748b;margin:12px 0}.ct-guide a:focus-visible,.ct-guide button:focus-visible{outline:3px solid #c17612;outline-offset:3px}
+@media(max-width:680px){.ct-guide .ct-hero{padding:23px}.ct-guide .ct-section{padding:18px}.ct-guide .ct-fields{grid-template-columns:1fr}.ct-guide .ct-checks{columns:1}.ct-guide .ct-alt{grid-template-columns:1fr}}
 
-    <div class="tutorial-container">
-        <div class="tutorial-header">
-            <h1>Market Access Map: cómo comprobar aranceles y acceso a mercados</h1>
-            <p>Aprende a distinguir el arancel publicado del que realmente podría aplicarse a tu envío.</p>
-        </div>
+/* Correcciones aisladas para guías ComexToolbox.
+   Neutralizan selectores globales de stylestools.css sin modificar el CSS compartido. */
+.ct-guide section,
+.ct-guide nav.ct-section {
+  max-width: none;
+  margin: 20px 0;
+  padding: 26px;
+}
+.ct-guide section.ct-hero {
+  margin: 22px 0;
+  padding: 34px;
+}
+.ct-guide nav.ct-section {
+  display: block;
+}
+.ct-guide .ct-section h2 { text-align: left; }
+.ct-guide section div {
+  display: block;
+  grid-template-columns: none;
+  gap: normal;
+}
+/* Restauramos solamente las rejillas que pertenecen al tutorial. */
+.ct-guide section .ct-fields { display: grid; grid-template-columns: 1fr 1fr auto; gap: 13px; }
+.ct-guide section .ct-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ct-guide section .ct-step h3 { display: flex; }
+.ct-guide section .ct-video { max-width: 700px; }
+@media (max-width: 680px) {
+ .ct-guide section.ct-hero { padding: 23px; }
+ .ct-guide section.ct-section, .ct-guide nav.ct-section { padding: 18px; }
+ .ct-guide section .ct-fields, .ct-guide section .ct-alt { grid-template-columns: 1fr; }
+}
 
-        <div class="tutorial-section">
-            <h2>1. ¿Qué es Market Access Map?</h2>
-            <div class="tutorial-step">
-                <p>Market Access Map (MAcMap) es una herramienta desarrollada por el ITC que permite acceder a información sobre aranceles aduaneros, medidas no arancelarias y acuerdos comerciales preferenciales entre países.</p>
-                <ul>
-                    <li>Incluye aranceles aplicados y consolidados</li>
-                    <li>Contiene reglas de origen y acuerdos comerciales</li>
-                    <li>Permite análisis por país, producto o flujo comercial</li>
-                </ul>
-                <div class="note">
-                    <strong>Nota:</strong> Ideal para empresas que necesitan conocer las condiciones de acceso a mercados para sus productos.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>2. Cómo acceder y registrarse</h2>
-            <div class="tutorial-step">
-                <ol>
-                    <li>Visita <a href="https://www.macmap.org/" target="_blank">www.macmap.org</a></li>
-                    <li>Pulsa "Access now" o “Log in” en la esquina superior derecha</li>
-                    <li>Regístrate gratuitamente con tu email profesional</li>
-                    <li>Confirma tu correo electrónico y accede a la plataforma</li>
-                </ol>
-                <div class="tip">
-                    <strong>Tip:</strong> Algunos países requieren suscripciones nacionales para acceso completo, pero hay mucha información abierta.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>3. Búsqueda por flujo comercial</h2>
-            <div class="tutorial-step">
-                <p>Para consultar condiciones de acceso de un producto:</p>
-                <ol>
-                    <li>Selecciona el país exportador (ej. Colombia)</li>
-                    <li>Selecciona el país importador (ej. Alemania)</li>
-                    <li>Introduce un producto por descripción o código HS</li>
-                    <li>Haz clic en “Search”</li>
-                </ol>
-                <ul>
-                    <li>Verás los aranceles aplicados, preferencias arancelarias, acuerdos vigentes y más</li>
-                    <li>Incluye barreras no arancelarias (NTMs) si están disponibles</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>4. Información arancelaria</h2>
-            <div class="tutorial-step">
-                <p>Los resultados muestran:</p>
-                <ul>
-                    <li>Arancel NMF (Nación Más Favorecida)</li>
-                    <li>Arancel preferencial (si existe acuerdo)</li>
-                    <li>Cuotas arancelarias y condiciones especiales</li>
-                    <li>Datos históricos de aranceles</li>
-                </ul>
-                <div class="warning">
-                    <strong>Importante:</strong> Comprueba si el acceso preferencial requiere cumplir reglas de origen específicas.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>5. Acuerdos comerciales y reglas de origen</h2>
-            <div class="tutorial-step">
-                <p>La sección de <strong>"Trade Agreements"</strong> permite:</p>
-                <ul>
-                    <li>Ver acuerdos bilaterales y multilaterales entre países</li>
-                    <li>Acceder a textos legales y anexos de los acuerdos</li>
-                    <li>Consultar requisitos de origen por producto y país</li>
-                </ul>
-                <div class="note">
-                    <strong>Nota:</strong> También puedes usar el "Rules of Origin Facilitator" si quieres más detalle específico.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>6. Exportar y compartir resultados</h2>
-            <div class="tutorial-step">
-                <ul>
-                    <li>Imprime o descarga resultados en formato PDF</li>
-                    <li>Exporta datos en Excel para análisis interno</li>
-                    <li>Comparte enlaces con socios comerciales o equipos técnicos</li>
-                </ul>
-                <div class="tip">
-                    <strong>Tip:</strong> Guarda tus consultas favoritas si tienes una cuenta registrada.
-                </div>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>7. Ejemplo práctico</h2>
-            <div class="tutorial-step">
-                <h3>Ejemplo: Exportación de aguacate de México a Canadá</h3>
-                <ol>
-                    <li>Exportador: México</li>
-                    <li>Importador: Canadá</li>
-                    <li>Producto: aguacate (HS 080440)</li>
-                    <li>Resultado: 0% arancel por acuerdo comercial</li>
-                    <li>Condición: cumplimiento de reglas de origen bajo T-MEC</li>
-                </ol>
-                <p>Se puede ver el desglose por subpartida, con hipervínculos a documentos técnicos.</p>
-            </div>
-        </div>
-
-        <div class="tutorial-section">
-            <h2>8. Consejos finales</h2>
-            <div class="tutorial-step">
-                <ul>
-                    <li>Combina Market Access Map con TradeMap para análisis de volumen + condiciones de acceso</li>
-                    <li>Consulta acuerdos recientes o en negociación en la sección de noticias</li>
-                    <li>Ideal para diseñar estrategias de internacionalización y preparar documentos aduaneros</li>
-                </ul>
-            </div>
-        </div>
-    <div class="tutorial-section"><h2>9. No confundas el arancel NMF con el preferencial</h2><div class="tutorial-step"><p>El <strong>Market Access Map del International Trade Centre (ITC)</strong> permite comparar regímenes arancelarios. El arancel <strong>NMF</strong> es una referencia para países a los que se aplica el trato de nación más favorecida; un <strong>arancel preferencial</strong> puede resultar inferior si existe un acuerdo y el producto cumple sus requisitos.</p><p>Que un país tenga un acuerdo comercial <strong>no significa automáticamente que todos los envíos entren sin aranceles</strong>. Hay que verificar el código de clasificación, la fecha, las reglas de origen, las pruebas documentales y posibles contingentes. Además, los impuestos interiores y costes de despacho no se deducen de una cifra arancelaria.</p><div class="warning"><strong>Antes de cotizar:</strong> consulta también la autoridad aduanera del país importador. Market Access Map es una herramienta de análisis; no sustituye la clasificación ni una resolución aduanera vinculante.</div></div></div>
-        <div class="tutorial-section"><h2>10. Caso práctico: comparar dos regímenes para un producto</h2><div class="tutorial-step"><p><strong>Ejemplo ilustrativo, con porcentajes ficticios:</strong> una empresa analiza la importación de una mercancía con valor en aduana de 10.000 €. El régimen NMF sería del 8 % y el preferencial del 2 %, <em>si se demuestra el origen</em>.</p><div class="table-container"><table><thead><tr><th>Concepto</th><th>NMF</th><th>Preferencial</th></tr></thead><tbody><tr><td>Valor en aduana (supuesto)</td><td>10.000 €</td><td>10.000 €</td></tr><tr><td>Arancel hipotético</td><td>8 %</td><td>2 %</td></tr><tr><td>Derecho calculado</td><td>800 €</td><td>200 €</td></tr><tr><td>Diferencia potencial</td><td colspan="2">600 € antes de otros costes e impuestos</td></tr></tbody></table></div><p>La diferencia solo es alcanzable cuando el producto y la operación cumplen las condiciones del régimen preferencial. No utilices estos porcentajes para una operación real.</p></div></div>
-        <div class="tutorial-section"><h2>11. Lista de verificación para una cotización</h2><div class="tutorial-step"><ol><li>Confirma el <strong>código arancelario del país de destino</strong>, no solo el código HS internacional de seis dígitos.</li><li>Selecciona exportador, importador, producto y año de referencia en la herramienta.</li><li>Compara NMF y preferencial y comprueba si existen contingentes, medidas comerciales o derechos específicos.</li><li>Revisa la <strong>regla de origen</strong> y la prueba documental aplicable; complementa con <a href="rules-of-origin-facilitator.html">Rules of Origin Facilitator</a>.</li><li>Identifica medidas no arancelarias: requisitos sanitarios, etiquetado, certificaciones u otras exigencias, según el producto.</li><li>Contrasta los resultados con la <strong>aduana del país de importación</strong> antes de fijar el precio.</li></ol><p><strong>Siguiente paso:</strong> calcula el precio puesto en destino con aranceles e impuestos efectivamente aplicables. Si exportas desde la UE, contrasta también los requisitos relevantes en <a href="access2markets.html">Access2Markets</a>.</p><p><strong>Fuente oficial:</strong> <a href="https://www.macmap.org/en/resources/faq" target="_blank" rel="noopener noreferrer">Preguntas frecuentes de Market Access Map (ITC)</a> y <a href="https://www.macmap.org/en/about/methodology" target="_blank" rel="noopener noreferrer">metodología</a>.</p></div></div>
-    </div>
-
-    <section>
-        <h2>Otros recursos útiles</h2>
-        <div>
-            <a href="/tools/TradeMap.html">📊 TradeMap</a>
-            <a href="/tools/export-potential-map.html">🌍 Export Potential Map</a>
-            <a href="/tools/the-atlas-of-economic-complexity.html">🧠 Atlas Económico</a>
-            <a href="/tools/market-access-map.html">🛃 Market Access Map</a>
-            <a href="/tools/rules-of-origin-facilitator.html">📘 Rules of Origin</a>
-            <a href="/tools/access2markets.html">🌐 Access2Markets</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 ComexToolbox. Recursos de comercio internacional.</p>
-        <a href="../index.html">🌐Volver al Hub🌐</a>
-    </footer>
-</body>
-</html>
+.ct-guide .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide .ct-mini{padding:16px;background:#f4f8fc;border:1px solid #d9e7f3;border-radius:10px}
+.ct-guide .ct-mini strong{display:block;color:#174c81;margin-bottom:5px}
+.ct-guide .ct-quiz{border:1px solid #cae0f4;border-radius:12px;background:#f4f9ff;padding:20px}
+.ct-guide .ct-quiz select,.ct-guide .ct-quiz input{width:100%;padding:10px;border:1px solid #b8cee2;border-radius:7px;font:inherit;max-width:100%}
+.ct-guide .ct-quiz label{display:block;font-weight:650;margin:10px 0}
+.ct-guide .ct-quiz .ct-output{padding:13px;background:white;border-radius:8px;border:1px solid #dae6f0;min-height:55px;margin-top:14px}
+.ct-guide section .ct-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ct-guide section .ct-quiz{display:block}
+@media(max-width:680px){.ct-guide section .ct-stack{grid-template-columns:1fr}}
+</style></head><body><header><nav><h1>ComexToolbox</h1><a href="../index.html">Volver a ComexToolbox</a> · <a href="market-access-map-en.html">English</a></nav></header><main class="ct-guide"><section class="ct-hero"><div class="ct-eyebrow">GUÍA PRÁCTICA · ACCESO A MERCADOS</div><h1>Market Access Map: interpreta aranceles antes de cotizar</h1><p>De la partida arancelaria a una estimación de coste defendible, sin confundir preferencias comerciales con derechos automáticos.</p><a class="ct-primary" href="https://www.macmap.org/" target="_blank" rel="noopener noreferrer">Abrir Market Access Map ↗</a><div class="ct-pills"><span>Arancel NMF y preferencial</span><span>Origen de mercancías</span><span>Cálculo orientativo</span></div></section><nav class="ct-section" aria-label="Índice de la guía"><h2>En esta guía</h2><div class="ct-toc"><a href="#que-es">Qué mide la herramienta</a><a href="#ruta">Ruta de consulta</a><a href="#caso">Caso simulado</a><a href="#calculadora">Simulador</a><a href="#errores">Errores habituales</a><a href="#fuentes">Fuentes</a></div></nav><section id="que-es" class="ct-section"><h2>1. El arancel que aparece en pantalla no siempre es el que pagarás</h2><p>El <strong>Market Access Map (MAcMap)</strong> del <strong>International Trade Centre (ITC)</strong> permite investigar aranceles NMF, preferencias derivadas de acuerdos comerciales, contingentes arancelarios, medidas comerciales y determinadas medidas no arancelarias. El resultado depende del <strong>producto, país importador, origen, fecha y régimen aplicable</strong>.</p><div class="ct-stack"><div class="ct-mini"><strong>Arancel NMF</strong>Tipo de referencia de nación más favorecida. No presupone ninguna preferencia bilateral.</div><div class="ct-mini"><strong>Arancel preferencial</strong>Puede ser menor si existe un régimen aplicable y se demuestra que el producto cumple sus condiciones de origen.</div></div><p>El derecho aduanero no equivale al coste completo de importar: pueden intervenir IVA, impuestos especiales, gastos de despacho, inspecciones, transporte y seguro. Tampoco debes interpretar un arancel del 0 % como ausencia de requisitos de acceso.</p><div class="ct-callout ct-caution"><strong>Advertencia operativa:</strong> antes de fijar una oferta vinculante verifica la clasificación nacional y la normativa vigente con la autoridad aduanera competente. Esta guía no sustituye asesoramiento aduanero ni una decisión de clasificación.</div></section>
+<section id="ruta" class="ct-section"><h2>2. Ruta de consulta: de la partida HS a la condición de acceso</h2><div class="ct-steps"><div class="ct-step"><h3>Prepara la ficha del producto</h3><p>Descripción comercial, materiales, composición y uso. El código HS de seis dígitos es un punto de partida; el país importador puede necesitar una clasificación más detallada.</p></div><div class="ct-step"><h3>Selecciona mercado importador y país de origen</h3><p>Abre Market Access Map y configura la ruta comercial. No confundas el país desde el que se envía con el <em>origen preferencial</em> de la mercancía.</p></div><div class="ct-step"><h3>Compara las medidas disponibles</h3><p>Comprueba el arancel NMF, posibles preferencias, derechos específicos, contingentes y medidas de defensa comercial que puedan alterar el coste.</p></div><div class="ct-step"><h3>Confirma las condiciones documentales</h3><p>Si interesa una preferencia, verifica la regla de origen del producto y la prueba exigida. Revisa, además, las medidas no arancelarias y certificaciones pertinentes.</p></div></div></section>
+<section id="caso" class="ct-section"><h2>3. Ejemplo de cotización: la preferencia que podría ahorrarte 600 €</h2><p>Escenario <strong>totalmente simulado</strong>: una empresa calcula los derechos sobre un valor en aduana hipotético de 10.000 €. Supongamos un arancel NMF del 8 % y uno preferencial del 2 % que solo podría aplicarse si la mercancía cumple las reglas de origen. <strong>No son tasas vigentes de ningún producto ni país.</strong></p><div class="ct-overflow"><table><thead><tr><th>Concepto simulado</th><th>Régimen NMF</th><th>Régimen preferencial</th></tr></thead><tbody><tr><td>Valor en aduana</td><td>10.000 €</td><td>10.000 €</td></tr><tr><td>Arancel hipotético</td><td>8 %</td><td>2 %</td></tr><tr><td>Derecho aduanero simple</td><td>800 €</td><td>200 €</td></tr><tr><td>Diferencia teórica</td><td colspan="2">600 €, antes de impuestos y otros costes</td></tr></tbody></table></div><p>La cifra inferior solo es defendible si el producto está correctamente clasificado y la operación reúne las condiciones de origen, documentación y fecha. Un acuerdo comercial no concede automáticamente una rebaja a cualquier envío.</p></section>
+<section id="calculadora" class="ct-section"><h2>4. Simulador: diferencia arancelaria orientativa</h2><p>Calcula la diferencia entre dos tipos <strong>introducidos por ti</strong>. Es una operación aritmética para comparar escenarios, <strong>no consulta aranceles reales</strong> y no incorpora impuestos, tipos específicos ni contingentes.</p><div class="ct-quiz"><label>Valor en aduana supuesto (€)<input id="ct-m-value" type="number" min="0.01" step="any" value="10000" inputmode="decimal"></label><label>Tipo NMF hipotético (%)<input id="ct-m-mfn" type="number" min="0" step="any" value="8" inputmode="decimal"></label><label>Tipo preferencial hipotético (%)<input id="ct-m-pref" type="number" min="0" step="any" value="2" inputmode="decimal"></label><button type="button" class="ct-button" id="ct-m-go">Calcular diferencia</button><p id="ct-m-result" class="ct-output" role="status" aria-live="polite"></p></div><p class="ct-hint">Si no se acredita el origen preferencial, no debes presupuestar la aplicación del tipo preferencial.</p></section>
+<section id="errores" class="ct-section"><h2>5. Cuatro comprobaciones antes de emitir un precio</h2><div class="ct-steps"><div class="ct-step"><h3>Clasificación nacional</h3><p>El código completo del país de importación puede precisar un desglose mayor que el HS6 y cambiar el régimen aplicado.</p></div><div class="ct-step"><h3>Origen distinto de procedencia</h3><p>Despachar desde un país no demuestra automáticamente que la mercancía tenga su origen preferencial.</p></div><div class="ct-step"><h3>Contingentes y medidas adicionales</h3><p>Los contingentes pueden tener límites o fechas; las medidas comerciales especiales pueden alterar la lectura de un arancel base.</p></div><div class="ct-step"><h3>Derecho frente a coste puesto en destino</h3><p>El arancel es solo una parte del coste. Separa valoración aduanera, impuestos indirectos y logística.</p></div></div></section>
+<section id="fuentes" class="ct-section"><h2>6. Qué hacer después de consultar MAcMap</h2><p>Prepara una hoja de coste por operación con clasificación, origen, país importador, régimen, documento acreditativo, tasa aplicable y fecha de verificación. Si no puedes justificar uno de esos campos, identifica la duda antes de presentar una oferta definitiva.</p><div class="ct-sources"><a href="https://www.macmap.org/" target="_blank" rel="noopener noreferrer">Market Access Map oficial</a><a href="https://www.macmap.org/en/resources/faq" target="_blank" rel="noopener noreferrer">Preguntas frecuentes ITC</a><a href="https://www.macmap.org/en/about/methodology" target="_blank" rel="noopener noreferrer">Metodología ITC</a></div><h3 style="margin-top:22px">Herramientas complementarias</h3><div class="ct-alt"><a href="rules-of-origin-facilitator.html"><strong>Rules of Origin Facilitator</strong><small>Revisar el origen preferencial de un producto</small></a><a href="access2markets.html"><strong>Access2Markets</strong><small>Contrastar condiciones de acceso relevantes para operaciones con la UE</small></a></div></section><p class="ct-meta">Revisión metodológica: noviembre de 2026. Los tipos del ejemplo son ficticios.</p></main><footer><p>ComexToolbox · Guía educativa independiente, no afiliada al ITC.</p><a href="../index.html">Volver a ComexToolbox</a></footer><script>(function(){const button=document.getElementById("ct-m-go");const out=document.getElementById("ct-m-result");if(!button||!out)return;button.addEventListener("click",()=>{const inputs=["ct-m-value","ct-m-mfn","ct-m-pref"].map(x=>document.getElementById(x).value.trim());const values=inputs.map(Number);if(inputs.some(x=>x==="")||values.some(x=>!Number.isFinite(x))||values[0]<=0||values[1]<0||values[2]<0){out.textContent="Introduce un valor positivo y tipos no negativos válidos.";return;}const [v,m,p]=values;const fmt=new Intl.NumberFormat("es-ES",{style:"currency",currency:"EUR",maximumFractionDigits:2});out.textContent="Escenario NMF: "+fmt.format(v*m/100)+" · Escenario preferencial: "+fmt.format(v*p/100)+" · Diferencia (NMF menos preferencial): "+fmt.format(v*(m-p)/100);});button.click()})();</script></body></html>
