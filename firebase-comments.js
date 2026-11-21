@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const normalizedPageId = ["/", "/index.html", "/index-en.html"].includes(rawPath) ? "home" : rawPath;
 
   const form = document.getElementById("commentForm");
-  const commentsList = document.getElementById("commentsList");
   const nameInput = document.getElementById("name");
   const commentInput = document.getElementById("comment");
   const status = document.getElementById("commentsStatus");
@@ -28,19 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (status) status.textContent = text;
   }
 
-  function renderComment(data) {
-    // Firestore content is untrusted user input. Never insert it with innerHTML.
-    const wrapper = document.createElement("div");
-    wrapper.className = "comment";
-    const author = document.createElement("strong");
-    author.textContent = typeof data.name === "string" ? data.name.slice(0, 80) : "";
-    const message = document.createElement("span");
-    message.textContent = typeof data.comment === "string" ? data.comment.slice(0, 1000) : "";
-    wrapper.append(author, document.createTextNode(": "), message);
-    return wrapper;
-  }
-
-  if (form && commentsList && nameInput && commentInput) {
+  // Recommendations are private: no public Firestore read or rendering.
+  if (form && nameInput && commentInput) {
     const sendButton = form.querySelector('[type="submit"]');
     nameInput.setAttribute("maxlength", "80");
     commentInput.setAttribute("maxlength", "1000");
@@ -71,26 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // A single-field query avoids a composite Firestore index for page + timestamp.
-    // Sorting happens locally; do not inject data into HTML.
-    db.collection("comments")
-      .where("page", "==", normalizedPageId)
-      .limit(200)
-      .onSnapshot((snapshot) => {
-        const fragment = document.createDocumentFragment();
-        const comments = snapshot.docs.map((doc) => doc.data());
-        comments.sort((a, b) =>
-          (typeof b.timestamp === "number" ? b.timestamp : 0) -
-          (typeof a.timestamp === "number" ? a.timestamp : 0)
-        );
-        comments.slice(0, 50).forEach((comment) => {
-          fragment.appendChild(renderComment(comment));
-        });
-        commentsList.replaceChildren(fragment);
-        setStatus("");
-      }, (error) => {
-        console.error("Comment loading error:", error);
-        setStatus(messages.loading);
-      });
   }
 });
