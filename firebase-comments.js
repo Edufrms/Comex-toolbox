@@ -71,14 +71,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // A single-field query avoids a composite Firestore index for page + timestamp.
+    // Sorting happens locally; do not inject data into HTML.
     db.collection("comments")
       .where("page", "==", normalizedPageId)
-      .orderBy("timestamp", "desc")
-      .limit(50)
+      .limit(200)
       .onSnapshot((snapshot) => {
         const fragment = document.createDocumentFragment();
-        snapshot.forEach((doc) => fragment.appendChild(renderComment(doc.data())));
+        const comments = snapshot.docs.map((doc) => doc.data());
+        comments.sort((a, b) =>
+          (typeof b.timestamp === "number" ? b.timestamp : 0) -
+          (typeof a.timestamp === "number" ? a.timestamp : 0)
+        );
+        comments.slice(0, 50).forEach((comment) => {
+          fragment.appendChild(renderComment(comment));
+        });
         commentsList.replaceChildren(fragment);
+        setStatus("");
       }, (error) => {
         console.error("Comment loading error:", error);
         setStatus(messages.loading);
