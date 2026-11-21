@@ -499,3 +499,6 @@ footer {
         grid-template-columns: 1fr;
     }
 } 
+
+/* Fase 1: los filtros respetan el atributo hidden sin alterar el diseño. */
+.resource-card[hidden] { display: none !important; }
